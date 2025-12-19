@@ -1,0 +1,232 @@
+{
+  "Common": {
+    "tagline": "360 digital studio",
+    "cta": "Book a call",
+    "menu": "Menu"
+  },
+  "Nav": {
+    "services": "Services",
+    "work": "Work",
+    "offers": "Offers",
+    "method": "Method",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Styles": {
+    "pulse": "Pulse",
+    "atelier": "Atelier",
+    "forge": "Forge"
+  },
+  "Footer": {
+    "subtitle": "Freelance studio based in France, built for ambitious brands.",
+    "contact": "hello@yodev.studio",
+    "links": "Navigation",
+    "socials": "Socials",
+    "rights": "© 2025 Yodev. All rights reserved.",
+    "legal": "Legal notice · Privacy policy"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "360 digital studio",
+      "title": "Websites and mobile apps that turn visitors into clients.",
+      "subtitle": "From art direction to launch, Yodev crafts fast, consistent and measurable experiences.",
+      "primary": "Book a call",
+      "secondary": "View case studies",
+      "chips": ["Web & landing pages", "iOS/Android apps", "Brand & content", "SEO & performance"]
+      ,
+      "styleLab": {
+        "eyebrow": "Style lab",
+        "title": "Switch the mood in one click.",
+        "subtitle": "Three art directions, each in light and dark."
+      },
+      "signals": {
+        "studioEyebrow": "Studio 360",
+        "studioBody": "Web · Mobile · Art direction · SEO · Content",
+        "outputEyebrow": "Output",
+        "outputBody": "Short sprints, clear deliverables, measurable impact."
+      }
+    },
+    "proof": {
+      "title": "An agile studio, tangible outcomes",
+      "subtitle": "Clear process, sharp execution, and a website built for business goals.",
+      "items": [
+        {
+          "title": "Single point of contact",
+          "description": "Smooth delivery, fast decisions, and a real partner by your side."
+        },
+        {
+          "title": "Design + code together",
+          "description": "Aligned UI, clean integration, and short iterations."
+        },
+        {
+          "title": "Performance & SEO baked in",
+          "description": "Speed, accessibility, content structure and tracking ready."
+        }
+      ]
+    },
+    "services": {
+      "title": "What Yodev builds for you",
+      "subtitle": "A 360 studio to move your brand forward, from the first wireframe to launch.",
+      "items": [
+        {
+          "title": "Conversion-first websites",
+          "description": "Landing pages, marketing sites, light e-commerce with clear paths to action.",
+          "bullets": ["UX & flows", "Premium UI", "Technical SEO", "Analytics"]
+        },
+        {
+          "title": "iOS/Android mobile apps",
+          "description": "MVPs, redesigns or new features delivered fast on a solid base.",
+          "bullets": ["React Native", "Design system", "API & back office", "QA & release"]
+        },
+        {
+          "title": "Digital identity & acquisition",
+          "description": "Art direction, copy and optimization for a brand that converts.",
+          "bullets": ["Art direction", "Brand kit", "SEO content", "Conversion rate"]
+        }
+      ]
+    },
+    "cases": {
+      "title": "Case studies",
+      "subtitle": "Three collaborations where design and tech power growth.",
+      "items": [
+        {
+          "title": "Studio Maree",
+          "type": "Marketing site",
+          "summary": "Premium website redesign for a consulting firm.",
+          "result": "Clearer positioning, smoother lead capture."
+        },
+        {
+          "title": "Nova Care",
+          "type": "Mobile app",
+          "summary": "Wellness MVP with tailored onboarding flows.",
+          "result": "Frictionless experience, scalable foundation."
+        },
+        {
+          "title": "Orbit Atelier",
+          "type": "Brand + SEO",
+          "summary": "Digital identity and editorial strategy for a creative studio.",
+          "result": "Stronger narrative, organic visibility back on track."
+        }
+      ]
+    },
+    "method": {
+      "title": "The Yodev method",
+      "subtitle": "A simple, transparent and iterative process to ship fast and right.",
+      "steps": [
+        {
+          "title": "Strategy & framing",
+          "description": "Goals, audience, core message and structure."
+        },
+        {
+          "title": "Design & art direction",
+          "description": "Wireframes, identity, UI kit, prototypes."
+        },
+        {
+          "title": "Development & integration",
+          "description": "Clean code, performance, SEO and analytics."
+        },
+        {
+          "title": "Launch & iterations",
+          "description": "Go-live, monitoring and continuous improvement."
+        }
+      ]
+    },
+    "offers": {
+      "title": "Packaged offers",
+      "subtitle": "Clear packages to start fast, with custom work when needed.",
+      "items": [
+        {
+          "name": "Starter",
+          "description": "1-5 page landing or showcase site to generate leads.",
+          "price": "From €1,800",
+          "bullets": ["Light DA", "Responsive build", "Basic SEO", "Launch"]
+        },
+        {
+          "name": "Growth",
+          "description": "Full website with structured content and conversion focus.",
+          "price": "From €4,500",
+          "bullets": ["Design system", "On-page SEO", "Tracking", "Editing guide"]
+        },
+        {
+          "name": "Product",
+          "description": "Web or mobile MVP with a clear roadmap.",
+          "price": "Custom quote",
+          "bullets": ["MVP framing", "Full UX/UI", "Back office", "Support"]
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "eyebrow": "Questions",
+      "items": [
+        {
+          "question": "What are the typical timelines?",
+          "answer": "A marketing site usually takes 3 to 6 weeks depending on content."
+        },
+        {
+          "question": "Do I keep ownership of the site?",
+          "answer": "Yes, you get the full codebase, content and access."
+        },
+        {
+          "question": "Do you provide maintenance?",
+          "answer": "Yes, via monthly support or on-demand fixes."
+        },
+        {
+          "question": "Is SEO included?",
+          "answer": "Technical SEO is included, editorial work is optional."
+        },
+        {
+          "question": "Do you work with partners?",
+          "answer": "Yes, depending on the project: photo, video, copywriting, branding."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to launch your next project?",
+      "subtitle": "Let us map the best strategy for your brand.",
+      "button": "Let us talk"
+    }
+  },
+  "ServicesPage": {
+    "title": "Services",
+    "subtitle": "Modular services designed to support growth."
+  },
+  "WorkPage": {
+    "title": "Work",
+    "subtitle": "Real projects where design meets product."
+  },
+  "OffersPage": {
+    "title": "Offers",
+    "subtitle": "Three packages to frame budget and accelerate launch."
+  },
+  "MethodPage": {
+    "title": "Method",
+    "subtitle": "A simple, transparent process to ship with confidence."
+  },
+  "AboutPage": {
+    "title": "About Yodev",
+    "subtitle": "An independent studio obsessed with detail and outcomes.",
+    "valueBody": "Yodev supports teams with a clear and structured approach tailored to your goals.",
+    "values": ["Bold art direction", "Fast, maintainable build", "Human support"]
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "subtitle": "Tell us about your goals, timeline and budget.",
+    "info": ["Reply within 48h", "Tailored quote", "20 min discovery call"],
+    "emailTitle": "Email",
+    "emailCta": "Send an email",
+    "form": {
+      "nameLabel": "Full name",
+      "emailLabel": "Work email",
+      "budgetLabel": "Estimated budget",
+      "messageLabel": "Describe your project",
+      "submit": "Send request",
+      "placeholders": {
+        "name": "Alex Smith",
+        "email": "hello@company.com",
+        "budget": "$5,000 - $10,000",
+        "message": "Context, goals, timeline..."
+      }
+    }
+  }
+}

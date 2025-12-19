@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+:root {
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --shadow-color: 15 23 42;
+  --shadow-soft: 0 20px 60px rgb(var(--shadow-color) / 0.16);
+  --shadow-glow: 0 0 0 1px rgb(var(--accent) / 0.35),
+    0 25px 60px rgb(var(--shadow-color) / 0.25);
+  --grid-size: 44px;
+  --header-height: 72px;
+  --font-body: var(--font-manrope);
+  --font-display: var(--font-space);
+}
+
+html[data-theme="light"] {
+  --bg: 247 248 252;
+  --bg-2: 239 242 248;
+  --surface: 255 255 255;
+  --surface-2: 245 247 252;
+  --text: 10 14 20;
+  --text-muted: 85 94 108;
+  --border: 15 23 42 / 0.12;
+  --ring: var(--accent) / 0.45;
+  --shadow-color: 15 23 42;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --bg: 8 10 14;
+  --bg-2: 13 16 22;
+  --surface: 16 18 26;
+  --surface-2: 21 24 34;
+  --text: 236 240 248;
+  --text-muted: 156 164 182;
+  --border: 255 255 255 / 0.1;
+  --ring: var(--accent) / 0.5;
+  --shadow-color: 0 0 0;
+  color-scheme: dark;
+}
+
+html[data-style="pulse"] {
+  --accent: 98 235 200;
+  --accent-2: 110 170 255;
+  --orb-1: 98 235 200;
+  --orb-2: 110 170 255;
+  --grid: 98 235 200 / 0.1;
+  --shape: 98 235 200 / 0.14;
+  --font-display: var(--font-space);
+  --radius-lg: 28px;
+}
+
+html[data-style="atelier"] {
+  --accent: 255 152 92;
+  --accent-2: 255 213 139;
+  --orb-1: 255 152 92;
+  --orb-2: 255 213 139;
+  --grid: 255 152 92 / 0.12;
+  --shape: 255 152 92 / 0.16;
+  --font-display: var(--font-fraunces);
+  --radius-lg: 34px;
+}
+
+html[data-style="forge"] {
+  --accent: 90 218 255;
+  --accent-2: 255 222 89;
+  --orb-1: 90 218 255;
+  --orb-2: 255 222 89;
+  --grid: 90 218 255 / 0.14;
+  --shape: 90 218 255 / 0.18;
+  --font-display: var(--font-space);
+  --radius-lg: 14px;
+}
+
+@theme inline {
+  --color-bg: rgb(var(--bg));
+  --color-bg-2: rgb(var(--bg-2));
+  --color-surface: rgb(var(--surface));
+  --color-surface-2: rgb(var(--surface-2));
+  --color-text: rgb(var(--text));
+  --color-muted: rgb(var(--text-muted));
+  --color-border: rgb(var(--border));
+  --color-accent: rgb(var(--accent));
+  --color-accent-2: rgb(var(--accent-2));
+  --color-ring: rgb(var(--ring));
+  --shadow-soft: var(--shadow-soft);
+  --shadow-glow: var(--shadow-glow);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+*,
+::before,
+::after {
+  border-color: rgb(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+  font-family: var(--font-body);
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgb(var(--grid)) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(var(--grid)) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(30px);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle,
+    rgb(var(--orb-1) / 0.35),
+    transparent 70%
+  );
+}
+
+.orb.secondary {
+  background: radial-gradient(
+    circle,
+    rgb(var(--orb-2) / 0.3),
+    transparent 70%
+  );
+}
+
+.noise {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgb(var(--shape)) 1px,
+    transparent 0
+  );
+  background-size: 18px 18px;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+
+  .float-slower {
+    animation: float-slow 18s ease-in-out infinite;
+  }
+
+  .fade-up {
+    animation: fade-up 0.8s ease-out both;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-18px) translateX(6px);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
