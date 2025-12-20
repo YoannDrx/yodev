@@ -11,6 +11,7 @@ import { FadeIn, SlideIn, StaggerChildren, StaggerItem } from "@/components/moti
 
 export function HeroHome() {
   const t = useTranslations("Home");
+  const common = useTranslations("Common");
   const heroChips = t.raw("hero.chips") as string[];
 
   return (
@@ -116,11 +117,11 @@ export function HeroHome() {
                       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     />
                     <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                      Disponible
+                      {common("available")}
                     </p>
                   </div>
                   <p className="mt-3 text-sm text-muted">
-                    Prêt à démarrer votre projet
+                    {common("readyToStart")}
                   </p>
                 </Card>
               </SlideIn>

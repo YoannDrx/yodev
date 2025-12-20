@@ -119,7 +119,7 @@ export function SiteHeader() {
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] border border-border bg-surface text-text transition-colors hover:border-primary/40"
-                aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                aria-label={isMobileMenuOpen ? common("menuClose") : common("menuOpen")}
               >
                 {isMobileMenuOpen ? (
                   <X className="h-5 w-5" />
@@ -151,11 +151,11 @@ export function SiteHeader() {
         )}
       >
         <div className="flex h-[var(--header-height)] items-center justify-between border-b border-border px-6">
-          <span className="text-sm font-semibold text-text">Menu</span>
+          <span className="text-sm font-semibold text-text">{common("menu")}</span>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] text-muted transition-colors hover:bg-bg-2 hover:text-text"
-            aria-label="Fermer le menu"
+            aria-label={common("menuClose")}
           >
             <X className="h-5 w-5" />
           </button>

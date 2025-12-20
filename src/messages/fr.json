@@ -2,7 +2,11 @@
   "Common": {
     "tagline": "Studio digital 360",
     "cta": "Réserver un appel",
-    "menu": "Menu"
+    "menu": "Menu",
+    "available": "Disponible",
+    "readyToStart": "Prêt à démarrer votre projet",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
   },
   "Nav": {
     "services": "Services",
@@ -260,5 +264,581 @@
         "message": "Contexte, objectifs, délais..."
       }
     }
+  },
+  "Services": {
+    "backButton": "Retour aux services",
+    "cta": "Démarrer un projet",
+    "viewWork": "Voir nos réalisations",
+    "featuresEyebrow": "Ce que nous proposons",
+    "featuresTitle": "Fonctionnalités",
+    "benefitsEyebrow": "Pourquoi nous choisir",
+    "benefitsTitle": "Avantages",
+    "ctaTitle": "Prêt à démarrer ?",
+    "ctaSubtitle": "Discutons de votre projet et voyons comment nous pouvons vous aider.",
+    "ctaButton": "Nous contacter",
+    "web": {
+      "title": "Sites Web",
+      "description": "Des sites performants et optimisés pour la conversion, du site vitrine à l'application web complexe.",
+      "features": [
+        "Design responsive sur mesure",
+        "Optimisation SEO intégrée",
+        "Performance et Core Web Vitals",
+        "CMS headless ou sur-mesure",
+        "Intégration analytics et tracking"
+      ],
+      "benefits": [
+        "Un site qui convertit vos visiteurs",
+        "Visibilité améliorée sur Google",
+        "Expérience utilisateur optimale",
+        "Autonomie sur vos contenus"
+      ]
+    },
+    "mobile": {
+      "title": "Applications Mobiles",
+      "description": "Des apps iOS et Android natives ou cross-platform, pensées pour l'engagement utilisateur.",
+      "features": [
+        "React Native / Flutter",
+        "Design natif iOS & Android",
+        "Notifications push",
+        "Mode hors-ligne",
+        "Intégration API & back-office"
+      ],
+      "benefits": [
+        "Présence sur les stores",
+        "Engagement utilisateur renforcé",
+        "Expérience mobile native",
+        "Base de code unifiée"
+      ]
+    },
+    "saas": {
+      "title": "SaaS & Applications Web",
+      "description": "Des plateformes SaaS robustes et scalables pour votre business model.",
+      "features": [
+        "Architecture multi-tenant",
+        "Système d'abonnement",
+        "Dashboard analytics",
+        "API REST/GraphQL",
+        "Sécurité et conformité RGPD"
+      ],
+      "benefits": [
+        "Revenus récurrents",
+        "Scalabilité assurée",
+        "Autonomie technique",
+        "Time-to-market optimisé"
+      ]
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Des boutiques en ligne performantes qui maximisent vos ventes.",
+      "features": [
+        "Shopify / WooCommerce / Sur-mesure",
+        "Tunnel de conversion optimisé",
+        "Paiement sécurisé multi-devises",
+        "Gestion des stocks et commandes",
+        "Intégration logistique"
+      ],
+      "benefits": [
+        "Augmentation du panier moyen",
+        "Réduction de l'abandon de panier",
+        "Automatisation des process",
+        "Expérience d'achat fluide"
+      ]
+    },
+    "ux-design": {
+      "title": "UX/UI Design",
+      "description": "Des interfaces intuitives et esthétiques qui enchantent vos utilisateurs.",
+      "features": [
+        "Recherche utilisateur",
+        "Wireframes et prototypes",
+        "Design system complet",
+        "Tests utilisateurs",
+        "Handoff développement"
+      ],
+      "benefits": [
+        "Meilleure satisfaction utilisateur",
+        "Réduction du temps de développement",
+        "Cohérence de marque",
+        "Décisions basées sur les données"
+      ]
+    },
+    "consulting": {
+      "title": "Conseil & Stratégie",
+      "description": "Un accompagnement stratégique pour vos projets digitaux.",
+      "features": [
+        "Audit technique et UX",
+        "Roadmap produit",
+        "Architecture système",
+        "Choix technologiques",
+        "Accompagnement équipe"
+      ],
+      "benefits": [
+        "Vision claire du projet",
+        "Risques anticipés",
+        "Stack adaptée à vos besoins",
+        "Montée en compétences"
+      ]
+    },
+    "seo": {
+      "title": "SEO & Performance",
+      "description": "Optimisation de votre visibilité et de vos performances web.",
+      "features": [
+        "Audit SEO complet",
+        "Optimisation technique",
+        "Stratégie de contenu",
+        "Link building",
+        "Suivi et reporting"
+      ],
+      "benefits": [
+        "Trafic organique qualifié",
+        "Meilleures positions Google",
+        "Autorité de domaine renforcée",
+        "ROI mesurable"
+      ]
+    },
+    "support": {
+      "title": "Support & Maintenance",
+      "description": "Un accompagnement continu pour la pérennité de vos projets.",
+      "features": [
+        "Monitoring 24/7",
+        "Mises à jour sécurité",
+        "Sauvegardes automatiques",
+        "Support réactif",
+        "Évolutions continues"
+      ],
+      "benefits": [
+        "Tranquillité d'esprit",
+        "Disponibilité optimale",
+        "Sécurité renforcée",
+        "Projet toujours à jour"
+      ]
+    }
+  },
+  "CaseStudies": {
+    "backButton": "Retour aux réalisations",
+    "contextEyebrow": "Contexte",
+    "contextTitle": "Le projet",
+    "challengeEyebrow": "Problématique",
+    "challengeTitle": "Le défi",
+    "solutionEyebrow": "Approche",
+    "solutionTitle": "La solution",
+    "resultsEyebrow": "Impact",
+    "resultsTitle": "Résultats",
+    "techTitle": "Technologies",
+    "ctaTitle": "Un projet similaire ?",
+    "ctaSubtitle": "Discutons de vos objectifs et voyons comment les atteindre ensemble.",
+    "ctaButton": "Parlons de votre projet",
+    "saas-b2b": {
+      "title": "Plateforme SaaS B2B",
+      "type": "SaaS / Web App",
+      "summary": "Développement d'une plateforme de gestion pour les équipes commerciales.",
+      "context": "Notre client, une scale-up en forte croissance, avait besoin d'une solution centralisée pour gérer son pipeline commercial et optimiser les performances de ses équipes.",
+      "challenge": "Les outils existants étaient fragmentés et peu adaptés à leur workflow spécifique. Le suivi des performances manquait de précision et les tâches répétitives prenaient un temps précieux.",
+      "solution": "Nous avons conçu une plateforme sur-mesure avec un dashboard intuitif, des automatisations intelligentes et une intégration CRM native. L'architecture multi-tenant permet une scalabilité optimale.",
+      "results": ["+40% de productivité commerciale", "Réduction de 60% du temps de reporting", "Adoption à 95% par les équipes", "ROI positif en 3 mois"],
+      "testimonial": {
+        "quote": "Yodev a parfaitement compris nos enjeux et a livré une solution qui dépasse nos attentes. L'équipe est réactive et force de proposition.",
+        "author": "Marie Dupont",
+        "role": "Directrice Commerciale"
+      }
+    },
+    "ecommerce-refonte": {
+      "title": "Refonte E-commerce Premium",
+      "type": "E-commerce",
+      "summary": "Refonte complète d'une boutique en ligne haut de gamme.",
+      "context": "Une marque de luxe française souhaitait moderniser sa présence digitale et repositionner son image vers un positionnement plus premium.",
+      "challenge": "La boutique existante souffrait d'un taux de conversion faible, d'une expérience mobile dégradée et d'un temps de chargement lent.",
+      "solution": "Refonte totale avec un design épuré et luxueux, optimisation des performances (score Lighthouse 95+), nouveau tunnel d'achat simplifié et expérience mobile-first.",
+      "results": ["+120% de taux de conversion", "+35% de panier moyen", "Temps de chargement divisé par 4", "Score Lighthouse 95+"],
+      "testimonial": {
+        "quote": "Notre nouvelle boutique reflète enfin l'ADN de notre marque. Les résultats sont au-delà de nos espérances.",
+        "author": "Jean Martin",
+        "role": "Fondateur"
+      }
+    },
+    "app-coaching": {
+      "title": "App de Coaching Sportif",
+      "type": "Mobile App",
+      "summary": "Application mobile de coaching personnalisé avec suivi en temps réel.",
+      "context": "Une startup dans le domaine du bien-être souhaitait lancer une app de coaching sportif innovante pour se différencier sur un marché compétitif.",
+      "challenge": "Le client souhaitait créer une app permettant un suivi personnalisé, des programmes adaptatifs et une communauté engagée. Le MVP devait être livré rapidement pour tester le marché.",
+      "solution": "Développement React Native avec un système de programmes adaptatifs basé sur les performances, intégration wearables, chat coach-utilisateur et gamification pour l'engagement.",
+      "results": ["MVP livré en 8 semaines", "10k téléchargements en 3 mois", "Note moyenne 4.8/5 sur les stores", "Taux de rétention de 65%"],
+      "testimonial": {
+        "quote": "L'équipe Yodev a été un véritable partenaire. Ils ont su transformer notre vision en un produit que nos utilisateurs adorent.",
+        "author": "Sophie Bernard",
+        "role": "CEO & Fondatrice"
+      }
+    }
+  },
+  "BlogPage": {
+    "eyebrow": "Insights",
+    "title": "Blog",
+    "subtitle": "Réflexions et retours d'expérience sur le développement web, le design et la stratégie digitale.",
+    "readMore": "Lire l'article",
+    "posts": [
+      {
+        "slug": "architecture-2025",
+        "title": "Architecture web en 2025 : les tendances clés",
+        "excerpt": "Un tour d'horizon des architectures modernes pour des applications performantes.",
+        "category": "Tech",
+        "date": "15 janvier 2025",
+        "readTime": "5 min"
+      },
+      {
+        "slug": "saas-vs-custom",
+        "title": "SaaS vs Sur-mesure : comment choisir ?",
+        "excerpt": "Les critères pour décider entre une solution existante et un développement custom.",
+        "category": "Stratégie",
+        "date": "10 janvier 2025",
+        "readTime": "7 min"
+      },
+      {
+        "slug": "ux-errors",
+        "title": "Les 5 erreurs UX qui tuent vos conversions",
+        "excerpt": "Analyse des problèmes les plus fréquents et comment les résoudre.",
+        "category": "Design",
+        "date": "5 janvier 2025",
+        "readTime": "6 min"
+      },
+      {
+        "slug": "mvp-iteration",
+        "title": "MVP et itération : la bonne approche",
+        "excerpt": "Comment construire un produit minimum viable efficace et itérer intelligemment.",
+        "category": "Produit",
+        "date": "20 décembre 2024",
+        "readTime": "8 min"
+      },
+      {
+        "slug": "core-web-vitals",
+        "title": "Core Web Vitals : guide pratique",
+        "excerpt": "Tout comprendre sur les métriques de performance web et comment les optimiser.",
+        "category": "Performance",
+        "date": "15 décembre 2024",
+        "readTime": "10 min"
+      },
+      {
+        "slug": "owasp-2024",
+        "title": "Sécurité web : OWASP Top 10 en pratique",
+        "excerpt": "Les vulnérabilités les plus courantes et comment protéger vos applications.",
+        "category": "Sécurité",
+        "date": "10 décembre 2024",
+        "readTime": "12 min"
+      }
+    ]
+  },
+  "BlogArticles": {
+    "ctaTitle": "Besoin d'expertise ?",
+    "ctaSubtitle": "Discutons de votre projet et de vos enjeux techniques.",
+    "ctaButton": "Nous contacter",
+    "architecture-2025": {
+      "title": "Architecture web en 2025 : les tendances clés",
+      "excerpt": "Un tour d'horizon des architectures modernes pour des applications performantes.",
+      "category": "Tech",
+      "date": "15 janvier 2025",
+      "readTime": "5 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "L'architecture web évolue constamment pour répondre aux exigences de performance, de scalabilité et d'expérience utilisateur. En 2025, plusieurs tendances se démarquent clairement.",
+        "Les architectures serverless et edge-first continuent de gagner du terrain. Déployer du code au plus près des utilisateurs réduit drastiquement la latence et améliore l'expérience globale.",
+        "Le paradigme Islands Architecture, popularisé par Astro, permet d'optimiser le JavaScript envoyé au client en ne rendant interactifs que les composants qui le nécessitent.",
+        "Les React Server Components transforment notre approche du rendu côté serveur, permettant de streamer du contenu tout en gardant une expérience utilisateur fluide.",
+        "Enfin, l'adoption des bases de données edge comme Turso ou PlanetScale permet de rapprocher les données des utilisateurs, complétant ainsi une architecture véritablement distribuée."
+      ]
+    },
+    "saas-vs-custom": {
+      "title": "SaaS vs Sur-mesure : comment choisir ?",
+      "excerpt": "Les critères pour décider entre une solution existante et un développement custom.",
+      "category": "Stratégie",
+      "date": "10 janvier 2025",
+      "readTime": "7 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "Choisir entre une solution SaaS et un développement sur-mesure est une décision stratégique qui impacte le long terme de votre entreprise.",
+        "Le SaaS offre une mise en œuvre rapide et un coût initial réduit. C'est idéal pour valider un concept ou lorsque le besoin correspond exactement à ce que propose le marché.",
+        "Le sur-mesure, en revanche, permet une adaptation parfaite à vos processus métier et une différenciation concurrentielle forte. C'est un investissement qui prend tout son sens quand votre workflow est unique.",
+        "Les critères clés à considérer : le niveau de personnalisation requis, le budget total sur 3-5 ans, l'importance stratégique du projet, et votre capacité à maintenir une solution custom.",
+        "Dans de nombreux cas, une approche hybride est pertinente : utiliser des SaaS pour les fonctions commoditisées et développer sur-mesure là où vous créez de la valeur."
+      ]
+    },
+    "ux-errors": {
+      "title": "Les 5 erreurs UX qui tuent vos conversions",
+      "excerpt": "Analyse des problèmes les plus fréquents et comment les résoudre.",
+      "category": "Design",
+      "date": "5 janvier 2025",
+      "readTime": "6 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "Une bonne UX n'est pas un luxe, c'est un levier de conversion. Voici les erreurs les plus fréquentes que nous rencontrons en audit.",
+        "Erreur n°1 : Les formulaires trop longs. Chaque champ supplémentaire réduit votre taux de conversion. Ne demandez que l'essentiel à chaque étape.",
+        "Erreur n°2 : Les CTA invisibles ou confus. Votre bouton d'action principal doit être évident et son libellé explicite sur ce qui va se passer.",
+        "Erreur n°3 : La surcharge cognitive. Trop d'options, trop de texte, trop de distractions. Simplifiez et guidez l'utilisateur vers son objectif.",
+        "Erreur n°4 : Le manque de feedback. L'utilisateur doit toujours savoir où il en est : chargement, succès, erreur. Le silence est anxiogène.",
+        "Erreur n°5 : Ignorer le mobile. Plus de la moitié du trafic est mobile. Si l'expérience n'est pas impeccable sur petit écran, vous perdez des clients."
+      ]
+    },
+    "mvp-iteration": {
+      "title": "MVP et itération : la bonne approche",
+      "excerpt": "Comment construire un produit minimum viable efficace et itérer intelligemment.",
+      "category": "Produit",
+      "date": "20 décembre 2024",
+      "readTime": "8 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "Le concept de MVP est souvent mal compris. Il ne s'agit pas de livrer un produit bâclé, mais de créer la version la plus simple qui permet de valider une hypothèse.",
+        "La clé est d'identifier le cœur de valeur de votre produit. Qu'est-ce qui le rend unique et indispensable ? C'est sur cette fonctionnalité core que doit se concentrer le MVP.",
+        "Définissez des métriques claires avant de lancer. Sans critères de succès, vous ne saurez pas interpréter les résultats et décider de la suite.",
+        "L'itération doit être rapide et basée sur les données. Analysez les comportements utilisateurs, recueillez du feedback qualitatif, et priorisez impitoyablement.",
+        "N'ayez pas peur de pivoter si les données le suggèrent. Un MVP qui échoue n'est pas un échec, c'est un apprentissage précieux qui vous rapproche du product-market fit."
+      ]
+    },
+    "core-web-vitals": {
+      "title": "Core Web Vitals : guide pratique",
+      "excerpt": "Tout comprendre sur les métriques de performance web et comment les optimiser.",
+      "category": "Performance",
+      "date": "15 décembre 2024",
+      "readTime": "10 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "Les Core Web Vitals sont devenus un critère de référencement Google. Mais au-delà du SEO, ils reflètent la qualité de l'expérience utilisateur.",
+        "LCP (Largest Contentful Paint) mesure le temps de chargement perçu. Objectif : moins de 2.5 secondes. Optimisez vos images, utilisez le lazy loading et préchargez les ressources critiques.",
+        "FID (First Input Delay) mesure la réactivité. Objectif : moins de 100ms. Réduisez le JavaScript bloquant et utilisez le code splitting.",
+        "CLS (Cumulative Layout Shift) mesure la stabilité visuelle. Objectif : moins de 0.1. Réservez l'espace pour les images et évitez les injections de contenu dynamique.",
+        "Les outils essentiels : Lighthouse pour l'audit, WebPageTest pour le diagnostic détaillé, et Chrome DevTools pour le debug. Mesurez en conditions réelles, pas seulement en local.",
+        "L'optimisation est un process continu. Intégrez les tests de performance dans votre CI/CD et surveillez les régressions."
+      ]
+    },
+    "owasp-2024": {
+      "title": "Sécurité web : OWASP Top 10 en pratique",
+      "excerpt": "Les vulnérabilités les plus courantes et comment protéger vos applications.",
+      "category": "Sécurité",
+      "date": "10 décembre 2024",
+      "readTime": "12 min",
+      "author": "Yoann Andrieux",
+      "content": [
+        "La sécurité n'est pas optionnelle. L'OWASP Top 10 recense les vulnérabilités les plus critiques que tout développeur doit connaître.",
+        "Les injections (SQL, NoSQL, LDAP) restent en tête. Utilisez toujours des requêtes paramétrées et validez rigoureusement les entrées utilisateur.",
+        "L'authentification cassée est un classique. Implémentez la 2FA, utilisez des librairies éprouvées, et ne réinventez jamais la roue sur les mots de passe.",
+        "L'exposition de données sensibles peut être fatale. Chiffrez en transit (HTTPS) et au repos, minimisez les données stockées, et auditez régulièrement vos endpoints.",
+        "Les composants vulnérables sont un risque souvent négligé. Maintenez vos dépendances à jour, utilisez des outils d'audit automatisé comme Snyk ou Dependabot.",
+        "La sécurité est l'affaire de tous. Formez vos équipes, intégrez des tests de sécurité dans votre pipeline, et faites auditer vos applications critiques par des experts."
+      ]
+    }
+  },
+  "CareersPage": {
+    "eyebrow": "Rejoignez-nous",
+    "title": "Carrières",
+    "subtitle": "Construisez le web de demain avec une équipe passionnée et exigeante.",
+    "valuesEyebrow": "Notre culture",
+    "valuesTitle": "Ce qui nous anime",
+    "values": [
+      {
+        "title": "Qualité sans compromis",
+        "description": "Nous visons l'excellence dans chaque ligne de code et chaque pixel."
+      },
+      {
+        "title": "Apprentissage continu",
+        "description": "La curiosité et le partage de connaissances sont au cœur de notre ADN."
+      },
+      {
+        "title": "Autonomie et confiance",
+        "description": "Nous faisons confiance à chacun pour prendre des initiatives et des décisions."
+      },
+      {
+        "title": "Équilibre vie pro/perso",
+        "description": "Le remote-first et la flexibilité pour que chacun donne le meilleur."
+      },
+      {
+        "title": "Impact réel",
+        "description": "Chaque projet compte, chaque contribution fait la différence."
+      },
+      {
+        "title": "Transparence totale",
+        "description": "Communication ouverte sur les objectifs, les résultats et les défis."
+      }
+    ],
+    "positionsEyebrow": "Opportunités",
+    "positionsTitle": "Postes ouverts",
+    "jobs": [
+      {
+        "slug": "dev-fullstack",
+        "title": "Développeur Fullstack Senior",
+        "type": "CDI",
+        "location": "Remote (France)",
+        "department": "Engineering"
+      },
+      {
+        "slug": "ux-designer",
+        "title": "UX/UI Designer",
+        "type": "CDI",
+        "location": "Remote (France)",
+        "department": "Design"
+      },
+      {
+        "slug": "chef-projet",
+        "title": "Chef de Projet Digital",
+        "type": "CDI",
+        "location": "Remote (France)",
+        "department": "Delivery"
+      }
+    ],
+    "viewJob": "Voir le poste",
+    "noPositions": "Aucun poste ouvert actuellement. N'hésitez pas à nous envoyer une candidature spontanée.",
+    "spontaneousTitle": "Vous ne trouvez pas votre poste ?",
+    "spontaneousSubtitle": "Nous sommes toujours à la recherche de talents exceptionnels. Envoyez-nous une candidature spontanée.",
+    "spontaneousButton": "Candidature spontanée"
+  },
+  "JobPostings": {
+    "applyButton": "Postuler maintenant",
+    "responsibilitiesEyebrow": "Vos missions",
+    "responsibilitiesTitle": "Ce que vous ferez",
+    "requirementsEyebrow": "Profil recherché",
+    "requirementsTitle": "Ce que nous cherchons",
+    "benefitsEyebrow": "Avantages",
+    "benefitsTitle": "Ce que nous offrons",
+    "ctaTitle": "Intéressé par ce poste ?",
+    "ctaSubtitle": "Envoyez-nous votre CV et parlons de votre parcours.",
+    "dev-fullstack": {
+      "title": "Développeur Fullstack Senior",
+      "type": "CDI",
+      "location": "Remote (France)",
+      "department": "Engineering",
+      "summary": "Rejoignez notre équipe technique pour concevoir et développer des applications web modernes pour nos clients.",
+      "responsibilities": [
+        "Développer des applications web avec Next.js, React et Node.js",
+        "Participer aux choix d'architecture et aux revues de code",
+        "Collaborer étroitement avec les designers et product managers",
+        "Mentorer les développeurs juniors de l'équipe",
+        "Contribuer à l'amélioration continue de nos pratiques"
+      ],
+      "requirements": [
+        "5+ ans d'expérience en développement web",
+        "Maîtrise de TypeScript, React et Node.js",
+        "Expérience avec les bases de données SQL et NoSQL",
+        "Sensibilité à l'UX et à la qualité du code",
+        "Excellent niveau de communication en français"
+      ],
+      "benefits": [
+        "Remote-first avec flexibilité totale",
+        "Équipement premium (MacBook, écran, etc.)",
+        "Formation continue et conférences",
+        "Projets variés et challengeants",
+        "Équipe bienveillante et exigeante"
+      ]
+    },
+    "ux-designer": {
+      "title": "UX/UI Designer",
+      "type": "CDI",
+      "location": "Remote (France)",
+      "department": "Design",
+      "summary": "Créez des expériences utilisateur exceptionnelles pour des projets web et mobile variés.",
+      "responsibilities": [
+        "Conduire des recherches utilisateur et définir les personas",
+        "Concevoir des wireframes, prototypes et maquettes haute-fidélité",
+        "Créer et maintenir des design systems cohérents",
+        "Collaborer avec les développeurs pour un handoff parfait",
+        "Participer aux tests utilisateurs et itérer"
+      ],
+      "requirements": [
+        "3+ ans d'expérience en UX/UI design",
+        "Maîtrise de Figma et des outils de prototypage",
+        "Portfolio démontrant une approche centrée utilisateur",
+        "Connaissance des contraintes techniques web et mobile",
+        "Curiosité et veille active sur les tendances design"
+      ],
+      "benefits": [
+        "Remote-first avec flexibilité totale",
+        "Licence Figma et outils premium",
+        "Accès à des ressources design (cours, livres, conférences)",
+        "Projets variés avec forte autonomie",
+        "Collaboration étroite avec des devs passionnés"
+      ]
+    },
+    "chef-projet": {
+      "title": "Chef de Projet Digital",
+      "type": "CDI",
+      "location": "Remote (France)",
+      "department": "Delivery",
+      "summary": "Pilotez des projets web et mobile de A à Z, de la phase de cadrage à la livraison.",
+      "responsibilities": [
+        "Cadrer les projets et définir les roadmaps",
+        "Coordonner les équipes design et développement",
+        "Gérer la relation client et les attentes",
+        "Suivre les budgets, plannings et livrables",
+        "Garantir la qualité des livrables"
+      ],
+      "requirements": [
+        "3+ ans d'expérience en gestion de projet digital",
+        "Excellente compréhension des métiers du web",
+        "Maîtrise des méthodologies Agile (Scrum, Kanban)",
+        "Capacité à gérer plusieurs projets en parallèle",
+        "Leadership naturel et excellent relationnel"
+      ],
+      "benefits": [
+        "Remote-first avec flexibilité totale",
+        "Outils de productivité premium",
+        "Projets variés et clients stimulants",
+        "Évolution vers des rôles de direction",
+        "Culture d'entreprise saine et transparente"
+      ]
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "Informations légales",
+    "title": "Mentions légales",
+    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "sections": [
+      {
+        "title": "Éditeur du site",
+        "content": "Le site yodev.fr est édité par Yodev, studio digital basé en France. Pour toute question, vous pouvez nous contacter via notre page contact."
+      },
+      {
+        "title": "Hébergement",
+        "content": "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. L'hébergeur assure la continuité de service et la sécurité des données."
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "content": "L'ensemble des contenus présents sur ce site (textes, images, logos, code) sont protégés par le droit d'auteur. Toute reproduction sans autorisation préalable est interdite."
+      },
+      {
+        "title": "Responsabilité",
+        "content": "Yodev s'efforce de fournir des informations exactes et à jour. Toutefois, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité des informations diffusées sur ce site."
+      },
+      {
+        "title": "Liens externes",
+        "content": "Ce site peut contenir des liens vers d'autres sites. Yodev n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu."
+      }
+    ]
+  },
+  "PrivacyPage": {
+    "eyebrow": "Protection des données",
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "backToLegal": "Retour aux mentions légales",
+    "sections": [
+      {
+        "title": "Collecte des données",
+        "content": "Nous collectons uniquement les données nécessaires au bon fonctionnement de nos services : nom, email, et informations de projet lors d'une prise de contact."
+      },
+      {
+        "title": "Utilisation des données",
+        "content": "Vos données sont utilisées exclusivement pour répondre à vos demandes, vous envoyer des informations pertinentes si vous y avez consenti, et améliorer nos services."
+      },
+      {
+        "title": "Protection des données",
+        "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, modification ou divulgation."
+      },
+      {
+        "title": "Cookies",
+        "content": "Ce site utilise des cookies techniques essentiels au fonctionnement et des cookies analytiques pour comprendre l'utilisation du site. Vous pouvez les désactiver dans votre navigateur."
+      },
+      {
+        "title": "Vos droits",
+        "content": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Contactez-nous pour exercer ces droits."
+      },
+      {
+        "title": "Contact",
+        "content": "Pour toute question concernant notre politique de confidentialité ou vos données personnelles, vous pouvez nous contacter via notre formulaire de contact."
+      }
+    ]
   }
 }
