@@ -10,7 +10,9 @@
     "offers": "Offres",
     "method": "Méthode",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog",
+    "careers": "Carrières"
   },
   "Styles": {
     "pulse": "Pulse",
@@ -18,12 +20,30 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Studio freelance basé en France, dédié aux marques ambitieuses.",
-    "contact": "hello@yodev.studio",
-    "links": "Navigation",
-    "socials": "Réseaux",
-    "rights": "© 2025 Yodev. Tous droits réservés.",
-    "legal": "Mentions légales · Politique de confidentialité"
+    "subtitle": "Studio digital basé en France, spécialisé dans la création de sites web et d'applications mobiles pour les marques ambitieuses.",
+    "company": "Entreprise",
+    "resourcesTitle": "Ressources",
+    "resources": {
+      "offers": "Tarifs",
+      "legal": "Mentions légales",
+      "privacy": "Confidentialité"
+    },
+    "services": {
+      "web": "Sites Web",
+      "mobile": "Apps Mobiles",
+      "saas": "SaaS",
+      "ecommerce": "E-commerce",
+      "uxDesign": "UX/UI Design",
+      "consulting": "Conseil"
+    },
+    "newsletter": {
+      "title": "Restez informé",
+      "placeholder": "Votre email",
+      "submit": "S'inscrire",
+      "success": "Merci ! Vous êtes inscrit à notre newsletter."
+    },
+    "socials": "Suivez-nous",
+    "rights": "© 2025 Yodev. Tous droits réservés."
   },
   "Home": {
     "hero": {

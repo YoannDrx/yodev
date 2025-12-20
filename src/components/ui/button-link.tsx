@@ -5,24 +5,30 @@ import {
   type ButtonVariant,
 } from "./button-styles";
 
-type ButtonLinkProps = {
-  href: React.ComponentProps<typeof Link>["href"];
-  children: React.ReactNode;
+type ButtonLinkProps = React.ComponentProps<typeof Link> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
-  className?: string;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
 };
 
 export function ButtonLink({
-  href,
-  children,
-  variant,
-  size,
+  variant = "primary",
+  size = "md",
   className,
+  leftIcon,
+  rightIcon,
+  children,
+  ...props
 }: ButtonLinkProps) {
   return (
-    <Link href={href} className={buttonClassName({ variant, size, className })}>
+    <Link
+      className={buttonClassName({ variant, size, className })}
+      {...props}
+    >
+      {leftIcon && <span className="shrink-0">{leftIcon}</span>}
       {children}
+      {rightIcon && <span className="shrink-0">{rightIcon}</span>}
     </Link>
   );
 }

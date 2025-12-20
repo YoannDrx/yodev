@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope, Space_Grotesk } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { getLocale } from "next-intl/server";
-import { StyleProvider } from "@/components/providers/style-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space",
-  subsets: ["latin"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
   subsets: ["latin"],
 });
 
@@ -21,9 +15,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Yodev — Studio digital 360",
+  title: "Yodev — Agence Digitale 360°",
   description:
-    "Yodev conçoit des sites web, apps mobiles et identités digitales orientés conversion.",
+    "Yodev conçoit et déploie vos solutions digitales sur mesure. Du concept à la mise en production, nous transformons vos idées en applications performantes.",
 };
 
 export default async function RootLayout({
@@ -34,18 +28,11 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      data-theme="light"
-      data-style="pulse"
-    >
+    <html lang={locale} suppressHydrationWarning data-theme="light">
       <body
-        className={`${spaceGrotesk.variable} ${fraunces.variable} ${manrope.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${manrope.variable} antialiased`}
       >
-        <ThemeProvider>
-          <StyleProvider>{children}</StyleProvider>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

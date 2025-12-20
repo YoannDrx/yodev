@@ -10,7 +10,9 @@
     "offers": "Offers",
     "method": "Method",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog",
+    "careers": "Careers"
   },
   "Styles": {
     "pulse": "Pulse",
@@ -18,12 +20,30 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Freelance studio based in France, built for ambitious brands.",
-    "contact": "hello@yodev.studio",
-    "links": "Navigation",
-    "socials": "Socials",
-    "rights": "© 2025 Yodev. All rights reserved.",
-    "legal": "Legal notice · Privacy policy"
+    "subtitle": "Digital studio based in France, specializing in websites and mobile apps for ambitious brands.",
+    "company": "Company",
+    "resourcesTitle": "Resources",
+    "resources": {
+      "offers": "Pricing",
+      "legal": "Legal Notice",
+      "privacy": "Privacy"
+    },
+    "services": {
+      "web": "Websites",
+      "mobile": "Mobile Apps",
+      "saas": "SaaS",
+      "ecommerce": "E-commerce",
+      "uxDesign": "UX/UI Design",
+      "consulting": "Consulting"
+    },
+    "newsletter": {
+      "title": "Stay updated",
+      "placeholder": "Your email",
+      "submit": "Subscribe",
+      "success": "Thanks! You're now subscribed to our newsletter."
+    },
+    "socials": "Follow us",
+    "rights": "© 2025 Yodev. All rights reserved."
   },
   "Home": {
     "hero": {

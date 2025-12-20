@@ -11,7 +11,8 @@ export function LanguageSwitch({ className }: { className?: string }) {
 
   return (
     <Link
-      href={pathname}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      href={pathname as any}
       locale={nextLocale}
       className={cn(
         "inline-flex h-9 items-center justify-center rounded-full border border-border bg-surface/80 px-3 text-xs font-medium text-text transition hover:border-accent/40",
