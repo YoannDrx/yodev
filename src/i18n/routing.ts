@@ -42,6 +42,14 @@ export const routing = defineRouting({
       fr: "/services/maintenance",
       en: "/services/support",
     },
+    "/ai": {
+      fr: "/ia",
+      en: "/ai",
+    },
+    "/expertise": {
+      fr: "/expertises",
+      en: "/expertise",
+    },
     "/work": {
       fr: "/realisations",
       en: "/work",
@@ -61,6 +69,10 @@ export const routing = defineRouting({
     "/about": {
       fr: "/a-propos",
       en: "/about",
+    },
+    "/team": {
+      fr: "/notre-equipe",
+      en: "/team",
     },
     "/contact": {
       fr: "/contact",

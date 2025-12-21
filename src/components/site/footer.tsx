@@ -13,7 +13,6 @@ import {
   Github,
   Mail,
   MapPin,
-  Phone,
   ArrowRight,
   Send
 } from "lucide-react";
@@ -28,7 +27,7 @@ const serviceLinks = [
 ] as const;
 
 const companyLinks = [
-  { href: "/about", key: "about" },
+  { href: "/team", key: "team" },
   { href: "/method", key: "method" },
   { href: "/work", key: "work" },
   { href: "/blog", key: "blog" },
@@ -51,6 +50,12 @@ const socialLinks = [
 export function SiteFooter() {
   const t = useTranslations("Footer");
   const nav = useTranslations("Nav");
+  const offices = t.raw("offices") as Array<{
+    city: string;
+    address: string;
+    zip: string;
+    country: string;
+  }>;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -92,23 +97,24 @@ export function SiteFooter() {
               {/* Contact info */}
               <div className="space-y-3">
                 <a
-                  href="mailto:contact@yodev.fr"
+                  href={`mailto:${t("email")}`}
                   className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-primary"
                 >
                   <Mail className="h-4 w-4" />
-                  contact@yodev.fr
+                  {t("email")}
                 </a>
-                <a
-                  href="tel:+33123456789"
-                  className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-primary"
-                >
-                  <Phone className="h-4 w-4" />
-                  +33 1 23 45 67 89
-                </a>
-                <div className="flex items-center gap-3 text-sm text-muted">
-                  <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span>Paris, France</span>
-                </div>
+                {offices.map((office) => (
+                  <div key={office.city} className="flex items-start gap-3 text-sm text-muted">
+                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-text">{office.city}</p>
+                      <p>{office.address}</p>
+                      <p>
+                        {office.zip}, {office.country}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Newsletter */}
@@ -119,6 +125,7 @@ export function SiteFooter() {
                 ) : (
                   <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                     <Input
+                      id="newsletter-email"
                       type="email"
                       placeholder={t("newsletter.placeholder")}
                       value={email}

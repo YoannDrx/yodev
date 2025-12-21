@@ -11,9 +11,9 @@ import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 
 // Articles disponibles
 const BLOG_POSTS = [
-  "architecture-2025",
-  "saas-vs-custom",
-  "ux-errors",
+  "agrement-cii",
+  "waf-efficacite",
+  "integrite-logs-continu",
   "mvp-iteration",
   "core-web-vitals",
   "owasp-2024",

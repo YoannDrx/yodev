@@ -1,22 +1,25 @@
 {
   "Common": {
-    "tagline": "360 digital studio",
-    "cta": "Book a call",
+    "tagline": "Web, mobile & AI agency",
+    "cta": "Start the conversation",
     "menu": "Menu",
     "available": "Available",
-    "readyToStart": "Ready to start your project",
+    "readyToStart": "Fast start, dedicated team",
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
   },
   "Nav": {
     "services": "Services",
+    "ai": "AI",
+    "expertise": "Expertise",
     "work": "Work",
     "offers": "Offers",
     "method": "Method",
     "about": "About",
+    "team": "Team",
     "contact": "Contact",
     "blog": "Blog",
-    "careers": "Careers"
+    "careers": "Jobs"
   },
   "Styles": {
     "pulse": "Pulse",
@@ -24,21 +27,21 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Digital studio based in France, specializing in websites and mobile apps for ambitious brands.",
+    "subtitle": "French web, mobile & AI agency building digital products that accelerate growth.",
     "company": "Company",
     "resourcesTitle": "Resources",
     "resources": {
-      "offers": "Pricing",
+      "offers": "Offers",
       "legal": "Legal Notice",
       "privacy": "Privacy"
     },
     "services": {
-      "web": "Websites",
-      "mobile": "Mobile Apps",
+      "web": "Web platforms",
+      "mobile": "Mobile apps",
       "saas": "SaaS",
       "ecommerce": "E-commerce",
       "uxDesign": "UX/UI Design",
-      "consulting": "Consulting"
+      "consulting": "Product consulting"
     },
     "newsletter": {
       "title": "Stay updated",
@@ -46,136 +49,314 @@
       "submit": "Subscribe",
       "success": "Thanks! You're now subscribed to our newsletter."
     },
+    "email": "hello@yodev.fr",
+    "offices": [
+      {
+        "city": "Paris",
+        "address": "2 rue Neuve Saint-Pierre",
+        "zip": "75004",
+        "country": "France"
+      },
+      {
+        "city": "Nantes",
+        "address": "10 rue Voltaire",
+        "zip": "44000",
+        "country": "France"
+      },
+      {
+        "city": "Lyon",
+        "address": "3 rue de la République",
+        "zip": "69001",
+        "country": "France"
+      }
+    ],
     "socials": "Follow us",
     "rights": "© 2025 Yodev. All rights reserved."
   },
   "Home": {
     "hero": {
-      "eyebrow": "360 digital studio",
-      "title": "Websites and mobile apps that turn visitors into clients.",
-      "subtitle": "From art direction to launch, Yodev crafts fast, consistent and measurable experiences.",
-      "primary": "Book a call",
+      "eyebrow": "WEB, MOBILE & AI DEVELOPMENT AGENCY",
+      "title": "Your web, mobile, AI team",
+      "subtitle": "Our team, drawn from the top 1% of tech profiles, designs and evolves your applications at competitive costs, with no middlemen, to accelerate your business.",
+      "primary": "Let's talk about your project",
       "secondary": "View case studies",
-      "chips": ["Web & landing pages", "iOS/Android apps", "Brand & content", "SEO & performance"]
-      ,
-      "styleLab": {
-        "eyebrow": "Style lab",
-        "title": "Switch the mood in one click.",
-        "subtitle": "Three art directions, each in light and dark."
-      },
+      "chips": [
+        "Web & platforms",
+        "Mobile apps",
+        "AI & data",
+        "Business software",
+        "UX/UI design",
+        "Cybersecurity"
+      ],
       "signals": {
-        "studioEyebrow": "Studio 360",
-        "studioBody": "Web · Mobile · Art direction · SEO · Content",
-        "outputEyebrow": "Output",
-        "outputBody": "Short sprints, clear deliverables, measurable impact."
+        "studioEyebrow": "Integrated team",
+        "studioBody": "Senior engineers in web, mobile, AI",
+        "outputEyebrow": "Delivery",
+        "outputBody": "Short sprints, clear deliverables, full transparency."
       }
     },
-    "proof": {
-      "title": "An agile studio, tangible outcomes",
-      "subtitle": "Clear process, sharp execution, and a website built for business goals.",
-      "items": [
+    "story": {
+      "eyebrow": "Yodev",
+      "title": "Driven by tough tech challenges",
+      "subtitle": "We aim for excellence for every client. We work in the most pragmatic way possible, with full transparency alongside you and your teams throughout delivery.",
+      "body": [
+        "We regularly work on projects with high technical and commercial stakes. Whether for startups or large groups, we adapt our methods and take on every challenge."
+      ],
+      "highlights": [
         {
-          "title": "Single point of contact",
-          "description": "Smooth delivery, fast decisions, and a real partner by your side."
+          "title": "Top 1% talent",
+          "description": "Hand-picked profiles from top schools and leading companies."
         },
         {
-          "title": "Design + code together",
-          "description": "Aligned UI, clean integration, and short iterations."
+          "title": "No middlemen",
+          "description": "You work directly with the engineers doing the work."
         },
         {
-          "title": "Performance & SEO baked in",
-          "description": "Speed, accessibility, content structure and tracking ready."
+          "title": "Competitive costs",
+          "description": "Senior team, controlled budget, measurable impact."
         }
       ]
     },
-    "services": {
-      "title": "What Yodev builds for you",
-      "subtitle": "A 360 studio to move your brand forward, from the first wireframe to launch.",
+    "founders": {
+      "eyebrow": "Leadership",
+      "title": "Founders",
       "items": [
         {
-          "title": "Conversion-first websites",
-          "description": "Landing pages, marketing sites, light e-commerce with clear paths to action.",
-          "bullets": ["UX & flows", "Premium UI", "Technical SEO", "Analytics"]
+          "name": "Jean",
+          "role": "CEO",
+          "bio": "Jean worked at IBM. He graduated from École polytechnique and EPFL."
         },
         {
-          "title": "iOS/Android mobile apps",
-          "description": "MVPs, redesigns or new features delivered fast on a solid base.",
-          "bullets": ["React Native", "Design system", "API & back office", "QA & release"]
+          "name": "Arnaud",
+          "role": "CTO",
+          "bio": "Arnaud worked at Facebook and Microsoft. He graduated top of his class from École polytechnique and from ENS."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What our clients say",
+      "items": [
+        {
+          "quote": "Thanks to Yodev, what used to take over an hour now takes 5 minutes.",
+          "author": "Patrick Lamarque",
+          "role": "Head of community department",
+          "company": "Fédération Française de Tir"
         },
         {
-          "title": "Digital identity & acquisition",
-          "description": "Art direction, copy and optimization for a brand that converts.",
-          "bullets": ["Art direction", "Brand kit", "SEO content", "Conversion rate"]
+          "quote": "Yodev played a decisive role in the digital transformation of Groupe Delisle.",
+          "author": "Ludovic Plana",
+          "role": "IT project manager",
+          "company": "Groupe Delisle"
+        },
+        {
+          "quote": "Generating 400,000 product sheets per year with AI was the challenge Showroomprivé solved with Yodev.",
+          "author": "Marie Furon",
+          "role": "Director of innovation and operational excellence",
+          "company": "Showroomprivé"
+        },
+        {
+          "quote": "Yodev has strong technical expertise; the team met deadlines and stayed flexible.",
+          "author": "Quentin de Pélichy",
+          "role": "CEO",
+          "company": "Turboself"
+        },
+        {
+          "quote": "In just 3 months, we launched a fully functional product with Yodev.",
+          "author": "Hugo des Longchamps",
+          "role": "CTO",
+          "company": "Paladin"
+        },
+        {
+          "quote": "Yodev was the ideal partner to go from idea to product in a few months. Their agility and transparency were decisive for our launch.",
+          "author": "Clémence Luc",
+          "role": "Co-founder & CEO",
+          "company": "10%"
         }
       ]
     },
     "cases": {
       "title": "Case studies",
-      "subtitle": "Three collaborations where design and tech power growth.",
+      "subtitle": "Concrete projects where tech drives growth.",
       "items": [
         {
-          "title": "Studio Maree",
-          "type": "Marketing site",
-          "summary": "Premium website redesign for a consulting firm.",
-          "result": "Clearer positioning, smoother lead capture."
+          "title": "Showroomprivé",
+          "type": "Generative AI",
+          "summary": "Automated generation of 400,000 product sheets per year.",
+          "result": "Content industrialized at scale."
         },
         {
-          "title": "Nova Care",
-          "type": "Mobile app",
-          "summary": "Wellness MVP with tailored onboarding flows.",
-          "result": "Frictionless experience, scalable foundation."
+          "title": "Turboself",
+          "type": "Predictive systems",
+          "summary": "Forecasting school canteen attendance.",
+          "result": "Operations decisions made reliable."
         },
         {
-          "title": "Orbit Atelier",
-          "type": "Brand + SEO",
-          "summary": "Digital identity and editorial strategy for a creative studio.",
-          "result": "Stronger narrative, organic visibility back on track."
+          "title": "Paladin",
+          "type": "B2B SaaS",
+          "summary": "Launched a business software product in 3 months.",
+          "result": "Operational MVP, fast adoption."
+        }
+      ]
+    },
+    "expertise": {
+      "title": "Our expertise",
+      "subtitle": "A multidisciplinary team covering the full product cycle.",
+      "items": [
+        {
+          "title": "Artificial intelligence",
+          "description": "Custom models, generative AI and production deployment."
+        },
+        {
+          "title": "Web platforms",
+          "description": "Marketing sites, business platforms and high-performance web apps."
+        },
+        {
+          "title": "Business software",
+          "description": "Robust internal tools tailored to your teams."
+        },
+        {
+          "title": "Mobile applications",
+          "description": "Reliable iOS/Android apps built for real usage."
+        },
+        {
+          "title": "E-commerce",
+          "description": "Optimized purchase flows and solid integrations."
+        },
+        {
+          "title": "UX/UI Design",
+          "description": "Clear interfaces, design systems and testing."
+        },
+        {
+          "title": "Cybersecurity",
+          "description": "Audit, hardening and security by design."
+        }
+      ]
+    },
+    "team": {
+      "eyebrow": "Team",
+      "title": "The Yodevers",
+      "subtitle": "A team of 30+ engineers and consultants to ship fast and well.",
+      "photoLabel": "Team photo",
+      "photoHint": "A team photo will be added here.",
+      "schoolsTitle": "Backgrounds & schools",
+      "schools": [
+        "École polytechnique",
+        "ENS",
+        "HEC",
+        "CentraleSupélec",
+        "ENSIMAG",
+        "Télécom Paris",
+        "Mines ParisTech",
+        "INSA",
+        "emlyon",
+        "42"
+      ],
+      "cta": "Meet the team"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Insights, field notes and product/AI analysis.",
+      "cta": "All articles"
+    },
+    "jobs": {
+      "title": "Jobs",
+      "subtitle": "Join a demanding and supportive team.",
+      "cta": "View jobs"
+    },
+    "press": {
+      "eyebrow": "Press",
+      "title": "In the press",
+      "outlets": ["Le Parisien", "BFM Business", "JDN", "Challenges", "Le Point"]
+    },
+    "locations": {
+      "eyebrow": "Offices",
+      "title": "Our offices",
+      "items": [
+        {
+          "city": "Paris",
+          "address": "2 rue Neuve Saint-Pierre",
+          "zip": "75004",
+          "country": "France"
+        },
+        {
+          "city": "Nantes",
+          "address": "10 rue Voltaire",
+          "zip": "44000",
+          "country": "France"
+        },
+        {
+          "city": "Lyon",
+          "address": "3 rue de la République",
+          "zip": "69001",
+          "country": "France"
+        }
+      ]
+    },
+    "services": {
+      "title": "What Yodev builds for you",
+      "subtitle": "Web, mobile and AI expertise to ship useful, scalable products.",
+      "items": [
+        {
+          "title": "Web platforms",
+          "description": "Marketing sites, business platforms and fast web applications.",
+          "bullets": ["Next.js / React", "SEO & performance", "Design system", "Analytics & tracking"]
+        },
+        {
+          "title": "Mobile applications",
+          "description": "Reliable iOS/Android apps built for usage and growth.",
+          "bullets": ["React Native / Flutter", "Mobile-first UX", "API & back office", "Store release"]
+        },
+        {
+          "title": "AI & data solutions",
+          "description": "Custom models, assistants and automations connected to your data.",
+          "bullets": ["Generative AI & RAG", "Predictive & scoring", "MLOps & deployment", "Security & compliance"]
         }
       ]
     },
     "method": {
       "title": "The Yodev method",
-      "subtitle": "A simple, transparent and iterative process to ship fast and right.",
+      "subtitle": "Clear framing, fast execution, continuous iterations.",
       "steps": [
         {
-          "title": "Strategy & framing",
-          "description": "Goals, audience, core message and structure."
+          "title": "Framing & goals",
+          "description": "KPIs, users, constraints, delivery plan."
         },
         {
-          "title": "Design & art direction",
-          "description": "Wireframes, identity, UI kit, prototypes."
+          "title": "Design & architecture",
+          "description": "UX/UI, tech choices, iterative roadmap."
         },
         {
-          "title": "Development & integration",
-          "description": "Clean code, performance, SEO and analytics."
+          "title": "Build & integration",
+          "description": "Development, QA, security, performance."
         },
         {
-          "title": "Launch & iterations",
-          "description": "Go-live, monitoring and continuous improvement."
+          "title": "Deployment & evolution",
+          "description": "Production, monitoring, improvements."
         }
       ]
     },
     "offers": {
       "title": "Packaged offers",
-      "subtitle": "Clear packages to start fast, with custom work when needed.",
+      "subtitle": "Clear formats to start fast, adjustable to your needs.",
       "items": [
         {
-          "name": "Starter",
-          "description": "1-5 page landing or showcase site to generate leads.",
-          "price": "From €1,800",
-          "bullets": ["Light DA", "Responsive build", "Basic SEO", "Launch"]
+          "name": "Diagnostic",
+          "description": "Technical/data audit and an actionable roadmap.",
+          "price": "From €2,500",
+          "bullets": ["Framing workshops", "Stack & data audit", "Quick wins", "Prioritized roadmap"]
         },
         {
-          "name": "Growth",
-          "description": "Full website with structured content and conversion focus.",
-          "price": "From €4,500",
-          "bullets": ["Design system", "On-page SEO", "Tracking", "Editing guide"]
+          "name": "Build",
+          "description": "Web/mobile/AI MVP shipped in short sprints.",
+          "price": "From €8,000",
+          "bullets": ["Full UX/UI", "Full-stack dev", "Production launch", "Docs & handover"]
         },
         {
-          "name": "Product",
-          "description": "Web or mobile MVP with a clear roadmap.",
+          "name": "Scale",
+          "description": "Dedicated team to accelerate your evolution.",
           "price": "Custom quote",
-          "bullets": ["MVP framing", "Full UX/UI", "Back office", "Support"]
+          "bullets": ["Team extension", "Continuous improvements", "SLA & maintenance", "ROI tracking"]
         }
       ]
     },
@@ -184,60 +365,262 @@
       "eyebrow": "Questions",
       "items": [
         {
-          "question": "What are the typical timelines?",
-          "answer": "A marketing site usually takes 3 to 6 weeks depending on content."
+          "question": "What are your typical timelines?",
+          "answer": "An MVP usually ships in 6 to 10 weeks depending on scope."
         },
         {
-          "question": "Do I keep ownership of the site?",
-          "answer": "Yes, you get the full codebase, content and access."
+          "question": "Do you work fixed-price or time & materials?",
+          "answer": "Both, depending on uncertainty and your preference."
+        },
+        {
+          "question": "Can you integrate AI into an existing stack?",
+          "answer": "Yes, we connect AI to your data and tools."
+        },
+        {
+          "question": "Who owns the code?",
+          "answer": "You own the full codebase and deliverables."
         },
         {
           "question": "Do you provide maintenance?",
-          "answer": "Yes, via monthly support or on-demand fixes."
-        },
-        {
-          "question": "Is SEO included?",
-          "answer": "Technical SEO is included, editorial work is optional."
-        },
-        {
-          "question": "Do you work with partners?",
-          "answer": "Yes, depending on the project: photo, video, copywriting, branding."
+          "answer": "Yes, through ongoing support or on-demand interventions."
         }
       ]
     },
     "cta": {
-      "title": "Ready to launch your next project?",
-      "subtitle": "Let us map the best strategy for your brand.",
-      "button": "Let us talk"
+      "title": "Ready to start your project?",
+      "subtitle": "Let us frame the right plan and move fast.",
+      "button": "Talk about your project"
     }
+  },
+  "AiPage": {
+    "eyebrow": "Yodev Data & AI Lab",
+    "title": "We build custom AI solutions in record time",
+    "subtitle": "Our AI engineers support you in designing, developing and deploying high-impact AI models and applications.",
+    "cta": "Let's talk about your project",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Our services",
+    "services": [
+      {
+        "title": "Data & AI audit",
+        "description": "We analyze your processes and identify concrete opportunities to integrate AI and turn data into strategic leverage."
+      },
+      {
+        "title": "AI applications",
+        "description": "Design and development of custom solutions integrated into your stack and aligned with operational goals."
+      },
+      {
+        "title": "AI models",
+        "description": "Model selection, training and fine-tuning with state-of-the-art techniques for measurable performance."
+      }
+    ],
+    "teamEyebrow": "Team",
+    "teamTitle": "A dedicated AI team",
+    "teamBody": "We are a team of 30 engineers and consultants passionate about AI and the practical application of research advances. Our mission: make AI simple and useful for our clients.",
+    "foundersEyebrow": "Founders",
+    "foundersTitle": "AI leadership",
+    "founders": [
+      {
+        "name": "Pablo",
+        "role": "Partner & Head of AI",
+        "bio": "HEC graduate, Pablo leads Yodev's AI growth and advises clients on strategic aspects of their projects. He previously taught mathematics in higher education."
+      },
+      {
+        "name": "Benjamin",
+        "role": "Partner & CTO AI",
+        "bio": "École polytechnique and Corps des Mines engineer, Benjamin leads the technical team and advises on the best-fit technologies."
+      }
+    ],
+    "expertiseEyebrow": "Expertise",
+    "expertiseTitle": "Our AI expertise",
+    "expertise": {
+      "items": [
+        {
+          "title": "Generative AI",
+          "description": "We integrate state-of-the-art LLMs (GPT-5, Gemini 2.5 Pro, Claude 4) to automate writing, extract knowledge and build tailored assistants."
+        },
+        {
+          "title": "Predictive systems",
+          "description": "Advanced predictive models using time series, neural networks and clustering."
+        },
+        {
+          "title": "Vision",
+          "description": "Custom Computer Vision and OCR for image and video analysis with high accuracy."
+        },
+        {
+          "title": "Data infrastructure",
+          "description": "Reliable architectures to collect, process, store and serve data efficiently."
+        }
+      ]
+    },
+    "casesEyebrow": "Work",
+    "casesTitle": "Selected projects",
+    "cases": [
+      {
+        "name": "Showroomprivé",
+        "description": "End-to-end solution for automatic product sheet generation using multimodal LLMs."
+      },
+      {
+        "name": "Projectiv",
+        "description": "Cinema attendance forecasting app developed in-house and sold."
+      },
+      {
+        "name": "Turboself",
+        "description": "School canteen attendance prediction algorithm using historical and contextual data."
+      },
+      {
+        "name": "Oulala Deals",
+        "description": "Facebook campaign optimization algorithm to maximize revenue."
+      },
+      {
+        "name": "Delia Strat / Ministry of Armed Forces",
+        "description": "Automatic generation of relational graphs from military documents using LLMs."
+      },
+      {
+        "name": "Okantis",
+        "description": "Intelligent data warehouse integrating LLMs for extraction, search and analytics in healthcare."
+      }
+    ],
+    "reasonsEyebrow": "Why us",
+    "reasonsTitle": "Why work with Yodev?",
+    "reasons": [
+      "30 Data & AI experts from top engineering schools.",
+      "50+ AI applications and models in production.",
+      "360° product support (design, development, deployment).",
+      "Continuous tech watch for state-of-the-art solutions."
+    ],
+    "ctaEyebrow": "Your project",
+    "ctaTitle": "Have an AI project?",
+    "ctaSubtitle": "We help you move from idea to production, fast and clean.",
+    "ctaButton": "Start the conversation"
+  },
+  "ExpertisePage": {
+    "title": "Expertise",
+    "subtitle": "All the skills to build, launch and scale your products.",
+    "eyebrow": "Know-how",
+    "sectionTitle": "Our domains",
+    "sectionSubtitle": "From product to infra, from design to AI.",
+    "categories": [
+      {
+        "title": "Custom development",
+        "items": [
+          "Mobile applications",
+          "Custom business software",
+          "E-commerce sites",
+          "SaaS applications"
+        ]
+      },
+      {
+        "title": "Data & AI",
+        "items": [
+          "Generative AI",
+          "Computer Vision",
+          "Predictive systems",
+          "Data Engineering"
+        ]
+      },
+      {
+        "title": "Technical expertise",
+        "items": [
+          "React / React Native",
+          "Node.js / TypeScript",
+          "Angular",
+          "Python",
+          "PHP",
+          "Flutter",
+          ".NET",
+          "Native mobile development"
+        ]
+      },
+      {
+        "title": "Product strategy",
+        "items": [
+          "Product Discovery",
+          "UX Research",
+          "UX/UI Design"
+        ]
+      },
+      {
+        "title": "Advisory & transformation",
+        "items": [
+          "Cloud & DevOps",
+          "Cybersecurity",
+          "Digital transformation"
+        ]
+      }
+    ],
+    "ctaEyebrow": "Contact",
+    "ctaTitle": "Have a specific need?",
+    "ctaSubtitle": "Let's talk and frame the best approach.",
+    "ctaButton": "Contact us"
+  },
+  "TeamPage": {
+    "title": "Team",
+    "subtitle": "30+ engineers and consultants to ship fast and without middlemen.",
+    "valuesEyebrow": "What sets us apart",
+    "valuesTitle": "A senior, available and committed team",
+    "values": [
+      {
+        "title": "Pragmatic excellence",
+        "description": "Always aim for impact without unnecessary complexity."
+      },
+      {
+        "title": "Full transparency",
+        "description": "Decisions, budget, timeline: everything is clear."
+      },
+      {
+        "title": "Fast delivery",
+        "description": "Short sprints, testing, continuous production."
+      },
+      {
+        "title": "Product culture",
+        "description": "We challenge, prioritize and measure."
+      },
+      {
+        "title": "AI & data expertise",
+        "description": "Profiles that move from proof to production."
+      },
+      {
+        "title": "Human first",
+        "description": "Available team, simple communication."
+      }
+    ],
+    "foundersEyebrow": "Leadership",
+    "foundersTitle": "Founders",
+    "schoolsEyebrow": "Backgrounds",
+    "schoolsTitle": "Demanding and complementary backgrounds",
+    "ctaEyebrow": "Hiring",
+    "ctaTitle": "Want to join us?",
+    "ctaSubtitle": "See open roles or send a spontaneous application.",
+    "ctaButton": "View jobs"
   },
   "ServicesPage": {
     "title": "Services",
-    "subtitle": "Modular services designed to support growth."
+    "subtitle": "Web, mobile and AI expertise to build useful products."
   },
   "WorkPage": {
     "title": "Work",
-    "subtitle": "Real projects where design meets product."
+    "subtitle": "Concrete projects where tech drives growth."
   },
   "OffersPage": {
     "title": "Offers",
-    "subtitle": "Three packages to frame budget and accelerate launch."
+    "subtitle": "Three formats to frame scope and accelerate delivery."
   },
   "MethodPage": {
     "title": "Method",
-    "subtitle": "A simple, transparent process to ship with confidence."
+    "subtitle": "A clear process to ship fast and with confidence."
   },
   "AboutPage": {
     "title": "About Yodev",
-    "subtitle": "An independent studio obsessed with detail and outcomes.",
-    "valueBody": "Yodev supports teams with a clear and structured approach tailored to your goals.",
-    "values": ["Bold art direction", "Fast, maintainable build", "Human support"]
+    "subtitle": "A senior team, no middlemen, obsessed with impact.",
+    "valueBody": "Yodev supports teams with a pragmatic and transparent approach.",
+    "values": ["Technical and product rigor", "Transparent decisions and costs", "Fast, maintainable delivery"]
   },
   "ContactPage": {
     "title": "Contact",
-    "subtitle": "Tell us about your goals, timeline and budget.",
-    "info": ["Reply within 48h", "Tailored quote", "20 min discovery call"],
+    "subtitle": "Tell us about your goals, constraints and timeline.",
+    "info": ["Reply within 48h", "Tailored quote", "30 min discovery call"],
     "emailTitle": "Email",
+    "email": "hello@yodev.fr",
     "emailCta": "Send an email",
     "form": {
       "nameLabel": "Full name",
@@ -350,8 +733,8 @@
       ]
     },
     "consulting": {
-      "title": "Consulting & Strategy",
-      "description": "Strategic guidance for your digital projects.",
+      "title": "Advisory & Transformation",
+      "description": "Strategic guidance for your web, mobile and AI projects.",
       "features": [
         "Technical and UX audit",
         "Product roadmap",
@@ -461,32 +844,32 @@
   "BlogPage": {
     "eyebrow": "Insights",
     "title": "Blog",
-    "subtitle": "Thoughts and experiences on web development, design, and digital strategy.",
+    "subtitle": "Insights on web, mobile, AI and product strategy.",
     "readMore": "Read article",
     "posts": [
       {
-        "slug": "architecture-2025",
-        "title": "Web Architecture in 2025: Key Trends",
-        "excerpt": "An overview of modern architectures for high-performance applications.",
+        "slug": "agrement-cii",
+        "title": "Yodev approved for the Innovation Tax Credit (CII)",
+        "excerpt": "Yodev is CII-certified as a subcontractor recognized by the French Ministry of Research.",
+        "category": "Business",
+        "date": "Dec 12, 2025",
+        "readTime": "4 min"
+      },
+      {
+        "slug": "waf-efficacite",
+        "title": "How to maximize a Web Application Firewall (WAF)?",
+        "excerpt": "A well-configured WAF is the difference between symbolic protection and a real barrier.",
         "category": "Tech",
-        "date": "January 15, 2025",
-        "readTime": "5 min"
-      },
-      {
-        "slug": "saas-vs-custom",
-        "title": "SaaS vs Custom: How to Choose?",
-        "excerpt": "Criteria for deciding between an existing solution and custom development.",
-        "category": "Strategy",
-        "date": "January 10, 2025",
-        "readTime": "7 min"
-      },
-      {
-        "slug": "ux-errors",
-        "title": "5 UX Mistakes That Kill Your Conversions",
-        "excerpt": "Analysis of the most common problems and how to solve them.",
-        "category": "Design",
-        "date": "January 5, 2025",
+        "date": "Dec 11, 2025",
         "readTime": "6 min"
+      },
+      {
+        "slug": "integrite-logs-continu",
+        "title": "Certifying the integrity of a continuous log stream",
+        "excerpt": "Proving your logs were not altered is now a security and compliance must.",
+        "category": "Tech",
+        "date": "Dec 11, 2025",
+        "readTime": "7 min"
       },
       {
         "slug": "mvp-iteration",
@@ -518,50 +901,48 @@
     "ctaTitle": "Need expertise?",
     "ctaSubtitle": "Let's discuss your project and technical challenges.",
     "ctaButton": "Contact us",
-    "architecture-2025": {
-      "title": "Web Architecture in 2025: Key Trends",
-      "excerpt": "An overview of modern architectures for high-performance applications.",
+    "agrement-cii": {
+      "title": "Yodev approved for the Innovation Tax Credit (CII)",
+      "excerpt": "Yodev is CII-certified as a subcontractor recognized by the French Ministry of Research.",
+      "category": "Business",
+      "date": "Dec 12, 2025",
+      "readTime": "4 min",
+      "author": "Jean Ashton",
+      "content": [
+        "The Innovation Tax Credit (CII) helps companies fund a portion of their R&D and innovation spend.",
+        "Yodev is CII-approved as a subcontractor recognized by the French Ministry of Research, which means our services can be included in eligible projects.",
+        "We help frame eligible work, structure deliverables, and secure technical requirements.",
+        "If you're preparing a CII file, we can support you from the framing phase to maximize delivered value."
+      ]
+    },
+    "waf-efficacite": {
+      "title": "How to maximize a Web Application Firewall (WAF)?",
+      "excerpt": "A well-configured WAF is the difference between symbolic protection and a real barrier.",
       "category": "Tech",
-      "date": "January 15, 2025",
-      "readTime": "5 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Web architecture constantly evolves to meet the demands of performance, scalability, and user experience. In 2025, several trends clearly stand out.",
-        "Serverless and edge-first architectures continue to gain ground. Deploying code closer to users drastically reduces latency and improves the overall experience.",
-        "The Islands Architecture paradigm, popularized by Astro, optimizes JavaScript sent to the client by only making interactive the components that need it.",
-        "React Server Components are transforming our approach to server-side rendering, allowing content streaming while maintaining a smooth user experience.",
-        "Finally, the adoption of edge databases like Turso or PlanetScale brings data closer to users, completing a truly distributed architecture."
-      ]
-    },
-    "saas-vs-custom": {
-      "title": "SaaS vs Custom: How to Choose?",
-      "excerpt": "Criteria for deciding between an existing solution and custom development.",
-      "category": "Strategy",
-      "date": "January 10, 2025",
-      "readTime": "7 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Choosing between a SaaS solution and custom development is a strategic decision that impacts your company's long-term future.",
-        "SaaS offers quick implementation and reduced initial cost. It's ideal for validating a concept or when the need exactly matches what the market offers.",
-        "Custom development, on the other hand, allows perfect adaptation to your business processes and strong competitive differentiation. It's an investment that makes sense when your workflow is unique.",
-        "Key criteria to consider: the level of customization required, total budget over 3-5 years, strategic importance of the project, and your ability to maintain a custom solution.",
-        "In many cases, a hybrid approach is relevant: use SaaS for commoditized functions and develop custom where you create value."
-      ]
-    },
-    "ux-errors": {
-      "title": "5 UX Mistakes That Kill Your Conversions",
-      "excerpt": "Analysis of the most common problems and how to solve them.",
-      "category": "Design",
-      "date": "January 5, 2025",
+      "date": "Dec 11, 2025",
       "readTime": "6 min",
-      "author": "Yoann Andrieux",
+      "author": "Molly Allerhand",
       "content": [
-        "Good UX isn't a luxury, it's a conversion lever. Here are the most common mistakes we encounter in audits.",
-        "Mistake #1: Forms that are too long. Each additional field reduces your conversion rate. Only ask for essentials at each step.",
-        "Mistake #2: Invisible or confusing CTAs. Your main action button should be obvious and its label explicit about what will happen.",
-        "Mistake #3: Cognitive overload. Too many options, too much text, too many distractions. Simplify and guide the user toward their goal.",
-        "Mistake #4: Lack of feedback. Users should always know where they are: loading, success, error. Silence is anxiety-inducing.",
-        "Mistake #5: Ignoring mobile. More than half of traffic is mobile. If the experience isn't flawless on small screens, you're losing customers."
+        "A WAF blocks what it recognizes. Poor configuration leads to false positives or missed attacks.",
+        "Start with observation mode and analyze logs to understand real traffic patterns.",
+        "Tailor rules to critical routes, business use cases and your sector's attack patterns.",
+        "Automate rule updates and add security regression tests to your CI/CD pipeline.",
+        "Measure impact: block rate, latency, false positives and incidents avoided."
+      ]
+    },
+    "integrite-logs-continu": {
+      "title": "Certifying the integrity of a continuous log stream",
+      "excerpt": "Proving your logs were not altered is now a security and compliance must.",
+      "category": "Tech",
+      "date": "Dec 11, 2025",
+      "readTime": "7 min",
+      "author": "Molly Allerhand",
+      "content": [
+        "Logs are evidence. You must be able to prove they have not been modified.",
+        "The approach chains events with hashes and periodically signs the stream.",
+        "Immutable storage (WORM) and timestamping reinforce traceability.",
+        "A well-designed pipeline enables faster audits and stronger compliance (ISO, SOC2).",
+        "We implement these guarantees on modern stacks without harming performance."
       ]
     },
     "mvp-iteration": {
@@ -614,8 +995,8 @@
   },
   "CareersPage": {
     "eyebrow": "Join us",
-    "title": "Careers",
-    "subtitle": "Build the web of tomorrow with a passionate and demanding team.",
+    "title": "Jobs",
+    "subtitle": "Build web, mobile & AI products with a passionate and demanding team.",
     "valuesEyebrow": "Our culture",
     "valuesTitle": "What drives us",
     "values": [

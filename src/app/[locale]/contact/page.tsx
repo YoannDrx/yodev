@@ -24,10 +24,10 @@ export default function ContactPage() {
               <p className="text-xs uppercase tracking-[0.2em] text-muted">
                 {t("emailTitle")}
               </p>
-              <p className="mt-2 text-sm text-text">hello@yodev.studio</p>
+              <p className="mt-2 text-sm text-text">{t("email")}</p>
             </Card>
             <a
-              href="mailto:hello@yodev.studio"
+              href={`mailto:${t("email")}`}
               className={buttonClassName({ variant: "secondary", size: "lg" })}
             >
               {t("emailCta")}
