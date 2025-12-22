@@ -8,9 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/motion";
 import {
-  Linkedin,
-  Twitter,
-  Github,
   Mail,
   MapPin,
   ArrowRight,
@@ -41,11 +38,6 @@ const resourceLinks = [
   { href: "/legal/privacy", key: "privacy" },
 ] as const;
 
-const socialLinks = [
-  { href: "https://linkedin.com/company/yodev", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://twitter.com/yodev_agency", icon: Twitter, label: "Twitter" },
-  { href: "https://github.com/yodev-agency", icon: Github, label: "GitHub" },
-];
 
 export function SiteFooter() {
   const t = useTranslations("Footer");
@@ -210,27 +202,6 @@ export function SiteFooter() {
                   </li>
                 ))}
               </ul>
-
-              {/* Social links */}
-              <div className="mt-8">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-text">
-                  {t("socials")}
-                </h3>
-                <div className="mt-4 flex gap-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-muted transition-all hover:border-primary/50 hover:bg-primary hover:text-white hover:shadow-glow"
-                      aria-label={social.label}
-                    >
-                      <social.icon className="h-4 w-4" />
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </FadeIn>
         </div>

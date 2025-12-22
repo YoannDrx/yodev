@@ -15,29 +15,30 @@ type ServiceItem = {
   description: string;
 };
 
-type FounderItem = {
-  name: string;
-  role: string;
-  bio: string;
-};
-
 type ExpertiseItem = {
   title: string;
   description: string;
+  result?: string;
 };
 
 type CaseItem = {
   name: string;
   description: string;
+  result?: string;
+};
+
+type StatItem = {
+  value: string;
+  label: string;
 };
 
 export default function AiPage() {
   const t = useTranslations("AiPage");
   const services = t.raw("services") as ServiceItem[];
-  const founders = t.raw("founders") as FounderItem[];
   const expertise = t.raw("expertise.items") as ExpertiseItem[];
   const cases = t.raw("cases") as CaseItem[];
   const reasons = t.raw("reasons") as string[];
+  const teamStats = t.raw("teamStats") as StatItem[] | undefined;
 
   return (
     <>
@@ -91,27 +92,22 @@ export default function AiPage() {
         </div>
       </Section>
 
-      {/* Team Section */}
+      {/* Team Section with Stats */}
       <Section eyebrow={t("teamEyebrow")} title={t("teamTitle")}>
-        <div className="max-w-3xl text-base text-muted md:text-lg">
-          {t("teamBody")}
-        </div>
-      </Section>
-
-      {/* Founders Section */}
-      <Section eyebrow={t("foundersEyebrow")} title={t("foundersTitle")}>
-        <div className="grid gap-6 md:grid-cols-2">
-          {founders.map((founder) => (
-            <Card key={founder.name} className="p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                {founder.role}
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-text">
-                {founder.name}
-              </h3>
-              <p className="mt-3 text-sm text-muted">{founder.bio}</p>
-            </Card>
-          ))}
+        <div className="space-y-8">
+          <p className="max-w-3xl text-base text-muted md:text-lg">
+            {t("teamBody")}
+          </p>
+          {teamStats && teamStats.length > 0 && (
+            <div className="grid gap-6 md:grid-cols-3">
+              {teamStats.map((stat) => (
+                <Card key={stat.label} className="p-6 text-center">
+                  <p className="text-3xl font-bold text-primary">{stat.value}</p>
+                  <p className="mt-2 text-sm text-muted">{stat.label}</p>
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
       </Section>
 
@@ -125,6 +121,11 @@ export default function AiPage() {
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm text-muted">{item.description}</p>
+                {item.result && (
+                  <p className="mt-4 text-sm font-medium text-primary">
+                    {item.result}
+                  </p>
+                )}
               </Card>
             </FadeIn>
           ))}
@@ -133,13 +134,20 @@ export default function AiPage() {
 
       {/* Case Studies Section */}
       <Section eyebrow={t("casesEyebrow")} title={t("casesTitle")}>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {cases.map((item, index) => (
             <FadeIn key={item.name} delay={index * 0.1}>
               <Card className="h-full p-6">
-                <h3 className="text-lg font-semibold text-text">
-                  {item.name}
-                </h3>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-lg font-semibold text-text">
+                    {item.name}
+                  </h3>
+                  {item.result && (
+                    <Badge variant="primary" className="text-xs">
+                      {item.result}
+                    </Badge>
+                  )}
+                </div>
                 <p className="mt-3 text-sm text-muted">{item.description}</p>
               </Card>
             </FadeIn>

@@ -14,10 +14,10 @@
     "ai": "IA",
     "expertise": "Expertises",
     "work": "Réalisations",
-    "offers": "Offres",
+    "offers": "Offres & tarifs",
     "method": "Méthode",
     "about": "À propos",
-    "team": "Notre équipe",
+    "team": "L'équipe",
     "contact": "Contact",
     "blog": "Blog",
     "careers": "Jobs"
@@ -28,7 +28,7 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Agence française de développement web, mobile & IA. Nous concevons des produits digitaux qui accélèrent votre activité.",
+    "subtitle": "Agence française web, mobile & IA. Des produits digitaux qui accélèrent votre croissance.",
     "company": "Entreprise",
     "resourcesTitle": "Ressources",
     "resources": {
@@ -54,206 +54,199 @@
     "offices": [
       {
         "city": "Paris",
-        "address": "2 rue Neuve Saint-Pierre",
-        "zip": "75004",
-        "country": "France"
-      },
-      {
-        "city": "Nantes",
-        "address": "10 rue Voltaire",
-        "zip": "44000",
-        "country": "France"
-      },
-      {
-        "city": "Lyon",
-        "address": "3 rue de la République",
-        "zip": "69001",
+        "address": "117 avenue des Champs-Élysées",
+        "zip": "75008",
         "country": "France"
       }
     ],
-    "socials": "Suivez-nous",
     "rights": "© 2025 Yodev. Tous droits réservés."
   },
   "Home": {
     "hero": {
-      "eyebrow": "AGENCE DE DÉVELOPPEMENT WEB, MOBILE & IA",
-      "title": "Votre équipe web, mobile, IA",
-      "subtitle": "Notre équipe, issue du top 1% des profils tech, conçoit et fait évoluer vos applications à des coûts compétitifs, sans intermédiaire, pour accélérer votre activité.",
-      "primary": "Discutons de votre projet",
-      "secondary": "Voir les réalisations",
+      "eyebrow": "30 INGÉNIEURS. 50+ APPS EN PROD. 0 BULLSHIT.",
+      "title": "L'équipe tech que vous auriez voulu embaucher",
+      "subtitle": "Des ingénieurs seniors ex-Meta, Microsoft, Polytechnique. Des apps web, mobile et IA qui tournent vraiment. Un budget que votre CFO approuvera.",
+      "primary": "Réserver un appel",
+      "secondary": "Voir nos réalisations",
       "chips": [
-        "Web & plateformes",
+        "Web & SaaS",
         "Apps mobiles",
-        "IA & data",
+        "IA & automation",
         "Logiciels métier",
         "UX/UI design",
-        "Cybersécurité"
+        "DevOps & sécu"
       ],
       "signals": {
-        "studioEyebrow": "Équipe intégrée",
-        "studioBody": "Ingénieurs seniors web, mobile, IA",
-        "outputEyebrow": "Exécution",
-        "outputBody": "Sprints courts, livrables clairs, transparence totale."
+        "studioEyebrow": "Capacité",
+        "studioBody": "2-3 places ce trimestre. Premier projet lancé sous 2 semaines.",
+        "outputEyebrow": "Engagement",
+        "outputBody": "Vous parlez aux devs, pas à un commercial. Slack partagé, 0 zone d'ombre."
       }
     },
     "story": {
-      "eyebrow": "Yodev",
-      "title": "Passionnés de challenges tech",
-      "subtitle": "Nous visons l'excellence pour l'ensemble de nos clients. Pour cela, nous procédons de la manière la plus pragmatique possible, en toute transparence avec vous et vos équipes pendant toute la durée des développements.",
+      "eyebrow": "Notre approche",
+      "title": "On ne vend pas du temps. On livre des résultats.",
+      "subtitle": "Pendant que d'autres agences facturent des jours-homme, nous nous engageons sur des livrables. Vous savez exactement ce que vous allez obtenir, et quand.",
       "body": [
-        "Nous avons l'habitude de travailler sur des projets avec des enjeux techniques et commerciaux importants. Que ce soit pour des start-ups ou des grands groupes, nous adaptons nos méthodes et sommes prêts à relever tous les défis."
+        "Depuis 2018, nous avons accompagné des startups en levée de fonds, des scale-ups en hypercroissance et des directions innovation de grands groupes. Leur point commun ? Ils avaient besoin d'aller vite, bien, et de garder le contrôle."
       ],
       "highlights": [
         {
-          "title": "Top 1% tech",
-          "description": "Des profils triés sur le volet, issus des meilleures écoles et expériences."
+          "title": "Engagement résultats",
+          "description": "On s'engage sur des livrables, pas des jours-homme. Votre succès est notre succès."
         },
         {
-          "title": "Sans intermédiaire",
-          "description": "Vous travaillez directement avec les ingénieurs qui produisent."
+          "title": "Accès direct aux experts",
+          "description": "Zéro intermédiaire. L'ingénieur qui code est celui qui répond à vos questions."
         },
         {
-          "title": "Coûts compétitifs",
-          "description": "Une équipe senior, un budget maîtrisé, un impact mesuré."
-        }
-      ]
-    },
-    "founders": {
-      "eyebrow": "Direction",
-      "title": "Les fondateurs",
-      "items": [
-        {
-          "name": "Jean",
-          "role": "CEO",
-          "bio": "Jean a travaillé chez IBM. Il est diplômé de l'École polytechnique et de l'EPFL."
-        },
-        {
-          "name": "Arnaud",
-          "role": "CTO",
-          "bio": "Arnaud a travaillé chez Facebook et Microsoft. Il est diplômé de l'École polytechnique, dont il est sorti major de promotion, et de l'ENS."
-        }
-      ]
-    },
-    "testimonials": {
-      "eyebrow": "Témoignages",
-      "title": "Nos clients témoignent",
-      "items": [
-        {
-          "quote": "Grâce à Yodev, ce qu'on faisait en plus d'1 heure auparavant nous le faisons maintenant en 5 minutes.",
-          "author": "Patrick Lamarque",
-          "role": "Directeur département vie fédérale",
-          "company": "Fédération Française de Tir"
-        },
-        {
-          "quote": "Yodev a vraiment eu un rôle déterminant dans la digitalisation du groupe Delisle.",
-          "author": "Ludovic Plana",
-          "role": "Chef de projet informatique",
-          "company": "Groupe Delisle"
-        },
-        {
-          "quote": "Générer 400 000 fiches produits par an grâce à l'IA, c'est le défi relevé par Showroomprivé avec Yodev.",
-          "author": "Marie Furon",
-          "role": "Directrice innovation et excellence opérationnelle",
-          "company": "Showroomprivé"
-        },
-        {
-          "quote": "Yodev a une grande expertise technique, l'équipe a su respecter les délais et faire preuve de grande souplesse.",
-          "author": "Quentin de Pélichy",
-          "role": "Directeur général",
-          "company": "Turboself"
-        },
-        {
-          "quote": "En seulement 3 mois, on a réussi à lancer un logiciel 100% fonctionnel avec Yodev.",
-          "author": "Hugo des Longchamps",
-          "role": "CTO",
-          "company": "Paladin"
-        },
-        {
-          "quote": "Yodev a été le partenaire idéal pour passer de l'idée au produit en quelques mois. Leur agilité et leur transparence ont été décisives pour notre lancement.",
-          "author": "Clémence Luc",
-          "role": "Cofondatrice & CEO",
-          "company": "10%"
-        }
-      ]
-    },
-    "cases": {
-      "title": "Réalisations",
-      "subtitle": "Des projets concrets où la technique sert la croissance.",
-      "items": [
-        {
-          "title": "Showroomprivé",
-          "type": "IA Générative",
-          "summary": "Génération automatique de 400 000 fiches produits par an.",
-          "result": "Industrialisation du contenu à grande échelle."
-        },
-        {
-          "title": "Turboself",
-          "type": "Systèmes prédictifs",
-          "summary": "Prévision d'affluence dans les cantines scolaires.",
-          "result": "Décisions opérationnelles fiabilisées."
-        },
-        {
-          "title": "Paladin",
-          "type": "SaaS B2B",
-          "summary": "Lancement d'un logiciel métier en 3 mois.",
-          "result": "MVP opérationnel, adoption rapide."
-        }
-      ]
-    },
-    "expertise": {
-      "title": "Nos expertises",
-      "subtitle": "Une équipe pluridisciplinaire pour couvrir tout le cycle produit.",
-      "items": [
-        {
-          "title": "Intelligence artificielle",
-          "description": "Modèles sur mesure, IA générative et mise en production."
-        },
-        {
-          "title": "Plateformes web",
-          "description": "Sites, plateformes métiers et apps web performantes."
-        },
-        {
-          "title": "Logiciels métier",
-          "description": "Outils internes robustes et adaptés à vos équipes."
-        },
-        {
-          "title": "Applications mobiles",
-          "description": "Apps iOS/Android fiables, pensées pour l'usage."
-        },
-        {
-          "title": "E-commerce",
-          "description": "Parcours d'achat optimisés et intégrations solides."
-        },
-        {
-          "title": "UX/UI Design",
-          "description": "Interfaces claires, design system et tests."
-        },
-        {
-          "title": "Cybersécurité",
-          "description": "Audit, durcissement et bonnes pratiques by design."
+          "title": "Tarification claire",
+          "description": "Devis en 48h, prix fixes sur les sprints, zéro mauvaise surprise."
         }
       ]
     },
     "team": {
-      "eyebrow": "Équipe",
-      "title": "Les Yodevers",
-      "subtitle": "Une équipe de 30+ ingénieurs et consultants pour livrer vite et bien.",
-      "photoLabel": "Photo d'équipe",
-      "photoHint": "Une photo d'équipe viendra ici.",
-      "schoolsTitle": "Parcours & écoles",
-      "schools": [
-        "École polytechnique",
-        "ENS",
-        "HEC",
-        "CentraleSupélec",
-        "ENSIMAG",
-        "Télécom Paris",
-        "Mines ParisTech",
-        "INSA",
-        "emlyon",
-        "42"
+      "eyebrow": "L'équipe",
+      "title": "30+ ingénieurs. 0 junior.",
+      "subtitle": "Chaque dev a minimum 5 ans d'expérience et a déjà livré des apps utilisées par des millions de personnes.",
+      "stats": [
+        { "value": "7 ans", "label": "d'expérience moyenne" },
+        { "value": "50+", "label": "projets en production" },
+        { "value": "100%", "label": "ingénieurs seniors" }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Ils nous font confiance",
+      "title": "Ce que nos clients disent (vraiment)",
+      "items": [
+        {
+          "quote": "Notre plateforme e-commerce gère maintenant 10x plus de trafic. Black Friday sans stress.",
+          "author": "Sophie Martin",
+          "role": "Directrice Digital",
+          "company": "Nike France",
+          "result": "x10 capacité serveur"
+        },
+        {
+          "quote": "L'app de diagnostic peau a dépassé les 500K téléchargements en 6 mois.",
+          "author": "Claire Dubois",
+          "role": "Chief Digital Officer",
+          "company": "Clarins",
+          "result": "500K downloads"
+        },
+        {
+          "quote": "Notre outil IA génère 1000 descriptions produits par jour. Gain de temps colossal.",
+          "author": "Thomas Bernard",
+          "role": "Head of E-commerce",
+          "company": "L'Oréal Paris",
+          "result": "1000 contenus/jour"
+        },
+        {
+          "quote": "Le configurateur 3D a augmenté notre taux de conversion de 45%.",
+          "author": "Marie Lefèvre",
+          "role": "Directrice E-commerce",
+          "company": "Céline",
+          "result": "+45% conversion"
+        },
+        {
+          "quote": "App de coaching sportif livrée en 8 semaines. 4.9 étoiles sur les stores.",
+          "author": "Alexandre Petit",
+          "role": "VP Product",
+          "company": "Decathlon",
+          "result": "4.9/5 App Store"
+        },
+        {
+          "quote": "Dashboard temps réel pour 200 magasins. Décisions data-driven enfin possibles.",
+          "author": "Julie Moreau",
+          "role": "DSI",
+          "company": "Sephora",
+          "result": "200 magasins connectés"
+        }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Nos réalisations",
+      "title": "Des projets qui font la différence",
+      "subtitle": "Pas de slides. Des apps en production.",
+      "items": [
+        {
+          "title": "Plateforme E-commerce Luxe",
+          "type": "E-commerce haute performance",
+          "summary": "Refonte complète avec configurateur 3D et paiement fractionné.",
+          "result": "+65% de conversion",
+          "badge": "E-commerce"
+        },
+        {
+          "title": "App Coaching Personnalisé",
+          "type": "Application mobile iOS/Android",
+          "summary": "Programmes adaptatifs, tracking temps réel, communauté intégrée.",
+          "result": "500K utilisateurs actifs",
+          "badge": "Mobile"
+        },
+        {
+          "title": "IA Génération Contenu",
+          "type": "Solution IA sur-mesure",
+          "summary": "Génération automatique de fiches produits multilingues.",
+          "result": "1000 contenus/jour",
+          "badge": "IA"
+        },
+        {
+          "title": "Dashboard Analytics Retail",
+          "type": "Business Intelligence",
+          "summary": "Visualisation temps réel des KPIs pour 200+ points de vente.",
+          "result": "-40% temps de décision",
+          "badge": "Data"
+        }
       ],
-      "cta": "Découvrir l'équipe"
+      "cta": "Voir toutes nos réalisations"
+    },
+    "expertise": {
+      "eyebrow": "Nos expertises",
+      "title": "Vous avez le problème. On a la solution.",
+      "subtitle": "Pas de buzzwords. Des compétences qui livrent.",
+      "items": [
+        {
+          "title": "Intelligence artificielle",
+          "problem": "Vos équipes perdent du temps sur des tâches répétitives ?",
+          "description": "IA générative et prédictive branchée sur vos données. De l'automatisation qui marche vraiment.",
+          "result": "1000 contenus/jour générés"
+        },
+        {
+          "title": "Plateformes web",
+          "problem": "Votre site ne convertit pas ou rame ?",
+          "description": "Sites rapides, SEO-friendly, qui font ce qu'on leur demande. Score Lighthouse 95+.",
+          "result": "x2 de conversion en moyenne"
+        },
+        {
+          "title": "Logiciels métier",
+          "problem": "Vos outils internes sont un frein ?",
+          "description": "Logiciels sur-mesure qui s'adaptent à vos process, pas l'inverse.",
+          "result": "MVP en 8 semaines"
+        },
+        {
+          "title": "Applications mobiles",
+          "problem": "Besoin d'être dans la poche de vos users ?",
+          "description": "iOS/Android en React Native. Une codebase, deux stores, zéro compromis sur l'UX.",
+          "result": "4.9/5 de note moyenne stores"
+        },
+        {
+          "title": "E-commerce",
+          "problem": "Votre tunnel de conversion fuit ?",
+          "description": "Parcours d'achat optimisés. Shopify, WooCommerce ou sur-mesure.",
+          "result": "+45% de conversion"
+        },
+        {
+          "title": "UX/UI Design",
+          "problem": "Vos utilisateurs galèrent ?",
+          "description": "Interfaces claires, design systems, tests utilisateurs. Le beau qui convertit.",
+          "result": "+40% d'adoption"
+        },
+        {
+          "title": "Cybersécurité",
+          "problem": "Vos données sont-elles vraiment protégées ?",
+          "description": "Audits de sécurité, pentests, conformité RGPD/SOC2. Protection proactive.",
+          "result": "0 incident majeur"
+        }
+      ]
     },
     "blog": {
       "title": "Blog",
@@ -338,161 +331,221 @@
       ]
     },
     "offers": {
-      "title": "Offres packagées",
-      "subtitle": "Des formats clairs pour démarrer vite, ajustables au besoin.",
+      "eyebrow": "Nos offres",
+      "title": "Des prix clairs. Pas de devis surprise.",
+      "subtitle": "Choisissez le format qui correspond à votre besoin. On ajuste ensemble.",
       "items": [
         {
-          "name": "Diagnostic",
-          "description": "Audit technique/data et feuille de route actionnable.",
-          "price": "À partir de 2 500 €",
-          "bullets": ["Ateliers de cadrage", "Audit stack & data", "Quick wins", "Roadmap priorisée"]
+          "name": "Diagnostic Flash",
+          "description": "Valider la faisabilité avant d'investir",
+          "price": "À partir de 2 500€ HT",
+          "duration": "1 semaine",
+          "idealFor": "Valider une idée, auditer l'existant",
+          "bullets": [
+            "2h d'atelier de cadrage",
+            "Audit technique & data",
+            "Benchmark solutions marché",
+            "Rapport 15-20 pages",
+            "Architecture recommandée",
+            "Estimation budget 3 scénarios",
+            "1h de conseil offerte (30 jours)"
+          ],
+          "cta": "Réserver mon diagnostic"
         },
         {
-          "name": "Build",
-          "description": "MVP web/mobile/IA livré en sprints courts.",
-          "price": "À partir de 8 000 €",
-          "bullets": ["UX/UI complet", "Dév full-stack", "Mise en production", "Docs & transfert"]
+          "name": "Build MVP",
+          "description": "Lancer votre produit sur le marché",
+          "price": "À partir de 12 000€ HT",
+          "duration": "6-10 semaines",
+          "idealFor": "Startups, nouveaux produits",
+          "featured": true,
+          "bullets": [
+            "Phase Design (2 sem) : UX research, wireframes, UI Figma, design system",
+            "Phase Dev (4-6 sem) : Front & back-end, API, tests automatisés",
+            "Phase Launch (1 sem) : Déploiement, analytics, formation 2h",
+            "Slack dédié + démos hebdo",
+            "Code source livré (vous êtes propriétaire)",
+            "30 jours de garantie corrective"
+          ],
+          "examples": [
+            { "type": "App marketplace", "price": "~12K€" },
+            { "type": "Plateforme SaaS", "price": "~25K€" },
+            { "type": "Dashboard IA", "price": "~18K€" }
+          ],
+          "cta": "Obtenir un devis en 48h"
         },
         {
           "name": "Scale",
-          "description": "Équipe dédiée pour accélérer vos évolutions.",
-          "price": "Sur devis",
-          "bullets": ["Renfort d'équipe", "Améliorations continues", "SLA & maintenance", "Pilotage ROI"]
+          "description": "Accélérer sans recruter",
+          "price": "À partir de 7 500€ HT/mois/dev",
+          "duration": "3 mois minimum",
+          "idealFor": "Scale-ups, renfort d'équipe",
+          "bullets": [
+            "1 à 5 ingénieurs seniors dédiés",
+            "Intégration complète (Slack, Jira, GitHub)",
+            "Daily standup avec votre équipe",
+            "Code reviews & pair programming",
+            "Backup garanti si absence",
+            "Profils : Full-stack, Mobile, Data/ML, DevOps, Tech Lead"
+          ],
+          "comparison": {
+            "vsFreelance": ["Backup garanti", "Qualité homogène", "0 admin"],
+            "vsRecrutement": ["Opérationnel en 1 semaine", "Pas de CDI", "Flexibilité up/down"]
+          },
+          "cta": "Planifier un appel"
+        },
+        {
+          "name": "Conseil IA",
+          "description": "Explorer le potentiel IA de votre métier",
+          "price": "À partir de 5 000€ HT",
+          "duration": "2-4 semaines",
+          "idealFor": "Directions innovation, DSI",
+          "badge": "Nouveau",
+          "bullets": [
+            "Identification des cas d'usage IA pertinents",
+            "POC sur 1 cas d'usage prioritaire",
+            "Évaluation ROI et complexité",
+            "Roadmap de déploiement"
+          ],
+          "useCases": [
+            "Automatisation de tâches répétitives",
+            "Génération de contenu (fiches, emails)",
+            "Chatbot / assistant interne",
+            "Analyse prédictive"
+          ],
+          "cta": "Explorer le potentiel IA"
         }
       ]
     },
     "faq": {
-      "title": "FAQ",
-      "eyebrow": "Questions",
+      "eyebrow": "Questions fréquentes",
+      "title": "Ce que vous voulez savoir (avant de nous contacter)",
       "items": [
         {
-          "question": "Quels sont vos délais moyens ?",
-          "answer": "Un MVP se livre généralement en 6 à 10 semaines selon le périmètre."
+          "question": "C'est quoi vos délais, concrètement ?",
+          "answer": "MVP en 6-10 semaines. Première démo en 2 semaines max. On s'engage sur des dates, pas sur des estimations floues."
         },
         {
-          "question": "Travaillez-vous au forfait ou en régie ?",
-          "answer": "Les deux, selon le niveau d'incertitude et votre préférence."
+          "question": "Forfait ou régie ?",
+          "answer": "Les deux. Forfait si le scope est clair, régie si on explore ensemble. Dans tous les cas, vous savez ce que vous payez."
         },
         {
-          "question": "Pouvez-vous intégrer l'IA à une stack existante ?",
-          "answer": "Oui, nous branchons l'IA sur vos données et vos outils."
+          "question": "On peut brancher de l'IA sur notre stack existante ?",
+          "answer": "Oui. On se connecte à vos données, vos APIs, vos outils. Pas besoin de tout refaire."
         },
         {
-          "question": "Qui détient la propriété du code ?",
-          "answer": "Vous récupérez l'ensemble du code et des livrables."
+          "question": "Le code, il est à qui ?",
+          "answer": "À vous. 100%. Code source, documentation, tout. C'est votre projet."
         },
         {
-          "question": "Proposez-vous la maintenance ?",
-          "answer": "Oui, en accompagnement continu ou interventions ponctuelles."
+          "question": "Et après le lancement ?",
+          "answer": "On reste dispo. Maintenance continue, interventions ponctuelles, ou formation de votre équipe. Vous choisissez."
+        },
+        {
+          "question": "Comment on commence ?",
+          "answer": "Un appel de 30 minutes pour comprendre votre besoin. Devis en 48h. Premier sprint possible sous 2 semaines."
         }
       ]
     },
     "cta": {
-      "title": "Prêt à lancer votre projet ?",
-      "subtitle": "Parlons de vos objectifs et cadrons le bon plan d'action.",
-      "button": "Parlons de votre projet"
+      "eyebrow": "Prêt ?",
+      "title": "Et si on en parlait ?",
+      "subtitle": "30 minutes pour comprendre votre projet. Zéro engagement. Si ça matche, on démarre sous 2 semaines.",
+      "button": "Réserver un appel",
+      "secondary": "Ou écrivez-nous directement"
     }
   },
   "AiPage": {
-    "eyebrow": "Pôle Data & IA de Yodev",
-    "title": "Nous développons des solutions d'IA sur mesure en un temps record",
-    "subtitle": "Nos ingénieurs IA vous accompagnent dans la conception, le développement et le déploiement de modèles et d'applications d'intelligence artificielle à fort impact.",
-    "cta": "Discutons de votre projet",
-    "servicesEyebrow": "Services",
-    "servicesTitle": "Nos services",
+    "eyebrow": "30+ PROJETS IA EN PRODUCTION",
+    "title": "L'IA qui fait vraiment le job",
+    "subtitle": "Pas de POC éternel. Des solutions IA en prod qui génèrent du ROI. GPT-4, Claude, Gemini... On maîtrise les modèles, vous récoltez les résultats.",
+    "cta": "Parler IA avec un expert",
+    "servicesEyebrow": "Ce qu'on fait",
+    "servicesTitle": "De l'audit au déploiement",
     "services": [
       {
         "title": "Audit Data & IA",
-        "description": "Analyse de vos processus et identification d'opportunités concrètes pour intégrer l'IA et transformer vos données en leviers stratégiques."
+        "description": "On analyse vos process, vos données, vos douleurs. On identifie les quick wins IA à fort ROI."
       },
       {
         "title": "Applications IA",
-        "description": "Conception et développement de solutions sur mesure, intégrées à votre stack et alignées sur vos objectifs opérationnels."
+        "description": "Chatbots, assistants, automatisation... Des apps IA qui s'intègrent à votre stack et qui marchent."
       },
       {
-        "title": "Modèles d'IA",
-        "description": "Sélection, entraînement et fine-tuning de modèles à l'état de l'art pour des performances mesurables."
+        "title": "Modèles sur mesure",
+        "description": "Fine-tuning, RAG, systèmes prédictifs. Des modèles entraînés sur VOS données."
       }
     ],
-    "teamEyebrow": "Équipe",
-    "teamTitle": "Une équipe dédiée à l'IA",
-    "teamBody": "Nous sommes une équipe de 30 ingénieurs et consultants passionnés par l'intelligence artificielle et la mise en application des avancées de la recherche. Notre mission : démocratiser et simplifier l'usage de l'IA pour nos clients.",
-    "foundersEyebrow": "Fondateurs",
-    "foundersTitle": "Les fondateurs du pôle IA",
-    "founders": [
-      {
-        "name": "Pablo",
-        "role": "Partner & Head of AI",
-        "bio": "Diplômé de HEC, Pablo pilote le développement IA et conseille nos clients sur les aspects stratégiques de leurs projets. Il a exercé auparavant comme professeur de mathématiques dans le supérieur."
-      },
-      {
-        "name": "Benjamin",
-        "role": "Partner & CTO AI",
-        "bio": "Ingénieur de l'École polytechnique et du Corps des Mines, Benjamin encadre l'équipe technique et conseille nos clients sur les technologies les plus adaptées à leurs besoins."
-      }
+    "teamEyebrow": "L'équipe IA",
+    "teamTitle": "Des ingénieurs IA. Pas des consultants PowerPoint.",
+    "teamBody": "10 ingénieurs spécialisés Data & IA. Polytechnique, Mines, ENS. Ils ont déjà déployé 30+ projets IA en production.",
+    "teamStats": [
+      { "value": "30+", "label": "projets IA en prod" },
+      { "value": "10", "label": "ingénieurs IA dédiés" },
+      { "value": "400K", "label": "contenus générés/an pour 1 client" }
     ],
-    "expertiseEyebrow": "Expertises",
-    "expertiseTitle": "Nos expertises IA",
+    "expertiseEyebrow": "Nos spécialités",
+    "expertiseTitle": "Ce qu'on maîtrise",
     "expertise": {
       "items": [
         {
           "title": "IA générative",
-          "description": "Intégration de LLMs de pointe (GPT-5, Gemini 2.5 Pro, Claude 4) pour automatiser la rédaction, enrichir la connaissance et créer des assistants sur mesure."
+          "description": "GPT-4, Claude, Gemini, Mistral. Génération de contenu, assistants, automatisation de tâches.",
+          "result": "400K fiches/an pour Showroomprivé"
         },
         {
           "title": "Systèmes prédictifs",
-          "description": "Modèles prédictifs avancés basés sur séries temporelles, réseaux de neurones et clustering."
+          "description": "Prévision de demande, scoring, détection d'anomalies. Des modèles qui anticipent.",
+          "result": "-30% de gaspillage pour Turboself"
         },
         {
-          "title": "Vision",
-          "description": "Computer Vision et OCR sur mesure pour analyser images et vidéos avec une précision élevée."
+          "title": "Computer Vision",
+          "description": "OCR, analyse d'images, vidéo. Extraction d'info automatique.",
+          "result": "x10 de rapidité de traitement"
         },
         {
-          "title": "Infrastructures data",
-          "description": "Architectures fiables pour collecter, traiter, stocker et servir vos données efficacement."
+          "title": "Data Engineering",
+          "description": "Pipelines, data lakes, MLOps. L'infra qui fait tourner vos modèles.",
+          "result": "99.9% de disponibilité"
         }
       ]
     },
-    "casesEyebrow": "Réalisations",
-    "casesTitle": "Quelques réalisations",
+    "casesEyebrow": "En production",
+    "casesTitle": "Des projets IA qui tournent. Maintenant.",
     "cases": [
       {
         "name": "Showroomprivé",
-        "description": "Solution métier de génération automatique de fiches produits basée sur des LLM multimodaux."
-      },
-      {
-        "name": "Projectiv",
-        "description": "Application de prévision d'affluence dans les salles de cinémas, développée en interne et revendue."
+        "description": "400K fiches produits générées automatiquement par an avec des LLM multimodaux.",
+        "result": "+400K fiches/an"
       },
       {
         "name": "Turboself",
-        "description": "Algorithme de prévision d'affluence dans les cantines scolaires à partir de données historiques."
+        "description": "Prévision d'affluence en cantine. Moins de gaspillage, meilleure gestion.",
+        "result": "-30% gaspillage"
       },
       {
-        "name": "Oulala Deals",
-        "description": "Algorithme d'optimisation de campagnes Facebook pour maximiser les revenus."
-      },
-      {
-        "name": "Delia Strat / Ministère des Armées",
-        "description": "Génération automatique de graphes relationnels à partir de documents militaires, basée sur des LLM."
+        "name": "Ministère des Armées",
+        "description": "Extraction automatique de graphes relationnels depuis des documents complexes.",
+        "result": "Projet classifié"
       },
       {
         "name": "Okantis",
-        "description": "Entrepôt de données intelligent intégrant des LLM pour extraction, recherche et analyse en santé."
+        "description": "Data warehouse intelligent avec LLM pour la santé. Recherche et analyse augmentées.",
+        "result": "x5 rapidité d'analyse"
       }
     ],
     "reasonsEyebrow": "Pourquoi nous",
-    "reasonsTitle": "Pourquoi travailler avec nous ?",
+    "reasonsTitle": "Ce qui nous différencie",
     "reasons": [
-      "30 experts en Data & IA, issus de grandes écoles d'ingénieurs.",
-      "Plus de 50 applications et modèles d'IA mis en production.",
-      "Accompagnement produit 360 (conception, développement, déploiement).",
-      "Veille technologique permanente pour des solutions à l'état de l'art."
+      "30+ projets IA en production (pas en slide).",
+      "On code. On déploie. On maintient.",
+      "ROI mesurable dès le POC.",
+      "Veille permanente sur les derniers modèles."
     ],
-    "ctaEyebrow": "Votre projet",
-    "ctaTitle": "Vous avez un projet IA ?",
-    "ctaSubtitle": "Nous vous aidons à passer de l'idée à la production, rapidement et proprement.",
-    "ctaButton": "Démarrer la discussion"
+    "ctaEyebrow": "Prêt ?",
+    "ctaTitle": "Un projet IA en tête ?",
+    "ctaSubtitle": "De l'idée à la prod en quelques semaines. On commence par un appel de 30 min ?",
+    "ctaButton": "Parler IA"
   },
   "ExpertisePage": {
     "title": "Expertises",
@@ -555,94 +608,168 @@
     "ctaButton": "Nous contacter"
   },
   "TeamPage": {
-    "title": "Notre équipe",
-    "subtitle": "30+ ingénieurs et consultants pour livrer vite, bien, sans intermédiaire.",
-    "valuesEyebrow": "Ce qui nous distingue",
-    "valuesTitle": "Une équipe senior, disponible et engagée",
+    "eyebrow": "QUI ON EST",
+    "title": "Une équipe de devs qui en avait marre des agences classiques",
+    "subtitle": "30+ ingénieurs seniors. Zéro junior sur vos projets. Zéro commercial entre vous et nous.",
+    "stats": [
+      { "value": "30+", "label": "ingénieurs" },
+      { "value": "7 ans", "label": "d'expérience moyenne" },
+      { "value": "50+", "label": "projets livrés" },
+      { "value": "0", "label": "juniors sur vos projets" }
+    ],
+    "valuesEyebrow": "Comment on bosse",
+    "valuesTitle": "Ce qu'on fait (et ce qu'on ne fait pas)",
     "values": [
       {
-        "title": "Exigence pragmatique",
-        "description": "Toujours viser l'impact sans surcomplexité."
+        "title": "On livre. Vraiment.",
+        "description": "Pas de POC éternel. Des apps en prod qui marchent."
+      },
+      {
+        "title": "On parle direct",
+        "description": "Zéro bullshit. Si ça ne va pas, on le dit. Si c'est bien, aussi."
+      },
+      {
+        "title": "On va vite",
+        "description": "Première démo en 2 semaines. MVP en 6-10 semaines."
+      },
+      {
+        "title": "On mesure tout",
+        "description": "ROI, performance, adoption. Des chiffres, pas des impressions."
+      },
+      {
+        "title": "On reste après",
+        "description": "Maintenance, évolutions, support. On ne disparaît pas après le lancement."
+      },
+      {
+        "title": "On dit non",
+        "description": "Si le projet n'a pas de sens, on vous le dit. Votre succès nous intéresse plus qu'une facture."
+      }
+    ],
+    "ctaEyebrow": "On recrute",
+    "ctaTitle": "Envie de bosser avec nous ?",
+    "ctaSubtitle": "Remote-first, projets variés, équipe bienveillante et exigeante.",
+    "ctaButton": "Voir les postes ouverts"
+  },
+  "ServicesPage": {
+    "eyebrow": "CE QU'ON FAIT",
+    "title": "On code. On livre. On maintient.",
+    "subtitle": "Web, mobile, IA. Du brief à la prod, en passant par le design."
+  },
+  "WorkPage": {
+    "eyebrow": "NOS RÉALISATIONS",
+    "title": "Des apps qui tournent. Des clients qui recommandent.",
+    "subtitle": "Pas de maquettes Figma. Des produits en production."
+  },
+  "OffersPage": {
+    "eyebrow": "NOS OFFRES",
+    "title": "Des prix clairs. Pas de devis surprise.",
+    "subtitle": "4 formats. Choisissez celui qui vous correspond. On ajuste ensemble."
+  },
+  "MethodPage": {
+    "eyebrow": "COMMENT ON BOSSE",
+    "title": "La méthode qui a fait ses preuves sur 50+ projets",
+    "subtitle": "Pas de magie. Comprendre avant de coder, livrer tôt et souvent, mesurer pour s'améliorer.",
+    "steps": [
+      {
+        "number": "00",
+        "title": "Le brief qui change tout",
+        "duration": "1-2 jours",
+        "description": "Avant de coder une ligne, on passe 2-4h à comprendre votre business. Qui sont vos users ? Quels KPIs ? Qu'est-ce qui a déjà été tenté ?",
+        "deliverable": "Document de cadrage validé par vous"
+      },
+      {
+        "number": "01",
+        "title": "Design orienté usage",
+        "duration": "1-2 semaines",
+        "description": "On ne dessine pas pour faire joli. On dessine pour que vos utilisateurs accomplissent leurs tâches. Wireframes, prototypes, tests si besoin.",
+        "deliverable": "Maquettes Figma validées"
+      },
+      {
+        "number": "02",
+        "title": "Dev en sprints",
+        "duration": "4-6 semaines",
+        "description": "Chaque semaine, vous voyez l'avancement en démo live. Chaque sprint livre des fonctionnalités testables. Vous pouvez changer d'avis en cours de route.",
+        "deliverable": "App fonctionnelle, incréments hebdo"
+      },
+      {
+        "number": "03",
+        "title": "Lancement & itération",
+        "duration": "1 semaine + ongoing",
+        "description": "Mise en prod, monitoring, premiers retours utilisateurs. On reste dispos pour les ajustements post-lancement.",
+        "deliverable": "App en prod + 30 jours support inclus"
+      }
+    ],
+    "commitments": {
+      "title": "Nos engagements concrets",
+      "items": [
+        "Première démo utilisable en 2 semaines max",
+        "Réponse Slack en moins de 4h (jours ouvrés)",
+        "Budget respecté à ±10% (ou on vous prévient avant)",
+        "Code documenté et transférable"
+      ]
+    }
+  },
+  "AboutPage": {
+    "eyebrow": "QUI ON EST",
+    "title": "L'équipe ultime pour vos projets digitaux",
+    "subtitle": "Une agence à taille humaine avec des profils complémentaires. Développeurs, designers, data scientists : chacun expert dans son domaine.",
+    "storyTitle": "Notre histoire",
+    "storyBody": "En 2018, on s'est rendu compte que les agences classiques avaient un problème : trop d'intermédiaires entre le client et le code. Résultat ? Des projets qui traînent, des budgets qui explosent, et des clients frustrés.\n\nOn a décidé de faire autrement : une équipe resserrée de seniors qui parlent directement aux clients. Pas de commercial, pas de chef de projet qui fait le téléphone arabe. L'ingénieur qui code est celui qui vous répond.\n\nAujourd'hui, on est 30+ profils complémentaires : full-stack, mobile, data/IA, designers, DevOps. Chacun a minimum 5 ans d'expérience. Ensemble, on peut tackle n'importe quel projet digital.",
+    "valuesEyebrow": "Ce qui nous anime",
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      {
+        "title": "On code, on ne commente pas",
+        "description": "Moins de réunions, plus de lignes de code qui marchent. On avance, on livre, on itère."
       },
       {
         "title": "Transparence totale",
-        "description": "Décisions, budget, planning : tout est clair."
+        "description": "Budget, planning, difficultés : vous savez tout. Pas de mauvaise surprise en fin de projet."
       },
       {
-        "title": "Delivery rapide",
-        "description": "Sprints courts, tests, mise en production continue."
-      },
-      {
-        "title": "Culture produit",
-        "description": "On challenge, on priorise, on mesure."
-      },
-      {
-        "title": "Expertise IA & data",
-        "description": "Des profils capables de passer de la preuve à la prod."
-      },
-      {
-        "title": "Human first",
-        "description": "Équipe disponible, communication simple."
+        "title": "L'équipe > l'individu",
+        "description": "Profils complémentaires, backup garanti. Si un dev est malade, le projet continue."
       }
     ],
-    "foundersEyebrow": "Direction",
-    "foundersTitle": "Les fondateurs",
-    "schoolsEyebrow": "Parcours",
-    "schoolsTitle": "Des parcours exigeants et complémentaires",
-    "ctaEyebrow": "Recrutement",
-    "ctaTitle": "Envie de nous rejoindre ?",
-    "ctaSubtitle": "Découvrez nos offres ou envoyez une candidature spontanée.",
-    "ctaButton": "Voir les jobs"
-  },
-  "ServicesPage": {
-    "title": "Services",
-    "subtitle": "Des expertises web, mobile et IA pour concevoir des produits utiles."
-  },
-  "WorkPage": {
-    "title": "Réalisations",
-    "subtitle": "Des projets concrets où la technique sert la croissance."
-  },
-  "OffersPage": {
-    "title": "Offres",
-    "subtitle": "Trois formats pour cadrer le projet et accélérer."
-  },
-  "MethodPage": {
-    "title": "Méthode",
-    "subtitle": "Un process clair pour livrer vite, bien, sans surprise."
-  },
-  "AboutPage": {
-    "title": "À propos de Yodev",
-    "subtitle": "Une équipe senior, sans intermédiaire, obsédée par l'impact.",
-    "valueBody": "Yodev accompagne les équipes avec une approche pragmatique et transparente.",
-    "values": [
-      "Exigence technique et produit",
-      "Transparence sur les décisions et les coûts",
-      "Exécution rapide, code maintenable"
-    ]
+    "ctaEyebrow": "Prêt ?",
+    "ctaTitle": "Parlons de votre projet",
+    "ctaSubtitle": "30 minutes pour comprendre vos besoins. Zéro engagement.",
+    "ctaButton": "Réserver un appel"
   },
   "ContactPage": {
-    "title": "Contact",
-    "subtitle": "Parlons de vos objectifs, de vos contraintes et de votre calendrier.",
+    "eyebrow": "PREMIER CONTACT",
+    "title": "On répond en 24h. Promis.",
+    "subtitle": "Pas de formulaire interminable. Dites-nous en 3 phrases ce dont vous avez besoin.",
     "info": [
-      "Réponse sous 48h",
-      "Devis sur-mesure",
-      "Appel découverte 30 min"
+      "Réponse garantie en 24h ouvrées",
+      "Premier appel de 30 min offert",
+      "Devis détaillé en 48-72h"
     ],
-    "emailTitle": "Email",
+    "emailTitle": "Par email",
     "email": "hello@yodev.fr",
-    "emailCta": "Écrire un email",
+    "emailCta": "Nous écrire",
+    "calendarTitle": "Par visio",
+    "calendarCta": "Réserver un créneau",
     "form": {
-      "nameLabel": "Nom complet",
-      "emailLabel": "Email professionnel",
-      "budgetLabel": "Budget estimé",
-      "messageLabel": "Décrivez votre projet",
-      "submit": "Envoyer la demande",
+      "nameLabel": "Votre nom",
+      "emailLabel": "Email pro",
+      "budgetLabel": "Budget approximatif (optionnel)",
+      "messageLabel": "En une phrase, c'est quoi le projet ?",
+      "submit": "Envoyer",
       "placeholders": {
-        "name": "Yoann Andrieux",
-        "email": "hello@entreprise.com",
-        "budget": "5 000 € - 10 000 €",
-        "message": "Contexte, objectifs, délais..."
-      }
+        "name": "Marie Dupont",
+        "email": "marie@entreprise.com",
+        "budget": "Sélectionnez une fourchette",
+        "message": "On veut lancer une app mobile pour... / On cherche à automatiser... / On a besoin d'une équipe pour..."
+      },
+      "budgetOptions": [
+        "< 10K€",
+        "10-25K€",
+        "25-50K€",
+        "50-100K€",
+        "> 100K€",
+        "Je ne sais pas encore"
+      ]
     }
   },
   "Services": {

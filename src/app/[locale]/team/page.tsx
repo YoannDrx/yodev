@@ -4,31 +4,46 @@ import { useTranslations } from "next-intl";
 import { PageIntro } from "@/components/site/page-intro";
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { Badge } from "@/components/ui/badge";
 import { CtaSection } from "@/components/sections";
-
-type FounderItem = {
-  name: string;
-  role: string;
-  bio: string;
-};
 
 type ValueItem = {
   title: string;
   description: string;
 };
 
+type StatItem = {
+  value: string;
+  label: string;
+};
+
 export default function TeamPage() {
   const t = useTranslations("TeamPage");
-  const home = useTranslations("Home");
-  const founders = home.raw("founders.items") as FounderItem[];
-  const schools = home.raw("team.schools") as string[];
   const values = t.raw("values") as ValueItem[];
+  const stats = t.raw("stats") as StatItem[] | undefined;
 
   return (
     <>
-      <PageIntro title={t("title")} subtitle={t("subtitle")} />
+      <PageIntro
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+      />
 
+      {/* Stats Section */}
+      {stats && stats.length > 0 && (
+        <Section>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <Card key={stat.label} className="p-6 text-center">
+                <p className="text-4xl font-bold text-primary">{stat.value}</p>
+                <p className="mt-2 text-sm text-muted">{stat.label}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Values Section */}
       <Section eyebrow={t("valuesEyebrow")} title={t("valuesTitle")}>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {values.map((value) => (
@@ -40,32 +55,7 @@ export default function TeamPage() {
         </div>
       </Section>
 
-      <Section eyebrow={t("foundersEyebrow")} title={t("foundersTitle")}>
-        <div className="grid gap-6 md:grid-cols-2">
-          {founders.map((founder) => (
-            <Card key={founder.name} className="p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                {founder.role}
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-text">
-                {founder.name}
-              </h3>
-              <p className="mt-3 text-sm text-muted">{founder.bio}</p>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow={t("schoolsEyebrow")} title={t("schoolsTitle")}>
-        <div className="flex flex-wrap gap-2">
-          {schools.map((school) => (
-            <Badge key={school} variant="outline" className="text-xs">
-              {school}
-            </Badge>
-          ))}
-        </div>
-      </Section>
-
+      {/* CTA Section */}
       <CtaSection
         eyebrow={t("ctaEyebrow")}
         title={t("ctaTitle")}

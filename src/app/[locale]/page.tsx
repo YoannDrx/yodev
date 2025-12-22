@@ -31,11 +31,6 @@ type StoryContent = {
   highlights: HighlightItem[];
 };
 
-type FounderItem = {
-  name: string;
-  role: string;
-  bio: string;
-};
 
 type TestimonialItem = {
   quote: string;
@@ -54,14 +49,6 @@ type CaseItem = {
   type: string;
   summary: string;
   result: string;
-};
-
-type TeamContent = {
-  title: string;
-  subtitle: string;
-  photoLabel: string;
-  schoolsTitle: string;
-  schools: string[];
 };
 
 type BlogPost = {
@@ -95,11 +82,9 @@ export default function HomePage() {
   const careers = useTranslations("CareersPage");
 
   const story = t.raw("story") as StoryContent;
-  const founders = t.raw("founders.items") as FounderItem[];
   const testimonials = t.raw("testimonials.items") as TestimonialItem[];
   const expertise = t.raw("expertise.items") as ExpertiseItem[];
   const cases = t.raw("cases.items") as CaseItem[];
-  const team = t.raw("team") as TeamContent;
   const blogPosts = blog.raw("posts") as BlogPost[];
   const jobs = careers.raw("jobs") as JobPosting[];
   const press = t.raw("press.outlets") as string[];
@@ -128,23 +113,6 @@ export default function HomePage() {
               </Card>
             ))}
           </div>
-        </div>
-      </Section>
-
-      {/* Founders Section */}
-      <Section eyebrow={t("founders.eyebrow")} title={t("founders.title")}>
-        <div className="grid gap-6 md:grid-cols-2">
-          {founders.map((founder) => (
-            <Card key={founder.name} className="p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                {founder.role}
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-text">
-                {founder.name}
-              </h3>
-              <p className="mt-3 text-sm text-muted">{founder.bio}</p>
-            </Card>
-          ))}
         </div>
       </Section>
 
@@ -199,43 +167,6 @@ export default function HomePage() {
             </FadeIn>
           ))}
         </ServiceGrid>
-      </Section>
-
-      {/* Team Section */}
-      <Section
-        eyebrow={t("team.eyebrow")}
-        title={team.title}
-        subtitle={team.subtitle}
-      >
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <Card className="flex h-full items-center justify-center p-10 text-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                {team.photoLabel}
-              </p>
-              <p className="mt-3 text-sm text-muted">
-                {t("team.photoHint")}
-              </p>
-            </div>
-          </Card>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-text">
-                {team.schoolsTitle}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {team.schools.map((school) => (
-                  <Badge key={school} variant="outline" className="text-xs">
-                    {school}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-            <ButtonLink href="/team" variant="secondary">
-              {t("team.cta")}
-            </ButtonLink>
-          </div>
-        </div>
       </Section>
 
       {/* Blog Section */}

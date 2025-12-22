@@ -11,12 +11,10 @@ import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/ai", key: "ai" },
-  { href: "/expertise", key: "expertise" },
-  { href: "/method", key: "method" },
-  { href: "/offers", key: "offers" },
+  { href: "/services", key: "services" },
   { href: "/work", key: "work" },
-  { href: "/team", key: "team" },
+  { href: "/offers", key: "offers" },
+  { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;
 
