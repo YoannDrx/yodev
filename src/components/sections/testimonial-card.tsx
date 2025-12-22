@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Quote, Play } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +26,7 @@ export function TestimonialCard({
   videoUrl,
   className,
 }: TestimonialCardProps) {
+  const t = useTranslations("Common");
   return (
     <Card
       variant="elevated"
@@ -43,7 +45,7 @@ export function TestimonialCard({
           whileTap={{ scale: 0.95 }}
         >
           <Play className="h-3 w-3" />
-          Voir la vidéo
+          {t("watchVideo")}
         </motion.button>
       )}
 

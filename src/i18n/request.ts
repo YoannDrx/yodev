@@ -3,7 +3,10 @@ import { hasLocale } from "next-intl";
 import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
+  // requestLocale vient du middleware ou de setRequestLocale()
   const requested = await requestLocale;
+
+  // Valider la locale, sinon utiliser la locale par défaut
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;

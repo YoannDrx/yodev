@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { PageIntro } from "@/components/site/page-intro";
 import { Badge } from "@/components/ui/badge";
