@@ -1,6 +1,6 @@
 {
   "Common": {
-    "tagline": "Agence web, mobile & IA",
+    "tagline": "Studio digital artisan",
     "cta": "Démarrer la discussion",
     "menu": "Menu",
     "available": "Disponible",
@@ -28,7 +28,7 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Agence française web, mobile & IA. Des produits digitaux qui accélèrent votre croissance.",
+    "subtitle": "Studio digital artisan. Web, mobile & IA pour les projets qui comptent.",
     "company": "Entreprise",
     "resourcesTitle": "Ressources",
     "resources": {
@@ -63,56 +63,105 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "30 INGÉNIEURS. 50+ APPS EN PROD. 0 BULLSHIT.",
-      "title": "L'équipe tech que vous auriez voulu embaucher",
-      "subtitle": "Des ingénieurs seniors ex-Meta, Microsoft, Polytechnique. Des apps web, mobile et IA qui tournent vraiment. Un budget que votre CFO approuvera.",
-      "primary": "Réserver un appel",
+      "eyebrow": "STUDIO DIGITAL. 4 EXPERTS. 0 INTERMÉDIAIRE.",
+      "title": "Le studio artisan que les grands groupes s'arrachent",
+      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... Ils nous ont choisi pour notre expertise, pas pour notre taille. IA, Architecture, Design, Stratégie : les bonnes personnes, au bon moment.",
+      "primary": "Discuter de mon projet",
       "secondary": "Voir nos réalisations",
       "chips": [
-        "Web & SaaS",
-        "Apps mobiles",
-        "IA & automation",
-        "Logiciels métier",
-        "UX/UI design",
-        "DevOps & sécu"
+        "IA & Automation",
+        "Architecture Cloud",
+        "Design produit",
+        "Stratégie digitale"
       ],
       "signals": {
-        "studioEyebrow": "Capacité",
-        "studioBody": "2-3 places ce trimestre. Premier projet lancé sous 2 semaines.",
-        "outputEyebrow": "Engagement",
-        "outputBody": "Vous parlez aux devs, pas à un commercial. Slack partagé, 0 zone d'ombre."
+        "studioEyebrow": "Format",
+        "studioBody": "4 experts complémentaires. Vous parlez directement à ceux qui font.",
+        "outputEyebrow": "Promesse",
+        "outputBody": "Pas d'usine, pas de junior caché. Un interlocuteur unique qui comprend votre métier."
       }
     },
     "story": {
-      "eyebrow": "Notre approche",
-      "title": "On ne vend pas du temps. On livre des résultats.",
-      "subtitle": "Pendant que d'autres agences facturent des jours-homme, nous nous engageons sur des livrables. Vous savez exactement ce que vous allez obtenir, et quand.",
+      "eyebrow": "Notre philosophie",
+      "title": "Petit par choix. Excellent par exigence.",
+      "subtitle": "On a refusé de grossir. On a préféré rester une équipe resserrée où chacun maîtrise son domaine.",
       "body": [
-        "Depuis 2018, nous avons accompagné des startups en levée de fonds, des scale-ups en hypercroissance et des directions innovation de grands groupes. Leur point commun ? Ils avaient besoin d'aller vite, bien, et de garder le contrôle."
+        "Depuis 2018, les plus grands nous font confiance pour leurs projets stratégiques. Pas parce qu'on est gros, mais parce qu'on est bons.",
+        "Notre secret ? 4 profils complémentaires seniors. Pas de dilution, pas de délégation. Vous parlez aux experts."
       ],
       "highlights": [
         {
-          "title": "Engagement résultats",
-          "description": "On s'engage sur des livrables, pas des jours-homme. Votre succès est notre succès."
+          "title": "Relation directe",
+          "description": "Zéro commercial, zéro chef de projet. L'expert qui fait est celui qui vous répond."
         },
         {
-          "title": "Accès direct aux experts",
-          "description": "Zéro intermédiaire. L'ingénieur qui code est celui qui répond à vos questions."
+          "title": "Expertise pointue",
+          "description": "IA, Architecture, UX/UI, Growth. 4 domaines, 4 seniors."
         },
         {
-          "title": "Tarification claire",
-          "description": "Devis en 48h, prix fixes sur les sprints, zéro mauvaise surprise."
+          "title": "Tarif premium assumé",
+          "description": "On ne brade pas. Notre prix reflète notre expertise. Nos résultats le justifient."
         }
       ]
     },
+    "paths": {
+      "eyebrow": "Par où commencer ?",
+      "title": "Trois façons de travailler avec nous",
+      "items": [
+        {
+          "icon": "Rocket",
+          "title": "Lancer un nouveau produit",
+          "description": "Site, app, SaaS... Vous partez de zéro ou presque. On vous accompagne du cadrage au lancement.",
+          "cta": "Créer mon produit",
+          "href": "/contact?type=nouveau"
+        },
+        {
+          "icon": "Wrench",
+          "title": "Améliorer l'existant",
+          "description": "Votre produit existe mais ne performe pas. On diagnostique, on optimise, on fait décoller.",
+          "cta": "Optimiser mon produit",
+          "href": "/contact?type=optimisation"
+        },
+        {
+          "icon": "Brain",
+          "title": "Explorer l'IA",
+          "description": "Vous voulez comprendre ce que l'IA peut faire pour vous. On identifie les opportunités concrètes.",
+          "cta": "Explorer l'IA",
+          "href": "/ai"
+        }
+      ]
+    },
+    "fitSection": {
+      "eyebrow": "Transparence",
+      "title": "On n'est pas faits pour tout le monde. Et c'est très bien.",
+      "goodFit": {
+        "title": "Pour vous si...",
+        "items": [
+          "Vous cherchez de l'expertise, pas des bras",
+          "Vous valorisez la qualité plus que le volume",
+          "Vous voulez parler aux gens qui font",
+          "Vous avez un vrai budget (>10K€ pour un projet)",
+          "Vous acceptez nos recommandations (même quand ça pique)"
+        ]
+      },
+      "badFit": {
+        "title": "Pas pour vous si...",
+        "items": [
+          "Vous cherchez le moins cher",
+          "Vous voulez 10 devs demain matin",
+          "Vous avez déjà tout décidé et cherchez des exécutants",
+          "Votre projet est urgent ET mal défini"
+        ]
+      }
+    },
     "team": {
       "eyebrow": "L'équipe",
-      "title": "30+ ingénieurs. 0 junior.",
-      "subtitle": "Chaque dev a minimum 5 ans d'expérience et a déjà livré des apps utilisées par des millions de personnes.",
+      "title": "4 experts. 0 junior.",
+      "subtitle": "Une micro-équipe de seniors complémentaires. Chacun expert dans son domaine, tous impliqués sur chaque projet.",
       "stats": [
-        { "value": "7 ans", "label": "d'expérience moyenne" },
+        { "value": "4", "label": "experts complémentaires" },
         { "value": "50+", "label": "projets en production" },
-        { "value": "100%", "label": "ingénieurs seniors" }
+        { "value": "100%", "label": "seniors" }
       ]
     },
     "testimonials": {
@@ -200,51 +249,33 @@
       "cta": "Voir toutes nos réalisations"
     },
     "expertise": {
-      "eyebrow": "Nos expertises",
-      "title": "Vous avez le problème. On a la solution.",
-      "subtitle": "Pas de buzzwords. Des compétences qui livrent.",
+      "eyebrow": "Nos 4 expertises",
+      "title": "4 domaines. 4 seniors. 0 dilution.",
+      "subtitle": "Chaque expert maîtrise son domaine de A à Z.",
       "items": [
         {
-          "title": "Intelligence artificielle",
-          "problem": "Vos équipes perdent du temps sur des tâches répétitives ?",
-          "description": "IA générative et prédictive branchée sur vos données. De l'automatisation qui marche vraiment.",
-          "result": "1000 contenus/jour générés"
+          "title": "Intelligence Artificielle",
+          "problem": "Vous voulez exploiter l'IA mais ne savez pas par où commencer ?",
+          "description": "LLM, RAG, automatisation, génération de contenu. On identifie les cas d'usage pertinents et on les met en production.",
+          "result": "1000 contenus/jour pour L'Oréal"
         },
         {
-          "title": "Plateformes web",
-          "problem": "Votre site ne convertit pas ou rame ?",
-          "description": "Sites rapides, SEO-friendly, qui font ce qu'on leur demande. Score Lighthouse 95+.",
-          "result": "x2 de conversion en moyenne"
+          "title": "Architecture & Scalabilité",
+          "problem": "Votre produit doit tenir la charge ou évoluer ?",
+          "description": "Cloud, DevOps, microservices. Des architectures qui scalent sans exploser.",
+          "result": "x10 trafic pour Nike France"
         },
         {
-          "title": "Logiciels métier",
-          "problem": "Vos outils internes sont un frein ?",
-          "description": "Logiciels sur-mesure qui s'adaptent à vos process, pas l'inverse.",
-          "result": "MVP en 8 semaines"
+          "title": "Design Produit",
+          "problem": "Vos utilisateurs galèrent ou partent ?",
+          "description": "UX research, UI design, design systems. Des interfaces qui convertissent.",
+          "result": "+45% conversion pour Céline"
         },
         {
-          "title": "Applications mobiles",
-          "problem": "Besoin d'être dans la poche de vos users ?",
-          "description": "iOS/Android en React Native. Une codebase, deux stores, zéro compromis sur l'UX.",
-          "result": "4.9/5 de note moyenne stores"
-        },
-        {
-          "title": "E-commerce",
-          "problem": "Votre tunnel de conversion fuit ?",
-          "description": "Parcours d'achat optimisés. Shopify, WooCommerce ou sur-mesure.",
-          "result": "+45% de conversion"
-        },
-        {
-          "title": "UX/UI Design",
-          "problem": "Vos utilisateurs galèrent ?",
-          "description": "Interfaces claires, design systems, tests utilisateurs. Le beau qui convertit.",
-          "result": "+40% d'adoption"
-        },
-        {
-          "title": "Cybersécurité",
-          "problem": "Vos données sont-elles vraiment protégées ?",
-          "description": "Audits de sécurité, pentests, conformité RGPD/SOC2. Protection proactive.",
-          "result": "0 incident majeur"
+          "title": "Stratégie Digitale",
+          "problem": "Vous avez une idée mais pas de roadmap ?",
+          "description": "Cadrage, priorisation, go-to-market. On structure avant de construire.",
+          "result": "MVP en 6 semaines"
         }
       ]
     },
@@ -456,7 +487,7 @@
     }
   },
   "AiPage": {
-    "eyebrow": "30+ PROJETS IA EN PRODUCTION",
+    "eyebrow": "IA EN PRODUCTION",
     "title": "L'IA qui fait vraiment le job",
     "subtitle": "Pas de POC éternel. Des solutions IA en prod qui génèrent du ROI. GPT-4, Claude, Gemini... On maîtrise les modèles, vous récoltez les résultats.",
     "cta": "Parler IA avec un expert",
@@ -477,11 +508,11 @@
       }
     ],
     "teamEyebrow": "L'équipe IA",
-    "teamTitle": "Des ingénieurs IA. Pas des consultants PowerPoint.",
-    "teamBody": "10 ingénieurs spécialisés Data & IA. Polytechnique, Mines, ENS. Ils ont déjà déployé 30+ projets IA en production.",
+    "teamTitle": "Des experts IA. Pas des consultants PowerPoint.",
+    "teamBody": "Notre expert IA senior a déjà déployé des dizaines de projets en production. De l'idée au déploiement, vous parlez à celui qui fait.",
     "teamStats": [
-      { "value": "30+", "label": "projets IA en prod" },
-      { "value": "10", "label": "ingénieurs IA dédiés" },
+      { "value": "50+", "label": "projets en prod" },
+      { "value": "1", "label": "expert IA dédié" },
       { "value": "400K", "label": "contenus générés/an pour 1 client" }
     ],
     "expertiseEyebrow": "Nos spécialités",
@@ -609,11 +640,11 @@
   },
   "TeamPage": {
     "eyebrow": "QUI ON EST",
-    "title": "Une équipe de devs qui en avait marre des agences classiques",
-    "subtitle": "30+ ingénieurs seniors. Zéro junior sur vos projets. Zéro commercial entre vous et nous.",
+    "title": "4 experts qui en avaient marre des agences classiques",
+    "subtitle": "Une micro-équipe de seniors complémentaires. Zéro junior sur vos projets. Zéro commercial entre vous et nous.",
     "stats": [
-      { "value": "30+", "label": "ingénieurs" },
-      { "value": "7 ans", "label": "d'expérience moyenne" },
+      { "value": "4", "label": "experts" },
+      { "value": "10+ ans", "label": "d'expérience moyenne" },
       { "value": "50+", "label": "projets livrés" },
       { "value": "0", "label": "juniors sur vos projets" }
     ],
@@ -711,10 +742,10 @@
   },
   "AboutPage": {
     "eyebrow": "QUI ON EST",
-    "title": "L'équipe ultime pour vos projets digitaux",
-    "subtitle": "Une agence à taille humaine avec des profils complémentaires. Développeurs, designers, data scientists : chacun expert dans son domaine.",
+    "title": "4 experts. 1 mission. 0 bullshit.",
+    "subtitle": "Un studio artisan à taille humaine. IA, Architecture, Design, Stratégie : chacun expert dans son domaine.",
     "storyTitle": "Notre histoire",
-    "storyBody": "En 2018, on s'est rendu compte que les agences classiques avaient un problème : trop d'intermédiaires entre le client et le code. Résultat ? Des projets qui traînent, des budgets qui explosent, et des clients frustrés.\n\nOn a décidé de faire autrement : une équipe resserrée de seniors qui parlent directement aux clients. Pas de commercial, pas de chef de projet qui fait le téléphone arabe. L'ingénieur qui code est celui qui vous répond.\n\nAujourd'hui, on est 30+ profils complémentaires : full-stack, mobile, data/IA, designers, DevOps. Chacun a minimum 5 ans d'expérience. Ensemble, on peut tackle n'importe quel projet digital.",
+    "storyBody": "En 2018, on s'est rendu compte que les agences classiques avaient un problème : trop d'intermédiaires entre le client et le code. Résultat ? Des projets qui traînent, des budgets qui explosent, et des clients frustrés.\n\nOn a décidé de faire autrement : une micro-équipe de seniors qui parlent directement aux clients. Pas de commercial, pas de chef de projet qui fait le téléphone arabe. L'expert qui fait est celui qui vous répond.\n\nAujourd'hui, on est 4 profils complémentaires : IA, Architecture, Design, Stratégie. Chacun a plus de 10 ans d'expérience. Nike, Clarins, L'Oréal nous font confiance. Pas pour notre taille, mais pour notre expertise.",
     "valuesEyebrow": "Ce qui nous anime",
     "valuesTitle": "Nos valeurs",
     "values": [

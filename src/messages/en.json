@@ -1,6 +1,6 @@
 {
   "Common": {
-    "tagline": "Web, mobile & AI agency",
+    "tagline": "Artisan digital studio",
     "cta": "Start the conversation",
     "menu": "Menu",
     "available": "Available",
@@ -28,7 +28,7 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "French web, mobile & AI agency. Digital products that accelerate your growth.",
+    "subtitle": "Artisan digital studio. Web, mobile & AI for projects that matter.",
     "company": "Company",
     "resourcesTitle": "Resources",
     "resources": {
@@ -63,56 +63,105 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "30 ENGINEERS. 50+ APPS IN PROD. 0 BULLSHIT.",
-      "title": "The tech team you wish you'd hired",
-      "subtitle": "Senior engineers ex-Meta, Microsoft, Polytechnique. Web, mobile and AI apps that actually work. A budget your CFO will approve.",
-      "primary": "Book a call",
+      "eyebrow": "DIGITAL STUDIO. 4 EXPERTS. 0 MIDDLEMEN.",
+      "title": "The artisan studio that enterprises fight over",
+      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... They chose us for our expertise, not our size. AI, Architecture, Design, Strategy: the right people, at the right time.",
+      "primary": "Discuss my project",
       "secondary": "See our work",
       "chips": [
-        "Web & SaaS",
-        "Mobile apps",
-        "AI & automation",
-        "Business software",
-        "UX/UI design",
-        "DevOps & security"
+        "AI & Automation",
+        "Cloud Architecture",
+        "Product Design",
+        "Digital Strategy"
       ],
       "signals": {
-        "studioEyebrow": "Capacity",
-        "studioBody": "2-3 spots this quarter. First project launched within 2 weeks.",
-        "outputEyebrow": "Commitment",
-        "outputBody": "You talk to devs, not sales. Shared Slack, 0 black box."
+        "studioEyebrow": "Format",
+        "studioBody": "4 complementary experts. You talk directly to those who build.",
+        "outputEyebrow": "Promise",
+        "outputBody": "No factory, no hidden juniors. One point of contact who understands your business."
       }
     },
     "story": {
-      "eyebrow": "Our approach",
-      "title": "We don't sell time. We deliver results.",
-      "subtitle": "While other agencies bill by the day, we commit to deliverables. You know exactly what you'll get, and when.",
+      "eyebrow": "Our philosophy",
+      "title": "Small by choice. Excellent by demand.",
+      "subtitle": "We refused to grow. We chose to stay a tight-knit team where everyone masters their craft.",
       "body": [
-        "Since 2018, we've worked with funded startups, hypergrowth scale-ups, and innovation teams at large groups. What they had in common? They needed to move fast, do it right, and stay in control."
+        "Since 2018, the biggest names trust us with their strategic projects. Not because we're big, but because we're good.",
+        "Our secret? 4 complementary senior profiles. No dilution, no delegation. You talk to the experts."
       ],
       "highlights": [
         {
-          "title": "Results commitment",
-          "description": "We commit to deliverables, not billable hours. Your success is our success."
+          "title": "Direct relationship",
+          "description": "Zero sales, zero project managers. The expert who builds is the one who answers you."
         },
         {
-          "title": "Direct access to experts",
-          "description": "Zero middlemen. The engineer who codes answers your questions."
+          "title": "Deep expertise",
+          "description": "AI, Architecture, UX/UI, Growth. 4 domains, 4 seniors."
         },
         {
-          "title": "Clear pricing",
-          "description": "Quote in 48h, fixed sprint prices, zero surprises."
+          "title": "Premium pricing, owned",
+          "description": "We don't discount. Our price reflects our expertise. Our results justify it."
         }
       ]
     },
+    "paths": {
+      "eyebrow": "Where to start?",
+      "title": "Three ways to work with us",
+      "items": [
+        {
+          "icon": "Rocket",
+          "title": "Launch a new product",
+          "description": "Site, app, SaaS... Starting from scratch. We guide you from scoping to launch.",
+          "cta": "Create my product",
+          "href": "/contact?type=new"
+        },
+        {
+          "icon": "Wrench",
+          "title": "Improve existing",
+          "description": "Your product exists but underperforms. We diagnose, optimize, and make it fly.",
+          "cta": "Optimize my product",
+          "href": "/contact?type=optimization"
+        },
+        {
+          "icon": "Brain",
+          "title": "Explore AI",
+          "description": "You want to understand what AI can do for you. We identify concrete opportunities.",
+          "cta": "Explore AI",
+          "href": "/ai"
+        }
+      ]
+    },
+    "fitSection": {
+      "eyebrow": "Transparency",
+      "title": "We're not for everyone. And that's perfectly fine.",
+      "goodFit": {
+        "title": "For you if...",
+        "items": [
+          "You're looking for expertise, not extra hands",
+          "You value quality over volume",
+          "You want to talk to the people who build",
+          "You have a real budget (>€10K for a project)",
+          "You accept our recommendations (even when it stings)"
+        ]
+      },
+      "badFit": {
+        "title": "Not for you if...",
+        "items": [
+          "You're looking for the cheapest option",
+          "You need 10 devs tomorrow morning",
+          "You've already decided everything and just need executors",
+          "Your project is urgent AND poorly defined"
+        ]
+      }
+    },
     "team": {
       "eyebrow": "The team",
-      "title": "30+ engineers. 0 juniors.",
-      "subtitle": "Every dev has 5+ years of experience and has shipped apps used by millions.",
+      "title": "4 experts. 0 juniors.",
+      "subtitle": "A micro-team of complementary seniors. Each an expert in their field, all involved in every project.",
       "stats": [
-        { "value": "7 years", "label": "average experience" },
+        { "value": "4", "label": "complementary experts" },
         { "value": "50+", "label": "projects in production" },
-        { "value": "100%", "label": "senior engineers" }
+        { "value": "100%", "label": "seniors" }
       ]
     },
     "testimonials": {
@@ -200,51 +249,33 @@
       "cta": "See all case studies"
     },
     "expertise": {
-      "eyebrow": "Our expertise",
-      "title": "You have the problem. We have the solution.",
-      "subtitle": "No buzzwords. Skills that deliver.",
+      "eyebrow": "Our 4 expertises",
+      "title": "4 domains. 4 seniors. 0 dilution.",
+      "subtitle": "Each expert masters their domain from A to Z.",
       "items": [
         {
-          "title": "Artificial intelligence",
-          "problem": "Your teams waste time on repetitive tasks?",
-          "description": "Generative and predictive AI connected to your data. Automation that actually works.",
-          "result": "1000 contents/day generated"
+          "title": "Artificial Intelligence",
+          "problem": "Want to leverage AI but don't know where to start?",
+          "description": "LLM, RAG, automation, content generation. We identify relevant use cases and ship them to production.",
+          "result": "1000 contents/day for L'Oréal"
         },
         {
-          "title": "Web platforms",
-          "problem": "Your site doesn't convert or loads slowly?",
-          "description": "Fast, SEO-friendly sites that do what they're supposed to. Lighthouse score 95+.",
-          "result": "x2 conversion on average"
+          "title": "Architecture & Scalability",
+          "problem": "Your product needs to handle load or evolve?",
+          "description": "Cloud, DevOps, microservices. Architectures that scale without breaking.",
+          "result": "x10 traffic for Nike France"
         },
         {
-          "title": "Business software",
-          "problem": "Your internal tools slow you down?",
-          "description": "Custom software that adapts to your processes, not the other way around.",
-          "result": "MVP in 8 weeks"
+          "title": "Product Design",
+          "problem": "Your users struggle or leave?",
+          "description": "UX research, UI design, design systems. Interfaces that convert.",
+          "result": "+45% conversion for Céline"
         },
         {
-          "title": "Mobile applications",
-          "problem": "Need to be in your users' pockets?",
-          "description": "iOS/Android with React Native. One codebase, two stores, no UX compromises.",
-          "result": "4.9/5 average store rating"
-        },
-        {
-          "title": "E-commerce",
-          "problem": "Your conversion funnel leaks?",
-          "description": "Optimized checkout flows. Shopify, WooCommerce or custom.",
-          "result": "+45% conversion"
-        },
-        {
-          "title": "UX/UI Design",
-          "problem": "Your users struggle?",
-          "description": "Clear interfaces, design systems, user testing. Beautiful that converts.",
-          "result": "+40% adoption"
-        },
-        {
-          "title": "Cybersecurity",
-          "problem": "Is your data really protected?",
-          "description": "Security audits, pentests, GDPR/SOC2 compliance. Proactive protection.",
-          "result": "0 major incidents"
+          "title": "Digital Strategy",
+          "problem": "You have an idea but no roadmap?",
+          "description": "Scoping, prioritization, go-to-market. We structure before building.",
+          "result": "MVP in 6 weeks"
         }
       ]
     },
@@ -444,7 +475,7 @@
     }
   },
   "AiPage": {
-    "eyebrow": "30+ AI PROJECTS IN PRODUCTION",
+    "eyebrow": "AI IN PRODUCTION",
     "title": "AI that actually does the job",
     "subtitle": "No eternal POC. AI solutions in prod generating ROI. GPT-4, Claude, Gemini... We master the models, you get the results.",
     "cta": "Talk AI with an expert",
@@ -465,11 +496,11 @@
       }
     ],
     "teamEyebrow": "The AI team",
-    "teamTitle": "AI engineers. Not PowerPoint consultants.",
-    "teamBody": "10 engineers specialized in Data & AI. Polytechnique, Mines, ENS. They've shipped 30+ AI projects in production.",
+    "teamTitle": "AI experts. Not PowerPoint consultants.",
+    "teamBody": "Our senior AI expert has shipped dozens of projects in production. From idea to deployment, you talk to the one who builds.",
     "teamStats": [
-      { "value": "30+", "label": "AI projects in prod" },
-      { "value": "10", "label": "dedicated AI engineers" },
+      { "value": "50+", "label": "projects in prod" },
+      { "value": "1", "label": "dedicated AI expert" },
       { "value": "400K", "label": "content generated/year for 1 client" }
     ],
     "expertiseEyebrow": "Specialties",
@@ -597,11 +628,11 @@
   },
   "TeamPage": {
     "eyebrow": "WHO WE ARE",
-    "title": "A dev team that was done with typical agencies",
-    "subtitle": "30+ senior engineers. Zero juniors on your projects. Zero salespeople between you and us.",
+    "title": "4 experts who were done with typical agencies",
+    "subtitle": "A micro-team of complementary seniors. Zero juniors on your projects. Zero salespeople between you and us.",
     "stats": [
-      { "value": "30+", "label": "engineers" },
-      { "value": "7 years", "label": "average experience" },
+      { "value": "4", "label": "experts" },
+      { "value": "10+ years", "label": "average experience" },
       { "value": "50+", "label": "projects delivered" },
       { "value": "0", "label": "juniors on your projects" }
     ],
@@ -699,10 +730,10 @@
   },
   "AboutPage": {
     "eyebrow": "WHO WE ARE",
-    "title": "The ultimate team for your digital projects",
-    "subtitle": "A human-sized agency with complementary profiles. Developers, designers, data scientists: each an expert in their domain.",
+    "title": "4 experts. 1 mission. 0 bullshit.",
+    "subtitle": "A human-sized artisan studio. AI, Architecture, Design, Strategy: each an expert in their domain.",
     "storyTitle": "Our story",
-    "storyBody": "In 2018, we realized typical agencies had a problem: too many middlemen between the client and the code. Result? Projects that drag, budgets that explode, and frustrated clients.\n\nWe decided to do things differently: a tight-knit team of seniors who talk directly to clients. No salespeople, no project managers playing telephone. The engineer who codes is the one who answers your questions.\n\nToday, we're 30+ complementary profiles: full-stack, mobile, data/AI, designers, DevOps. Each has at least 5 years of experience. Together, we can tackle any digital project.",
+    "storyBody": "In 2018, we realized typical agencies had a problem: too many middlemen between the client and the code. Result? Projects that drag, budgets that explode, and frustrated clients.\n\nWe decided to do things differently: a micro-team of seniors who talk directly to clients. No salespeople, no project managers playing telephone. The expert who builds is the one who answers your questions.\n\nToday, we're 4 complementary profiles: AI, Architecture, Design, Strategy. Each has 10+ years of experience. Nike, Clarins, L'Oréal trust us. Not for our size, but for our expertise.",
     "valuesEyebrow": "What drives us",
     "valuesTitle": "Our values",
     "values": [

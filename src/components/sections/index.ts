@@ -8,3 +8,5 @@ export { ProcessStep, ProcessTimeline, ProcessGrid } from "./process-step";
 export { StatCard, StatSimple, StatGrid, StatsBar } from "./stat-card";
 export { ClientLogos, ClientLogosGrid } from "./client-logos";
 export { CtaSection } from "./cta-section";
+export { PathsSection } from "./paths-section";
+export { FitSection } from "./fit-section";
