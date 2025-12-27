@@ -14,9 +14,6 @@ import {
   FitSection,
 } from "@/components/sections";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ButtonLink } from "@/components/ui/button-link";
-import { Link } from "@/i18n/navigation";
 import { FadeIn } from "@/components/motion";
 
 type HighlightItem = {
@@ -51,25 +48,14 @@ type CaseItem = {
   result: string;
 };
 
-type BlogPost = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-};
-
 export default function HomePage() {
   const t = useTranslations("Home");
   const nav = useTranslations("Nav");
-  const blog = useTranslations("BlogPage");
 
   const story = t.raw("story") as StoryContent;
   const testimonials = t.raw("testimonials.items") as TestimonialItem[];
   const expertise = t.raw("expertise.items") as ExpertiseItem[];
   const cases = t.raw("cases.items") as CaseItem[];
-  const blogPosts = blog.raw("posts") as BlogPost[];
 
   return (
     <>
@@ -154,43 +140,6 @@ export default function HomePage() {
             </FadeIn>
           ))}
         </ServiceGrid>
-      </Section>
-
-      {/* Blog Section */}
-      <Section
-        eyebrow={nav("blog")}
-        title={t("blog.title")}
-        subtitle={t("blog.subtitle")}
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          {blogPosts.slice(0, 3).map((post) => (
-            <Link
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              href={`/blog/${post.slug}` as any}
-              key={post.slug}
-              className="group"
-            >
-              <Card className="flex h-full flex-col p-6 transition-all group-hover:border-primary/30 group-hover:shadow-md">
-                <div className="flex items-center justify-between text-xs text-muted">
-                  <Badge variant="outline" className="text-[10px] uppercase tracking-[0.2em]">
-                    {post.category}
-                  </Badge>
-                  <span>{post.date}</span>
-                </div>
-                <h3 className="mt-4 text-lg font-semibold text-text group-hover:text-primary">
-                  {post.title}
-                </h3>
-                <p className="mt-3 text-sm text-muted">{post.excerpt}</p>
-                <p className="mt-6 text-xs text-muted">{post.readTime}</p>
-              </Card>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-8 flex justify-center">
-          <ButtonLink href="/blog" variant="secondary">
-            {t("blog.cta")}
-          </ButtonLink>
-        </div>
       </Section>
 
       {/* CTA Section */}

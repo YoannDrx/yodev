@@ -15,12 +15,13 @@ import {
 } from "lucide-react";
 
 const serviceLinks = [
+  { href: "/services/ai", key: "ai" },
   { href: "/services/web", key: "web" },
+  { href: "/services/custom-software", key: "customSoftware" },
   { href: "/services/mobile", key: "mobile" },
-  { href: "/services/saas", key: "saas" },
   { href: "/services/ecommerce", key: "ecommerce" },
   { href: "/services/ux-design", key: "uxDesign" },
-  { href: "/services/consulting", key: "consulting" },
+  { href: "/services/cybersecurity", key: "cybersecurity" },
 ] as const;
 
 const companyLinks = [

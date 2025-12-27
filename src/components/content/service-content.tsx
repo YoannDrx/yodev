@@ -7,20 +7,65 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FadeIn } from "@/components/motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Zap, Shield, Code, Palette, Smartphone, ShoppingCart, Brain } from "lucide-react";
 
 type ServiceSlug = string;
+
+type ServiceItem = {
+  title: string;
+  description: string;
+};
+
+type MethodologyStep = {
+  title: string;
+  description: string;
+};
+
+type ExpertiseItem = {
+  title: string;
+  description: string;
+  result?: string;
+};
+
+type ProjectItem = {
+  name: string;
+  description: string;
+  result: string;
+};
+
+const serviceIcons: Record<string, React.ReactNode> = {
+  ai: <Brain className="h-6 w-6" />,
+  web: <Code className="h-6 w-6" />,
+  "custom-software": <Zap className="h-6 w-6" />,
+  mobile: <Smartphone className="h-6 w-6" />,
+  ecommerce: <ShoppingCart className="h-6 w-6" />,
+  "ux-design": <Palette className="h-6 w-6" />,
+  cybersecurity: <Shield className="h-6 w-6" />,
+};
 
 export function ServiceContent({ service }: { service: ServiceSlug }) {
   const t = useTranslations("Services");
   const nav = useTranslations("Nav");
 
-  const serviceData = {
-    title: t(`${service}.title`),
-    description: t(`${service}.description`),
-    features: t.raw(`${service}.features`) as string[],
-    benefits: t.raw(`${service}.benefits`) as string[],
-  };
+  // Données de base
+  const title = t(`${service}.title`);
+  const subtitle = t(`${service}.subtitle`);
+  const description = t(`${service}.description`);
+
+  // Données optionnelles
+  const hasServices = t.has(`${service}.services`);
+  const hasMethodology = t.has(`${service}.methodology`);
+  const hasExpertise = t.has(`${service}.expertise`);
+  const hasProjects = t.has(`${service}.projects`);
+  const hasTechnologies = t.has(`${service}.technologies`);
+  const hasWhyUs = t.has(`${service}.whyUs`);
+
+  const services = hasServices ? (t.raw(`${service}.services`) as ServiceItem[]) : [];
+  const methodology = hasMethodology ? (t.raw(`${service}.methodology`) as MethodologyStep[]) : [];
+  const expertise = hasExpertise ? (t.raw(`${service}.expertise`) as ExpertiseItem[]) : [];
+  const projects = hasProjects ? (t.raw(`${service}.projects`) as ProjectItem[]) : [];
+  const technologies = hasTechnologies ? (t.raw(`${service}.technologies`) as string[]) : [];
+  const whyUs = hasWhyUs ? (t.raw(`${service}.whyUs`) as string[]) : [];
 
   return (
     <>
@@ -39,13 +84,21 @@ export function ServiceContent({ service }: { service: ServiceSlug }) {
 
             <FadeIn delay={0.1}>
               <h1 className="text-4xl font-bold text-text md:text-5xl lg:text-6xl">
-                {serviceData.title}
+                {title}
               </h1>
             </FadeIn>
 
+            {subtitle && (
+              <FadeIn delay={0.15}>
+                <p className="mt-4 text-xl font-medium text-primary">
+                  {subtitle}
+                </p>
+              </FadeIn>
+            )}
+
             <FadeIn delay={0.2}>
               <p className="mt-6 text-lg text-muted">
-                {serviceData.description}
+                {description}
               </p>
             </FadeIn>
 
@@ -67,44 +120,133 @@ export function ServiceContent({ service }: { service: ServiceSlug }) {
         </Container>
       </section>
 
-      {/* Features Section */}
-      <Section
-        eyebrow={t("featuresEyebrow")}
-        title={t("featuresTitle")}
-      >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {serviceData.features.map((feature, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <Card className="flex items-start gap-4 p-6">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Check className="h-5 w-5" />
-                </div>
-                <p className="text-text">{feature}</p>
-              </Card>
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
+      {/* Services Section */}
+      {services.length > 0 && (
+        <Section
+          eyebrow={t("servicesEyebrow")}
+          title={t("servicesTitle")}
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.1}>
+                <Card className="flex h-full flex-col p-6">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    {serviceIcons[service] || <Zap className="h-6 w-6" />}
+                  </div>
+                  <h3 className="text-lg font-semibold text-text">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{item.description}</p>
+                </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
 
-      {/* Benefits Section */}
-      <Section
-        eyebrow={t("benefitsEyebrow")}
-        title={t("benefitsTitle")}
-        className="bg-surface/50"
-      >
-        <div className="grid gap-6 md:grid-cols-2">
-          {serviceData.benefits.map((benefit, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <div className="flex items-start gap-4">
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 text-sm font-semibold text-primary">
-                  {String(index + 1).padStart(2, "0")}
+      {/* Methodology Section */}
+      {methodology.length > 0 && (
+        <Section
+          eyebrow={t("methodologyEyebrow")}
+          title={t("methodologyTitle")}
+          className="bg-surface/50"
+        >
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {methodology.map((step, index) => (
+              <FadeIn key={step.title} delay={index * 0.1}>
+                <div className="relative">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="text-lg font-semibold text-text">{step.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{step.description}</p>
                 </div>
-                <p className="text-muted">{benefit}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Expertise Section */}
+      {expertise.length > 0 && (
+        <Section
+          eyebrow={t("expertiseEyebrow")}
+          title={t("expertiseTitle")}
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            {expertise.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.1}>
+                <Card className="flex h-full flex-col p-6">
+                  <h3 className="text-lg font-semibold text-text">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-sm text-muted">{item.description}</p>
+                  {item.result && (
+                    <p className="mt-4 text-sm font-medium text-primary">{item.result}</p>
+                  )}
+                </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Projects Section */}
+      {projects.length > 0 && (
+        <Section
+          eyebrow={t("projectsEyebrow")}
+          title={t("projectsTitle")}
+          className="bg-surface/50"
+        >
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {projects.map((project, index) => (
+              <FadeIn key={project.name} delay={index * 0.1}>
+                <Card className="flex h-full flex-col p-6">
+                  <h3 className="text-lg font-semibold text-text">{project.name}</h3>
+                  <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
+                  <p className="mt-4 text-sm font-bold text-primary">{project.result}</p>
+                </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Technologies Section */}
+      {technologies.length > 0 && (
+        <Section
+          eyebrow={t("technologiesEyebrow")}
+          title={t("technologiesTitle")}
+        >
+          <div className="flex flex-wrap justify-center gap-3">
+            {technologies.map((tech, index) => (
+              <FadeIn key={tech} delay={index * 0.05}>
+                <Badge variant="outline" className="px-4 py-2 text-sm">
+                  {tech}
+                </Badge>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Why Us Section */}
+      {whyUs.length > 0 && (
+        <Section
+          eyebrow={t("whyUsEyebrow")}
+          title={t("whyUsTitle")}
+          className="bg-surface/50"
+        >
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {whyUs.map((item, index) => (
+              <FadeIn key={item} delay={index * 0.1}>
+                <Card className="flex items-start gap-4 p-6">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Check className="h-5 w-5" />
+                  </div>
+                  <p className="text-text">{item}</p>
+                </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* CTA Section */}
       <Section className="py-16">

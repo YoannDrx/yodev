@@ -10,17 +10,21 @@ export const routing = defineRouting({
       fr: "/services",
       en: "/services",
     },
+    "/services/ai": {
+      fr: "/services/ia",
+      en: "/services/ai",
+    },
     "/services/web": {
       fr: "/services/web",
       en: "/services/web",
     },
+    "/services/custom-software": {
+      fr: "/services/logiciel-metier",
+      en: "/services/custom-software",
+    },
     "/services/mobile": {
       fr: "/services/mobile",
       en: "/services/mobile",
-    },
-    "/services/saas": {
-      fr: "/services/saas",
-      en: "/services/saas",
     },
     "/services/ecommerce": {
       fr: "/services/ecommerce",
@@ -30,17 +34,9 @@ export const routing = defineRouting({
       fr: "/services/ux-design",
       en: "/services/ux-design",
     },
-    "/services/consulting": {
-      fr: "/services/conseil",
-      en: "/services/consulting",
-    },
-    "/services/seo": {
-      fr: "/services/seo",
-      en: "/services/seo",
-    },
-    "/services/support": {
-      fr: "/services/maintenance",
-      en: "/services/support",
+    "/services/cybersecurity": {
+      fr: "/services/cybersecurite",
+      en: "/services/cybersecurity",
     },
     "/ai": {
       fr: "/ia",

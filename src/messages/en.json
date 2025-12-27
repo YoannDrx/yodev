@@ -37,12 +37,13 @@
       "privacy": "Privacy"
     },
     "services": {
-      "web": "Web platforms",
-      "mobile": "Mobile apps",
-      "saas": "SaaS",
+      "ai": "Artificial Intelligence",
+      "web": "Web Platforms",
+      "customSoftware": "Custom Software",
+      "mobile": "Mobile Apps",
       "ecommerce": "E-commerce",
       "uxDesign": "UX/UI Design",
-      "consulting": "Product consulting"
+      "cybersecurity": "Cybersecurity"
     },
     "newsletter": {
       "title": "Stay updated",
@@ -249,33 +250,37 @@
       "cta": "See all case studies"
     },
     "expertise": {
-      "eyebrow": "Our 4 expertises",
-      "title": "4 domains. 4 seniors. 0 dilution.",
-      "subtitle": "Each expert masters their domain from A to Z.",
+      "eyebrow": "Our expertise",
+      "title": "You have the problem. We have the solution.",
+      "subtitle": "No buzzwords. Skills that deliver.",
       "items": [
         {
-          "title": "Artificial Intelligence",
-          "problem": "Want to leverage AI but don't know where to start?",
-          "description": "LLM, RAG, automation, content generation. We identify relevant use cases and ship them to production.",
-          "result": "1000 contents/day for L'Oréal"
+          "title": "Artificial intelligence",
+          "description": "Generative and predictive AI connected to your data. Automation that actually works."
         },
         {
-          "title": "Architecture & Scalability",
-          "problem": "Your product needs to handle load or evolve?",
-          "description": "Cloud, DevOps, microservices. Architectures that scale without breaking.",
-          "result": "x10 traffic for Nike France"
+          "title": "Web platforms",
+          "description": "Fast, SEO-friendly sites that do what they're supposed to. Lighthouse score 95+."
         },
         {
-          "title": "Product Design",
-          "problem": "Your users struggle or leave?",
-          "description": "UX research, UI design, design systems. Interfaces that convert.",
-          "result": "+45% conversion for Céline"
+          "title": "Custom software",
+          "description": "Custom software that adapts to your processes, not the other way around."
         },
         {
-          "title": "Digital Strategy",
-          "problem": "You have an idea but no roadmap?",
-          "description": "Scoping, prioritization, go-to-market. We structure before building.",
-          "result": "MVP in 6 weeks"
+          "title": "Mobile applications",
+          "description": "iOS/Android with React Native. One codebase, two stores, no UX compromises."
+        },
+        {
+          "title": "E-commerce",
+          "description": "Optimized checkout flows. Shopify, Prestashop or custom."
+        },
+        {
+          "title": "UX/UI Design",
+          "description": "Clear interfaces, design systems, user testing. Beautiful that converts."
+        },
+        {
+          "title": "Cybersecurity",
+          "description": "Security audits, pentests, GDPR/SOC2 compliance. Proactive protection."
         }
       ]
     },
@@ -795,147 +800,642 @@
     "backButton": "Back to services",
     "cta": "Start a project",
     "viewWork": "View our work",
-    "featuresEyebrow": "What we offer",
-    "featuresTitle": "Features",
-    "benefitsEyebrow": "Why choose us",
-    "benefitsTitle": "Benefits",
+    "servicesEyebrow": "What we do",
+    "servicesTitle": "Our services",
+    "methodologyEyebrow": "How we work",
+    "methodologyTitle": "Our method",
+    "expertiseEyebrow": "Our domains",
+    "expertiseTitle": "Technical expertise",
+    "projectsEyebrow": "Case studies",
+    "projectsTitle": "Projects delivered",
+    "technologiesEyebrow": "Tech stack",
+    "technologiesTitle": "Technologies we master",
+    "whyUsEyebrow": "Why us",
+    "whyUsTitle": "What makes the difference",
     "ctaTitle": "Ready to start?",
     "ctaSubtitle": "Let's discuss your project and see how we can help.",
     "ctaButton": "Contact us",
-    "web": {
-      "title": "Websites",
-      "description": "High-performance, conversion-optimized websites from marketing sites to complex web applications.",
-      "features": [
-        "Custom responsive design",
-        "Built-in SEO optimization",
-        "Performance and Core Web Vitals",
-        "Headless or custom CMS",
-        "Analytics and tracking integration"
+
+    "ai": {
+      "title": "Artificial Intelligence",
+      "subtitle": "AI that actually delivers",
+      "description": "No eternal POC. Production-ready AI solutions that generate ROI. We turn your data into competitive advantage.",
+      "services": [
+        {
+          "title": "Data & AI Audit",
+          "description": "We analyze your processes and identify high-impact AI quick wins. No fluff, just actionable insights."
+        },
+        {
+          "title": "AI Applications",
+          "description": "Chatbots, assistants, automation. Apps that integrate with your stack and actually work."
+        },
+        {
+          "title": "Custom Models",
+          "description": "Fine-tuning, RAG, predictive. Models trained on YOUR data for YOUR use cases."
+        }
       ],
-      "benefits": [
-        "A site that converts visitors",
-        "Better Google visibility",
-        "Optimal user experience",
-        "Content autonomy"
+      "methodology": [
+        {
+          "title": "Scoping",
+          "description": "We identify high-ROI use cases and validate technical feasibility."
+        },
+        {
+          "title": "Rapid POC",
+          "description": "Working prototype in 2-4 weeks to validate the approach."
+        },
+        {
+          "title": "Production",
+          "description": "Industrialization, monitoring, continuous improvement."
+        },
+        {
+          "title": "Iterations",
+          "description": "User feedback, fine-tuning, new features."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "Generative AI",
+          "description": "GPT-4, Claude, Gemini, Mistral. We master the best LLMs and know which to choose for your case.",
+          "result": "400K content generated/year"
+        },
+        {
+          "title": "Predictive Systems",
+          "description": "Machine Learning applied to your business data. Forecasting, anomaly detection, optimization.",
+          "result": "-30% waste"
+        },
+        {
+          "title": "Computer Vision",
+          "description": "Image recognition, OCR, video analysis. Intelligent processing of your visual data.",
+          "result": "5x analysis speed"
+        },
+        {
+          "title": "RAG & Embeddings",
+          "description": "Smart knowledge bases. Your documents become queryable in natural language.",
+          "result": "90% accuracy"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Product Sheet Generation",
+          "description": "Generative AI to automatically create SEO-optimized product descriptions.",
+          "result": "+400K sheets/year"
+        },
+        {
+          "name": "Consumption Forecasting",
+          "description": "Predictive system to anticipate orders in collective catering.",
+          "result": "-30% waste"
+        },
+        {
+          "name": "Document Analysis",
+          "description": "Automatic extraction and classification of information from complex documents.",
+          "result": "5x productivity"
+        },
+        {
+          "name": "Business Assistant",
+          "description": "Internal chatbot trained on company documentation and processes.",
+          "result": "-60% support tickets"
+        }
+      ],
+      "technologies": ["GPT-4", "Claude", "Gemini", "Mistral", "LangChain", "Python", "TensorFlow", "PyTorch", "Pinecone", "Chroma"],
+      "whyUs": [
+        "4 senior AI experts in-house",
+        "50+ AI projects in production",
+        "No eternal POC, we deliver",
+        "Permanent tech watch"
       ]
     },
+
+    "web": {
+      "title": "Web Platforms",
+      "subtitle": "Sites that convert. Not showcases.",
+      "description": "Web apps, marketing sites, business platforms. Fast, SEO-friendly, maintainable. We build sites that work for you.",
+      "services": [
+        {
+          "title": "Full Development",
+          "description": "From design to deployment. Marketing sites, web apps, custom business platforms."
+        },
+        {
+          "title": "Redesign & Migration",
+          "description": "We modernize your site without breaking what works. Progressive migration, SEO preserved."
+        },
+        {
+          "title": "Maintenance & Evolution",
+          "description": "Responsive support, security updates, new features. Your site stays alive."
+        }
+      ],
+      "methodology": [
+        {
+          "title": "Scoping",
+          "description": "Goals, KPIs, personas, technical constraints. We lay the foundations."
+        },
+        {
+          "title": "Design",
+          "description": "Wireframes, mockups, validation. You see before we code."
+        },
+        {
+          "title": "Development",
+          "description": "2-week sprints, regular demos. You track progress."
+        },
+        {
+          "title": "Launch",
+          "description": "Deployment, monitoring, iterations. We stay by your side."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "Performance",
+          "description": "Lighthouse 90+, Core Web Vitals in the green. Your users don't wait.",
+          "result": "Lighthouse 95+"
+        },
+        {
+          "title": "Technical SEO",
+          "description": "Optimized architecture, semantic markup, sitemap. Google finds you.",
+          "result": "+150% organic traffic"
+        },
+        {
+          "title": "Accessibility",
+          "description": "WCAG 2.1 AA, keyboard navigation, screen readers. Everyone counts.",
+          "result": "100% score"
+        },
+        {
+          "title": "Maintainability",
+          "description": "Clean, documented, tested code. Your future devs will thank us.",
+          "result": "-40% debug time"
+        }
+      ],
+      "projects": [
+        {
+          "name": "B2B Platform",
+          "description": "Complete web app with user management, analytics dashboard and API.",
+          "result": "+40% productivity"
+        },
+        {
+          "name": "Corporate Site",
+          "description": "Complete redesign with new design system and headless CMS.",
+          "result": "+120% conversions"
+        },
+        {
+          "name": "Marketplace",
+          "description": "Multi-vendor platform with integrated payments and automated management.",
+          "result": "€500K GMV/month"
+        },
+        {
+          "name": "Customer Portal",
+          "description": "Secure customer area with order tracking and integrated support.",
+          "result": "-50% support calls"
+        }
+      ],
+      "technologies": ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS", "Vercel", "AWS"],
+      "whyUs": [
+        "Scalable architecture from day one",
+        "Non-negotiable performance",
+        "Maintainable and documented code",
+        "Responsive post-delivery support"
+      ]
+    },
+
+    "custom-software": {
+      "title": "Custom Software",
+      "subtitle": "Software that adapts to you. Not the other way around.",
+      "description": "We map your needs and develop an app that perfectly addresses them. No more workarounds and overflowing spreadsheets.",
+      "services": [
+        {
+          "title": "Analysis & Design",
+          "description": "Business workshops, process mapping, functional specs. We understand before we code."
+        },
+        {
+          "title": "Custom Development",
+          "description": "Application tailored to your needs. No license, no limits, just bespoke."
+        },
+        {
+          "title": "SI Integration",
+          "description": "Connection to your existing tools: ERP, CRM, accounting. Everything communicates."
+        }
+      ],
+      "methodology": [
+        {
+          "title": "Kickoff & Interviews",
+          "description": "We meet end users. Not just decision makers."
+        },
+        {
+          "title": "Business Workshops",
+          "description": "Process mapping, pain point identification, prioritization."
+        },
+        {
+          "title": "UX Design",
+          "description": "Wireframes, user flows, validation with field teams."
+        },
+        {
+          "title": "Iterative Development",
+          "description": "Short sprints, frequent demos, continuous adjustments."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "Domain-Driven Design",
+          "description": "Architecture aligned with your business. Code speaks your language.",
+          "result": "Guaranteed scalability"
+        },
+        {
+          "title": "Test-Driven Development",
+          "description": "Tests before code. Fewer bugs, more confidence with each release.",
+          "result": "-80% bugs in prod"
+        },
+        {
+          "title": "DevOps & CI/CD",
+          "description": "Automated deployments, monitoring, instant rollback.",
+          "result": "Daily deployments"
+        },
+        {
+          "title": "User Training",
+          "description": "Documentation, videos, training sessions. Your teams are autonomous.",
+          "result": "100% adoption"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Logistics ERP",
+          "description": "Complete flow, inventory, shipping management for an e-commerce company.",
+          "result": "+60% productivity"
+        },
+        {
+          "name": "Custom CRM",
+          "description": "Client tracking adapted to specific processes of a real estate agency.",
+          "result": "+35% sales"
+        },
+        {
+          "name": "HR Planning",
+          "description": "Schedule, leave, skills management for a 200-person SME.",
+          "result": "-4h/week admin"
+        },
+        {
+          "name": "Production Management",
+          "description": "Real-time tracking, traceability, reporting for a manufacturer.",
+          "result": "+25% yield"
+        }
+      ],
+      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "GraphQL", "TypeScript"],
+      "whyUs": [
+        "We understand your business before coding",
+        "Testing and quality non-negotiable",
+        "Long-term support",
+        "Your data stays with you"
+      ]
+    },
+
     "mobile": {
       "title": "Mobile Apps",
-      "description": "Native or cross-platform iOS and Android apps designed for user engagement.",
-      "features": [
-        "React Native / Flutter",
-        "Native iOS & Android design",
-        "Push notifications",
-        "Offline mode",
-        "API & back-office integration"
+      "subtitle": "Apps your users love.",
+      "description": "iOS, Android, cross-platform. Performant, smooth apps that drive engagement. Not laggy prototypes.",
+      "services": [
+        {
+          "title": "Audit & Advisory",
+          "description": "Analysis of your existing app or project. Technical and UX recommendations."
+        },
+        {
+          "title": "Full Development",
+          "description": "From idea to store. Design, development, testing, deployment, maintenance."
+        },
+        {
+          "title": "Redesign & Modernization",
+          "description": "Migration to a modern stack without losing your users."
+        }
       ],
-      "benefits": [
-        "App store presence",
-        "Enhanced user engagement",
-        "Native mobile experience",
-        "Unified codebase"
+      "methodology": [
+        {
+          "title": "Discovery",
+          "description": "Personas, user stories, competitor benchmark. We lay the foundations."
+        },
+        {
+          "title": "Design",
+          "description": "Wireframes, UI kit, interactive prototype. You test before code."
+        },
+        {
+          "title": "Development",
+          "description": "2-week sprints, regular test builds. You track progress."
+        },
+        {
+          "title": "Publication",
+          "description": "Store submission, ASO, analytics. Your app is visible."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "React Native",
+          "description": "One codebase, two platforms. Native performance, optimized development.",
+          "result": "-40% dev time"
+        },
+        {
+          "title": "Flutter",
+          "description": "Smooth, customized UI. Ideal for rich visual experiences.",
+          "result": "60 FPS guaranteed"
+        },
+        {
+          "title": "Push & Engagement",
+          "description": "Smart notifications, deep linking, optimized retention.",
+          "result": "+45% retention"
+        },
+        {
+          "title": "Offline Mode",
+          "description": "Smart synchronization. Your app works even without network.",
+          "result": "100% availability"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Retail Loyalty App",
+          "description": "Scan, points, rewards, personalized notifications.",
+          "result": "500K+ downloads"
+        },
+        {
+          "name": "Field Service App",
+          "description": "Offline input, auto-sync, photo management for technicians.",
+          "result": "+2h/day saved"
+        },
+        {
+          "name": "Health App",
+          "description": "Patient tracking, medication reminders, integrated telemedicine.",
+          "result": "4.8★ on stores"
+        },
+        {
+          "name": "Event App",
+          "description": "Schedule, networking, badge scanning, live notifications.",
+          "result": "+70% engagement"
+        }
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo", "TypeScript", "GraphQL"],
+      "whyUs": [
+        "Non-negotiable native experience",
+        "Store publication mastered",
+        "Testing on real devices",
+        "Long-term maintenance"
       ]
     },
-    "saas": {
-      "title": "SaaS & Web Apps",
-      "description": "Robust and scalable SaaS platforms for your business model.",
-      "features": [
-        "Multi-tenant architecture",
-        "Subscription system",
-        "Analytics dashboard",
-        "REST/GraphQL API",
-        "Security and GDPR compliance"
-      ],
-      "benefits": [
-        "Recurring revenue",
-        "Ensured scalability",
-        "Technical autonomy",
-        "Optimized time-to-market"
-      ]
-    },
+
     "ecommerce": {
       "title": "E-commerce",
-      "description": "High-performance online stores that maximize your sales.",
-      "features": [
-        "Shopify / WooCommerce / Custom",
-        "Optimized conversion funnel",
-        "Secure multi-currency payments",
-        "Inventory and order management",
-        "Logistics integration"
+      "subtitle": "Stores that grow your revenue.",
+      "description": "Shopify, Prestashop, custom. We design purchasing journeys that convert and back-offices that save you time.",
+      "services": [
+        {
+          "title": "Store Creation",
+          "description": "From A to Z. Strategy, design, development, launch. Turnkey."
+        },
+        {
+          "title": "Redesign & Migration",
+          "description": "Platform migration without losing your SEO or customers."
+        },
+        {
+          "title": "Conversion Optimization",
+          "description": "A/B testing, checkout funnel, UX. Every % counts."
+        }
       ],
-      "benefits": [
-        "Increased average order value",
-        "Reduced cart abandonment",
-        "Process automation",
-        "Seamless shopping experience"
+      "methodology": [
+        {
+          "title": "Audit & Strategy",
+          "description": "Competitor analysis, positioning, target KPIs."
+        },
+        {
+          "title": "UX & Journey",
+          "description": "Optimized checkout funnel, friction reduction."
+        },
+        {
+          "title": "Development",
+          "description": "Store, payments, logistics, integrations."
+        },
+        {
+          "title": "Optimization",
+          "description": "A/B tests, analytics, continuous iterations."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "Conversion",
+          "description": "Optimized checkout, one-click checkout, cart abandonment.",
+          "result": "+35% conversion"
+        },
+        {
+          "title": "SI Integration",
+          "description": "ERP, PIM, CRM connection. Your inventory and orders synchronized.",
+          "result": "Zero re-entry"
+        },
+        {
+          "title": "Omnichannel",
+          "description": "Click & collect, marketplace, retail. Wherever your customers are.",
+          "result": "+50% revenue"
+        },
+        {
+          "title": "Performance",
+          "description": "Load time < 2s. Every second counts for conversion.",
+          "result": "Lighthouse 95+"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Luxury Boutique",
+          "description": "Complete redesign with premium experience and optimized checkout.",
+          "result": "+120% conversion"
+        },
+        {
+          "name": "B2B Marketplace",
+          "description": "Multi-vendor platform with complex order management.",
+          "result": "€2M GMV/month"
+        },
+        {
+          "name": "Click & Collect",
+          "description": "POS integration, real-time inventory, omnichannel journey.",
+          "result": "+40% average basket"
+        },
+        {
+          "name": "Subscription Box",
+          "description": "Flexible subscription system with churn management.",
+          "result": "-25% churn"
+        }
+      ],
+      "technologies": ["Shopify", "Prestashop", "WooCommerce", "Stripe", "Algolia", "Klaviyo", "React", "Node.js"],
+      "whyUs": [
+        "Conversion obsessed",
+        "SI integration mastered",
+        "Data-driven, not gut feeling",
+        "Dedicated e-commerce support"
       ]
     },
+
     "ux-design": {
       "title": "UX/UI Design",
-      "description": "Intuitive and beautiful interfaces that delight your users.",
-      "features": [
-        "User research",
-        "Wireframes and prototypes",
-        "Complete design system",
-        "User testing",
-        "Developer handoff"
+      "subtitle": "Interfaces your users understand.",
+      "description": "UX research, wireframes, design systems, user testing. We design clear interfaces that guide your users to action.",
+      "services": [
+        {
+          "title": "UX Research",
+          "description": "Interviews, user testing, analytics. We understand your users before designing."
+        },
+        {
+          "title": "UI Design",
+          "description": "Mockups, design system, iconography. Beautiful AND functional interfaces."
+        },
+        {
+          "title": "UX Audit",
+          "description": "Analysis of your existing product. Actionable recommendations, quick wins identified."
+        }
       ],
-      "benefits": [
-        "Better user satisfaction",
-        "Reduced development time",
-        "Brand consistency",
-        "Data-driven decisions"
+      "methodology": [
+        {
+          "title": "Brief & Discovery",
+          "description": "Goals, constraints, personas. We align everyone."
+        },
+        {
+          "title": "Wireframes",
+          "description": "Structure, flows, architecture. The skeleton before the skin."
+        },
+        {
+          "title": "Prototype",
+          "description": "Testable interactive mockups. Validation before development."
+        },
+        {
+          "title": "Design System",
+          "description": "Reusable components, guidelines. Guaranteed consistency."
+        }
+      ],
+      "expertise": [
+        {
+          "title": "User Research",
+          "description": "User testing, interviews, surveys. Fact-based decisions.",
+          "result": "+40% satisfaction"
+        },
+        {
+          "title": "Design System",
+          "description": "Component library. Consistency and development speed.",
+          "result": "-50% design time"
+        },
+        {
+          "title": "Prototyping",
+          "description": "Interactive Figma, testing before code. Fast and cheap iterations.",
+          "result": "-30% dev iterations"
+        },
+        {
+          "title": "Accessibility",
+          "description": "WCAG 2.1, contrast, keyboard navigation. Inclusive design.",
+          "result": "AA+ score"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Banking App",
+          "description": "Complete UX redesign for a fintech. Simplified journey.",
+          "result": "+60% tasks completed"
+        },
+        {
+          "name": "SaaS Dashboard",
+          "description": "Design system + interface redesign for a B2B tool.",
+          "result": "-40% support tickets"
+        },
+        {
+          "name": "E-commerce Site",
+          "description": "Checkout funnel and product page optimization.",
+          "result": "+25% conversion"
+        },
+        {
+          "name": "Business App",
+          "description": "Field UX for technicians. Mobile-first optimized interface.",
+          "result": "4.7★ internal satisfaction"
+        }
+      ],
+      "technologies": ["Figma", "Framer", "Principle", "Whimsical", "Hotjar", "Maze", "Notion", "Storybook"],
+      "whyUs": [
+        "Research-based design",
+        "No trends, just useful",
+        "Impeccable dev handoff",
+        "Systematic user testing"
       ]
     },
-    "consulting": {
-      "title": "Advisory & Transformation",
-      "description": "Strategic guidance for your web, mobile and AI projects.",
-      "features": [
-        "Technical and UX audit",
-        "Product roadmap",
-        "System architecture",
-        "Technology choices",
-        "Team support"
+
+    "cybersecurity": {
+      "title": "Cybersecurity",
+      "subtitle": "Test and guarantee your company's security.",
+      "description": "Security audits, pentests, vulnerability analysis. We find the flaws before hackers do. Actionable reports, not PDF for the drawer.",
+      "services": [
+        {
+          "title": "Penetration Testing",
+          "description": "Web, API, mobile, network pentest. We attack like the real ones."
+        },
+        {
+          "title": "Source Code Audit",
+          "description": "SAST analysis, manual review. We find what tools miss."
+        },
+        {
+          "title": "Infrastructure Audit",
+          "description": "AWS, Azure, GCP. Configuration, IAM, secrets. Nothing escapes us."
+        }
       ],
-      "benefits": [
-        "Clear project vision",
-        "Anticipated risks",
-        "Stack suited to your needs",
-        "Skill development"
-      ]
-    },
-    "seo": {
-      "title": "SEO & Performance",
-      "description": "Optimizing your visibility and web performance.",
-      "features": [
-        "Complete SEO audit",
-        "Technical optimization",
-        "Content strategy",
-        "Link building",
-        "Tracking and reporting"
+      "methodology": [
+        {
+          "title": "Reconnaissance",
+          "description": "Mapping your attack surface. We see what attackers see."
+        },
+        {
+          "title": "Intrusion",
+          "description": "Exploitation of identified vulnerabilities. Realistic tests."
+        },
+        {
+          "title": "Analysis",
+          "description": "Risk qualification, prioritization, recommendations."
+        },
+        {
+          "title": "Remediation",
+          "description": "Fix support, re-audit. You're really protected."
+        }
       ],
-      "benefits": [
-        "Qualified organic traffic",
-        "Better Google rankings",
-        "Stronger domain authority",
-        "Measurable ROI"
-      ]
-    },
-    "support": {
-      "title": "Support & Maintenance",
-      "description": "Ongoing support for the longevity of your projects.",
-      "features": [
-        "24/7 monitoring",
-        "Security updates",
-        "Automatic backups",
-        "Responsive support",
-        "Continuous improvements"
+      "expertise": [
+        {
+          "title": "Web Pentest",
+          "description": "OWASP Top 10, injections, XSS, CSRF. Web applications thoroughly tested.",
+          "result": "100% critical vulns found"
+        },
+        {
+          "title": "API Pentest",
+          "description": "Authentication, authorization, business logic. Your APIs secured.",
+          "result": "Zero breach post-audit"
+        },
+        {
+          "title": "Cloud Audit",
+          "description": "Configuration, IAM, secrets, logs. Your cloud hardened.",
+          "result": "CIS benchmark compliance"
+        },
+        {
+          "title": "Awareness",
+          "description": "Team training, simulated phishing. Human link strengthened.",
+          "result": "-70% phishing clicks"
+        }
       ],
-      "benefits": [
-        "Peace of mind",
-        "Optimal availability",
-        "Enhanced security",
-        "Always up-to-date project"
+      "projects": [
+        {
+          "name": "Fintech",
+          "description": "Complete pre-launch audit. Web, API, infra, code.",
+          "result": "0 post-launch incident"
+        },
+        {
+          "name": "E-commerce",
+          "description": "Platform pentest + PCI-DSS audit.",
+          "result": "Compliance achieved"
+        },
+        {
+          "name": "B2B SaaS",
+          "description": "Quarterly recurring audit + private bug bounty.",
+          "result": "SOC2 Type II"
+        },
+        {
+          "name": "Manufacturing",
+          "description": "IT/OT network audit, segmentation, remote access.",
+          "result": "Risk score -60%"
+        }
+      ],
+      "technologies": ["Burp Suite", "Metasploit", "Nmap", "OWASP ZAP", "Nuclei", "Trivy", "SonarQube", "AWS Security Hub"],
+      "whyUs": [
+        "OSCP/OSWE certified experts",
+        "Actionable reports, not fluff",
+        "Re-audit included",
+        "Total confidentiality"
       ]
     }
   },
