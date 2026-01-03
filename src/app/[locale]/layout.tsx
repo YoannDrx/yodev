@@ -26,7 +26,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div className="min-h-screen bg-bg text-text">
         <SiteHeader />
-        <main className="relative">{children}</main>
+        <main className="relative mesh-gradient min-h-screen">{children}</main>
         <SiteFooter />
       </div>
     </NextIntlClientProvider>

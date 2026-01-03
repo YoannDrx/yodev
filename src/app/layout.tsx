@@ -1,23 +1,52 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, DM_Sans, Fira_Code } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space",
+// Body font - Plus Jakarta Sans
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+// Display font - DM Sans
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// Mono font - Fira Code
+const firaCode = Fira_Code({
+  variable: "--font-fira",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Yodev — Agence Digitale 360°",
+  title: "Yodev — Agence IA & Transformation Digitale",
   description:
-    "Yodev conçoit et déploie vos solutions digitales sur mesure. Du concept à la mise en production, nous transformons vos idées en applications performantes.",
+    "Yodev accélère votre transformation digitale avec l'IA, la modernisation legacy et le développement web/mobile haute performance. Expert Next.js, React, LLM & Cloud.",
+  keywords: [
+    "agence IA",
+    "transformation digitale",
+    "développement web",
+    "Next.js",
+    "React",
+    "LLM",
+    "modernisation legacy",
+    "cloud",
+    "cybersécurité",
+  ],
+  authors: [{ name: "Yodev" }],
+  openGraph: {
+    title: "Yodev — Agence IA & Transformation Digitale",
+    description:
+      "Accélérez votre transformation digitale avec l'IA et le développement web haute performance.",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({
@@ -28,9 +57,9 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale} suppressHydrationWarning data-theme="light">
+    <html lang={locale} suppressHydrationWarning data-theme="dark">
       <body
-        className={`${spaceGrotesk.variable} ${manrope.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${dmSans.variable} ${firaCode.variable} antialiased`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>

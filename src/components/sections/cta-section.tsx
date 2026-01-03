@@ -14,6 +14,8 @@ interface CtaSectionProps {
   subtitle?: string;
   ctaLabel: string;
   ctaHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
   variant?: "default" | "card" | "gradient";
   className?: string;
 }
@@ -24,6 +26,8 @@ export function CtaSection({
   subtitle,
   ctaLabel,
   ctaHref = "/contact",
+  secondaryLabel,
+  secondaryHref,
   variant = "default",
   className,
 }: CtaSectionProps) {
@@ -32,33 +36,47 @@ export function CtaSection({
       <section className={cn("py-16 md:py-20", className)}>
         <Container>
           <FadeIn>
-            <Card variant="elevated" className="overflow-hidden">
-              <div className="relative flex flex-col items-center gap-6 p-8 text-center md:flex-row md:justify-between md:p-12 md:text-left">
+            <Card variant="elevated" className="overflow-hidden glass-panel rounded-[3rem]">
+              <div className="relative flex flex-col items-center gap-8 p-12 text-center md:p-20">
                 {/* Background gradient */}
-                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/10 via-transparent to-secondary/10" />
+                <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-dots" />
 
-                <div className="max-w-xl">
+                <div className="max-w-2xl relative z-10">
                   {eyebrow && (
                     <p className="mb-2 text-xs font-medium uppercase tracking-wider text-primary">
                       {eyebrow}
                     </p>
                   )}
-                  <h2 className="text-2xl font-bold text-text md:text-3xl">
+                  <h2 className="text-4xl md:text-6xl font-display font-bold text-text mb-8">
                     {title}
                   </h2>
                   {subtitle && (
-                    <p className="mt-2 text-muted">{subtitle}</p>
+                    <p className="text-xl text-muted mb-12">{subtitle}</p>
                   )}
                 </div>
 
-                <ButtonLink
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  href={ctaHref as any}
-                  size="lg"
-                  rightIcon={<ArrowRight className="h-4 w-4" />}
-                >
-                  {ctaLabel}
-                </ButtonLink>
+                <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10">
+                  <ButtonLink
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    href={ctaHref as any}
+                    size="lg"
+                    className="px-12 py-5 rounded-full shadow-[0_0_30px_rgba(27,168,150,0.3)]"
+                  >
+                    {ctaLabel}
+                  </ButtonLink>
+                  {secondaryLabel && secondaryHref && (
+                    <ButtonLink
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      href={secondaryHref as any}
+                      variant="glass"
+                      size="lg"
+                      className="px-12 py-5 rounded-full"
+                    >
+                      {secondaryLabel}
+                    </ButtonLink>
+                  )}
+                </div>
               </div>
             </Card>
           </FadeIn>

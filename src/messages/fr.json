@@ -20,7 +20,14 @@
     "team": "L'équipe",
     "contact": "Contact",
     "blog": "Blog",
-    "careers": "Jobs"
+    "careers": "Jobs",
+    "webMobile": "Web & Mobile",
+    "webMobileDesc": "Sites web, applications, e-commerce",
+    "iaLegacy": "IA & Legacy",
+    "iaLegacyDesc": "Modernisation et intégration IA",
+    "cybersecurity": "Cybersécurité",
+    "cybersecurityDesc": "Audits, pentests, conformité",
+    "allServices": "Voir tous nos services"
   },
   "Styles": {
     "pulse": "Pulse",
@@ -28,13 +35,14 @@
     "forge": "Forge"
   },
   "Footer": {
-    "subtitle": "Studio digital artisan. Web, mobile & IA pour les projets qui comptent.",
-    "company": "Entreprise",
+    "subtitle": "Agence IA & transformation digitale. Modernisation legacy, cybersécurité et développement haute performance.",
+    "company": "Agence",
     "resourcesTitle": "Ressources",
     "resources": {
       "offers": "Offres",
       "legal": "Mentions légales",
-      "privacy": "Confidentialité"
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
     },
     "services": {
       "ai": "Intelligence artificielle",
@@ -43,10 +51,14 @@
       "mobile": "Apps mobiles",
       "ecommerce": "E-commerce",
       "uxDesign": "UX/UI Design",
-      "cybersecurity": "Cybersécurité"
+      "cybersecurity": "Cybersécurité",
+      "iaLegacy": "IA & Transformation Legacy",
+      "webMobile": "Développement Web & Mobile",
+      "expertise": "Expertise Technique"
     },
     "newsletter": {
-      "title": "Restez informé",
+      "title": "Newsletter",
+      "description": "Recevez nos insights tech et IA",
       "placeholder": "Votre email",
       "submit": "S'inscrire",
       "success": "Merci ! Vous êtes inscrit à notre newsletter."
@@ -64,16 +76,26 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "STUDIO DIGITAL. 4 EXPERTS. 0 INTERMÉDIAIRE.",
-      "title": "Le studio artisan que les grands groupes s'arrachent",
-      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... Ils nous ont choisi pour notre expertise, pas pour notre taille. IA, Architecture, Design, Stratégie : les bonnes personnes, au bon moment.",
-      "primary": "Discuter de mon projet",
+      "eyebrow": "Spécialiste IA & Modernisation IT",
+      "titleLine1": "Modernisation IT & IA",
+      "titleLine2": "pour PME/ETI",
+      "title": "Modernisation IT & IA pour PME/ETI",
+      "subtitle": "Du legacy au futur. Nous transformons vos systèmes critiques en moteurs d'innovation IA. Performance, Sécurité et ROI garantis sous 12 semaines.",
+      "primary": "Consultation Stratégique",
       "secondary": "Voir nos réalisations",
+      "experts": {
+        "count": "+15 Experts IA",
+        "label": "Disponibles pour audit"
+      },
+      "status": {
+        "label": "Migration Status",
+        "value": "94% Completed"
+      },
       "chips": [
         "IA & Automation",
         "Architecture Cloud",
-        "Design produit",
-        "Stratégie digitale"
+        "Legacy Modernization",
+        "Cybersécurité"
       ],
       "signals": {
         "studioEyebrow": "Format",
@@ -81,6 +103,56 @@
         "outputEyebrow": "Promesse",
         "outputBody": "Pas d'usine, pas de junior caché. Un interlocuteur unique qui comprend votre métier."
       }
+    },
+    "architecture": {
+      "title": "Notre Architecture de Modernisation",
+      "description": "Nous ne faisons pas que réécrire du code. Nous créons une couche d'abstraction moderne pour injecter l'IA dans vos flux de travail existants.",
+      "steps": [
+        {
+          "title": "1. Audit & Extraction Legacy",
+          "description": "Mapping des APIs, DBs et processus critiques sans interruption de service."
+        },
+        {
+          "title": "2. Middleware IA Sécurisé",
+          "description": "Intégration d'un Vector Store (RAG) et d'agents LLM avec filtrage de confidentialité."
+        },
+        {
+          "title": "3. Scaling & Performance",
+          "description": "Déploiement auto-scalable sur Cloud moderne (AWS/Azure) avec monitoring temps réel."
+        }
+      ]
+    },
+    "useCases": {
+      "title": "À chaque enjeu, sa solution.",
+      "subtitle": "Nous adaptons nos processus selon la maturité de votre structure.",
+      "tabs": {
+        "startup": "Startups",
+        "pme": "PME / ETI",
+        "enterprise": "Grand Groupe"
+      },
+      "pme": [
+        {
+          "icon": "Database",
+          "title": "Migration Base de Données",
+          "description": "Passage de SQL Server on-prem vers Cloud hybride avec zéro downtime garanti via CDC.",
+          "features": ["Sécurité AES-256", "Performance +300%"]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "Chatbot Support Intelligent",
+          "description": "Implémentation d'un RAG connecté à votre documentation interne pour automatiser 60% du N1.",
+          "features": ["ROI sous 6 mois", "RGPD & Souveraineté"]
+        },
+        {
+          "icon": "Shield",
+          "title": "Audit de Sécurité IT",
+          "description": "Pentesting et mise en conformité SOC2 / ISO 27001 pour vos infrastructures critiques.",
+          "features": ["Zero Trust Framework", "Monitoring 24/7"]
+        }
+      ]
+    },
+    "trust": {
+      "title": "Ils font confiance à notre expertise technique"
     },
     "story": {
       "eyebrow": "Notre philosophie",
@@ -914,6 +986,24 @@
         "50+ projets IA en production",
         "Pas de POC éternel, on livre",
         "Veille techno permanente"
+      ],
+      "faq": [
+        {
+          "question": "Quels modèles IA utilisez-vous ?",
+          "answer": "Nous travaillons avec les meilleurs LLMs du marché : GPT-4, Claude, Gemini, Mistral, et Llama 3. Le choix dépend de votre cas d'usage : performance, coût, latence, confidentialité. On vous conseille objectivement."
+        },
+        {
+          "question": "Combien de temps pour un POC IA ?",
+          "answer": "Un POC fonctionnel prend généralement 2 à 4 semaines. L'objectif est de valider rapidement la faisabilité et le ROI avant d'industrialiser. Pas de POC éternel chez nous."
+        },
+        {
+          "question": "Comment garantissez-vous la confidentialité des données ?",
+          "answer": "Plusieurs options selon vos contraintes : modèles on-premise, cloud privé, anonymisation des données. On travaille en conformité RGPD et on peut signer des NDA renforcés."
+        },
+        {
+          "question": "Peut-on fine-tuner un modèle sur nos données métier ?",
+          "answer": "Absolument. Le fine-tuning permet d'adapter un LLM à votre vocabulaire et vos cas d'usage spécifiques. On combine souvent RAG + fine-tuning pour des résultats optimaux."
+        }
       ]
     },
 
@@ -1448,6 +1538,24 @@
         "Rapports actionnables, pas du blabla",
         "Contre-audit inclus",
         "Confidentialité totale"
+      ],
+      "faq": [
+        {
+          "question": "Quelle est la différence entre audit et pentest ?",
+          "answer": "L'audit évalue votre posture sécurité globale (configuration, process, conformité). Le pentest simule une vraie attaque pour trouver des vulnérabilités exploitables. On recommande souvent les deux."
+        },
+        {
+          "question": "Combien de temps dure un pentest ?",
+          "answer": "De 3 à 10 jours selon le périmètre. Un pentest web standard prend 5 jours, un audit infrastructure plus complexe peut aller jusqu'à 2 semaines. On définit le scope ensemble."
+        },
+        {
+          "question": "Quelles certifications ont vos experts ?",
+          "answer": "Nos pentesters sont certifiés OSCP, OSWE, GPEN, CEH. Ils font partie des top 1% sur les plateformes de bug bounty et maintiennent leurs compétences à jour."
+        },
+        {
+          "question": "Comment se passe la remédiation ?",
+          "answer": "On livre un rapport détaillé avec priorisation par risque et recommandations concrètes. On peut accompagner vos équipes sur les corrections et faire un contre-audit gratuit pour valider."
+        }
       ]
     }
   },

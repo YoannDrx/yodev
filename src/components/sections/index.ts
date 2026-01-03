@@ -10,3 +10,6 @@ export { ClientLogos, ClientLogosGrid } from "./client-logos";
 export { CtaSection } from "./cta-section";
 export { PathsSection } from "./paths-section";
 export { FitSection } from "./fit-section";
+export { ArchitectureSection } from "./architecture-section";
+export { UseCasesSection } from "./use-cases-section";
+export { TrustSection } from "./trust-section";

@@ -64,16 +64,26 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "DIGITAL STUDIO. 4 EXPERTS. 0 MIDDLEMEN.",
-      "title": "The artisan studio that enterprises fight over",
-      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... They chose us for our expertise, not our size. AI, Architecture, Design, Strategy: the right people, at the right time.",
-      "primary": "Discuss my project",
+      "eyebrow": "AI & IT Modernization Specialist",
+      "titleLine1": "IT Modernization & AI",
+      "titleLine2": "for SMEs & Mid-caps",
+      "title": "IT Modernization & AI for SMEs & Mid-caps",
+      "subtitle": "From legacy to future. We transform your critical systems into AI-powered innovation engines. Performance, Security and ROI guaranteed in 12 weeks.",
+      "primary": "Strategic Consultation",
       "secondary": "See our work",
+      "experts": {
+        "count": "+15 AI Experts",
+        "label": "Available for audit"
+      },
+      "status": {
+        "label": "Migration Status",
+        "value": "94% Completed"
+      },
       "chips": [
         "AI & Automation",
         "Cloud Architecture",
-        "Product Design",
-        "Digital Strategy"
+        "Legacy Modernization",
+        "Cybersecurity"
       ],
       "signals": {
         "studioEyebrow": "Format",
@@ -81,6 +91,56 @@
         "outputEyebrow": "Promise",
         "outputBody": "No factory, no hidden juniors. One point of contact who understands your business."
       }
+    },
+    "architecture": {
+      "title": "Our Modernization Architecture",
+      "description": "We don't just rewrite code. We create a modern abstraction layer to inject AI into your existing workflows.",
+      "steps": [
+        {
+          "title": "1. Legacy Audit & Extraction",
+          "description": "Mapping of APIs, DBs and critical processes without service interruption."
+        },
+        {
+          "title": "2. Secure AI Middleware",
+          "description": "Integration of a Vector Store (RAG) and LLM agents with privacy filtering."
+        },
+        {
+          "title": "3. Scaling & Performance",
+          "description": "Auto-scalable deployment on modern Cloud (AWS/Azure) with real-time monitoring."
+        }
+      ]
+    },
+    "useCases": {
+      "title": "For every challenge, a solution.",
+      "subtitle": "We adapt our processes according to your organization's maturity.",
+      "tabs": {
+        "startup": "Startups",
+        "pme": "SMEs / Mid-caps",
+        "enterprise": "Enterprise"
+      },
+      "pme": [
+        {
+          "icon": "Database",
+          "title": "Database Migration",
+          "description": "Migration from on-prem SQL Server to hybrid Cloud with guaranteed zero downtime via CDC.",
+          "features": ["AES-256 Security", "+300% Performance"]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "Intelligent Support Chatbot",
+          "description": "Implementation of a RAG connected to your internal documentation to automate 60% of L1 support.",
+          "features": ["ROI within 6 months", "GDPR & Sovereignty"]
+        },
+        {
+          "icon": "Shield",
+          "title": "IT Security Audit",
+          "description": "Pentesting and SOC2 / ISO 27001 compliance for your critical infrastructure.",
+          "features": ["Zero Trust Framework", "24/7 Monitoring"]
+        }
+      ]
+    },
+    "trust": {
+      "title": "They trust our technical expertise"
     },
     "story": {
       "eyebrow": "Our philosophy",
