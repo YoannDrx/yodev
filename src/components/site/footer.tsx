@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { Linkedin, Twitter, Send, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/ui/logo";
 
 const serviceLinks = [
   { href: "/services/ai", key: "ai" },
@@ -62,13 +63,8 @@ export function SiteFooter() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Logo & Description */}
           <div className="space-y-6">
-            <Link href="/" className="group flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary rotate-3 transition-transform duration-300 group-hover:rotate-12">
-                <span className="text-dark font-black text-lg">Y</span>
-              </div>
-              <span className="text-xl font-display font-bold tracking-tight">
-                yodev
-              </span>
+            <Link href="/" className="group">
+              <Logo size="sm" />
             </Link>
             <p className="text-muted text-sm leading-relaxed">
               {t("subtitle")}

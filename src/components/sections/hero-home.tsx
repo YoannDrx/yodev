@@ -1,10 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Zap } from "lucide-react";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
@@ -129,7 +127,7 @@ export function HeroHome() {
 
           {/* Right Visual - Code Preview */}
           <SlideIn direction="right" delay={0.2} className="hidden lg:block relative">
-            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group">
+            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group bg-[#0f1111]/95 border-white/10">
               {/* Code Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex gap-2">
@@ -151,11 +149,7 @@ export function HeroHome() {
               </div>
 
               {/* Floating Status */}
-              <motion.div
-                className="absolute bottom-6 right-6 bg-dark/80 backdrop-blur border border-white/10 p-4 rounded-2xl shadow-2xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
+              <div className="absolute bottom-6 right-6 bg-dark/90 backdrop-blur-sm border border-white/10 p-4 rounded-2xl shadow-2xl">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-primary/20 rounded-lg">
                     <Zap className="w-6 h-6 text-primary" />
@@ -165,7 +159,7 @@ export function HeroHome() {
                     <p className="text-sm font-bold">{t("hero.status.value")}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </GlassPanel>
 
             {/* Decorative elements */}

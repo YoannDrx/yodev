@@ -64,30 +64,30 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "AI & IT Modernization Specialist",
-      "titleLine1": "IT Modernization & AI",
-      "titleLine2": "for SMEs & Mid-caps",
-      "title": "IT Modernization & AI for SMEs & Mid-caps",
-      "subtitle": "From legacy to future. We transform your critical systems into AI-powered innovation engines. Performance, Security and ROI guaranteed in 12 weeks.",
+      "eyebrow": "Full-service digital studio",
+      "titleLine1": "One partner.",
+      "titleLine2": "All your digital.",
+      "title": "One partner. All your digital.",
+      "subtitle": "Web, mobile, AI, design, security — a tight-knit team that walks with you from idea to launch. No silos, no friction. Just us, with you.",
       "primary": "Strategic Consultation",
       "secondary": "See our work",
       "experts": {
-        "count": "+15 AI Experts",
-        "label": "Available for audit"
+        "count": "+15 Experts",
+        "label": "Ready to work with you"
       },
       "status": {
         "label": "Migration Status",
         "value": "94% Completed"
       },
       "chips": [
+        "Web & Mobile",
         "AI & Automation",
-        "Cloud Architecture",
-        "Legacy Modernization",
+        "UI/UX Design",
         "Cybersecurity"
       ],
       "signals": {
         "studioEyebrow": "Format",
-        "studioBody": "4 complementary experts. You talk directly to those who build.",
+        "studioBody": "A multidisciplinary team. You talk directly to those who build.",
         "outputEyebrow": "Promise",
         "outputBody": "No factory, no hidden juniors. One point of contact who understands your business."
       }

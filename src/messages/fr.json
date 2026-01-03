@@ -76,30 +76,30 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "Spécialiste IA & Modernisation IT",
-      "titleLine1": "Modernisation IT & IA",
-      "titleLine2": "pour PME/ETI",
-      "title": "Modernisation IT & IA pour PME/ETI",
-      "subtitle": "Du legacy au futur. Nous transformons vos systèmes critiques en moteurs d'innovation IA. Performance, Sécurité et ROI garantis sous 12 semaines.",
+      "eyebrow": "Studio digital 360°",
+      "titleLine1": "Un partenaire.",
+      "titleLine2": "Tout votre digital.",
+      "title": "Un partenaire. Tout votre digital.",
+      "subtitle": "Web, mobile, IA, design, sécurité — une équipe soudée qui vous accompagne de l'idée au lancement. Pas de silos, pas de friction. Juste nous, avec vous.",
       "primary": "Consultation Stratégique",
       "secondary": "Voir nos réalisations",
       "experts": {
-        "count": "+15 Experts IA",
-        "label": "Disponibles pour audit"
+        "count": "+15 Experts",
+        "label": "Prêts à vous accompagner"
       },
       "status": {
         "label": "Migration Status",
         "value": "94% Completed"
       },
       "chips": [
+        "Web & Mobile",
         "IA & Automation",
-        "Architecture Cloud",
-        "Legacy Modernization",
+        "Design UI/UX",
         "Cybersécurité"
       ],
       "signals": {
         "studioEyebrow": "Format",
-        "studioBody": "4 experts complémentaires. Vous parlez directement à ceux qui font.",
+        "studioBody": "Une équipe pluridisciplinaire. Vous parlez directement à ceux qui font.",
         "outputEyebrow": "Promesse",
         "outputBody": "Pas d'usine, pas de junior caché. Un interlocuteur unique qui comprend votre métier."
       }

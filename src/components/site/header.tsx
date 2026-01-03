@@ -6,6 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X, ChevronDown, Cpu, Shield, Zap, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { buttonClassName } from "@/components/ui/button-styles";
+import { Logo } from "@/components/ui/logo";
 import { LanguageSwitch } from "./language-switch";
 import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
@@ -86,13 +87,8 @@ export function SiteHeader() {
         <Container>
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="group flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary rotate-3 transition-transform duration-300 group-hover:rotate-12">
-                <span className="text-dark font-black text-xl">Y</span>
-              </div>
-              <span className="text-2xl font-display font-bold tracking-tight">
-                yodev
-              </span>
+            <Link href="/" className="group">
+              <Logo size="md" />
             </Link>
 
             {/* Desktop Navigation */}
