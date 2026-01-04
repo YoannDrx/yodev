@@ -81,7 +81,7 @@ export function SiteHeader() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "glass-panel py-3" : "bg-transparent py-6"
+          isScrolled ? "glass-panel-solid py-3" : "bg-transparent py-6"
         )}
       >
         <Container>
@@ -124,7 +124,7 @@ export function SiteHeader() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-72 glass-panel rounded-2xl p-4 space-y-2"
+                      className="absolute top-full left-0 mt-2 w-72 glass-panel-solid rounded-2xl p-4 space-y-2"
                     >
                       {servicesItems.map((item) => {
                         const Icon = item.icon;

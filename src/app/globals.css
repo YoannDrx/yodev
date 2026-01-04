@@ -226,6 +226,19 @@ summary::-webkit-details-marker {
   box-shadow: var(--shadow-glass);
 }
 
+/* Glass panel with solid background - for headers/dropdowns */
+.glass-panel-solid {
+  background: #0f1111;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(var(--glass-border));
+  box-shadow: var(--shadow-glass);
+}
+
+html[data-theme="light"] .glass-panel-solid {
+  background: #fafbfc;
+}
+
 /* Glass with stronger blur */
 .glass-panel-strong {
   background: rgb(255 255 255 / 0.05);
