@@ -308,6 +308,13 @@ html[data-theme="light"] .glass-panel-solid {
   background-clip: text;
 }
 
+html[data-theme="light"] .text-gradient {
+  background: linear-gradient(135deg, #0f1111 0%, rgba(15,17,17,0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Gradient text - primary colored */
 .text-gradient-primary {
   background: linear-gradient(135deg, rgb(var(--primary)), rgb(var(--primary-light)));
@@ -386,6 +393,54 @@ html[data-theme="light"] .glass-panel-solid {
 .code-comparison-modern {
   background: linear-gradient(135deg, rgba(27, 168, 150, 0.12), rgba(15, 17, 17, 0.7));
   border: 1px solid rgba(27, 168, 150, 0.25);
+}
+
+/* Hero code card - dark mode */
+.hero-code-card {
+  background: #0f1111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero code card - light mode */
+html[data-theme="light"] .hero-code-card {
+  background: #ffffff;
+  border: 1px solid rgb(27 168 150 / 0.3);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.1);
+}
+
+html[data-theme="light"] .hero-code-card .text-primary {
+  color: rgb(20 138 123);
+}
+
+html[data-theme="light"] .hero-code-card .text-white\/80 {
+  color: rgb(31 41 55);
+}
+
+html[data-theme="light"] .hero-code-card .text-muted {
+  color: rgb(107 114 128);
+}
+
+/* Hero status tag - light mode */
+html[data-theme="light"] .hero-status-tag {
+  background: #ffffff;
+  border: 1px solid rgb(27 168 150 / 0.3);
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+html[data-theme="light"] .hero-status-tag p {
+  color: rgb(31 41 55);
+}
+
+/* Hero decorative background - light mode */
+html[data-theme="light"] .hero-code-bg {
+  background: #ffffff;
+}
+
+/* Hero eyebrow badge - light mode */
+html[data-theme="light"] .hero-eyebrow-badge {
+  background: #ffffff;
+  border: 1px solid rgb(27 168 150 / 0.3);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
 }
 
 /* Metric cards with gradient border */

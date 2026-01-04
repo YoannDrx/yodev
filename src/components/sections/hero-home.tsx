@@ -45,7 +45,7 @@ export function HeroHome() {
           <div className="space-y-8">
             {/* Eyebrow Badge */}
             <FadeIn direction="up" delay={0}>
-              <div className="inline-flex items-center gap-2 glass-panel px-4 py-2 rounded-full">
+              <div className="inline-flex items-center gap-2 glass-panel px-4 py-2 rounded-full hero-eyebrow-badge">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -121,7 +121,7 @@ export function HeroHome() {
 
           {/* Right Visual - Code Preview */}
           <SlideIn direction="right" delay={0.2} className="hidden lg:block relative">
-            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group bg-[#0f1111] border-white/10">
+            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group hero-code-card">
               {/* Code Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex gap-2">
@@ -143,7 +143,7 @@ export function HeroHome() {
               </div>
 
               {/* Floating Status */}
-              <div className="absolute bottom-6 right-6 bg-dark/90 backdrop-blur-sm border border-white/10 p-4 rounded-2xl shadow-2xl">
+              <div className="absolute bottom-6 right-6 bg-dark/90 backdrop-blur-sm border border-white/10 p-4 rounded-2xl shadow-2xl hero-status-tag">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-primary/20 rounded-lg">
                     <Zap className="w-6 h-6 text-primary" />
@@ -157,7 +157,7 @@ export function HeroHome() {
             </GlassPanel>
 
             {/* Decorative elements */}
-            <div className="absolute inset-0 bg-dark rounded-3xl -z-[5]" />
+            <div className="absolute inset-0 bg-dark rounded-3xl -z-[5] hero-code-bg" />
             <div className="absolute -top-6 -right-6 w-full h-full border border-primary/20 rounded-3xl -z-10" />
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10 animate-pulse" />
           </SlideIn>
