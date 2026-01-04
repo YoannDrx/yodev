@@ -11,11 +11,12 @@ import { LogoDots } from "@/components/ui/logo";
 import { cn } from "@/lib/utils";
 
 const techData = [
+  // FRONTEND
   {
     id: "nextjs",
     name: "React / Next.js",
     category: "frontend",
-    version: "14.2 (App Router)",
+    version: "16.1 (Turbopack)",
     perf: 98,
     security: 94,
     useCase: "SaaS, dashboards, e-commerce",
@@ -23,21 +24,100 @@ const techData = [
     code: "export default async function Page() {\n  const data = await getAnalytics();\n  return <Dashboard data={data} />;\n}",
   },
   {
+    id: "vuejs",
+    name: "Vue.js",
+    category: "frontend",
+    version: "3.5 (Vapor Mode)",
+    perf: 96,
+    security: 92,
+    useCase: "Apps réactives, dashboards, PWA",
+    stack: ["Pinia", "Nuxt", "Vite"],
+    code: "const count = ref(0)\nconst doubled = computed(() =>\n  count.value * 2\n)",
+  },
+  {
+    id: "angularjs",
+    name: "Angular",
+    category: "frontend",
+    version: "20 (Signals)",
+    perf: 91,
+    security: 95,
+    useCase: "Apps enterprise, ERP, backoffices",
+    stack: ["RxJS", "NgRx", "Material"],
+    code: "@Component({ selector: 'app-root' })\nexport class AppComponent {\n  title = signal('Yodev');\n}",
+  },
+  {
+    id: "tailwindcss",
+    name: "Tailwind CSS",
+    category: "frontend",
+    version: "4.1",
+    perf: 99,
+    security: 100,
+    useCase: "Design systems, UI rapide, prototypage",
+    stack: ["PostCSS", "Headless UI", "Radix"],
+    code: "<button className=\"bg-primary\n  hover:bg-primary-dark\n  px-4 py-2 rounded-lg\">\n  Click me\n</button>",
+  },
+  // BACKEND
+  {
     id: "nodejs",
     name: "Node.js / NestJS",
     category: "backend",
-    version: "20.x LTS",
+    version: "24 LTS",
     perf: 92,
     security: 97,
-    useCase: "Microservices, APIs temps reel",
+    useCase: "Microservices, APIs temps réel",
     stack: ["Prisma", "PostgreSQL", "Redis"],
     code: "@Get(':id')\nasync findOne(@Param('id') id: string) {\n  return this.usersService.findById(id);\n}",
   },
   {
+    id: "go",
+    name: "Go (Golang)",
+    category: "backend",
+    version: "1.25",
+    perf: 99,
+    security: 96,
+    useCase: "APIs haute perf, microservices, CLI",
+    stack: ["Gin", "gRPC", "sqlc"],
+    code: "func (s *Server) GetUser(ctx context.Context,\n  req *pb.GetUserRequest) (*pb.User, error) {\n  return s.db.GetUser(ctx, req.Id)\n}",
+  },
+  {
+    id: "rust",
+    name: "Rust",
+    category: "backend",
+    version: "1.92",
+    perf: 100,
+    security: 99,
+    useCase: "Systèmes critiques, WebAssembly, perf",
+    stack: ["Actix", "Tokio", "Serde"],
+    code: "async fn get_user(Path(id): Path<u32>)\n  -> Result<Json<User>, AppError> {\n  Ok(Json(db.find(id).await?))\n}",
+  },
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    category: "backend",
+    version: "18",
+    perf: 94,
+    security: 98,
+    useCase: "BDD relationnelle, analytics, JSONB",
+    stack: ["pgvector", "TimescaleDB", "PostGIS"],
+    code: "SELECT u.name, COUNT(o.id) as orders\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id\nGROUP BY u.id;",
+  },
+  {
+    id: "redis",
+    name: "Redis",
+    category: "backend",
+    version: "8.2",
+    perf: 100,
+    security: 90,
+    useCase: "Cache, sessions, queues, pub/sub",
+    stack: ["Redis Stack", "Streams", "Lua"],
+    code: "await redis.set('session:123', JSON.stringify({\n  user: 'john', role: 'admin'\n}), 'EX', 3600);",
+  },
+  // IA & DATA
+  {
     id: "python",
     name: "Python / IA",
     category: "ai",
-    version: "3.12 (PyTorch)",
+    version: "3.13 (PyTorch 2.5)",
     perf: 88,
     security: 91,
     useCase: "RAG, LLM agents, automation",
@@ -45,26 +125,229 @@ const techData = [
     code: "agent = create_react_agent(\n  llm=ChatOpenAI(model='gpt-4'),\n  tools=tools\n)",
   },
   {
+    id: "tensorflow",
+    name: "TensorFlow",
+    category: "ai",
+    version: "2.18",
+    perf: 95,
+    security: 93,
+    useCase: "ML/Deep Learning, vision, NLP",
+    stack: ["Keras", "TFLite", "TensorBoard"],
+    code: "model = tf.keras.Sequential([\n  layers.Dense(128, activation='relu'),\n  layers.Dense(10, activation='softmax')\n])",
+  },
+  {
+    id: "langchain",
+    name: "LangChain",
+    category: "ai",
+    version: "0.3",
+    perf: 90,
+    security: 88,
+    useCase: "Agents IA, RAG, chatbots, pipelines",
+    stack: ["OpenAI", "Chroma", "Pinecone"],
+    code: "chain = (\n  retriever | format_docs |\n  prompt | llm | StrOutputParser()\n)",
+  },
+  {
+    id: "openai",
+    name: "OpenAI API",
+    category: "ai",
+    version: "GPT-4o / o1",
+    perf: 97,
+    security: 94,
+    useCase: "LLM, génération, assistants, vision",
+    stack: ["Assistants API", "Embeddings", "Whisper"],
+    code: "const response = await openai.chat.completions\n  .create({\n  model: 'gpt-4o',\n  messages: [{ role: 'user', content: prompt }]\n});",
+  },
+  // MOBILE
+  {
     id: "swift",
     name: "Swift (iOS Native)",
     category: "mobile",
-    version: "5.10 (SwiftUI)",
+    version: "6.2 (SwiftUI)",
     perf: 99,
     security: 96,
-    useCase: "Applications mobiles premium",
+    useCase: "Applications iOS premium",
     stack: ["SwiftUI", "Combine", "CoreData"],
     code: "struct HomeView: View {\n  var body: some View {\n    VStack { Text('Hello Yodev') }\n  }\n}",
   },
   {
+    id: "kotlin",
+    name: "Kotlin",
+    category: "mobile",
+    version: "2.3 (Jetpack Compose)",
+    perf: 97,
+    security: 95,
+    useCase: "Applications Android natives",
+    stack: ["Compose", "Coroutines", "Hilt"],
+    code: "@Composable\nfun Greeting(name: String) {\n  Text(text = \"Hello $name!\")\n}",
+  },
+  {
+    id: "flutter",
+    name: "Flutter",
+    category: "mobile",
+    version: "3.38 (Impeller)",
+    perf: 94,
+    security: 92,
+    useCase: "Apps cross-platform iOS/Android",
+    stack: ["Dart", "Riverpod", "Firebase"],
+    code: "Widget build(BuildContext context) {\n  return Scaffold(\n    body: Center(child: Text('Hello'))\n  );\n}",
+  },
+  // INFRA
+  {
     id: "aws",
     name: "AWS Cloud",
     category: "infra",
-    version: "Terraform v1.8",
+    version: "2025",
     perf: 95,
     security: 99,
     useCase: "Scaling, serverless, DevSecOps",
     stack: ["Lambda", "RDS", "CloudFront"],
     code: "resource 'aws_lambda_function' 'app' {\n  function_name = 'yodev-api'\n  handler = 'index.handler'\n}",
+  },
+  {
+    id: "docker",
+    name: "Docker",
+    category: "infra",
+    version: "27",
+    perf: 96,
+    security: 93,
+    useCase: "Conteneurisation, CI/CD, dev local",
+    stack: ["Compose", "BuildKit", "Registry"],
+    code: "FROM node:20-alpine\nWORKDIR /app\nCOPY . .\nRUN npm ci && npm run build\nCMD [\"npm\", \"start\"]",
+  },
+  {
+    id: "kubernetes",
+    name: "Kubernetes",
+    category: "infra",
+    version: "1.32",
+    perf: 98,
+    security: 97,
+    useCase: "Orchestration, scaling, haute dispo",
+    stack: ["Helm", "ArgoCD", "Istio"],
+    code: "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: yodev-api\nspec:\n  replicas: 3",
+  },
+  {
+    id: "terraform",
+    name: "Terraform",
+    category: "infra",
+    version: "1.10",
+    perf: 94,
+    security: 96,
+    useCase: "IaC, multi-cloud, provisioning",
+    stack: ["HCL", "Modules", "State"],
+    code: "module \"vpc\" {\n  source = \"./modules/vpc\"\n  cidr   = \"10.0.0.0/16\"\n  azs    = [\"eu-west-1a\", \"eu-west-1b\"]\n}",
+  },
+  {
+    id: "vercel",
+    name: "Vercel",
+    category: "infra",
+    version: "2025",
+    perf: 99,
+    security: 95,
+    useCase: "Déploiement frontend, Edge, Preview",
+    stack: ["Next.js", "Edge Functions", "Analytics"],
+    code: "// vercel.json\n{\n  \"framework\": \"nextjs\",\n  \"regions\": [\"cdg1\", \"iad1\"]\n}",
+  },
+  {
+    id: "cloudflare",
+    name: "Cloudflare",
+    category: "infra",
+    version: "Workers",
+    perf: 100,
+    security: 98,
+    useCase: "CDN, Edge computing, DDoS protection",
+    stack: ["Workers", "Pages", "R2", "D1"],
+    code: "export default {\n  async fetch(request) {\n    return new Response('Hello from Edge!');\n  }\n}",
+  },
+  {
+    id: "ovhcloud",
+    name: "OVH Cloud",
+    category: "infra",
+    version: "2025",
+    perf: 92,
+    security: 97,
+    useCase: "Cloud souverain EU, VPS, Kubernetes",
+    stack: ["Public Cloud", "Managed K8s", "Storage"],
+    code: "# OVH Terraform Provider\nprovider \"ovh\" {\n  endpoint = \"ovh-eu\"\n}",
+  },
+  // BACKEND (suite)
+  {
+    id: "supabase",
+    name: "Supabase",
+    category: "backend",
+    version: "v2",
+    perf: 93,
+    security: 94,
+    useCase: "BaaS, auth, realtime, storage",
+    stack: ["PostgreSQL", "Auth", "Edge Functions"],
+    code: "const { data } = await supabase\n  .from('users')\n  .select('*')\n  .eq('active', true)",
+  },
+  {
+    id: "neon",
+    name: "Neon DB",
+    category: "backend",
+    version: "Serverless",
+    perf: 96,
+    security: 95,
+    useCase: "PostgreSQL serverless, branching",
+    stack: ["PostgreSQL", "Branching", "Autoscaling"],
+    code: "import { neon } from '@neondatabase/serverless';\nconst sql = neon(process.env.DATABASE_URL);\nconst users = await sql`SELECT * FROM users`;",
+  },
+  {
+    id: "resend",
+    name: "Resend",
+    category: "backend",
+    version: "API v1",
+    perf: 98,
+    security: 96,
+    useCase: "Emails transactionnels, React Email",
+    stack: ["React Email", "Webhooks", "Analytics"],
+    code: "await resend.emails.send({\n  from: 'hello@yodev.fr',\n  to: user.email,\n  subject: 'Bienvenue!',\n  react: <WelcomeEmail />\n});",
+  },
+  {
+    id: "stripe",
+    name: "Stripe",
+    category: "backend",
+    version: "API 2024",
+    perf: 99,
+    security: 99,
+    useCase: "Paiements, abonnements, facturation",
+    stack: ["Checkout", "Billing", "Connect"],
+    code: "const session = await stripe.checkout.sessions\n  .create({\n  mode: 'subscription',\n  line_items: [{ price: priceId, quantity: 1 }]\n});",
+  },
+  {
+    id: "prisma",
+    name: "Prisma",
+    category: "backend",
+    version: "6.x",
+    perf: 94,
+    security: 93,
+    useCase: "ORM TypeScript, migrations, studio",
+    stack: ["PostgreSQL", "MySQL", "MongoDB"],
+    code: "const users = await prisma.user.findMany({\n  where: { active: true },\n  include: { posts: true }\n});",
+  },
+  // FRONTEND (suite)
+  {
+    id: "figma",
+    name: "Figma",
+    category: "frontend",
+    version: "2024",
+    perf: 95,
+    security: 92,
+    useCase: "Design, prototypage, design system",
+    stack: ["Dev Mode", "Variables", "Auto Layout"],
+    code: "// Figma to Code\n<Frame\n  name=\"Button\"\n  width={120}\n  height={40}\n  cornerRadius={8}\n/>",
+  },
+  // MOBILE (suite)
+  {
+    id: "reactnative",
+    name: "React Native",
+    category: "mobile",
+    version: "0.76",
+    perf: 93,
+    security: 91,
+    useCase: "Apps cross-platform avec code natif",
+    stack: ["Expo", "Reanimated", "React Navigation"],
+    code: "export default function App() {\n  return (\n    <View style={styles.container}>\n      <Text>Hello Yodev!</Text>\n    </View>\n  );\n}",
   },
 ];
 
@@ -210,6 +493,57 @@ export default function ExpertisePage() {
                     alt="Python"
                   />
                 </div>
+                {/* Nouveaux logos en orbite */}
+                <div
+                  className="absolute bottom-12 left-8 w-14 h-14 glass-panel rounded-2xl flex items-center justify-center animate-float"
+                  style={{ animationDelay: "1.2s" }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    className="w-7 h-7"
+                    alt="Vue.js"
+                  />
+                </div>
+                <div
+                  className="absolute top-1/2 -left-4 w-14 h-14 glass-panel rounded-2xl flex items-center justify-center animate-float"
+                  style={{ animationDelay: "1.6s" }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                    className="w-7 h-7"
+                    alt="AWS"
+                  />
+                </div>
+                <div
+                  className="absolute top-4 right-16 w-14 h-14 glass-panel rounded-2xl flex items-center justify-center animate-float"
+                  style={{ animationDelay: "2s" }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                    className="w-7 h-7"
+                    alt="Docker"
+                  />
+                </div>
+                <div
+                  className="absolute bottom-4 left-1/3 w-14 h-14 glass-panel rounded-2xl flex items-center justify-center animate-float"
+                  style={{ animationDelay: "2.4s" }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    className="w-7 h-7"
+                    alt="TypeScript"
+                  />
+                </div>
+                <div
+                  className="absolute top-1/4 -left-2 w-12 h-12 glass-panel rounded-xl flex items-center justify-center animate-float"
+                  style={{ animationDelay: "2.8s" }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    className="w-6 h-6"
+                    alt="Figma"
+                  />
+                </div>
               </div>
             </Parallax>
           </div>
@@ -251,13 +585,45 @@ export default function ExpertisePage() {
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center">
                       <img
-                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${
-                          tech.id === "nextjs"
-                            ? "nextjs/nextjs-original"
-                            : tech.id === "aws"
-                              ? "amazonwebservices/amazonwebservices-original-wordmark"
-                              : `${tech.id}/${tech.id}-original`
-                        }.svg`}
+                        src={
+                          {
+                            // Simple Icons (pour les logos non disponibles dans Devicon)
+                            openai: "https://cdn.simpleicons.org/openai/white",
+                            stripe: "https://cdn.simpleicons.org/stripe/white",
+                            langchain: "https://cdn.simpleicons.org/langchain/white",
+                            supabase: "https://cdn.simpleicons.org/supabase/white",
+                            vercel: "https://cdn.simpleicons.org/vercel/white",
+                            cloudflare: "https://cdn.simpleicons.org/cloudflare/white",
+                            neon: "https://cdn.simpleicons.org/neon/white",
+                            resend: "https://cdn.simpleicons.org/resend/white",
+                          }[tech.id] ||
+                          `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${
+                            {
+                              nextjs: "nextjs/nextjs-original",
+                              vuejs: "vuejs/vuejs-original",
+                              angularjs: "angularjs/angularjs-original",
+                              tailwindcss: "tailwindcss/tailwindcss-original",
+                              nodejs: "nodejs/nodejs-original",
+                              go: "go/go-original-wordmark",
+                              rust: "rust/rust-original",
+                              postgresql: "postgresql/postgresql-original",
+                              redis: "redis/redis-original",
+                              python: "python/python-original",
+                              tensorflow: "tensorflow/tensorflow-original",
+                              swift: "swift/swift-original",
+                              kotlin: "kotlin/kotlin-original",
+                              flutter: "flutter/flutter-original",
+                              aws: "amazonwebservices/amazonwebservices-original-wordmark",
+                              docker: "docker/docker-original",
+                              kubernetes: "kubernetes/kubernetes-plain",
+                              terraform: "terraform/terraform-original",
+                              ovhcloud: "linux/linux-original",
+                              prisma: "prisma/prisma-original",
+                              figma: "figma/figma-original",
+                              reactnative: "react/react-original",
+                            }[tech.id] || `${tech.id}/${tech.id}-original`
+                          }.svg`
+                        }
                         className="w-10 h-10"
                         alt={tech.name}
                       />

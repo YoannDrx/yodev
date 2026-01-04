@@ -43,10 +43,12 @@
       "mobile": "Mobile Apps",
       "ecommerce": "E-commerce",
       "uxDesign": "UX/UI Design",
-      "cybersecurity": "Cybersecurity"
+      "cybersecurity": "Cybersecurity",
+      "expertise": "Technical Expertise"
     },
     "newsletter": {
       "title": "Stay updated",
+      "description": "Get insights on tech, design and product. No spam, unsubscribe anytime.",
       "placeholder": "Your email",
       "submit": "Subscribe",
       "success": "Thanks! You're now subscribed to our newsletter."
