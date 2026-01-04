@@ -118,6 +118,46 @@
         "pme": "SMEs / Mid-caps",
         "enterprise": "Enterprise"
       },
+      "startup": [
+        {
+          "icon": "Rocket",
+          "title": "MVP to traction",
+          "description": "Ship in 6-8 weeks with a scalable technical baseline.",
+          "features": ["Fast time-to-market", "Scalable infra", "Analytics foundation"]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Data-first product",
+          "description": "Event tracking, KPI dashboards, and continuous experiments.",
+          "features": ["Event tracking", "Realtime dashboards", "Cohorts & retention"]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI onboarding & support",
+          "description": "Assistant for onboarding, FAQ, and customer support.",
+          "features": ["24/7 self-serve", "Multilingual", "Reduced L1 support"]
+        }
+      ],
+      "enterprise": [
+        {
+          "icon": "Shield",
+          "title": "Compliance & governance",
+          "description": "SOC2, GDPR, and continuous controls for critical environments.",
+          "features": ["Audit trails", "Zero trust", "Access governance"]
+        },
+        {
+          "icon": "Database",
+          "title": "Data platform modernization",
+          "description": "Pipeline refactor, data quality, and governance.",
+          "features": ["Lakehouse / DWH", "Quality & lineage", "Cost controls"]
+        },
+        {
+          "icon": "Cloud",
+          "title": "Cloud migration at scale",
+          "description": "Progressive legacy carve-out with zero downtime.",
+          "features": ["Monolith carve-out", "Observability", "FinOps"]
+        }
+      ],
       "pme": [
         {
           "icon": "Database",
@@ -1554,14 +1594,51 @@
         "author": "Sophie Bernard",
         "role": "CEO & Founder"
       }
+    },
+    "ai-modernization": {
+      "title": "AI Modernization: industrial data pipeline",
+      "type": "AI / Data",
+      "summary": "Legacy data pipeline refactor for a logistics mid-market.",
+      "context": "LogiTrans, an industrial mid-market company, ran a monolithic on-prem ERP with heavy batch processing and limited observability.",
+      "challenge": "Reduce maintenance costs without downtime, improve data entry accuracy, and speed up order processing while securing data.",
+      "solution": "Event-driven architecture, microservices and AI agents for data qualification, progressive AWS migration and MLOps for continuous monitoring.",
+      "results": ["-40% maintenance costs", "Order processing 2.4s", "0.02% entry errors", "10x capacity"],
+      "testimonial": {
+        "quote": "We gained speed and reliability without stopping operations. A real generational leap.",
+        "author": "Claire Morel",
+        "role": "IT Director"
+      }
+    },
+    "legacy-to-cloud": {
+      "title": "Legacy-to-Cloud: mid-market success",
+      "type": "IT Modernization",
+      "summary": "Migration of a critical monolith to cloud-native architecture.",
+      "context": "A 500+ employee company relied on an aging stack with high infra costs and slow releases.",
+      "challenge": "Migrate without downtime, decouple critical modules and sustain scale with a lean team.",
+      "solution": "Strangler pattern, microservices, Infrastructure as Code and secure CI/CD with real-time observability.",
+      "results": ["-42% infra costs", "99.99% availability", "Deploys x5", "Time-to-market -60%"],
+      "testimonial": {
+        "quote": "Migration was frictionless. We ship faster and infrastructure costs dropped dramatically.",
+        "author": "Hugo Lambert",
+        "role": "CTO"
+      }
     }
   },
   "BlogPage": {
     "eyebrow": "Insights",
     "title": "Blog",
     "subtitle": "Insights on web, mobile, AI and product strategy.",
+    "allCategories": "All",
     "readMore": "Read article",
     "posts": [
+      {
+        "slug": "measuring-ai-roi-2026",
+        "title": "Measuring AI ROI in 2026: a pragmatic guide",
+        "excerpt": "Calculate real ROI for LLM adoption: hidden costs, measurable productivity and Go/No-Go signals.",
+        "category": "AI & LLM",
+        "date": "Jan 18, 2026",
+        "readTime": "9 min"
+      },
       {
         "slug": "agrement-cii",
         "title": "Yodev approved for the Innovation Tax Credit (CII)",
@@ -1705,6 +1782,23 @@
         "Sensitive data exposure can be fatal. Encrypt in transit (HTTPS) and at rest, minimize stored data, and regularly audit your endpoints.",
         "Vulnerable components are an often-neglected risk. Keep your dependencies up to date, use automated audit tools like Snyk or Dependabot.",
         "Security is everyone's business. Train your teams, integrate security tests into your pipeline, and have critical applications audited by experts."
+      ]
+    },
+    "measuring-ai-roi-2026": {
+      "title": "Measuring AI ROI in 2026: a pragmatic guide",
+      "excerpt": "How to calculate real ROI for LLM adoption in SMBs.",
+      "category": "AI & LLM",
+      "date": "Jan 18, 2026",
+      "readTime": "9 min",
+      "author": "Alexandre V.",
+      "content": [
+        "AI ROI isn't a promise: without a clear frame, pilots get confused with business value.",
+        "Start by listing total costs: inference, data ingestion, MLOps, security and monitoring.",
+        "Measure productivity gains on defined tasks: time saved, errors avoided, SLA uplift.",
+        "Compute incremental ROI per use case and prioritize those with payback under 12 months.",
+        "Avoid hidden costs: data quality work, unnecessary fine-tuning and redundant tooling.",
+        "Track mixed metrics: direct savings plus customer value (NPS, conversion, churn).",
+        "Successful AI adoption behaves like a product: iterate, measure, govern."
       ]
     }
   },

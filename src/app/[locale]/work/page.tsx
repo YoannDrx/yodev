@@ -15,6 +15,8 @@ import {
   Sparkles,
   ShoppingCart,
   Smartphone,
+  Cpu,
+  Cloud,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -58,6 +60,26 @@ const caseStudies: CaseStudy[] = [
     results: ["MVP en 8 sem.", "4.8★ App Store"],
     color: "from-green-500/20 to-primary/10",
     icon: Smartphone,
+  },
+  {
+    slug: "ai-modernization",
+    title: "Modernisation IA & Data",
+    type: "IA / Data",
+    summary:
+      "Refonte d'un pipeline data industriel avec agents IA et architecture event-driven.",
+    results: ["-40% coûts", "2,4 s/commande"],
+    color: "from-primary/20 to-secondary/10",
+    icon: Cpu,
+  },
+  {
+    slug: "legacy-to-cloud",
+    title: "Legacy-to-Cloud ETI 500+",
+    type: "Modernisation IT",
+    summary:
+      "Migration cloud-native d'un monolithe critique avec zéro downtime et infra optimisée.",
+    results: ["-42% infra", "99.99% uptime"],
+    color: "from-blue-500/20 to-primary/10",
+    icon: Cloud,
   },
 ];
 

@@ -9,6 +9,8 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { FadeIn, SlideIn } from "@/components/motion";
 import { CtaSection } from "@/components/sections";
 import { Link } from "@/i18n/navigation";
+import { AiModernizationCaseStudy } from "@/components/content/case-study-ai-modernization";
+import { LegacyCloudCaseStudy } from "@/components/content/case-study-legacy-cloud";
 import {
   ArrowRight,
   ArrowLeft,
@@ -27,9 +29,19 @@ const slugToGradient: Record<string, string> = {
   "saas-b2b": "from-blue-500/20 to-primary/10",
   "ecommerce-refonte": "from-orange-500/20 to-pink-500/10",
   "app-coaching": "from-green-500/20 to-primary/10",
+  "ai-modernization": "from-primary/20 to-secondary/10",
+  "legacy-to-cloud": "from-blue-500/20 to-primary/10",
 };
 
 export function CaseStudyContent({ slug }: { slug: CaseStudySlug }) {
+  if (slug === "ai-modernization") {
+    return <AiModernizationCaseStudy />;
+  }
+
+  if (slug === "legacy-to-cloud") {
+    return <LegacyCloudCaseStudy />;
+  }
+
   const t = useTranslations("CaseStudies");
 
   const caseData = {

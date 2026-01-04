@@ -3,15 +3,27 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Database, MessageSquare, Shield, Check, ChevronRight } from "lucide-react";
+import {
+  BarChart,
+  Cloud,
+  Database,
+  MessageSquare,
+  Rocket,
+  Shield,
+  Check,
+  ChevronRight,
+} from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 const icons = {
+  BarChart,
+  Cloud,
   Database,
   MessageSquare,
+  Rocket,
   Shield,
 };
 
@@ -27,7 +39,7 @@ type TabKey = "startup" | "pme" | "enterprise";
 export function UseCasesSection() {
   const t = useTranslations("Home.useCases");
   const [activeTab, setActiveTab] = useState<TabKey>("pme");
-  const useCases = t.raw("pme") as UseCase[];
+  const useCases = t.raw(activeTab) as UseCase[];
 
   const tabs: { key: TabKey; label: string }[] = [
     { key: "startup", label: t("tabs.startup") },

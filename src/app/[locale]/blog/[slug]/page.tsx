@@ -10,6 +10,7 @@ const BLOG_POSTS = [
   "mvp-iteration",
   "core-web-vitals",
   "owasp-2024",
+  "measuring-ai-roi-2026",
 ] as const;
 
 type BlogSlug = (typeof BLOG_POSTS)[number];

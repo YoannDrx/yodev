@@ -3,7 +3,13 @@ import { getTranslations } from "next-intl/server";
 import { CaseStudyContent } from "@/components/content/case-study-content";
 
 // Études de cas disponibles
-const CASE_STUDIES = ["saas-b2b", "ecommerce-refonte", "app-coaching"] as const;
+const CASE_STUDIES = [
+  "saas-b2b",
+  "ecommerce-refonte",
+  "app-coaching",
+  "ai-modernization",
+  "legacy-to-cloud",
+] as const;
 
 type CaseStudySlug = (typeof CASE_STUDIES)[number];
 

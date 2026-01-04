@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FadeIn, SlideIn } from "@/components/motion";
 import { CtaSection, FaqList } from "@/components/sections";
+import { AiLegacyServiceContent } from "@/components/content/service-ai-legacy";
+import { CybersecurityComplianceServiceContent } from "@/components/content/service-cybersecurity-compliance";
 import { cn } from "@/lib/utils";
 import {
   ArrowRight,
@@ -143,6 +145,14 @@ const serviceData: Record<
 };
 
 export function ServiceContent({ service }: { service: ServiceSlug }) {
+  if (service === "ai") {
+    return <AiLegacyServiceContent />;
+  }
+
+  if (service === "cybersecurity") {
+    return <CybersecurityComplianceServiceContent />;
+  }
+
   const t = useTranslations("Services");
   const nav = useTranslations("Nav");
 

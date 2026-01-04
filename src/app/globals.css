@@ -365,6 +365,16 @@ summary::-webkit-details-marker {
   font-family: var(--font-mono);
 }
 
+.code-comparison-legacy {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.12), rgba(15, 17, 17, 0.7));
+  border: 1px solid rgba(255, 107, 53, 0.25);
+}
+
+.code-comparison-modern {
+  background: linear-gradient(135deg, rgba(27, 168, 150, 0.12), rgba(15, 17, 17, 0.7));
+  border: 1px solid rgba(27, 168, 150, 0.25);
+}
+
 /* Metric cards with gradient border */
 .metric-card {
   background: linear-gradient(145deg, rgba(27, 168, 150, 0.05), rgba(15, 17, 17, 0.5));
@@ -384,6 +394,10 @@ summary::-webkit-details-marker {
   /* Floating animation */
   .float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 
   .float-slow {

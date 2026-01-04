@@ -130,6 +130,46 @@
         "pme": "PME / ETI",
         "enterprise": "Grand Groupe"
       },
+      "startup": [
+        {
+          "icon": "Rocket",
+          "title": "MVP express & scalable",
+          "description": "Lancement en 6-8 semaines avec une base technique evolutive.",
+          "features": ["Time-to-market rapide", "Infra evolutive", "Socle analytics"]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Pilotage data-first",
+          "description": "Tracking produit, dashboards KPI et experimentation continue.",
+          "features": ["Event tracking", "Dashboards temps reel", "Cohortes & retention"]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "Onboarding & support IA",
+          "description": "Assistant IA pour l'onboarding, la FAQ et le support client.",
+          "features": ["Self-serve 24/7", "Multilingue", "Reduction du support N1"]
+        }
+      ],
+      "enterprise": [
+        {
+          "icon": "Shield",
+          "title": "Conformite & gouvernance",
+          "description": "SOC2, RGPD et controles continus pour les environnements critiques.",
+          "features": ["Audit trails", "Zero trust", "Gestion des acces"]
+        },
+        {
+          "icon": "Database",
+          "title": "Modernisation data platform",
+          "description": "Refonte des pipelines, qualite data et gouvernance.",
+          "features": ["Lakehouse / DWH", "Qualite & lineage", "Cost control"]
+        },
+        {
+          "icon": "Cloud",
+          "title": "Migration cloud a l'echelle",
+          "description": "Decoupage progressif du legacy et migration sans downtime.",
+          "features": ["Decoupage monolithe", "Observabilite", "FinOps"]
+        }
+      ],
       "pme": [
         {
           "icon": "Database",
@@ -1614,14 +1654,51 @@
         "author": "Sophie Bernard",
         "role": "CEO & Fondatrice"
       }
+    },
+    "ai-modernization": {
+      "title": "Modernisation IA : pipeline data industriel",
+      "type": "IA / Data",
+      "summary": "Refonte d'un pipeline data legacy pour une ETI logistique.",
+      "context": "LogiTrans, ETI industrielle, opérait un ERP monolithique on-premise avec des traitements batch lourds et peu observables.",
+      "challenge": "Réduire les coûts de maintenance sans interrompre la production, fiabiliser la saisie et accélérer le traitement des commandes tout en sécurisant la donnée.",
+      "solution": "Architecture event-driven, micro-services et agents IA pour la qualification des données, migration progressive vers AWS et MLOps pour le monitoring continu.",
+      "results": ["-40% coûts de maintenance", "Traitement commande 2,4 s", "0,02% erreurs de saisie", "Capacité x10"],
+      "testimonial": {
+        "quote": "Nous avons gagné en vitesse et en fiabilité sans stop de production. Un vrai saut de génération.",
+        "author": "Claire Morel",
+        "role": "Directrice IT"
+      }
+    },
+    "legacy-to-cloud": {
+      "title": "Legacy-to-Cloud : succès ETI 500+",
+      "type": "Modernisation IT",
+      "summary": "Migration d'un monolithe critique vers une architecture cloud-native.",
+      "context": "Une ETI de 500+ collaborateurs s'appuyait sur un SI vieillissant, coûteux et difficile à faire évoluer.",
+      "challenge": "Migrer sans downtime, découpler les modules critiques et garantir une scalabilité durable avec des équipes réduites.",
+      "solution": "Strangler pattern, micro-services, Infrastructure as Code et CI/CD sécurisé, avec observabilité temps réel.",
+      "results": ["-42% coûts infra", "Disponibilité 99,99%", "Mises en prod x5", "Time-to-market -60%"],
+      "testimonial": {
+        "quote": "La migration s'est faite sans friction. Nous livrons plus vite et notre infrastructure coûte beaucoup moins.",
+        "author": "Hugo Lambert",
+        "role": "CTO"
+      }
     }
   },
   "BlogPage": {
     "eyebrow": "Insights",
     "title": "Blog",
     "subtitle": "Retours d'expérience sur le web, le mobile, l'IA et la stratégie produit.",
+    "allCategories": "Tous",
     "readMore": "Lire l'article",
     "posts": [
+      {
+        "slug": "measuring-ai-roi-2026",
+        "title": "Mesurer le ROI de l'IA en 2026 : guide pragmatique",
+        "excerpt": "Calculer un ROI réel pour vos projets IA : coûts cachés, productivité mesurable et décisions Go/No-Go.",
+        "category": "IA & LLM",
+        "date": "18 janv. 2026",
+        "readTime": "9 min"
+      },
       {
         "slug": "agrement-cii",
         "title": "Yodev, prestataire agréé pour le Crédit d'impôt innovation (CII)",
@@ -1766,6 +1843,23 @@
         "L'exposition de données sensibles peut être fatale. Chiffrez en transit (HTTPS) et au repos, minimisez les données stockées, et auditez régulièrement vos endpoints.",
         "Les composants vulnérables sont un risque souvent négligé. Maintenez vos dépendances à jour, utilisez des outils d'audit automatisé comme Snyk ou Dependabot.",
         "La sécurité est l'affaire de tous. Formez vos équipes, intégrez des tests de sécurité dans votre pipeline, et faites auditer vos applications critiques par des experts."
+      ]
+    },
+    "measuring-ai-roi-2026": {
+      "title": "Mesurer le ROI de l'IA en 2026 : guide pragmatique",
+      "excerpt": "Comment calculer un ROI réel pour l'intégration des LLM dans votre PME.",
+      "category": "IA & LLM",
+      "date": "18 janvier 2026",
+      "readTime": "9 min",
+      "author": "Alexandre V.",
+      "content": [
+        "Le ROI de l'IA n'est pas qu'une promesse : sans cadre clair, on confond prototypes et valeur business.",
+        "Commencez par isoler les coûts totaux : inférence, ingestion de données, MLOps, sécurité et supervision.",
+        "Mesurez les gains de productivité sur des tâches précises : temps gagné, erreurs évitées, SLA améliorés.",
+        "Calculez un ROI incrémental par cas d'usage et priorisez ceux dont le retour est inférieur à 12 mois.",
+        "Évitez les coûts cachés : qualité des données, fine-tuning inutile et tooling redondant.",
+        "Pilotez par métriques mixtes : économies directes + valeur client (NPS, conversion, churn).",
+        "Une intégration IA réussie ressemble à un produit : itération, mesure, gouvernance."
       ]
     }
   },
