@@ -50,9 +50,7 @@ export function HeroHome() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-widest text-primary">
-                  {t("hero.eyebrow")}
-                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">{t("hero.eyebrow")}</span>
               </div>
             </FadeIn>
 
@@ -67,9 +65,7 @@ export function HeroHome() {
 
             {/* Subtitle */}
             <FadeIn direction="up" delay={0.2}>
-              <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed">
-                {t("hero.subtitle")}
-              </p>
+              <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed">{t("hero.subtitle")}</p>
             </FadeIn>
 
             {/* CTA + Experts */}
@@ -110,9 +106,7 @@ export function HeroHome() {
                 <div className="h-12 text-xs font-bold uppercase tracking-widest text-muted flex items-center gap-2">
                   <span className="text-primary">SOC2</span> Compliance
                 </div>
-                <div className="h-8 text-xs font-bold uppercase tracking-widest text-muted flex items-center gap-2">
-                  GDPR
-                </div>
+                <div className="h-8 text-xs font-bold uppercase tracking-widest text-muted flex items-center gap-2">GDPR</div>
                 <div className="h-10 w-px bg-white/10" />
                 <div className="flex items-center gap-1">
                   <svg className="h-5 w-5 text-yellow-500 fill-current" viewBox="0 0 20 20">
@@ -127,7 +121,7 @@ export function HeroHome() {
 
           {/* Right Visual - Code Preview */}
           <SlideIn direction="right" delay={0.2} className="hidden lg:block relative">
-            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group bg-[#0f1111]/95 border-white/10">
+            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group bg-[#0f1111] border-white/10">
               {/* Code Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex gap-2">
@@ -163,6 +157,7 @@ export function HeroHome() {
             </GlassPanel>
 
             {/* Decorative elements */}
+            <div className="absolute inset-0 bg-dark rounded-3xl -z-[5]" />
             <div className="absolute -top-6 -right-6 w-full h-full border border-primary/20 rounded-3xl -z-10" />
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10 animate-pulse" />
           </SlideIn>
