@@ -1,26 +1,10 @@
 # Yodev
 
-## Recherche de Code
+## grepai - OBLIGATOIRE
 
-Ce projet utilise **grepai** pour la recherche sémantique de code.
+**Tu DOIS utiliser grepai (via MCP) pour TOUTE recherche de code.**
 
-### Commandes
+- ❌ INTERDIT : Grep, Glob, grep, find, rg
+- ✅ OBLIGATOIRE : `mcp__grepai__grepai_search`
 
-```bash
-# Recherche sémantique
-~/.local/bin/grepai search "ta question en langage naturel"
-
-# Tracer les appels
-~/.local/bin/grepai trace callers "nomFonction"
-~/.local/bin/grepai trace callees "nomFonction"
-
-# Status de l'index
-~/.local/bin/grepai status
-```
-
-### Exemples de recherches
-
-```bash
-~/.local/bin/grepai search "Comment fonctionne ce projet ?"
-~/.local/bin/grepai search "Quelles sont les fonctionnalites principales ?"
-```
+Voir `~/.claude/CLAUDE.md` pour les instructions complètes.
