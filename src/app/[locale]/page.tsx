@@ -3,9 +3,10 @@
 import { useTranslations } from "next-intl";
 import {
   HeroHome,
-  ArchitectureSection,
-  UseCasesSection,
+  PathsSection,
+  SelectedWorkSection,
   TrustSection,
+  FitSection,
   CtaSection,
 } from "@/components/sections";
 
@@ -15,19 +16,11 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section - New design */}
       <HeroHome />
-
-      {/* Architecture Section - Technical Schema */}
-      <ArchitectureSection />
-
-      {/* Use Cases Section - PME/ETI solutions */}
-      <UseCasesSection />
-
-      {/* Trust Section - Client logos */}
+      <PathsSection />
+      <SelectedWorkSection />
       <TrustSection />
-
-      {/* CTA Section */}
+      <FitSection />
       <CtaSection
         eyebrow={nav("contact")}
         title={t("cta.title")}

@@ -104,10 +104,10 @@ export function UseCasesSection() {
                     ))}
                   </ul>
                   <Link
-                    href="/work"
+                    href="/contact"
                     className="text-primary font-bold inline-flex items-center group-hover:underline"
                   >
-                    Découvrir le cas client
+                    {t("cta")}
                     <ChevronRight className="ml-2 w-4 h-4" />
                   </Link>
                 </GlassPanel>

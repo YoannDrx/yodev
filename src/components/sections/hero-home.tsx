@@ -1,37 +1,20 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowRight, Zap } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { FadeIn, SlideIn } from "@/components/motion";
-import { cn } from "@/lib/utils";
 
-// Fake expert avatars
-const experts = [
-  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-];
-
-// Code lines for the preview
-const codeLines = [
-  { line: "01", code: "import { Modernizer } from '@yodev/core';", color: "text-primary" },
-  { line: "02", code: "const legacySystem = await fetchInventory('on-prem');", color: "text-white/80" },
-  { line: "03", code: "const aiAgent = new Modernizer({", color: "text-white/80" },
-  { line: "04", code: '  model: "GPT-4o-secure",', color: "text-secondary", indent: true },
-  { line: "05", code: '  optimization: "cost-and-security"', color: "text-white/80", indent: true },
-  { line: "06", code: "});", color: "text-white/80" },
-];
+const deliverySteps = ["diagnostic", "design", "delivery"] as const;
 
 export function HeroHome() {
   const t = useTranslations("Home");
   const common = useTranslations("Common");
 
   return (
-    <section className="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
+    <section className="relative flex min-h-[760px] items-center overflow-hidden pb-20 pt-32 lg:min-h-[820px]">
       {/* Background glows */}
       <div className="hero-glow -top-20 -left-20" />
       <div
@@ -44,7 +27,7 @@ export function HeroHome() {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Eyebrow Badge */}
-            <FadeIn direction="up" delay={0}>
+            <FadeIn direction="up" delay={0} initiallyVisible>
               <div className="inline-flex items-center gap-2 glass-panel px-4 py-2 rounded-full hero-eyebrow-badge">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
@@ -55,7 +38,7 @@ export function HeroHome() {
             </FadeIn>
 
             {/* Main Title */}
-            <FadeIn direction="up" delay={0.1}>
+            <FadeIn direction="up" delay={0.1} initiallyVisible>
               <h1 className="text-5xl lg:text-7xl font-display font-extrabold leading-[1.1]">
                 <span className="text-gradient">{t("hero.titleLine1")}</span>
                 <br />
@@ -64,13 +47,12 @@ export function HeroHome() {
             </FadeIn>
 
             {/* Subtitle */}
-            <FadeIn direction="up" delay={0.2}>
+            <FadeIn direction="up" delay={0.2} initiallyVisible>
               <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed">{t("hero.subtitle")}</p>
             </FadeIn>
 
-            {/* CTA + Experts */}
-            <FadeIn direction="up" delay={0.3}>
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <FadeIn direction="up" delay={0.3} initiallyVisible>
+              <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
                 <ButtonLink
                   href="/contact"
                   size="lg"
@@ -80,80 +62,55 @@ export function HeroHome() {
                   {common("cta")}
                 </ButtonLink>
 
-                {/* Experts Avatars */}
-                <div className="flex items-center -space-x-3">
-                  {experts.map((src, i) => (
-                    <Image
-                      key={i}
-                      src={src}
-                      alt={`Expert ${i + 1}`}
-                      width={40}
-                      height={40}
-                      className="rounded-full border-2 border-dark object-cover"
-                    />
-                  ))}
-                  <div className="pl-6">
-                    <p className="text-sm font-bold">{t("hero.experts.count")}</p>
-                    <p className="text-xs text-muted">{t("hero.experts.label")}</p>
-                  </div>
-                </div>
+                <ButtonLink href="/work" size="lg" variant="outline">
+                  {t("hero.secondary")}
+                </ButtonLink>
               </div>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+                {t("hero.ctaNote")}
+              </p>
             </FadeIn>
 
-            {/* Trust Badges */}
-            <FadeIn direction="up" delay={0.4}>
-              <div className="pt-8 flex items-center gap-8 opacity-60">
-                <div className="h-12 text-xs font-bold uppercase tracking-widest text-muted flex items-center gap-2">
-                  <span className="text-primary">SOC2</span> Compliance
-                </div>
-                <div className="h-8 text-xs font-bold uppercase tracking-widest text-muted flex items-center gap-2">GDPR</div>
-                <div className="h-10 w-px bg-white/10" />
-                <div className="flex items-center gap-1">
-                  <svg className="h-5 w-5 text-yellow-500 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="font-bold">4.9/5</span>
-                  <span className="text-xs text-muted">Clutch</span>
-                </div>
+            <FadeIn direction="up" delay={0.4} initiallyVisible>
+              <div className="flex flex-wrap gap-3 pt-4">
+                {[0, 1, 2, 3].map((index) => (
+                  <span
+                    key={index}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-muted"
+                  >
+                    <CheckCircle2 className="size-4 text-primary" aria-hidden="true" />
+                    {t(`hero.chips.${index}`)}
+                  </span>
+                ))}
               </div>
             </FadeIn>
           </div>
 
-          {/* Right Visual - Code Preview */}
-          <SlideIn direction="right" delay={0.2} className="hidden lg:block relative">
+          <SlideIn direction="right" delay={0.2} initiallyVisible className="hidden lg:block relative">
             <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group hero-code-card">
-              {/* Code Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500/50" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                   <div className="w-3 h-3 rounded-full bg-green-500/50" />
                 </div>
-                <div className="text-xs font-mono text-muted">pipeline-ia.config.ts</div>
+                <div className="text-xs font-mono text-muted">{t("hero.process.label")}</div>
               </div>
 
-              {/* Code Lines */}
-              <div className="space-y-4 font-mono text-sm">
-                {codeLines.map((line) => (
-                  <div key={line.line} className={cn("flex items-center gap-2", line.color)}>
-                    <span className="text-muted">{line.line}</span>
-                    <span className={line.indent ? "ml-4" : ""}>{line.code}</span>
+              <div className="space-y-4">
+                {deliverySteps.map((step, index) => (
+                  <div key={step} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span className="font-mono text-sm text-primary">0{index + 1}</span>
+                    <div>
+                      <p className="font-bold">{t(`hero.process.${step}.title`)}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                        {t(`hero.process.${step}.description`)}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              {/* Floating Status */}
-              <div className="absolute bottom-6 right-6 bg-dark/90 backdrop-blur-sm border border-white/10 p-4 rounded-2xl shadow-2xl hero-status-tag">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/20 rounded-lg">
-                    <Zap className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted">{t("hero.status.label")}</p>
-                    <p className="text-sm font-bold">{t("hero.status.value")}</p>
-                  </div>
-                </div>
-              </div>
             </GlassPanel>
 
             {/* Decorative elements */}

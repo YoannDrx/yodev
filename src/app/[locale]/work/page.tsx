@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
@@ -8,15 +8,13 @@ import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FadeIn } from "@/components/motion";
 import { CtaSection } from "@/components/sections";
-import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   TrendingUp,
   Sparkles,
-  ShoppingCart,
-  Smartphone,
+  ClipboardCheck,
+  Workflow,
   Cpu,
-  Cloud,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -30,68 +28,165 @@ type CaseStudy = {
   icon: typeof TrendingUp;
 };
 
-const caseStudies: CaseStudy[] = [
+const workContent: Record<
+  "fr" | "en",
   {
-    slug: "saas-b2b",
-    title: "Plateforme SaaS B2B",
-    type: "SaaS / Web App",
-    summary:
-      "Développement d'une plateforme de gestion pour les équipes commerciales avec dashboard analytics et automatisation.",
-    results: ["+40% productivité", "ROI en 3 mois"],
-    color: "from-blue-500/20 to-primary/10",
-    icon: TrendingUp,
+    eyebrow: string;
+    titleLead: string;
+    titleAccent: string;
+    subtitle: string;
+    contactCta: string;
+    caseEyebrow: string;
+    caseTitle: string;
+    caseStatus: string;
+    caseStudies: CaseStudy[];
+    stats: { value: string; label: string }[];
+    sectorsEyebrow: string;
+    sectorsTitle: string;
+    sectorsSubtitle: string;
+    sectors: { name: string; signal: string }[];
+    ctaEyebrow: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaLabel: string;
+    ctaSecondary: string;
+  }
+> = {
+  fr: {
+    eyebrow: "Réalisations sélectionnées",
+    titleLead: "Des décisions",
+    titleAccent: "rendues visibles.",
+    subtitle:
+      "Des produits personnels utilisés comme preuves de cadrage, d’UX, d’architecture et de fiabilité — sans résultat client inventé.",
+    contactCta: "Discuter de votre projet",
+    caseEyebrow: "Études de travail",
+    caseTitle: "Trois angles complémentaires",
+    caseStatus: "Documentation détaillée en préparation",
+    caseStudies: [
+      {
+        slug: "moodday",
+        title: "Moodday",
+        type: "Produit sensible / Santé mentale",
+        summary:
+          "Refonte d’un compagnon de suivi personnel avec confidentialité, parcours aidant et synchronisation hors ligne explicite.",
+        results: ["Confidentialité", "Offline-first"],
+        color: "from-blue-500/20 to-primary/10",
+        icon: ClipboardCheck,
+      },
+      {
+        slug: "jobio",
+        title: "Jobio",
+        type: "Produit / Workflow commercial",
+        summary:
+          "Réduction d’un produit trop large vers cinq parcours cœur et trois priorités commerciales maximum par jour.",
+        results: ["Périmètre V1", "Workflow actionnable"],
+        color: "from-orange-500/20 to-pink-500/10",
+        icon: Workflow,
+      },
+      {
+        slug: "mycryptopilot",
+        title: "MyCryptoPilot",
+        type: "Architecture / Sécurité",
+        summary:
+          "Démonstrateur testnet orienté risque, connexions read-only et suppression des performances fictives.",
+        results: ["Testnet", "Risk-first"],
+        color: "from-green-500/20 to-primary/10",
+        icon: Cpu,
+      },
+    ],
+    stats: [
+      { value: "Produit", label: "Cadrage" },
+      { value: "UX", label: "Parcours" },
+      { value: "Code", label: "Fiabilité" },
+      { value: "Livraison", label: "Transfert" },
+    ],
+    sectorsEyebrow: "Types de problèmes",
+    sectorsTitle: "Des contraintes différentes, une méthode traçable",
+    sectorsSubtitle:
+      "Le domaine change ; les hypothèses, décisions et critères de validation restent explicites.",
+    sectors: [
+      { name: "Produits SaaS", signal: "Web" },
+      { name: "Applications métier", signal: "UX" },
+      { name: "Produits sensibles", signal: "Privacy" },
+      { name: "Outils data", signal: "Fiabilité" },
+    ],
+    ctaEyebrow: "Votre projet",
+    ctaTitle: "Un cas concret à cadrer ?",
+    ctaSubtitle:
+      "Décrivez le problème et les contraintes pour identifier la première décision utile.",
+    ctaLabel: "Qualifier le projet",
+    ctaSecondary: "Voir les services",
   },
-  {
-    slug: "ecommerce-refonte",
-    title: "Refonte E-commerce Premium",
-    type: "E-commerce",
-    summary:
-      "Refonte complète d'une boutique en ligne haut de gamme avec optimisation performance et nouveau tunnel d'achat.",
-    results: ["+120% conversion", "Lighthouse 95+"],
-    color: "from-orange-500/20 to-pink-500/10",
-    icon: ShoppingCart,
+  en: {
+    eyebrow: "Selected work",
+    titleLead: "Decisions",
+    titleAccent: "made visible.",
+    subtitle:
+      "Personal products used as evidence of product framing, UX, architecture and reliability — without invented client outcomes.",
+    contactCta: "Discuss your project",
+    caseEyebrow: "Work studies",
+    caseTitle: "Three complementary angles",
+    caseStatus: "Detailed documentation in progress",
+    caseStudies: [
+      {
+        slug: "moodday",
+        title: "Moodday",
+        type: "Sensitive product / Mental health",
+        summary:
+          "Redesign of a personal tracking companion with privacy, caregiver journeys and explicit offline synchronization.",
+        results: ["Privacy", "Offline-first"],
+        color: "from-blue-500/20 to-primary/10",
+        icon: ClipboardCheck,
+      },
+      {
+        slug: "jobio",
+        title: "Jobio",
+        type: "Product / Sales workflow",
+        summary:
+          "Reduction of an oversized product into five core journeys and no more than three commercial priorities per day.",
+        results: ["V1 scope", "Actionable workflow"],
+        color: "from-orange-500/20 to-pink-500/10",
+        icon: Workflow,
+      },
+      {
+        slug: "mycryptopilot",
+        title: "MyCryptoPilot",
+        type: "Architecture / Security",
+        summary:
+          "Risk-first testnet demonstrator with read-only connections and no fictional performance metrics.",
+        results: ["Testnet", "Risk-first"],
+        color: "from-green-500/20 to-primary/10",
+        icon: Cpu,
+      },
+    ],
+    stats: [
+      { value: "Product", label: "Framing" },
+      { value: "UX", label: "Journeys" },
+      { value: "Code", label: "Reliability" },
+      { value: "Delivery", label: "Handover" },
+    ],
+    sectorsEyebrow: "Problem types",
+    sectorsTitle: "Different constraints, a traceable method",
+    sectorsSubtitle:
+      "The domain changes; assumptions, decisions and validation criteria remain explicit.",
+    sectors: [
+      { name: "SaaS products", signal: "Web" },
+      { name: "Business applications", signal: "UX" },
+      { name: "Sensitive products", signal: "Privacy" },
+      { name: "Data tools", signal: "Reliability" },
+    ],
+    ctaEyebrow: "Your project",
+    ctaTitle: "A concrete case to frame?",
+    ctaSubtitle:
+      "Describe the problem and constraints to identify the first useful decision.",
+    ctaLabel: "Qualify the project",
+    ctaSecondary: "See services",
   },
-  {
-    slug: "app-coaching",
-    title: "App de Coaching Sportif",
-    type: "Mobile App",
-    summary:
-      "Application mobile de coaching personnalisé avec suivi en temps réel, programmes adaptatifs et gamification.",
-    results: ["MVP en 8 sem.", "4.8★ App Store"],
-    color: "from-green-500/20 to-primary/10",
-    icon: Smartphone,
-  },
-  {
-    slug: "ai-modernization",
-    title: "Modernisation IA & Data",
-    type: "IA / Data",
-    summary:
-      "Refonte d'un pipeline data industriel avec agents IA et architecture event-driven.",
-    results: ["-40% coûts", "2,4 s/commande"],
-    color: "from-primary/20 to-secondary/10",
-    icon: Cpu,
-  },
-  {
-    slug: "legacy-to-cloud",
-    title: "Legacy-to-Cloud ETI 500+",
-    type: "Modernisation IT",
-    summary:
-      "Migration cloud-native d'un monolithe critique avec zéro downtime et infra optimisée.",
-    results: ["-42% infra", "99.99% uptime"],
-    color: "from-blue-500/20 to-primary/10",
-    icon: Cloud,
-  },
-];
-
-const stats = [
-  { value: "200+", label: "Projets livrés" },
-  { value: "98%", label: "Clients satisfaits" },
-  { value: "50+", label: "Projets IA" },
-  { value: "15+", label: "Experts seniors" },
-];
+};
 
 export default function WorkPage() {
-  const t = useTranslations("WorkPage");
+  const locale = useLocale() === "en" ? "en" : "fr";
+  const copy = workContent[locale];
 
   return (
     <>
@@ -105,22 +200,21 @@ export default function WorkPage() {
             <FadeIn>
               <Badge variant="primary" className="mb-6">
                 <Sparkles className="w-3 h-3 mr-1" />
-                {t("eyebrow") || "Nos Réalisations"}
+                {copy.eyebrow}
               </Badge>
             </FadeIn>
 
             <FadeIn delay={0.1}>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-extrabold leading-[1.1] mb-6">
-                <span className="text-gradient">Projets qui</span>
+                <span className="text-gradient">{copy.titleLead}</span>
                 <br />
-                <span className="text-primary">Performent.</span>
+                <span className="text-primary">{copy.titleAccent}</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
               <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10">
-                {t("subtitle") ||
-                  "Des solutions digitales qui génèrent des résultats mesurables. Découvrez comment nous avons transformé les défis de nos clients en succès."}
+                {copy.subtitle}
               </p>
             </FadeIn>
 
@@ -130,7 +224,7 @@ export default function WorkPage() {
                 size="lg"
                 className="px-8 shadow-[0_0_30px_rgba(27,168,150,0.3)]"
               >
-                Discuter de votre projet
+                {copy.contactCta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </ButtonLink>
             </FadeIn>
@@ -142,7 +236,7 @@ export default function WorkPage() {
       <section className="py-12 border-y border-white/5">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {copy.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -169,18 +263,18 @@ export default function WorkPage() {
           <div className="text-center mb-16">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                Case Studies
+                {copy.caseEyebrow}
               </Badge>
             </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-display font-bold">
-                Projets Phares
+                {copy.caseTitle}
               </h2>
             </FadeIn>
           </div>
 
           <div className="space-y-8">
-            {caseStudies.map((study, index) => {
+            {copy.caseStudies.map((study, index) => {
               const Icon = study.icon;
               return (
                 <motion.div
@@ -190,11 +284,7 @@ export default function WorkPage() {
                   transition={{ delay: index * 0.15 }}
                   viewport={{ once: true }}
                 >
-                  <Link
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    href={`/work/${study.slug}` as any}
-                    className="block group"
-                  >
+                  <div className="group">
                     <GlassPanel
                       className={cn(
                         "p-8 md:p-12 rounded-3xl relative overflow-hidden",
@@ -243,9 +333,8 @@ export default function WorkPage() {
                             ))}
                           </div>
 
-                          <span className="inline-flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
-                            Voir le case study
-                            <ArrowRight className="ml-2 w-4 h-4" />
+                          <span className="inline-flex items-center text-muted font-medium">
+                            {copy.caseStatus}
                           </span>
                         </div>
 
@@ -257,7 +346,7 @@ export default function WorkPage() {
                         </div>
                       </div>
                     </GlassPanel>
-                  </Link>
+                  </div>
                 </motion.div>
               );
             })}
@@ -271,29 +360,23 @@ export default function WorkPage() {
           <div className="text-center mb-16">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                Industries
+                {copy.sectorsEyebrow}
               </Badge>
             </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-                Secteurs d'Expertise
+                {copy.sectorsTitle}
               </h2>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-muted max-w-xl mx-auto">
-                Notre expérience couvre de nombreux secteurs, avec une expertise
-                particulière en SaaS, e-commerce et applications mobiles.
+                {copy.sectorsSubtitle}
               </p>
             </FadeIn>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { name: "SaaS & Startups", count: "50+" },
-              { name: "E-commerce", count: "40+" },
-              { name: "Fintech", count: "20+" },
-              { name: "Santé & Biotech", count: "15+" },
-            ].map((industry, index) => (
+            {copy.sectors.map((industry, index) => (
               <motion.div
                 key={industry.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -303,7 +386,7 @@ export default function WorkPage() {
               >
                 <GlassPanel className="p-6 rounded-2xl text-center">
                   <p className="text-2xl font-display font-black text-primary mb-1">
-                    {industry.count}
+                    {industry.signal}
                   </p>
                   <p className="text-sm font-medium">{industry.name}</p>
                 </GlassPanel>
@@ -315,12 +398,12 @@ export default function WorkPage() {
 
       {/* CTA Section */}
       <CtaSection
-        eyebrow="Votre projet"
-        title="Prêt à créer quelque chose d'exceptionnel ?"
-        subtitle="Discutons de vos objectifs et voyons comment transformer votre vision en réalité."
-        ctaLabel="Démarrer un projet"
+        eyebrow={copy.ctaEyebrow}
+        title={copy.ctaTitle}
+        subtitle={copy.ctaSubtitle}
+        ctaLabel={copy.ctaLabel}
         ctaHref="/contact"
-        secondaryLabel="Voir nos services"
+        secondaryLabel={copy.ctaSecondary}
         secondaryHref="/services"
         variant="card"
       />

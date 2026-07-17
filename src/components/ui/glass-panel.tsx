@@ -28,12 +28,6 @@ const variantStyles: Record<GlassPanelVariant, string> = {
   ),
 };
 
-const borderColorStyles: Record<string, string> = {
-  primary: "border-l-primary",
-  secondary: "border-l-secondary",
-  none: "",
-};
-
 const borderPositionStyles: Record<string, Record<string, string>> = {
   left: {
     primary: "border-l-4 border-l-primary",

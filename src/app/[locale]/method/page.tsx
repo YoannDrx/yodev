@@ -1,12 +1,13 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn, SlideIn } from "@/components/motion";
 import { CtaSection } from "@/components/sections";
+import { Link } from "@/i18n/navigation";
 import {
   Lightbulb,
   Palette,
@@ -41,8 +42,55 @@ const stepColors = [
   "from-orange-500/20 to-red-500/10",
 ];
 
+const methodContent = {
+  fr: {
+    commitmentsEyebrow: "Cadre de collaboration",
+    deliverableLabel: "Livrable",
+    commitmentsBody:
+      "Ces règles servent à rendre la mission lisible. Les délais et niveaux de service précis sont définis dans le périmètre accepté.",
+    summaryEyebrow: "En résumé",
+    summaryTitle: "Une progression par décisions et livrables vérifiables",
+    phases: [
+      { period: "Étape 1", label: "Cadrer" },
+      { period: "Étape 2", label: "Concevoir" },
+      { period: "Étape 3", label: "Construire" },
+      { period: "Étape 4", label: "Lancer et transférer" },
+    ],
+    summaryNote:
+      "La durée dépend du périmètre, des dépendances et de la disponibilité des parties prenantes. Une estimation n’est annoncée qu’après le cadrage.",
+    ctaTitle: "Un problème produit à cadrer ?",
+    ctaSubtitle:
+      "Partagez le contexte, les contraintes et l’échéance pour définir la prochaine étape.",
+    ctaLabel: "Qualifier le projet",
+    secondaryLabel: "Voir les offres",
+  },
+  en: {
+    commitmentsEyebrow: "Working agreement",
+    deliverableLabel: "Deliverable",
+    commitmentsBody:
+      "These rules keep the engagement readable. Exact timelines and service levels are defined in the accepted scope.",
+    summaryEyebrow: "In short",
+    summaryTitle: "Progress through decisions and verifiable deliverables",
+    phases: [
+      { period: "Step 1", label: "Frame" },
+      { period: "Step 2", label: "Design" },
+      { period: "Step 3", label: "Build" },
+      { period: "Step 4", label: "Launch and hand over" },
+    ],
+    summaryNote:
+      "Duration depends on scope, dependencies and stakeholder availability. An estimate is only shared after framing.",
+    ctaTitle: "A product problem to frame?",
+    ctaSubtitle:
+      "Share the context, constraints and deadline to define the next step.",
+    ctaLabel: "Qualify the project",
+    secondaryLabel: "See the offers",
+  },
+} as const;
+
 export default function MethodPage() {
   const t = useTranslations("MethodPage");
+  const locale = useLocale() === "en" ? "en" : "fr";
+  const copy = methodContent[locale];
   const steps = t.raw("steps") as MethodStep[];
   const commitments = t.raw("commitments") as Commitments;
 
@@ -172,7 +220,7 @@ export default function MethodPage() {
                         <FileCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
                           <p className="text-xs font-bold uppercase tracking-wider text-muted mb-1">
-                            Livrable
+                            {copy.deliverableLabel}
                           </p>
                           <p className="text-sm font-medium">
                             {step.deliverable}
@@ -194,22 +242,21 @@ export default function MethodPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                Nos garanties
+                {copy.commitmentsEyebrow}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
                 {commitments.title}
               </h2>
               <p className="text-muted mb-8">
-                Ce ne sont pas des slogans marketing. Ce sont des engagements
-                contractuels qu'on respecte sur chaque projet.
+                {copy.commitmentsBody}
               </p>
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 text-primary font-bold hover:translate-x-1 transition-transform"
               >
-                Discuter de votre projet
+                {copy.ctaLabel}
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </FadeIn>
 
             <SlideIn direction="right">
@@ -243,29 +290,20 @@ export default function MethodPage() {
           <div className="text-center mb-16">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                En résumé
+                {copy.summaryEyebrow}
               </Badge>
             </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-display font-bold">
-                De l'idée au lancement en 6-10 semaines
+                {copy.summaryTitle}
               </h2>
             </FadeIn>
           </div>
 
           <div className="grid gap-4 md:grid-cols-4">
-            {[
-              { week: "Semaine 1", label: "Cadrage & brief", color: "blue" },
-              { week: "Semaines 2-3", label: "Design & UX", color: "purple" },
-              {
-                week: "Semaines 4-8",
-                label: "Développement",
-                color: "primary",
-              },
-              { week: "Semaine 9-10", label: "Lancement", color: "orange" },
-            ].map((phase, index) => (
+            {copy.phases.map((phase, index) => (
               <motion.div
-                key={phase.week}
+                key={phase.period}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -273,7 +311,7 @@ export default function MethodPage() {
               >
                 <GlassPanel className="p-6 rounded-2xl text-center h-full">
                   <p className="text-xs font-bold uppercase tracking-wider text-muted mb-2">
-                    {phase.week}
+                    {phase.period}
                   </p>
                   <p className="font-bold text-lg">{phase.label}</p>
                 </GlassPanel>
@@ -283,8 +321,7 @@ export default function MethodPage() {
 
           <FadeIn delay={0.3}>
             <p className="text-center text-sm text-muted mt-8 max-w-2xl mx-auto">
-              Ces durées sont indicatives et varient selon la complexité du
-              projet. On s'engage sur un planning précis dès le début.
+              {copy.summaryNote}
             </p>
           </FadeIn>
         </Container>
@@ -292,11 +329,11 @@ export default function MethodPage() {
 
       {/* CTA Section */}
       <CtaSection
-        title="Prêt à démarrer votre projet ?"
-        subtitle="On vous fait un planning détaillé sous 48h après notre premier échange."
-        ctaLabel="Planifier un appel"
+        title={copy.ctaTitle}
+        subtitle={copy.ctaSubtitle}
+        ctaLabel={copy.ctaLabel}
         ctaHref="/contact"
-        secondaryLabel="Voir nos offres"
+        secondaryLabel={copy.secondaryLabel}
         secondaryHref="/offers"
         variant="card"
       />

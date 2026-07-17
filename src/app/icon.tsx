@@ -10,8 +10,6 @@ export default function Icon() {
   const dotSize = 12;
   const gap = 2;
   const radius = 2;
-  const offset = 3;
-
   return new ImageResponse(
     (
       <div

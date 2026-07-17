@@ -10,57 +10,9 @@ export const routing = defineRouting({
       fr: "/services",
       en: "/services",
     },
-    "/services/ai": {
-      fr: "/services/ia",
-      en: "/services/ai",
-    },
-    "/services/web": {
-      fr: "/services/web",
-      en: "/services/web",
-    },
-    "/services/custom-software": {
-      fr: "/services/logiciel-metier",
-      en: "/services/custom-software",
-    },
-    "/services/mobile": {
-      fr: "/services/mobile",
-      en: "/services/mobile",
-    },
-    "/services/ecommerce": {
-      fr: "/services/ecommerce",
-      en: "/services/ecommerce",
-    },
-    "/services/ux-design": {
-      fr: "/services/ux-design",
-      en: "/services/ux-design",
-    },
-    "/services/cybersecurity": {
-      fr: "/services/cybersecurite",
-      en: "/services/cybersecurity",
-    },
-    "/ai": {
-      fr: "/ia",
-      en: "/ai",
-    },
-    "/expertise": {
-      fr: "/expertises",
-      en: "/expertise",
-    },
-    "/expertise/scalable-architecture": {
-      fr: "/expertises/architecture-scalable",
-      en: "/expertise/scalable-architecture",
-    },
-    "/expertise/compliance": {
-      fr: "/expertises/conformite",
-      en: "/expertise/compliance",
-    },
     "/work": {
       fr: "/realisations",
       en: "/work",
-    },
-    "/work/[slug]": {
-      fr: "/realisations/[slug]",
-      en: "/work/[slug]",
     },
     "/offers": {
       fr: "/offres",
@@ -74,53 +26,9 @@ export const routing = defineRouting({
       fr: "/a-propos",
       en: "/about",
     },
-    "/team": {
-      fr: "/notre-equipe",
-      en: "/team",
-    },
     "/contact": {
       fr: "/contact",
       en: "/contact",
-    },
-    "/blog": {
-      fr: "/blog",
-      en: "/blog",
-    },
-    "/blog/[slug]": {
-      fr: "/blog/[slug]",
-      en: "/blog/[slug]",
-    },
-    "/solutions": {
-      fr: "/solutions",
-      en: "/solutions",
-    },
-    "/bookings/ai-strategy-audit": {
-      fr: "/rdv/audit-strategique-ia",
-      en: "/bookings/ai-strategy-audit",
-    },
-    "/bookings/security-risk-audit": {
-      fr: "/rdv/audit-risques-securite",
-      en: "/bookings/security-risk-audit",
-    },
-    "/bookings/legacy-roi-analysis": {
-      fr: "/rdv/analyse-roi-legacy",
-      en: "/bookings/legacy-roi-analysis",
-    },
-    "/bookings/technical-roadmap": {
-      fr: "/rdv/roadmap-technique",
-      en: "/bookings/technical-roadmap",
-    },
-    "/bookings/discovery-call": {
-      fr: "/rdv/appel-decouverte",
-      en: "/bookings/discovery-call",
-    },
-    "/careers": {
-      fr: "/carrieres",
-      en: "/careers",
-    },
-    "/careers/[slug]": {
-      fr: "/carrieres/[slug]",
-      en: "/careers/[slug]",
     },
     "/legal": {
       fr: "/mentions-legales",

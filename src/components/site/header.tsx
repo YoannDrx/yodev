@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X, ChevronDown, Cpu, Shield, Zap, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { buttonClassName } from "@/components/ui/button-styles";
 import { Logo } from "@/components/ui/logo";
@@ -12,32 +12,12 @@ import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Services submenu items
-const servicesItems = [
-  {
-    href: "/services/web",
-    key: "webMobile",
-    icon: Zap,
-    color: "text-primary",
-  },
-  {
-    href: "/services/ai",
-    key: "iaLegacy",
-    icon: Cpu,
-    color: "text-primary",
-  },
-  {
-    href: "/services/cybersecurity",
-    key: "cybersecurity",
-    icon: Shield,
-    color: "text-secondary",
-  },
-] as const;
-
 const navItems = [
-  { href: "/expertise", key: "expertise" },
+  { href: "/services", key: "services" },
   { href: "/work", key: "work" },
-  { href: "/blog", key: "blog" },
+  { href: "/method", key: "method" },
+  { href: "/offers", key: "offers" },
+  { href: "/about", key: "about" },
 ] as const;
 
 export function SiteHeader() {
@@ -46,7 +26,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -58,12 +37,6 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
-  }, [pathname]);
-
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -74,6 +47,17 @@ export function SiteHeader() {
     return () => {
       document.body.style.overflow = "";
     };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMobileMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
   }, [isMobileMenuOpen]);
 
   return (
@@ -93,85 +77,9 @@ export function SiteHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center gap-8 md:flex">
-              {/* Services Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <button
-                  className={cn(
-                    "flex items-center gap-1 py-2 text-sm font-semibold transition-colors",
-                    pathname.startsWith("/services")
-                      ? "text-primary"
-                      : "text-text hover:text-primary"
-                  )}
-                >
-                  <span>{t("services")}</span>
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform duration-200",
-                      isServicesOpen && "rotate-180"
-                    )}
-                  />
-                </button>
-
-                {/* Services Mega Menu */}
-                <AnimatePresence>
-                  {isServicesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-72 glass-panel-solid rounded-2xl p-4 space-y-2"
-                    >
-                      {servicesItems.map((item) => {
-                        const Icon = item.icon;
-                        return (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className="flex items-start gap-3 p-3 rounded-xl transition-all hover:bg-white/5 group"
-                          >
-                            <div
-                              className={cn(
-                                "flex h-10 w-10 items-center justify-center rounded-lg bg-white/5",
-                                item.color
-                              )}
-                            >
-                              <Icon className="h-5 w-5" />
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-sm group-hover:text-primary transition-colors">
-                                {t(item.key)}
-                              </p>
-                              <p className="text-xs text-muted mt-0.5">
-                                {t(`${item.key}Desc`)}
-                              </p>
-                            </div>
-                          </Link>
-                        );
-                      })}
-                      <div className="border-t border-white/10 pt-3 mt-3">
-                        <Link
-                          href="/services"
-                          className="flex items-center justify-between p-3 rounded-xl hover:bg-white/5 group transition-all"
-                        >
-                          <span className="text-sm font-semibold text-muted group-hover:text-primary">
-                            {t("allServices")}
-                          </span>
-                          <ArrowRight className="h-4 w-4 text-muted group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Other Nav Items */}
               {navItems.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  pathname === item.href || pathname.startsWith(`${item.href}/`);
                 return (
                   <Link
                     key={item.href}
@@ -205,11 +113,14 @@ export function SiteHeader() {
 
             {/* Mobile Toggle */}
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex h-10 w-10 items-center justify-center text-text md:hidden"
+              className="flex size-12 items-center justify-center rounded-xl text-text md:hidden"
               aria-label={
                 isMobileMenuOpen ? common("menuClose") : common("menuOpen")
               }
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMobileMenuOpen ? (
                 <X className="h-8 w-8" />
@@ -236,46 +147,20 @@ export function SiteHeader() {
 
             {/* Menu Panel */}
             <motion.div
+              id="mobile-navigation"
+              role="dialog"
+              aria-modal="true"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               className="fixed inset-x-0 top-20 z-50 glass-panel mx-6 rounded-3xl p-6 md:hidden"
             >
               <nav className="flex flex-col gap-4">
-                {/* Services with sub-items */}
-                <div className="border-b border-white/10 pb-4">
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">
-                    {t("services")}
-                  </p>
-                  <div className="grid gap-2">
-                    {servicesItems.map((item) => {
-                      const Icon = item.icon;
-                      return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-all"
-                        >
-                          <div
-                            className={cn(
-                              "flex h-8 w-8 items-center justify-center rounded-lg bg-white/5",
-                              item.color
-                            )}
-                          >
-                            <Icon className="h-4 w-4" />
-                          </div>
-                          <span className="font-semibold">{t(item.key)}</span>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Other nav items */}
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="text-2xl font-bold py-2 hover:text-primary transition-colors"
                   >
                     {t(item.key)}
@@ -291,6 +176,7 @@ export function SiteHeader() {
                 {/* CTA */}
                 <Link
                   href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={buttonClassName({
                     variant: "primary",
                     size: "lg",

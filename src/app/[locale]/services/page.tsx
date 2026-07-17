@@ -1,369 +1,362 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import {
-  Globe,
-  Smartphone,
-  Server,
-  ShoppingBag,
-  Cpu,
-  Palette,
-  Shield,
-  TrendingUp,
-  Check,
   ArrowRight,
+  CheckCircle2,
+  Code2,
+  FileSearch,
+  Gauge,
+  Layers3,
+  ShieldCheck,
+  Sparkles,
+  WandSparkles,
 } from "lucide-react";
-import { Container } from "@/components/ui/container";
-import { GlassPanel } from "@/components/ui/glass-panel";
+import { FadeIn } from "@/components/motion";
+import { CtaSection } from "@/components/sections";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
-import { Link } from "@/i18n/navigation";
-import { FadeIn, SlideIn } from "@/components/motion";
-import { CtaSection, FaqList } from "@/components/sections";
-import { cn } from "@/lib/utils";
+import { Card } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
 
-const services = [
-  {
-    icon: Globe,
-    title: "Développement Web",
-    description: "Applications haute performance avec Next.js & architectures scalables par défaut.",
-    features: ["SPA & SSR Apps", "SEO & Performance", "APIs & Intégrations"],
-    slug: "web",
-    color: "primary",
-  },
-  {
-    icon: Smartphone,
-    title: "Développement Mobile",
-    description: "Expériences fluides et natives sur iOS & Android pour une rétention maximale.",
-    features: ["React Native / Flutter", "Swift & Kotlin Native", "PWA à forte valeur"],
-    slug: "mobile",
-    color: "primary",
-  },
-  {
-    icon: Server,
-    title: "Solutions SaaS",
-    description: "Conception de plateformes multi-tenant avec gestion complexe d'abonnements.",
-    features: ["Stripe Integration", "Infrastructure Multi-tenant", "Dashboard Analytic"],
-    slug: "custom-software",
-    color: "primary",
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce",
-    description: "Boutiques ultra-rapides via Headless Commerce pour un taux de conversion record.",
-    features: ["Shopify Headless / Medusa", "Core Web Vitals", "Checkout Personnalisé"],
-    slug: "ecommerce",
-    color: "primary",
-  },
-];
+const serviceIcons = [FileSearch, Layers3, Code2, Gauge] as const;
 
-const aiService = {
-  icon: Cpu,
-  title: "IA & LLM Integration",
-  description: "Donnez des super-pouvoirs à votre infrastructure. Nous intégrons les derniers modèles (OpenAI, Claude, Llama 3) via RAG pour des agents IA métier performants et sécurisés.",
-  features: [
-    "Chatbots & Agents RAG",
-    "Automatisation de workflow",
-    "Analyse prédictive & Data",
-    "Computer Vision & OCR",
-  ],
-  slug: "ai",
-  badge: "Expertise 2026",
-};
-
-const moreServices = [
-  {
-    icon: Palette,
-    title: "UX/UI Design",
-    description: "Interfaces intuitives basées sur la psychologie utilisateur et l'accessibilité.",
-    features: ["Audit UX & Heatmaps", "Design System Scalable", "Prototypes Haute-Fidélité"],
-    slug: "ux-design",
-    color: "primary",
+const content = {
+  fr: {
+    eyebrow: "Studio produit & développement",
+    title: "Une intervention claire, du problème au produit fiable.",
+    subtitle:
+      "Yodev cadre, conçoit et développe des produits web. Le périmètre, les preuves attendues et les limites sont posés avant la production.",
+    primaryCta: "Qualifier mon projet",
+    secondaryCta: "Voir les réalisations",
+    servicesEyebrow: "Services",
+    servicesTitle: "Quatre façons concrètes d’avancer",
+    servicesSubtitle:
+      "Chaque mission produit des livrables utilisables. Les technologies viennent après le problème, jamais avant.",
+    services: [
+      {
+        title: "Cadrage produit & audit UX",
+        description:
+          "Transformer un besoin diffus en parcours prioritaires, décisions documentées et périmètre livrable.",
+        deliverables: [
+          "Audit des parcours et irritants",
+          "Cartographie du périmètre et des risques",
+          "Plan d’action priorisé",
+        ],
+      },
+      {
+        title: "Conception d’un MVP",
+        description:
+          "Passer d’une hypothèse à une expérience testable sans fabriquer un produit trop large dès la première version.",
+        deliverables: [
+          "Architecture de l’information",
+          "Prototype des parcours essentiels",
+          "Design system adapté au produit",
+        ],
+      },
+      {
+        title: "Développement React / Next.js",
+        description:
+          "Construire ou reprendre une application web avec des parcours réels, des états complets et une base maintenable.",
+        deliverables: [
+          "Interface accessible et responsive",
+          "Intégrations API, données et paiement",
+          "Tests, preview et documentation",
+        ],
+      },
+      {
+        title: "Fiabilisation & modernisation",
+        description:
+          "Réduire la dette qui bloque la livraison : bugs critiques, performance, sécurité applicative et déploiement.",
+        deliverables: [
+          "Diagnostic reproductible",
+          "Corrections par niveau de risque",
+          "Plan de migration et de retour arrière",
+        ],
+      },
+    ],
+    aiEyebrow: "IA & automatisation",
+    aiTitle: "L’IA seulement lorsqu’elle améliore le parcours.",
+    aiBody:
+      "Une fonctionnalité IA doit avoir une source, un comportement d’échec et un coût observables. Si une règle déterministe suffit, elle reste le meilleur choix.",
+    aiItems: [
+      "Cas d’usage et données évalués avant intégration",
+      "Sorties structurées, traçabilité et contrôle utilisateur",
+      "Fallback explicite et aucune réussite simulée",
+    ],
+    engagementEyebrow: "Cadre de mission",
+    engagementTitle: "Ce qui est défini avant de commencer",
+    engagementSubtitle:
+      "Les délais et niveaux de service dépendent du périmètre accepté. Ils ne sont jamais promis de manière générique.",
+    engagement: [
+      {
+        title: "Périmètre",
+        body: "Parcours inclus, fonctionnalités masquées et critères de sortie.",
+      },
+      {
+        title: "Preuves",
+        body: "Démonstration, tests, métriques ou documentation attendus à la livraison.",
+      },
+      {
+        title: "Responsabilités",
+        body: "Accès, validations, dépendances externes et personne responsable de chaque décision.",
+      },
+      {
+        title: "Transfert",
+        body: "Code, environnement, décisions et procédure de reprise après la mission.",
+      },
+    ],
+    fitEyebrow: "Bon point de départ",
+    fitTitle: "Vous avez un problème produit concret à résoudre ?",
+    fitBody:
+      "Partagez le contexte, les utilisateurs concernés, les contraintes et l’échéance. La première réponse sert à déterminer si Yodev est le bon interlocuteur.",
+    fitCta: "Décrire le projet",
+    fitSecondary: "Voir la méthode",
   },
-  {
-    icon: Shield,
-    title: "Cybersécurité",
-    description: "Blindage de vos actifs numériques contre les vulnérabilités OWASP et conformité RGPD.",
-    features: ["Pentesting & Audits", "Hardening Serveur", "Compliance (SOC2)"],
-    slug: "cybersecurity",
-    color: "primary",
+  en: {
+    eyebrow: "Product & development studio",
+    title: "A clear engagement, from problem to reliable product.",
+    subtitle:
+      "Yodev frames, designs and develops web products. Scope, expected evidence and limits are agreed before production starts.",
+    primaryCta: "Qualify my project",
+    secondaryCta: "See the work",
+    servicesEyebrow: "Services",
+    servicesTitle: "Four concrete ways to move forward",
+    servicesSubtitle:
+      "Every engagement produces usable deliverables. Technology follows the problem, never the other way around.",
+    services: [
+      {
+        title: "Product framing & UX audit",
+        description:
+          "Turn a broad need into priority journeys, documented decisions and a deliverable scope.",
+        deliverables: [
+          "Journey and friction audit",
+          "Scope and risk map",
+          "Prioritized action plan",
+        ],
+      },
+      {
+        title: "MVP design",
+        description:
+          "Move from hypothesis to a testable experience without building an oversized first version.",
+        deliverables: [
+          "Information architecture",
+          "Core journey prototype",
+          "Product-specific design system",
+        ],
+      },
+      {
+        title: "React / Next.js development",
+        description:
+          "Build or take over a web application with real journeys, complete states and a maintainable foundation.",
+        deliverables: [
+          "Accessible, responsive interface",
+          "API, data and payment integrations",
+          "Tests, preview and documentation",
+        ],
+      },
+      {
+        title: "Reliability & modernization",
+        description:
+          "Reduce the debt blocking delivery: critical bugs, performance, application security and deployment.",
+        deliverables: [
+          "Reproducible diagnosis",
+          "Risk-ranked fixes",
+          "Migration and rollback plan",
+        ],
+      },
+    ],
+    aiEyebrow: "AI & automation",
+    aiTitle: "AI only when it improves the journey.",
+    aiBody:
+      "An AI feature needs observable sources, failure behavior and cost. When a deterministic rule is enough, it remains the better choice.",
+    aiItems: [
+      "Use case and data assessed before integration",
+      "Structured outputs, traceability and user control",
+      "Explicit fallback and no simulated success",
+    ],
+    engagementEyebrow: "Engagement model",
+    engagementTitle: "What is agreed before work starts",
+    engagementSubtitle:
+      "Timelines and service levels depend on accepted scope. They are never promised generically.",
+    engagement: [
+      {
+        title: "Scope",
+        body: "Included journeys, hidden features and exit criteria.",
+      },
+      {
+        title: "Evidence",
+        body: "Demo, tests, metrics or documentation expected at delivery.",
+      },
+      {
+        title: "Responsibilities",
+        body: "Access, approvals, external dependencies and an owner for each decision.",
+      },
+      {
+        title: "Handover",
+        body: "Code, environment, decisions and takeover procedure after the engagement.",
+      },
+    ],
+    fitEyebrow: "A good starting point",
+    fitTitle: "Do you have a concrete product problem to solve?",
+    fitBody:
+      "Share the context, affected users, constraints and deadline. The first response determines whether Yodev is the right fit.",
+    fitCta: "Describe the project",
+    fitSecondary: "See the method",
   },
-  {
-    icon: TrendingUp,
-    title: "Consulting & Stratégie",
-    description: "Audit de votre stack technique et roadmap de transformation digitale sur 12-24 mois.",
-    features: ["Modernisation Legacy", "Cloud Migration (AWS)", "CTO as a Service"],
-    slug: null,
-    color: "primary",
-  },
-];
-
-const stats = [
-  { value: "200+", label: "Projets Livrés" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "12 sem.", label: "Délai Moyen MVP" },
-  { value: "15+", label: "Experts Seniors" },
-];
-
-const faqItems = [
-  {
-    question: "Quel est votre processus de développement ?",
-    answer: "Nous fonctionnons en cycle Agile (Scrum). Nous divisons le projet en Sprints de 2 semaines avec des livrables testables à chaque fin de cycle. Vous avez accès à un environnement de staging et un dashboard de suivi en temps réel.",
-  },
-  {
-    question: "Combien de temps faut-il pour un projet ?",
-    answer: "Un MVP (Minimum Viable Product) robuste prend généralement entre 8 et 14 semaines. Les audits stratégiques ou missions d'intégration IA peuvent varier de 2 à 6 semaines selon la complexité des données.",
-  },
-  {
-    question: "Travaillez-vous avec des startups early-stage ?",
-    answer: "Oui, nous avons un framework dédié aux startups pour valider le Product-Market Fit rapidement sans sacrifier la qualité technique nécessaire pour les levées de fonds futures.",
-  },
-  {
-    question: "Faites-vous du Staff Augmentation ?",
-    answer: "Tout à fait. Nous pouvons intégrer un ou plusieurs experts (Dev, IA, Product) directement dans vos squads existantes pour accélérer vos roadmaps internes.",
-  },
-];
-
-type ServiceType = {
-  icon: typeof Globe;
-  title: string;
-  description: string;
-  features: string[];
-  slug: string | null;
-  color: string;
-};
-
-function ServiceCard({
-  service,
-  index,
-  large = false,
-}: {
-  service: ServiceType;
-  index: number;
-  large?: boolean;
-}) {
-  const Icon = service.icon;
-  const href = service.slug ? `/services/${service.slug}` : "/expertise";
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-      viewport={{ once: true }}
-    >
-      <Link href={href as "/services/web"}>
-        <GlassPanel
-          className={cn(
-            "p-8 rounded-[2rem] flex flex-col group h-full",
-            "hover:bg-white/5 hover:-translate-y-2 hover:border-primary/40 transition-all duration-300"
-          )}
-        >
-          <div
-            className={cn(
-              "w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6",
-              "group-hover:bg-primary group-hover:text-dark transition-all"
-            )}
-          >
-            <Icon className="w-6 h-6" />
-          </div>
-          <h3 className={cn("font-bold mb-3", large ? "text-2xl" : "text-xl")}>
-            {service.title}
-          </h3>
-          <p className="text-sm text-muted mb-6 leading-relaxed flex-grow">
-            {service.description}
-          </p>
-          <ul className="space-y-2 mb-8 text-xs text-muted font-medium">
-            {service.features.map((feature) => (
-              <li key={feature} className="flex items-center gap-2">
-                <Check className="w-3 h-3 text-primary flex-shrink-0" />
-                <span>{feature}</span>
-              </li>
-            ))}
-          </ul>
-          <span className="inline-flex items-center text-primary text-sm font-bold group-hover:translate-x-1 transition-transform">
-            Découvrir
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </span>
-        </GlassPanel>
-      </Link>
-    </motion.div>
-  );
-}
+} as const;
 
 export default function ServicesPage() {
-  const t = useTranslations("ServicesPage");
-  const common = useTranslations("Common");
+  const locale = useLocale() === "en" ? "en" : "fr";
+  const copy = content[locale];
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-24">
+      <section className="relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-40">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <FadeIn>
-                <Badge variant="primary" className="mb-4">
-                  Nos piliers d'excellence
-                </Badge>
-              </FadeIn>
-              <FadeIn delay={0.1}>
-                <h1 className="text-5xl lg:text-7xl font-display font-extrabold leading-[1.1]">
-                  <span className="text-gradient">Services Digitaux</span>
-                  <br />
-                  <span className="text-primary italic">Complets.</span>
-                </h1>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <p className="text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-                  De la conception à la maintenance. Tout ce qu'il faut pour dominer votre marché grâce à une ingénierie de pointe et une approche centrée sur le ROI.
-                </p>
-              </FadeIn>
-            </div>
-
-            <SlideIn direction="right" className="hidden lg:block">
-              <GlassPanel className="p-6 rounded-3xl border-primary/20">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/50" />
-                  <span className="text-[10px] font-mono text-muted">yodev-stack-navigator.sh</span>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-dark/50 p-3 rounded-xl border border-white/5 text-[11px] font-mono">
-                    <span className="text-primary font-bold">FE:</span> Next.js 14, React, Tailwind
-                  </div>
-                  <div className="bg-dark/50 p-3 rounded-xl border border-white/5 text-[11px] font-mono">
-                    <span className="text-secondary font-bold">BE:</span> Node.js, Python, Go
-                  </div>
-                  <div className="bg-dark/50 p-3 rounded-xl border border-white/5 text-[11px] font-mono">
-                    <span className="text-blue-400 font-bold">AI:</span> OpenAI, Claude, Llama 3
-                  </div>
-                  <div className="bg-dark/50 p-3 rounded-xl border border-white/5 text-[11px] font-mono">
-                    <span className="text-purple-400 font-bold">OPS:</span> AWS, Vercel, Docker
-                  </div>
-                </div>
-              </GlassPanel>
-            </SlideIn>
-          </div>
-        </Container>
-      </section>
-
-      {/* Services Grid */}
-      <section className="pb-24">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
-            ))}
-
-            {/* AI Service - Large Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2"
-            >
-              <Link href={`/services/${aiService.slug}` as "/services/ai"}>
-                <GlassPanel
-                  className={cn(
-                    "p-8 rounded-[2rem] flex flex-col group h-full",
-                    "bg-gradient-to-br from-primary/5 via-transparent to-secondary/5",
-                    "border-primary/30 hover:border-primary/50 transition-all duration-300"
-                  )}
+          <div className="max-w-4xl">
+            <FadeIn initiallyVisible>
+              <Badge variant="primary" className="mb-6">
+                <Sparkles className="mr-1 size-3" aria-hidden="true" />
+                {copy.eyebrow}
+              </Badge>
+              <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.08] text-text md:text-6xl lg:text-7xl">
+                {copy.title}
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
+                {copy.subtitle}
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink
+                  href="/contact"
+                  size="lg"
+                  rightIcon={<ArrowRight className="size-4" aria-hidden="true" />}
                 >
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="w-14 h-14 bg-primary text-dark rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(27,168,150,0.4)] animate-pulse">
-                      <Cpu className="w-8 h-8" />
-                    </div>
-                    <Badge variant="accent" size="sm">
-                      {aiService.badge}
-                    </Badge>
-                  </div>
-                  <h3 className="text-3xl font-display font-bold mb-4">{aiService.title}</h3>
-                  <p className="text-muted mb-8 text-lg leading-relaxed max-w-lg">
-                    {aiService.description}
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4 mb-8">
-                    {aiService.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                        <span className="text-xs font-bold">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <ButtonLink
-                    href={`/services/${aiService.slug}` as "/services/ai"}
-                    className="mt-auto self-start"
-                    size="lg"
-                  >
-                    Voir nos solutions IA
-                  </ButtonLink>
-                </GlassPanel>
-              </Link>
-            </motion.div>
-
-            {/* More Services */}
-            {moreServices.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index + 5} />
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="pb-24">
-        <Container>
-          <GlassPanel className="rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center flex-1">
-                <motion.p
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-4xl font-display font-black text-text mb-1"
-                >
-                  {stat.value}
-                </motion.p>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary">
-                  {stat.label}
-                </p>
-                {index < stats.length - 1 && (
-                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-white/10" />
-                )}
+                  {copy.primaryCta}
+                </ButtonLink>
+                <ButtonLink href="/work" size="lg" variant="outline">
+                  {copy.secondaryCta}
+                </ButtonLink>
               </div>
-            ))}
-          </GlassPanel>
+            </FadeIn>
+          </div>
         </Container>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pb-32">
-        <Container className="max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Questions Fréquentes
+      <section className="border-y border-border bg-surface-2/45 py-20 md:py-24">
+        <Container>
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              {copy.servicesEyebrow}
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-text md:text-5xl">
+              {copy.servicesTitle}
             </h2>
-            <p className="text-muted">
-              Tout ce qu'il faut savoir avant de démarrer notre partenariat.
+            <p className="mt-4 text-lg leading-relaxed text-muted">
+              {copy.servicesSubtitle}
             </p>
           </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {copy.services.map((service, index) => {
+              const Icon = serviceIcons[index] ?? FileSearch;
 
-          <FaqList items={faqItems} columns={1} />
+              return (
+                <Card key={service.title} className="p-7 md:p-8" hover={false}>
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Icon className="size-6" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-text">{service.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted">{service.description}</p>
+                  <ul className="mt-6 space-y-3 border-t border-border pt-5">
+                    {service.deliverables.map((deliverable) => (
+                      <li key={deliverable} className="flex items-start gap-3 text-sm text-text">
+                        <CheckCircle2
+                          className="mt-0.5 size-4 shrink-0 text-secondary"
+                          aria-hidden="true"
+                        />
+                        {deliverable}
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              );
+            })}
+          </div>
         </Container>
       </section>
 
-      {/* CTA Section */}
+      <section className="py-20 md:py-28">
+        <Container>
+          <Card
+            className="overflow-hidden border-primary/20 bg-dark p-8 text-white md:p-12 lg:p-16"
+            hover={false}
+          >
+            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <div className="flex size-12 items-center justify-center rounded-xl bg-primary/15 text-primary-light">
+                  <WandSparkles className="size-6" aria-hidden="true" />
+                </div>
+                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary-light">
+                  {copy.aiEyebrow}
+                </p>
+                <h2 className="mt-3 text-3xl font-bold md:text-5xl">{copy.aiTitle}</h2>
+                <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+                  {copy.aiBody}
+                </p>
+              </div>
+              <ul className="space-y-4">
+                {copy.aiItems.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/85"
+                  >
+                    <ShieldCheck
+                      className="mt-0.5 size-5 shrink-0 text-secondary-light"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Card>
+        </Container>
+      </section>
+
+      <section className="border-y border-border bg-surface-2/45 py-20 md:py-24">
+        <Container>
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              {copy.engagementEyebrow}
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-text md:text-5xl">
+              {copy.engagementTitle}
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">
+              {copy.engagementSubtitle}
+            </p>
+          </div>
+          <ol className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+            {copy.engagement.map((item, index) => (
+              <li key={item.title} className="bg-surface p-6 md:p-7">
+                <span className="font-mono text-xs text-primary">0{index + 1}</span>
+                <h3 className="mt-5 text-xl font-bold text-text">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </section>
+
       <CtaSection
-        title="Une vision technique sans compromis."
-        subtitle="Nos experts sont prêts à auditer votre projet et proposer une roadmap d'accélération sous 48h."
-        ctaLabel="Discutons de votre projet"
+        eyebrow={copy.fitEyebrow}
+        title={copy.fitTitle}
+        subtitle={copy.fitBody}
+        ctaLabel={copy.fitCta}
         ctaHref="/contact"
-        secondaryLabel="Notre Tech Stack"
-        secondaryHref="/expertise"
+        secondaryLabel={copy.fitSecondary}
+        secondaryHref="/method"
         variant="card"
       />
     </>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { GlassPanel } from "@/components/ui/glass-panel";
@@ -8,11 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { FadeIn, SlideIn } from "@/components/motion";
 import { CtaSection } from "@/components/sections";
 import {
-  Users,
   Code,
   Eye,
   Heart,
-  ArrowRight,
   Sparkles,
   Rocket,
   Target,
@@ -25,38 +23,94 @@ type ValueItem = {
   description: string;
 };
 
-const valueIcons = [Code, Eye, Users];
+const valueIcons = [Code, Eye, Shield];
 
-const stats = [
-  { value: "2018", label: "Création" },
-  { value: "4", label: "Experts seniors" },
-  { value: "200+", label: "Projets livrés" },
-  { value: "98%", label: "Clients satisfaits" },
-];
+const aboutContent = {
+  fr: {
+    stats: [
+      { value: "Direct", label: "Échanges" },
+      { value: "Produit", label: "Cadrage" },
+      { value: "Code", label: "Livraison" },
+      { value: "Clair", label: "Transfert" },
+    ],
+    storyEyebrow: "Notre approche",
+    highlights: [
+      {
+        title: "Contraintes d’abord",
+        description:
+          "Le périmètre, les inconnues et les risques sont nommés avant de proposer une solution.",
+      },
+      {
+        title: "Responsable identifié",
+        description:
+          "Vous savez qui décide, qui réalise et qui répond pour chaque livrable.",
+      },
+      {
+        title: "Transfert prévu",
+        description:
+          "Code, documentation et décisions restent exploitables après la mission.",
+      },
+    ],
+    approachEyebrow: "Organisation",
+    approachTitle: "Un studio compact, sans équipe fictive",
+    approachBody:
+      "Le noyau de la mission reste volontairement resserré. Si une compétence complémentaire est nécessaire, son rôle, son périmètre et son mode d’intervention sont annoncés avant le démarrage.",
+    approachItems: [
+      "Un interlocuteur responsable du résultat",
+      "Des rôles et limites écrits dans le cadrage",
+      "Aucune capacité ou certification présentée sans preuve",
+      "Une documentation conçue pour la reprise",
+    ],
+  },
+  en: {
+    stats: [
+      { value: "Direct", label: "Communication" },
+      { value: "Product", label: "Framing" },
+      { value: "Code", label: "Delivery" },
+      { value: "Clear", label: "Handover" },
+    ],
+    storyEyebrow: "Our approach",
+    highlights: [
+      {
+        title: "Constraints first",
+        description:
+          "Scope, unknowns and risks are named before a solution is proposed.",
+      },
+      {
+        title: "Named ownership",
+        description:
+          "You know who decides, who builds and who is accountable for each deliverable.",
+      },
+      {
+        title: "Handover by design",
+        description:
+          "Code, documentation and decisions remain usable after the engagement.",
+      },
+    ],
+    approachEyebrow: "Organization",
+    approachTitle: "A compact studio, without an invented team",
+    approachBody:
+      "The engagement stays deliberately focused. When a complementary skill is needed, its role, scope and working model are agreed before work begins.",
+    approachItems: [
+      "One owner accountable for the outcome",
+      "Roles and limits written into the scope",
+      "No capability or certification shown without evidence",
+      "Documentation designed for handover",
+    ],
+  },
+} as const;
 
-const highlights = [
-  {
-    icon: Target,
-    title: "Focus résultats",
-    description: "On ne facture pas des heures. On livre de la valeur mesurable.",
-    color: "text-primary bg-primary/10",
-  },
-  {
-    icon: Shield,
-    title: "Zéro intermédiaire",
-    description: "Vous parlez directement aux experts qui codent votre projet.",
-    color: "text-blue-400 bg-blue-400/10",
-  },
-  {
-    icon: Rocket,
-    title: "Rapidité d'exécution",
-    description: "Petite équipe = décisions rapides = livraison en temps record.",
-    color: "text-orange-400 bg-orange-400/10",
-  },
+const highlightIcons = [Target, Shield, Rocket];
+const highlightColors = [
+  "text-primary bg-primary/10",
+  "text-blue-400 bg-blue-400/10",
+  "text-orange-400 bg-orange-400/10",
 ];
 
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
+  const locale = useLocale() === "en" ? "en" : "fr";
+  const copy = aboutContent[locale];
   const values = t.raw("values") as ValueItem[];
 
   return (
@@ -98,7 +152,7 @@ export default function AboutPage() {
       <section className="py-12 border-y border-white/5">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {copy.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -125,7 +179,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                Notre histoire
+                {copy.storyEyebrow}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
                 {t("storyTitle")}
@@ -141,8 +195,8 @@ export default function AboutPage() {
 
             <SlideIn direction="right">
               <div className="space-y-4">
-                {highlights.map((item, index) => {
-                  const Icon = item.icon;
+                {copy.highlights.map((item, index) => {
+                  const Icon = highlightIcons[index] ?? Target;
                   return (
                     <motion.div
                       key={item.title}
@@ -156,7 +210,7 @@ export default function AboutPage() {
                           <div
                             className={cn(
                               "w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0",
-                              item.color
+                              highlightColors[index] ?? highlightColors[0]
                             )}
                           >
                             <Icon className="w-6 h-6" />
@@ -221,53 +275,40 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team Preview */}
+      {/* Operating model */}
       <section className="py-24">
         <Container>
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-center">
             <FadeIn>
               <Badge variant="outline" className="mb-4">
-                L'équipe
+                {copy.approachEyebrow}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                4 experts complémentaires
+                {copy.approachTitle}
               </h2>
               <p className="text-muted mb-8">
-                Pas de commercial, pas de chef de projet, pas de junior caché.
-                L'expert qui fait est celui qui vous répond. C'est notre
-                garantie de qualité.
+                {copy.approachBody}
               </p>
-              <a
-                href="/team"
-                className="inline-flex items-center gap-2 text-primary font-bold hover:translate-x-1 transition-transform"
-              >
-                Découvrir l'équipe
-                <ArrowRight className="w-4 h-4" />
-              </a>
             </FadeIn>
 
             <SlideIn direction="right">
               <GlassPanel className="p-8 rounded-3xl">
-                <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { role: "Lead Dev & IA", expertise: "Architecture, LLMs" },
-                    { role: "Full-Stack", expertise: "React, Node, Cloud" },
-                    { role: "UX/UI Designer", expertise: "Design Systems" },
-                    { role: "DevOps & Sécu", expertise: "AWS, Pentests" },
-                  ].map((member, index) => (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {copy.approachItems.map((item, index) => (
                     <motion.div
-                      key={member.role}
+                      key={item}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="text-center"
+                      className="rounded-2xl border border-white/10 bg-white/5 p-5"
                     >
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center mx-auto mb-3">
-                        <Users className="w-8 h-8 text-primary/60" />
-                      </div>
-                      <p className="font-bold text-sm">{member.role}</p>
-                      <p className="text-xs text-muted">{member.expertise}</p>
+                      <span className="font-mono text-xs font-bold text-primary">
+                        0{index + 1}
+                      </span>
+                      <p className="mt-3 text-sm font-medium leading-relaxed">
+                        {item}
+                      </p>
                     </motion.div>
                   ))}
                 </div>

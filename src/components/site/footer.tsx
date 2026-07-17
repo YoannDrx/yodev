@@ -1,61 +1,27 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { GlassPanel } from "@/components/ui/glass-panel";
-import { Linkedin, Twitter, Send, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, Mail } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
+import { buttonClassName } from "@/components/ui/button-styles";
 
-const serviceLinks = [
-  { href: "/services/ai", key: "ai" },
-  { href: "/services/cybersecurity", key: "cybersecurity" },
-  { href: "/services/web", key: "web" },
-  { href: "/expertise", key: "expertise" },
+const primaryLinks = [
+  { href: "/services", key: "services" },
+  { href: "/work", key: "work" },
+  { href: "/method", key: "method" },
+  { href: "/offers", key: "offers" },
 ] as const;
 
 const companyLinks = [
-  { href: "/work", key: "work" },
   { href: "/about", key: "about" },
-  { href: "/blog", key: "blog" },
   { href: "/contact", key: "contact" },
 ] as const;
-
-const socialLinks = [
-  {
-    href: "https://linkedin.com/company/yodev",
-    icon: Linkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://twitter.com/yodev_agency",
-    icon: Twitter,
-    label: "Twitter",
-  },
-];
 
 export function SiteFooter() {
   const t = useTranslations("Footer");
   const nav = useTranslations("Nav");
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubscribed(true);
-    setEmail("");
-  };
 
   return (
     <footer className="relative bg-bg border-t border-white/5 pt-20 pb-10">
@@ -69,37 +35,19 @@ export function SiteFooter() {
             <p className="text-muted text-sm leading-relaxed">
               {t("subtitle")}
             </p>
-            {/* Social Links */}
-            <div className="flex gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg glass-panel hover:text-primary transition-colors"
-                    aria-label={social.label}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
-          {/* Services */}
+          {/* Main navigation */}
           <div>
-            <h4 className="font-bold mb-6">{nav("services")}</h4>
+            <h4 className="font-bold mb-6">{t("navigation")}</h4>
             <ul className="space-y-4 text-sm text-muted">
-              {serviceLinks.map((item) => (
+              {primaryLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     className="hover:text-primary transition-colors"
                   >
-                    {t(`services.${item.key}`)}
+                    {nav(item.key)}
                   </Link>
                 </li>
               ))}
@@ -123,40 +71,30 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact */}
           <div>
-            <h4 className="font-bold mb-6">{t("newsletter.title")}</h4>
+            <h4 className="font-bold mb-6">{t("contact.title")}</h4>
             <p className="text-sm text-muted mb-4">
-              {t("newsletter.description")}
+              {t("contact.description")}
             </p>
-            {isSubscribed ? (
-              <GlassPanel className="p-4 rounded-xl">
-                <p className="text-sm text-primary font-medium">
-                  {t("newsletter.success")}
-                </p>
-              </GlassPanel>
-            ) : (
-              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <Input
-                  id="newsletter-email"
-                  type="email"
-                  placeholder={t("newsletter.placeholder")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/5 border-white/10 rounded-xl"
-                  required
-                />
-                <Button
-                  type="submit"
-                  variant="primary"
-                  size="md"
-                  isLoading={isSubmitting}
-                  className="w-full rounded-xl"
-                >
-                  {t("newsletter.submit")}
-                </Button>
-              </form>
-            )}
+            <a
+              href={`mailto:${t("email")}`}
+              className="mb-4 flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              <Mail className="size-4" aria-hidden="true" />
+              {t("email")}
+            </a>
+            <Link
+              href="/contact"
+              className={buttonClassName({
+                variant: "outline",
+                size: "md",
+                className: "w-full justify-center rounded-xl",
+              })}
+            >
+              {t("contact.cta")}
+              <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
 

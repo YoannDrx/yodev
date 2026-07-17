@@ -4,17 +4,6 @@ Ce fichier fournit des instructions à Claude Code pour ce projet.
 
 ---
 
-## grepai - OBLIGATOIRE
-
-**Tu DOIS utiliser grepai (via MCP) pour TOUTE recherche de code.**
-
-- ❌ INTERDIT : Grep, Glob, grep, find, rg
-- ✅ OBLIGATOIRE : `mcp__grepai__grepai_search`
-
-Voir `~/.claude/CLAUDE.md` pour les instructions complètes.
-
----
-
 ## A propos du projet
 
 **Yodev** - Site/Application de développement.
@@ -42,4 +31,3 @@ pnpm lint         # ESLint
 - **Thème** : next-themes
 - **Carousel** : Embla Carousel
 - **Package Manager** : pnpm
-
