@@ -10,7 +10,7 @@ Copier les variables suivantes dans `.env.local` :
 NEXT_PUBLIC_SITE_URL=https://yodev.fr
 CONTACT_EMAIL=hello@yodev.fr
 RESEND_API_KEY=re_...
-RESEND_FROM_EMAIL=Yodev <contact@votre-domaine-verifie.fr>
+RESEND_FROM_EMAIL=Yodev <contact@do-not-reply.app>
 # Optionnel : le bloc de réservation reste masqué sans URL réelle.
 NEXT_PUBLIC_BOOKING_URL=https://...
 ```
