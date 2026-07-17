@@ -1,137 +1,125 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
-import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
-import { FadeIn, SlideIn, StaggerChildren, StaggerItem } from "@/components/motion";
+import { GlassPanel } from "@/components/ui/glass-panel";
+import { FadeIn, SlideIn } from "@/components/motion";
+
+const deliverySteps = ["diagnostic", "design", "delivery"] as const;
 
 export function HeroHome() {
   const t = useTranslations("Home");
   const common = useTranslations("Common");
-  const heroChips = t.raw("hero.chips") as string[];
 
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 -z-10 bg-grid opacity-30" />
-      <div className="absolute inset-0 -z-10 noise opacity-20" />
-
-      {/* Animated gradient orbs */}
-      <motion.div
-        className="orb float-slow"
-        style={{ width: 400, height: 400, top: -150, left: -100 }}
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      />
-      <motion.div
-        className="orb secondary float-slower"
-        style={{ width: 500, height: 500, bottom: -200, right: -150 }}
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+    <section className="relative flex min-h-[760px] items-center overflow-hidden pb-20 pt-32 lg:min-h-[820px]">
+      {/* Background glows */}
+      <div className="hero-glow -top-20 -left-20" />
+      <div
+        className="hero-glow-secondary bottom-0 right-0"
+        style={{ background: "radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%)" }}
       />
 
-      <Container className="relative flex min-h-[90vh] items-center py-20 md:py-28">
-        <div className="grid w-full gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-          {/* Left side - Main content */}
-          <div className="flex flex-col justify-center space-y-8">
-            <FadeIn direction="up" delay={0}>
-              <Badge className="inline-flex items-center gap-2 w-fit">
-                <Sparkles className="h-3.5 w-3.5" />
-                {t("hero.eyebrow")}
-              </Badge>
+      <Container className="relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            {/* Eyebrow Badge */}
+            <FadeIn direction="up" delay={0} initiallyVisible>
+              <div className="inline-flex items-center gap-2 glass-panel px-4 py-2 rounded-full hero-eyebrow-badge">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">{t("hero.eyebrow")}</span>
+              </div>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.1}>
-              <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-text md:text-5xl lg:text-6xl">
-                {t("hero.title")}
+            {/* Main Title */}
+            <FadeIn direction="up" delay={0.1} initiallyVisible>
+              <h1 className="text-5xl lg:text-7xl font-display font-extrabold leading-[1.1]">
+                <span className="text-gradient">{t("hero.titleLine1")}</span>
+                <br />
+                <span className="text-primary italic">{t("hero.titleLine2")}</span>
               </h1>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.2}>
-              <p className="max-w-xl text-base leading-relaxed text-muted md:text-lg">
-                {t("hero.subtitle")}
-              </p>
+            {/* Subtitle */}
+            <FadeIn direction="up" delay={0.2} initiallyVisible>
+              <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed">{t("hero.subtitle")}</p>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.3}>
-              <div className="flex flex-wrap gap-4">
-                <ButtonLink href="/contact" size="lg" rightIcon={<ArrowRight className="h-4 w-4" />}>
-                  {t("hero.primary")}
+            <FadeIn direction="up" delay={0.3} initiallyVisible>
+              <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
+                <ButtonLink
+                  href="/contact"
+                  size="lg"
+                  rightIcon={<ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />}
+                  className="group px-8 py-4 rounded-full shadow-[0_0_20px_rgba(27,168,150,0.3)]"
+                >
+                  {common("cta")}
                 </ButtonLink>
-                <ButtonLink href="/work" variant="secondary" size="lg">
+
+                <ButtonLink href="/work" size="lg" variant="outline">
                   {t("hero.secondary")}
                 </ButtonLink>
               </div>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+                {t("hero.ctaNote")}
+              </p>
             </FadeIn>
 
-            <StaggerChildren staggerDelay={0.08} childDelay={0.4}>
-              <div className="flex flex-wrap gap-2">
-                {heroChips.map((chip) => (
-                  <StaggerItem key={chip}>
-                    <Badge variant="outline" className="text-xs">
-                      {chip}
-                    </Badge>
-                  </StaggerItem>
+            <FadeIn direction="up" delay={0.4} initiallyVisible>
+              <div className="flex flex-wrap gap-3 pt-4">
+                {[0, 1, 2, 3].map((index) => (
+                  <span
+                    key={index}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-muted"
+                  >
+                    <CheckCircle2 className="size-4 text-primary" aria-hidden="true" />
+                    {t(`hero.chips.${index}`)}
+                  </span>
                 ))}
               </div>
-            </StaggerChildren>
+            </FadeIn>
           </div>
 
-          {/* Right side - Signal cards */}
-          <div className="flex flex-col justify-center space-y-4">
-            <SlideIn direction="right" delay={0.2}>
-              <Card variant="elevated" className="p-6">
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                  {t("hero.signals.studioEyebrow")}
-                </p>
-                <h3 className="mt-3 text-xl font-semibold text-text md:text-2xl">
-                  {t("hero.signals.studioBody")}
-                </h3>
-              </Card>
-            </SlideIn>
+          <SlideIn direction="right" delay={0.2} initiallyVisible className="hidden lg:block relative">
+            <GlassPanel className="p-8 rounded-3xl relative overflow-hidden group hero-code-card">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500/50" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                </div>
+                <div className="text-xs font-mono text-muted">{t("hero.process.label")}</div>
+              </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <SlideIn direction="right" delay={0.3}>
-                <Card className="h-full p-5">
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                    {t("hero.signals.outputEyebrow")}
-                  </p>
-                  <p className="mt-3 text-sm text-muted">
-                    {t("hero.signals.outputBody")}
-                  </p>
-                </Card>
-              </SlideIn>
-
-              <SlideIn direction="right" delay={0.4}>
-                <Card className="h-full p-5">
-                  <div className="flex items-center gap-2">
-                    <motion.div
-                      className="h-3 w-3 rounded-full bg-green-500"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    />
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                      {common("available")}
-                    </p>
+              <div className="space-y-4">
+                {deliverySteps.map((step, index) => (
+                  <div key={step} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span className="font-mono text-sm text-primary">0{index + 1}</span>
+                    <div>
+                      <p className="font-bold">{t(`hero.process.${step}.title`)}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                        {t(`hero.process.${step}.description`)}
+                      </p>
+                    </div>
                   </div>
-                  <p className="mt-3 text-sm text-muted">
-                    {common("readyToStart")}
-                  </p>
-                </Card>
-              </SlideIn>
-            </div>
-          </div>
+                ))}
+              </div>
+
+            </GlassPanel>
+
+            {/* Decorative elements */}
+            <div className="absolute inset-0 bg-dark rounded-3xl -z-[5] hero-code-bg" />
+            <div className="absolute -top-6 -right-6 w-full h-full border border-primary/20 rounded-3xl -z-10" />
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10 animate-pulse" />
+          </SlideIn>
         </div>
       </Container>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg to-transparent" />
     </section>
   );
 }

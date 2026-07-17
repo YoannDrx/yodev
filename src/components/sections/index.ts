@@ -1,12 +1,13 @@
 export { HeroHome } from "./hero-home";
 export { ServiceCard, ServiceGrid } from "./service-card";
 export { CaseStudyCard, CaseStudyGrid } from "./case-study-card";
-export { TestimonialCard, TestimonialFeatured } from "./testimonial-card";
 export { PricingCard, PricingGrid } from "./pricing-card";
 export { FaqItem, FaqList } from "./faq-item";
 export { ProcessStep, ProcessTimeline, ProcessGrid } from "./process-step";
 export { StatCard, StatSimple, StatGrid, StatsBar } from "./stat-card";
-export { ClientLogos, ClientLogosGrid } from "./client-logos";
 export { CtaSection } from "./cta-section";
 export { PathsSection } from "./paths-section";
 export { FitSection } from "./fit-section";
+export { UseCasesSection } from "./use-cases-section";
+export { TrustSection } from "./trust-section";
+export { SelectedWorkSection } from "./selected-work-section";

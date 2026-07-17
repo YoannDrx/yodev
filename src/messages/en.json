@@ -1,1815 +1,108 @@
 {
   "Common": {
-    "tagline": "Artisan digital studio",
     "cta": "Start the conversation",
-    "menu": "Menu",
-    "available": "Available",
-    "readyToStart": "Fast start, dedicated team",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "watchVideo": "Watch video"
+    "menuClose": "Close menu"
   },
   "Nav": {
     "services": "Services",
-    "ai": "AI",
-    "expertise": "Expertise",
     "work": "Work",
-    "offers": "Offers",
     "method": "Method",
+    "offers": "Offers",
     "about": "About",
-    "team": "Team",
-    "contact": "Contact",
-    "blog": "Blog",
-    "careers": "Jobs"
-  },
-  "Styles": {
-    "pulse": "Pulse",
-    "atelier": "Atelier",
-    "forge": "Forge"
+    "contact": "Contact"
   },
   "Footer": {
-    "subtitle": "Artisan digital studio. Web, mobile & AI for projects that matter.",
+    "subtitle": "Product and development studio. Framing, UX and reliable web applications.",
     "company": "Company",
-    "resourcesTitle": "Resources",
+    "navigation": "Navigation",
+    "contact": {
+      "title": "Let's discuss your product",
+      "description": "Describe the problem, context and expected outcome. We will reply with a clear next step.",
+      "cta": "Qualify the project"
+    },
     "resources": {
-      "offers": "Offers",
       "legal": "Legal Notice",
       "privacy": "Privacy"
     },
-    "services": {
-      "ai": "Artificial Intelligence",
-      "web": "Web Platforms",
-      "customSoftware": "Custom Software",
-      "mobile": "Mobile Apps",
-      "ecommerce": "E-commerce",
-      "uxDesign": "UX/UI Design",
-      "cybersecurity": "Cybersecurity"
-    },
-    "newsletter": {
-      "title": "Stay updated",
-      "placeholder": "Your email",
-      "submit": "Subscribe",
-      "success": "Thanks! You're now subscribed to our newsletter."
-    },
     "email": "hello@yodev.fr",
-    "offices": [
-      {
-        "city": "Paris",
-        "address": "117 avenue des Champs-Élysées",
-        "zip": "75008",
-        "country": "France"
-      }
-    ],
-    "rights": "© 2025 Yodev. All rights reserved."
-  },
-  "Home": {
-    "hero": {
-      "eyebrow": "DIGITAL STUDIO. 4 EXPERTS. 0 MIDDLEMEN.",
-      "title": "The artisan studio that enterprises fight over",
-      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... They chose us for our expertise, not our size. AI, Architecture, Design, Strategy: the right people, at the right time.",
-      "primary": "Discuss my project",
-      "secondary": "See our work",
-      "chips": [
-        "AI & Automation",
-        "Cloud Architecture",
-        "Product Design",
-        "Digital Strategy"
-      ],
-      "signals": {
-        "studioEyebrow": "Format",
-        "studioBody": "4 complementary experts. You talk directly to those who build.",
-        "outputEyebrow": "Promise",
-        "outputBody": "No factory, no hidden juniors. One point of contact who understands your business."
-      }
-    },
-    "story": {
-      "eyebrow": "Our philosophy",
-      "title": "Small by choice. Excellent by demand.",
-      "subtitle": "We refused to grow. We chose to stay a tight-knit team where everyone masters their craft.",
-      "body": [
-        "Since 2018, the biggest names trust us with their strategic projects. Not because we're big, but because we're good.",
-        "Our secret? 4 complementary senior profiles. No dilution, no delegation. You talk to the experts."
-      ],
-      "highlights": [
-        {
-          "title": "Direct relationship",
-          "description": "Zero sales, zero project managers. The expert who builds is the one who answers you."
-        },
-        {
-          "title": "Deep expertise",
-          "description": "AI, Architecture, UX/UI, Growth. 4 domains, 4 seniors."
-        },
-        {
-          "title": "Premium pricing, owned",
-          "description": "We don't discount. Our price reflects our expertise. Our results justify it."
-        }
-      ]
-    },
-    "paths": {
-      "eyebrow": "Where to start?",
-      "title": "Three ways to work with us",
-      "items": [
-        {
-          "icon": "Rocket",
-          "title": "Launch a new product",
-          "description": "Site, app, SaaS... Starting from scratch. We guide you from scoping to launch.",
-          "cta": "Create my product",
-          "href": "/contact?type=new"
-        },
-        {
-          "icon": "Wrench",
-          "title": "Improve existing",
-          "description": "Your product exists but underperforms. We diagnose, optimize, and make it fly.",
-          "cta": "Optimize my product",
-          "href": "/contact?type=optimization"
-        },
-        {
-          "icon": "Brain",
-          "title": "Explore AI",
-          "description": "You want to understand what AI can do for you. We identify concrete opportunities.",
-          "cta": "Explore AI",
-          "href": "/ai"
-        }
-      ]
-    },
-    "fitSection": {
-      "eyebrow": "Transparency",
-      "title": "We're not for everyone. And that's perfectly fine.",
-      "goodFit": {
-        "title": "For you if...",
-        "items": [
-          "You're looking for expertise, not extra hands",
-          "You value quality over volume",
-          "You want to talk to the people who build",
-          "You have a real budget (>€10K for a project)",
-          "You accept our recommendations (even when it stings)"
-        ]
-      },
-      "badFit": {
-        "title": "Not for you if...",
-        "items": [
-          "You're looking for the cheapest option",
-          "You need 10 devs tomorrow morning",
-          "You've already decided everything and just need executors",
-          "Your project is urgent AND poorly defined"
-        ]
-      }
-    },
-    "team": {
-      "eyebrow": "The team",
-      "title": "4 experts. 0 juniors.",
-      "subtitle": "A micro-team of complementary seniors. Each an expert in their field, all involved in every project.",
-      "stats": [
-        { "value": "4", "label": "complementary experts" },
-        { "value": "50+", "label": "projects in production" },
-        { "value": "100%", "label": "seniors" }
-      ]
-    },
-    "testimonials": {
-      "eyebrow": "They trust us",
-      "title": "What our clients actually say",
-      "items": [
-        {
-          "quote": "Our e-commerce platform now handles 10x more traffic. Black Friday stress-free.",
-          "author": "Sophie Martin",
-          "role": "Digital Director",
-          "company": "Nike France",
-          "result": "x10 server capacity"
-        },
-        {
-          "quote": "The skin diagnostic app exceeded 500K downloads in 6 months.",
-          "author": "Claire Dubois",
-          "role": "Chief Digital Officer",
-          "company": "Clarins",
-          "result": "500K downloads"
-        },
-        {
-          "quote": "Our AI tool generates 1000 product descriptions per day. Massive time saver.",
-          "author": "Thomas Bernard",
-          "role": "Head of E-commerce",
-          "company": "L'Oréal Paris",
-          "result": "1000 contents/day"
-        },
-        {
-          "quote": "The 3D configurator increased our conversion rate by 45%.",
-          "author": "Marie Lefèvre",
-          "role": "E-commerce Director",
-          "company": "Céline",
-          "result": "+45% conversion"
-        },
-        {
-          "quote": "Sports coaching app delivered in 8 weeks. 4.9 stars on stores.",
-          "author": "Alexandre Petit",
-          "role": "VP Product",
-          "company": "Decathlon",
-          "result": "4.9/5 App Store"
-        },
-        {
-          "quote": "Real-time dashboard for 200 stores. Data-driven decisions finally possible.",
-          "author": "Julie Moreau",
-          "role": "CIO",
-          "company": "Sephora",
-          "result": "200 stores connected"
-        }
-      ]
-    },
-    "cases": {
-      "eyebrow": "Our work",
-      "title": "Projects that make a difference",
-      "subtitle": "No slides. Apps in production.",
-      "items": [
-        {
-          "title": "Luxury E-commerce Platform",
-          "type": "High-performance e-commerce",
-          "summary": "Complete redesign with 3D configurator and split payments.",
-          "result": "+65% conversion",
-          "badge": "E-commerce"
-        },
-        {
-          "title": "Personalized Coaching App",
-          "type": "iOS/Android mobile app",
-          "summary": "Adaptive programs, real-time tracking, integrated community.",
-          "result": "500K active users",
-          "badge": "Mobile"
-        },
-        {
-          "title": "AI Content Generation",
-          "type": "Custom AI solution",
-          "summary": "Automatic generation of multilingual product sheets.",
-          "result": "1000 contents/day",
-          "badge": "AI"
-        },
-        {
-          "title": "Retail Analytics Dashboard",
-          "type": "Business Intelligence",
-          "summary": "Real-time KPI visualization for 200+ stores.",
-          "result": "-40% decision time",
-          "badge": "Data"
-        }
-      ],
-      "cta": "See all case studies"
-    },
-    "expertise": {
-      "eyebrow": "Our expertise",
-      "title": "You have the problem. We have the solution.",
-      "subtitle": "No buzzwords. Skills that deliver.",
-      "items": [
-        {
-          "title": "Artificial intelligence",
-          "description": "Generative and predictive AI connected to your data. Automation that actually works."
-        },
-        {
-          "title": "Web platforms",
-          "description": "Fast, SEO-friendly sites that do what they're supposed to. Lighthouse score 95+."
-        },
-        {
-          "title": "Custom software",
-          "description": "Custom software that adapts to your processes, not the other way around."
-        },
-        {
-          "title": "Mobile applications",
-          "description": "iOS/Android with React Native. One codebase, two stores, no UX compromises."
-        },
-        {
-          "title": "E-commerce",
-          "description": "Optimized checkout flows. Shopify, Prestashop or custom."
-        },
-        {
-          "title": "UX/UI Design",
-          "description": "Clear interfaces, design systems, user testing. Beautiful that converts."
-        },
-        {
-          "title": "Cybersecurity",
-          "description": "Security audits, pentests, GDPR/SOC2 compliance. Proactive protection."
-        }
-      ]
-    },
-    "blog": {
-      "title": "Blog",
-      "subtitle": "Insights, field notes and product/AI analysis.",
-      "cta": "All articles"
-    },
-    "jobs": {
-      "title": "Jobs",
-      "subtitle": "Join a demanding and supportive team.",
-      "cta": "View jobs"
-    },
-    "press": {
-      "eyebrow": "Press",
-      "title": "In the press",
-      "outlets": ["Le Parisien", "BFM Business", "JDN", "Challenges", "Le Point"]
-    },
-    "locations": {
-      "eyebrow": "Office",
-      "title": "Our office",
-      "items": [
-        {
-          "city": "Paris",
-          "address": "117 avenue des Champs-Élysées",
-          "zip": "75008",
-          "country": "France"
-        }
-      ]
-    },
-    "services": {
-      "title": "What Yodev builds for you",
-      "subtitle": "Web, mobile and AI expertise to ship useful, scalable products.",
-      "items": [
-        {
-          "title": "Web platforms",
-          "description": "Marketing sites, business platforms and fast web applications.",
-          "bullets": ["Next.js / React", "SEO & performance", "Design system", "Analytics & tracking"]
-        },
-        {
-          "title": "Mobile applications",
-          "description": "Reliable iOS/Android apps built for usage and growth.",
-          "bullets": ["React Native / Flutter", "Mobile-first UX", "API & back office", "Store release"]
-        },
-        {
-          "title": "AI & data solutions",
-          "description": "Custom models, assistants and automations connected to your data.",
-          "bullets": ["Generative AI & RAG", "Predictive & scoring", "MLOps & deployment", "Security & compliance"]
-        }
-      ]
-    },
-    "method": {
-      "title": "The Yodev method",
-      "subtitle": "Clear framing, fast execution, continuous iterations.",
-      "steps": [
-        {
-          "title": "Framing & goals",
-          "description": "KPIs, users, constraints, delivery plan."
-        },
-        {
-          "title": "Design & architecture",
-          "description": "UX/UI, tech choices, iterative roadmap."
-        },
-        {
-          "title": "Build & integration",
-          "description": "Development, QA, security, performance."
-        },
-        {
-          "title": "Deployment & evolution",
-          "description": "Production, monitoring, improvements."
-        }
-      ]
-    },
-    "offers": {
-      "eyebrow": "Our offers",
-      "title": "Clear prices. No surprise quotes.",
-      "subtitle": "Choose the format that fits. We'll adjust together.",
-      "items": [
-        {
-          "name": "Flash Diagnostic",
-          "description": "Validate feasibility before investing",
-          "price": "From €2,500",
-          "duration": "1 week",
-          "idealFor": "Validate an idea, audit existing",
-          "bullets": [
-            "2h framing workshop",
-            "Technical & data audit",
-            "Market solutions benchmark",
-            "15-20 page report",
-            "Recommended architecture",
-            "Budget estimate: 3 scenarios",
-            "1h free consulting (30 days)"
-          ],
-          "cta": "Book my diagnostic"
-        },
-        {
-          "name": "Build MVP",
-          "description": "Launch your product to market",
-          "price": "From €12,000",
-          "duration": "6-10 weeks",
-          "idealFor": "Startups, new products",
-          "featured": true,
-          "bullets": [
-            "Design Phase (2 wks): UX research, wireframes, Figma UI, design system",
-            "Dev Phase (4-6 wks): Front & back-end, API, automated tests",
-            "Launch Phase (1 wk): Deployment, analytics, 2h training",
-            "Dedicated Slack + weekly demos",
-            "Source code delivered (you own it)",
-            "30-day bug fix warranty"
-          ],
-          "examples": [
-            { "type": "Marketplace app", "price": "~€12K" },
-            { "type": "SaaS platform", "price": "~€25K" },
-            { "type": "AI dashboard", "price": "~€18K" }
-          ],
-          "cta": "Get a quote in 48h"
-        },
-        {
-          "name": "Scale",
-          "description": "Accelerate without hiring",
-          "price": "From €7,500/month/dev",
-          "duration": "3 months minimum",
-          "idealFor": "Scale-ups, team extension",
-          "bullets": [
-            "1 to 5 senior engineers dedicated",
-            "Full integration (Slack, Jira, GitHub)",
-            "Daily standup with your team",
-            "Code reviews & pair programming",
-            "Guaranteed backup if absence",
-            "Profiles: Full-stack, Mobile, Data/ML, DevOps, Tech Lead"
-          ],
-          "comparison": {
-            "vsFreelance": ["Guaranteed backup", "Consistent quality", "Zero admin"],
-            "vsRecrutement": ["Operational in 1 week", "No permanent contract", "Flexible up/down"]
-          },
-          "cta": "Schedule a call"
-        },
-        {
-          "name": "AI Consulting",
-          "description": "Explore AI potential in your business",
-          "price": "From €5,000",
-          "duration": "2-4 weeks",
-          "idealFor": "Innovation directors, CIOs",
-          "badge": "New",
-          "bullets": [
-            "Identify relevant AI use cases",
-            "POC on 1 priority use case",
-            "ROI and complexity assessment",
-            "Deployment roadmap"
-          ],
-          "useCases": [
-            "Automate repetitive tasks",
-            "Content generation (sheets, emails)",
-            "Chatbot / internal assistant",
-            "Predictive analytics"
-          ],
-          "cta": "Explore AI potential"
-        }
-      ]
-    },
-    "faq": {
-      "eyebrow": "Frequently asked",
-      "title": "What you want to know (before reaching out)",
-      "items": [
-        {
-          "question": "What are your actual timelines?",
-          "answer": "MVP in 6-10 weeks. First demo in 2 weeks max. We commit to dates, not fuzzy estimates."
-        },
-        {
-          "question": "Fixed price or time & materials?",
-          "answer": "Both. Fixed if scope is clear, T&M if we're exploring together. Either way, you know what you're paying."
-        },
-        {
-          "question": "Can you plug AI into our existing stack?",
-          "answer": "Yes. We connect to your data, APIs, tools. No need to rebuild everything."
-        },
-        {
-          "question": "Who owns the code?",
-          "answer": "You do. 100%. Source code, documentation, everything. It's your project."
-        },
-        {
-          "question": "What about after launch?",
-          "answer": "We stay available. Ongoing maintenance, ad-hoc interventions, or training your team. Your choice."
-        },
-        {
-          "question": "How do we get started?",
-          "answer": "30-minute call to understand your needs. Quote in 48h. First sprint possible within 2 weeks."
-        }
-      ]
-    },
-    "cta": {
-      "eyebrow": "Ready?",
-      "title": "Let's talk about it?",
-      "subtitle": "30 minutes to understand your project. Zero commitment. If it's a fit, we start within 2 weeks.",
-      "button": "Book a call",
-      "secondary": "Or email us directly"
-    }
-  },
-  "AiPage": {
-    "eyebrow": "AI IN PRODUCTION",
-    "title": "AI that actually does the job",
-    "subtitle": "No eternal POC. AI solutions in prod generating ROI. GPT-4, Claude, Gemini... We master the models, you get the results.",
-    "cta": "Talk AI with an expert",
-    "servicesEyebrow": "What we do",
-    "servicesTitle": "From audit to deployment",
-    "services": [
-      {
-        "title": "Data & AI audit",
-        "description": "We analyze your processes, data, pain points. We identify high-ROI AI quick wins."
-      },
-      {
-        "title": "AI applications",
-        "description": "Chatbots, assistants, automation... AI apps that integrate with your stack and work."
-      },
-      {
-        "title": "Custom models",
-        "description": "Fine-tuning, RAG, predictive systems. Models trained on YOUR data."
-      }
-    ],
-    "teamEyebrow": "The AI team",
-    "teamTitle": "AI experts. Not PowerPoint consultants.",
-    "teamBody": "Our senior AI expert has shipped dozens of projects in production. From idea to deployment, you talk to the one who builds.",
-    "teamStats": [
-      { "value": "50+", "label": "projects in prod" },
-      { "value": "1", "label": "dedicated AI expert" },
-      { "value": "400K", "label": "content generated/year for 1 client" }
-    ],
-    "expertiseEyebrow": "Specialties",
-    "expertiseTitle": "What we master",
-    "expertise": {
-      "items": [
-        {
-          "title": "Generative AI",
-          "description": "GPT-4, Claude, Gemini, Mistral. Content generation, assistants, task automation.",
-          "result": "400K sheets/year for Showroomprivé"
-        },
-        {
-          "title": "Predictive systems",
-          "description": "Demand forecasting, scoring, anomaly detection. Models that anticipate.",
-          "result": "-30% food waste for Turboself"
-        },
-        {
-          "title": "Computer Vision",
-          "description": "OCR, image analysis, video. Automatic information extraction.",
-          "result": "x10 faster processing"
-        },
-        {
-          "title": "Data Engineering",
-          "description": "Pipelines, data lakes, MLOps. The infra that runs your models.",
-          "result": "99.9% availability"
-        }
-      ]
-    },
-    "casesEyebrow": "In production",
-    "casesTitle": "AI projects running. Now.",
-    "cases": [
-      {
-        "name": "Showroomprivé",
-        "description": "400K product sheets generated automatically per year with multimodal LLMs.",
-        "result": "+400K sheets/year"
-      },
-      {
-        "name": "Turboself",
-        "description": "Canteen attendance prediction. Less waste, better management.",
-        "result": "-30% food waste"
-      },
-      {
-        "name": "Ministry of Armed Forces",
-        "description": "Automatic extraction of relational graphs from complex documents.",
-        "result": "Classified project"
-      },
-      {
-        "name": "Okantis",
-        "description": "Intelligent data warehouse with LLM for healthcare. Enhanced search and analysis.",
-        "result": "x5 analysis speed"
-      }
-    ],
-    "reasonsEyebrow": "Why us",
-    "reasonsTitle": "What makes us different",
-    "reasons": [
-      "30+ AI projects in production (not slides).",
-      "We code. We deploy. We maintain.",
-      "Measurable ROI from the POC.",
-      "Continuous monitoring of latest models."
-    ],
-    "ctaEyebrow": "Ready?",
-    "ctaTitle": "AI project in mind?",
-    "ctaSubtitle": "From idea to prod in weeks. Start with a 30-min call?",
-    "ctaButton": "Talk AI"
-  },
-  "ExpertisePage": {
-    "title": "Expertise",
-    "subtitle": "All the skills to build, launch and scale your products.",
-    "eyebrow": "Know-how",
-    "sectionTitle": "Our domains",
-    "sectionSubtitle": "From product to infra, from design to AI.",
-    "categories": [
-      {
-        "title": "Custom development",
-        "items": [
-          "Mobile applications",
-          "Custom business software",
-          "E-commerce sites",
-          "SaaS applications"
-        ]
-      },
-      {
-        "title": "Data & AI",
-        "items": [
-          "Generative AI",
-          "Computer Vision",
-          "Predictive systems",
-          "Data Engineering"
-        ]
-      },
-      {
-        "title": "Technical expertise",
-        "items": [
-          "React / React Native",
-          "Node.js / TypeScript",
-          "Angular",
-          "Python",
-          "PHP",
-          "Flutter",
-          ".NET",
-          "Native mobile development"
-        ]
-      },
-      {
-        "title": "Product strategy",
-        "items": [
-          "Product Discovery",
-          "UX Research",
-          "UX/UI Design"
-        ]
-      },
-      {
-        "title": "Advisory & transformation",
-        "items": [
-          "Cloud & DevOps",
-          "Cybersecurity",
-          "Digital transformation"
-        ]
-      }
-    ],
-    "ctaEyebrow": "Contact",
-    "ctaTitle": "Have a specific need?",
-    "ctaSubtitle": "Let's talk and frame the best approach.",
-    "ctaButton": "Contact us"
-  },
-  "TeamPage": {
-    "eyebrow": "WHO WE ARE",
-    "title": "4 experts who were done with typical agencies",
-    "subtitle": "A micro-team of complementary seniors. Zero juniors on your projects. Zero salespeople between you and us.",
-    "stats": [
-      { "value": "4", "label": "experts" },
-      { "value": "10+ years", "label": "average experience" },
-      { "value": "50+", "label": "projects delivered" },
-      { "value": "0", "label": "juniors on your projects" }
-    ],
-    "valuesEyebrow": "How we work",
-    "valuesTitle": "What we do (and what we don't)",
-    "values": [
-      {
-        "title": "We ship. For real.",
-        "description": "No endless POCs. Apps in prod that actually work."
-      },
-      {
-        "title": "We speak directly",
-        "description": "Zero bullshit. If something's wrong, we say it. If it's good, too."
-      },
-      {
-        "title": "We move fast",
-        "description": "First demo in 2 weeks. MVP in 6-10 weeks."
-      },
-      {
-        "title": "We measure everything",
-        "description": "ROI, performance, adoption. Numbers, not feelings."
-      },
-      {
-        "title": "We stick around",
-        "description": "Maintenance, evolutions, support. We don't vanish after launch."
-      },
-      {
-        "title": "We say no",
-        "description": "If the project doesn't make sense, we'll tell you. Your success matters more than an invoice."
-      }
-    ],
-    "ctaEyebrow": "We're hiring",
-    "ctaTitle": "Want to work with us?",
-    "ctaSubtitle": "Remote-first, varied projects, supportive and demanding team.",
-    "ctaButton": "See open positions"
-  },
-  "ServicesPage": {
-    "eyebrow": "WHAT WE DO",
-    "title": "We code. We ship. We maintain.",
-    "subtitle": "Web, mobile, AI. From brief to prod, including design."
-  },
-  "WorkPage": {
-    "eyebrow": "OUR WORK",
-    "title": "Apps that work. Clients that recommend.",
-    "subtitle": "No Figma mockups. Products in production."
-  },
-  "OffersPage": {
-    "eyebrow": "OUR OFFERS",
-    "title": "Clear prices. No surprise quotes.",
-    "subtitle": "4 formats. Pick the one that fits. We'll adjust together."
+    "rights": "© 2026 Yodev. All rights reserved."
   },
   "MethodPage": {
-    "eyebrow": "HOW WE WORK",
-    "title": "The method proven on 50+ projects",
-    "subtitle": "No magic. Understand before coding, ship early and often, measure to improve.",
+    "eyebrow": "METHOD",
+    "title": "A clear method from framing to launch",
+    "subtitle": "Understand before building, make trade-offs visible and validate every step with suitable evidence.",
     "steps": [
       {
         "number": "00",
-        "title": "The brief that changes everything",
-        "duration": "1-2 days",
-        "description": "Before writing a single line of code, we spend 2-4h understanding your business. Who are your users? What KPIs? What's been tried before?",
-        "deliverable": "Scope document validated by you"
+        "title": "Frame the problem",
+        "duration": "Depends on unknowns",
+        "description": "Identify users, expected outcome, constraints, dependencies and what still needs to be learned before choosing a solution.",
+        "deliverable": "Scope, risks and decision criteria"
       },
       {
         "number": "01",
         "title": "Usage-driven design",
-        "duration": "1-2 weeks",
-        "description": "We don't design to look pretty. We design so your users accomplish their tasks. Wireframes, prototypes, testing if needed.",
-        "deliverable": "Validated Figma mockups"
+        "duration": "Depends on journeys",
+        "description": "Structure essential journeys, their states and interface decisions. Prototype fidelity follows the risk being addressed.",
+        "deliverable": "Journeys, prototype and interface rules"
       },
       {
         "number": "02",
-        "title": "Dev in sprints",
-        "duration": "4-6 weeks",
-        "description": "Every week, you see progress in a live demo. Every sprint delivers testable features. You can change your mind along the way.",
-        "deliverable": "Functional app, weekly increments"
+        "title": "Build in increments",
+        "duration": "Agreed cadence",
+        "description": "Ship usable slices, handle their real states and verify business logic before expanding scope.",
+        "deliverable": "Testable increments on a shared preview"
       },
       {
         "number": "03",
-        "title": "Launch & iteration",
-        "duration": "1 week + ongoing",
-        "description": "Production deployment, monitoring, first user feedback. We stay available for post-launch adjustments.",
-        "deliverable": "App in prod + 30 days support included"
+        "title": "Launch and hand over",
+        "duration": "Defined in the quote",
+        "description": "Prepare production release, monitor agreed signals and organize takeover without implicit dependency.",
+        "deliverable": "Verified release, documentation and rollback procedure"
       }
     ],
     "commitments": {
-      "title": "Our concrete commitments",
+      "title": "Explicit working rules",
       "items": [
-        "First usable demo within 2 weeks max",
-        "Slack response in under 4h (business days)",
-        "Budget respected ±10% (or we warn you first)",
-        "Documented and transferable code"
+        "Goals, exclusions and acceptance criteria written before implementation",
+        "Demo cadence and communication channel agreed at the start",
+        "Scope-change impact documented before inclusion",
+        "Code, access and documentation organized for handover"
       ]
     }
   },
   "AboutPage": {
     "eyebrow": "WHO WE ARE",
-    "title": "4 experts. 1 mission. 0 bullshit.",
-    "subtitle": "A human-sized artisan studio. AI, Architecture, Design, Strategy: each an expert in their domain.",
+    "title": "Design useful products, ship them cleanly",
+    "subtitle": "A human-sized product and development studio with direct communication.",
     "storyTitle": "Our story",
-    "storyBody": "In 2018, we realized typical agencies had a problem: too many middlemen between the client and the code. Result? Projects that drag, budgets that explode, and frustrated clients.\n\nWe decided to do things differently: a micro-team of seniors who talk directly to clients. No salespeople, no project managers playing telephone. The expert who builds is the one who answers your questions.\n\nToday, we're 4 complementary profiles: AI, Architecture, Design, Strategy. Each has 10+ years of experience. Nike, Clarins, L'Oréal trust us. Not for our size, but for our expertise.",
+    "storyBody": "Yodev starts from a simple principle: fewer intermediaries make it easier to understand the problem and decide quickly.\n\nEach engagement begins with concrete framing and progresses through verifiable deliverables. Constraints, trade-offs and limits remain visible throughout the project.\n\nThe goal is not to sell an abstract transformation, but to ship a useful, maintainable and transferable product.",
     "valuesEyebrow": "What drives us",
     "valuesTitle": "Our values",
     "values": [
       {
-        "title": "We code, we don't comment",
-        "description": "Fewer meetings, more lines of code that work. We move forward, we deliver, we iterate."
+        "title": "Build and verify",
+        "description": "Each increment is tied to a need, acceptance criteria and evidence that it works."
       },
       {
-        "title": "Total transparency",
-        "description": "Budget, timeline, challenges: you know everything. No surprises at the end of the project."
+        "title": "Useful transparency",
+        "description": "Budget, timeline, risks and trade-offs are visible while decisions can still be made."
       },
       {
-        "title": "Team > Individual",
-        "description": "Complementary profiles, guaranteed backup. If a dev is sick, the project continues."
+        "title": "Transferable product",
+        "description": "Code, documentation and access are organized to avoid artificial dependency on the provider."
       }
     ],
     "ctaEyebrow": "Ready?",
     "ctaTitle": "Let's talk about your project",
-    "ctaSubtitle": "30 minutes to understand your needs. Zero commitment.",
-    "ctaButton": "Book a call"
-  },
-  "ContactPage": {
-    "eyebrow": "FIRST CONTACT",
-    "title": "We reply in 24h. Promise.",
-    "subtitle": "No endless forms. Tell us in 3 sentences what you need.",
-    "info": [
-      "Guaranteed reply within 24 business hours",
-      "Free 30-minute first call",
-      "Detailed quote in 48-72h"
-    ],
-    "emailTitle": "By email",
-    "email": "hello@yodev.fr",
-    "emailCta": "Write to us",
-    "calendarTitle": "By video call",
-    "calendarCta": "Book a slot",
-    "form": {
-      "nameLabel": "Your name",
-      "emailLabel": "Work email",
-      "budgetLabel": "Approximate budget (optional)",
-      "messageLabel": "In one sentence, what's the project?",
-      "submit": "Send",
-      "placeholders": {
-        "name": "Alex Smith",
-        "email": "alex@company.com",
-        "budget": "Select a range",
-        "message": "We want to launch a mobile app for... / We're looking to automate... / We need a team for..."
-      },
-      "budgetOptions": [
-        "< €10K",
-        "€10-25K",
-        "€25-50K",
-        "€50-100K",
-        "> €100K",
-        "I don't know yet"
-      ]
-    }
-  },
-  "Services": {
-    "backButton": "Back to services",
-    "cta": "Start a project",
-    "viewWork": "View our work",
-    "servicesEyebrow": "What we do",
-    "servicesTitle": "Our services",
-    "methodologyEyebrow": "How we work",
-    "methodologyTitle": "Our method",
-    "expertiseEyebrow": "Our domains",
-    "expertiseTitle": "Technical expertise",
-    "projectsEyebrow": "Case studies",
-    "projectsTitle": "Projects delivered",
-    "technologiesEyebrow": "Tech stack",
-    "technologiesTitle": "Technologies we master",
-    "whyUsEyebrow": "Why us",
-    "whyUsTitle": "What makes the difference",
-    "ctaTitle": "Ready to start?",
-    "ctaSubtitle": "Let's discuss your project and see how we can help.",
-    "ctaButton": "Contact us",
-
-    "ai": {
-      "title": "Artificial Intelligence",
-      "subtitle": "AI that actually delivers",
-      "description": "No eternal POC. Production-ready AI solutions that generate ROI. We turn your data into competitive advantage.",
-      "services": [
-        {
-          "title": "Data & AI Audit",
-          "description": "We analyze your processes and identify high-impact AI quick wins. No fluff, just actionable insights."
-        },
-        {
-          "title": "AI Applications",
-          "description": "Chatbots, assistants, automation. Apps that integrate with your stack and actually work."
-        },
-        {
-          "title": "Custom Models",
-          "description": "Fine-tuning, RAG, predictive. Models trained on YOUR data for YOUR use cases."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Scoping",
-          "description": "We identify high-ROI use cases and validate technical feasibility."
-        },
-        {
-          "title": "Rapid POC",
-          "description": "Working prototype in 2-4 weeks to validate the approach."
-        },
-        {
-          "title": "Production",
-          "description": "Industrialization, monitoring, continuous improvement."
-        },
-        {
-          "title": "Iterations",
-          "description": "User feedback, fine-tuning, new features."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Generative AI",
-          "description": "GPT-4, Claude, Gemini, Mistral. We master the best LLMs and know which to choose for your case.",
-          "result": "400K content generated/year"
-        },
-        {
-          "title": "Predictive Systems",
-          "description": "Machine Learning applied to your business data. Forecasting, anomaly detection, optimization.",
-          "result": "-30% waste"
-        },
-        {
-          "title": "Computer Vision",
-          "description": "Image recognition, OCR, video analysis. Intelligent processing of your visual data.",
-          "result": "5x analysis speed"
-        },
-        {
-          "title": "RAG & Embeddings",
-          "description": "Smart knowledge bases. Your documents become queryable in natural language.",
-          "result": "90% accuracy"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Product Sheet Generation",
-          "description": "Generative AI to automatically create SEO-optimized product descriptions.",
-          "result": "+400K sheets/year"
-        },
-        {
-          "name": "Consumption Forecasting",
-          "description": "Predictive system to anticipate orders in collective catering.",
-          "result": "-30% waste"
-        },
-        {
-          "name": "Document Analysis",
-          "description": "Automatic extraction and classification of information from complex documents.",
-          "result": "5x productivity"
-        },
-        {
-          "name": "Business Assistant",
-          "description": "Internal chatbot trained on company documentation and processes.",
-          "result": "-60% support tickets"
-        }
-      ],
-      "technologies": ["GPT-4", "Claude", "Gemini", "Mistral", "LangChain", "Python", "TensorFlow", "PyTorch", "Pinecone", "Chroma"],
-      "whyUs": [
-        "4 senior AI experts in-house",
-        "50+ AI projects in production",
-        "No eternal POC, we deliver",
-        "Permanent tech watch"
-      ]
-    },
-
-    "web": {
-      "title": "Web Platforms",
-      "subtitle": "Sites that convert. Not showcases.",
-      "description": "Web apps, marketing sites, business platforms. Fast, SEO-friendly, maintainable. We build sites that work for you.",
-      "services": [
-        {
-          "title": "Full Development",
-          "description": "From design to deployment. Marketing sites, web apps, custom business platforms."
-        },
-        {
-          "title": "Redesign & Migration",
-          "description": "We modernize your site without breaking what works. Progressive migration, SEO preserved."
-        },
-        {
-          "title": "Maintenance & Evolution",
-          "description": "Responsive support, security updates, new features. Your site stays alive."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Scoping",
-          "description": "Goals, KPIs, personas, technical constraints. We lay the foundations."
-        },
-        {
-          "title": "Design",
-          "description": "Wireframes, mockups, validation. You see before we code."
-        },
-        {
-          "title": "Development",
-          "description": "2-week sprints, regular demos. You track progress."
-        },
-        {
-          "title": "Launch",
-          "description": "Deployment, monitoring, iterations. We stay by your side."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Performance",
-          "description": "Lighthouse 90+, Core Web Vitals in the green. Your users don't wait.",
-          "result": "Lighthouse 95+"
-        },
-        {
-          "title": "Technical SEO",
-          "description": "Optimized architecture, semantic markup, sitemap. Google finds you.",
-          "result": "+150% organic traffic"
-        },
-        {
-          "title": "Accessibility",
-          "description": "WCAG 2.1 AA, keyboard navigation, screen readers. Everyone counts.",
-          "result": "100% score"
-        },
-        {
-          "title": "Maintainability",
-          "description": "Clean, documented, tested code. Your future devs will thank us.",
-          "result": "-40% debug time"
-        }
-      ],
-      "projects": [
-        {
-          "name": "B2B Platform",
-          "description": "Complete web app with user management, analytics dashboard and API.",
-          "result": "+40% productivity"
-        },
-        {
-          "name": "Corporate Site",
-          "description": "Complete redesign with new design system and headless CMS.",
-          "result": "+120% conversions"
-        },
-        {
-          "name": "Marketplace",
-          "description": "Multi-vendor platform with integrated payments and automated management.",
-          "result": "€500K GMV/month"
-        },
-        {
-          "name": "Customer Portal",
-          "description": "Secure customer area with order tracking and integrated support.",
-          "result": "-50% support calls"
-        }
-      ],
-      "technologies": ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS", "Vercel", "AWS"],
-      "whyUs": [
-        "Scalable architecture from day one",
-        "Non-negotiable performance",
-        "Maintainable and documented code",
-        "Responsive post-delivery support"
-      ]
-    },
-
-    "custom-software": {
-      "title": "Custom Software",
-      "subtitle": "Software that adapts to you. Not the other way around.",
-      "description": "We map your needs and develop an app that perfectly addresses them. No more workarounds and overflowing spreadsheets.",
-      "services": [
-        {
-          "title": "Analysis & Design",
-          "description": "Business workshops, process mapping, functional specs. We understand before we code."
-        },
-        {
-          "title": "Custom Development",
-          "description": "Application tailored to your needs. No license, no limits, just bespoke."
-        },
-        {
-          "title": "SI Integration",
-          "description": "Connection to your existing tools: ERP, CRM, accounting. Everything communicates."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Kickoff & Interviews",
-          "description": "We meet end users. Not just decision makers."
-        },
-        {
-          "title": "Business Workshops",
-          "description": "Process mapping, pain point identification, prioritization."
-        },
-        {
-          "title": "UX Design",
-          "description": "Wireframes, user flows, validation with field teams."
-        },
-        {
-          "title": "Iterative Development",
-          "description": "Short sprints, frequent demos, continuous adjustments."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Domain-Driven Design",
-          "description": "Architecture aligned with your business. Code speaks your language.",
-          "result": "Guaranteed scalability"
-        },
-        {
-          "title": "Test-Driven Development",
-          "description": "Tests before code. Fewer bugs, more confidence with each release.",
-          "result": "-80% bugs in prod"
-        },
-        {
-          "title": "DevOps & CI/CD",
-          "description": "Automated deployments, monitoring, instant rollback.",
-          "result": "Daily deployments"
-        },
-        {
-          "title": "User Training",
-          "description": "Documentation, videos, training sessions. Your teams are autonomous.",
-          "result": "100% adoption"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Logistics ERP",
-          "description": "Complete flow, inventory, shipping management for an e-commerce company.",
-          "result": "+60% productivity"
-        },
-        {
-          "name": "Custom CRM",
-          "description": "Client tracking adapted to specific processes of a real estate agency.",
-          "result": "+35% sales"
-        },
-        {
-          "name": "HR Planning",
-          "description": "Schedule, leave, skills management for a 200-person SME.",
-          "result": "-4h/week admin"
-        },
-        {
-          "name": "Production Management",
-          "description": "Real-time tracking, traceability, reporting for a manufacturer.",
-          "result": "+25% yield"
-        }
-      ],
-      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "GraphQL", "TypeScript"],
-      "whyUs": [
-        "We understand your business before coding",
-        "Testing and quality non-negotiable",
-        "Long-term support",
-        "Your data stays with you"
-      ]
-    },
-
-    "mobile": {
-      "title": "Mobile Apps",
-      "subtitle": "Apps your users love.",
-      "description": "iOS, Android, cross-platform. Performant, smooth apps that drive engagement. Not laggy prototypes.",
-      "services": [
-        {
-          "title": "Audit & Advisory",
-          "description": "Analysis of your existing app or project. Technical and UX recommendations."
-        },
-        {
-          "title": "Full Development",
-          "description": "From idea to store. Design, development, testing, deployment, maintenance."
-        },
-        {
-          "title": "Redesign & Modernization",
-          "description": "Migration to a modern stack without losing your users."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Discovery",
-          "description": "Personas, user stories, competitor benchmark. We lay the foundations."
-        },
-        {
-          "title": "Design",
-          "description": "Wireframes, UI kit, interactive prototype. You test before code."
-        },
-        {
-          "title": "Development",
-          "description": "2-week sprints, regular test builds. You track progress."
-        },
-        {
-          "title": "Publication",
-          "description": "Store submission, ASO, analytics. Your app is visible."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "React Native",
-          "description": "One codebase, two platforms. Native performance, optimized development.",
-          "result": "-40% dev time"
-        },
-        {
-          "title": "Flutter",
-          "description": "Smooth, customized UI. Ideal for rich visual experiences.",
-          "result": "60 FPS guaranteed"
-        },
-        {
-          "title": "Push & Engagement",
-          "description": "Smart notifications, deep linking, optimized retention.",
-          "result": "+45% retention"
-        },
-        {
-          "title": "Offline Mode",
-          "description": "Smart synchronization. Your app works even without network.",
-          "result": "100% availability"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Retail Loyalty App",
-          "description": "Scan, points, rewards, personalized notifications.",
-          "result": "500K+ downloads"
-        },
-        {
-          "name": "Field Service App",
-          "description": "Offline input, auto-sync, photo management for technicians.",
-          "result": "+2h/day saved"
-        },
-        {
-          "name": "Health App",
-          "description": "Patient tracking, medication reminders, integrated telemedicine.",
-          "result": "4.8★ on stores"
-        },
-        {
-          "name": "Event App",
-          "description": "Schedule, networking, badge scanning, live notifications.",
-          "result": "+70% engagement"
-        }
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo", "TypeScript", "GraphQL"],
-      "whyUs": [
-        "Non-negotiable native experience",
-        "Store publication mastered",
-        "Testing on real devices",
-        "Long-term maintenance"
-      ]
-    },
-
-    "ecommerce": {
-      "title": "E-commerce",
-      "subtitle": "Stores that grow your revenue.",
-      "description": "Shopify, Prestashop, custom. We design purchasing journeys that convert and back-offices that save you time.",
-      "services": [
-        {
-          "title": "Store Creation",
-          "description": "From A to Z. Strategy, design, development, launch. Turnkey."
-        },
-        {
-          "title": "Redesign & Migration",
-          "description": "Platform migration without losing your SEO or customers."
-        },
-        {
-          "title": "Conversion Optimization",
-          "description": "A/B testing, checkout funnel, UX. Every % counts."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Audit & Strategy",
-          "description": "Competitor analysis, positioning, target KPIs."
-        },
-        {
-          "title": "UX & Journey",
-          "description": "Optimized checkout funnel, friction reduction."
-        },
-        {
-          "title": "Development",
-          "description": "Store, payments, logistics, integrations."
-        },
-        {
-          "title": "Optimization",
-          "description": "A/B tests, analytics, continuous iterations."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Conversion",
-          "description": "Optimized checkout, one-click checkout, cart abandonment.",
-          "result": "+35% conversion"
-        },
-        {
-          "title": "SI Integration",
-          "description": "ERP, PIM, CRM connection. Your inventory and orders synchronized.",
-          "result": "Zero re-entry"
-        },
-        {
-          "title": "Omnichannel",
-          "description": "Click & collect, marketplace, retail. Wherever your customers are.",
-          "result": "+50% revenue"
-        },
-        {
-          "title": "Performance",
-          "description": "Load time < 2s. Every second counts for conversion.",
-          "result": "Lighthouse 95+"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Luxury Boutique",
-          "description": "Complete redesign with premium experience and optimized checkout.",
-          "result": "+120% conversion"
-        },
-        {
-          "name": "B2B Marketplace",
-          "description": "Multi-vendor platform with complex order management.",
-          "result": "€2M GMV/month"
-        },
-        {
-          "name": "Click & Collect",
-          "description": "POS integration, real-time inventory, omnichannel journey.",
-          "result": "+40% average basket"
-        },
-        {
-          "name": "Subscription Box",
-          "description": "Flexible subscription system with churn management.",
-          "result": "-25% churn"
-        }
-      ],
-      "technologies": ["Shopify", "Prestashop", "WooCommerce", "Stripe", "Algolia", "Klaviyo", "React", "Node.js"],
-      "whyUs": [
-        "Conversion obsessed",
-        "SI integration mastered",
-        "Data-driven, not gut feeling",
-        "Dedicated e-commerce support"
-      ]
-    },
-
-    "ux-design": {
-      "title": "UX/UI Design",
-      "subtitle": "Interfaces your users understand.",
-      "description": "UX research, wireframes, design systems, user testing. We design clear interfaces that guide your users to action.",
-      "services": [
-        {
-          "title": "UX Research",
-          "description": "Interviews, user testing, analytics. We understand your users before designing."
-        },
-        {
-          "title": "UI Design",
-          "description": "Mockups, design system, iconography. Beautiful AND functional interfaces."
-        },
-        {
-          "title": "UX Audit",
-          "description": "Analysis of your existing product. Actionable recommendations, quick wins identified."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Brief & Discovery",
-          "description": "Goals, constraints, personas. We align everyone."
-        },
-        {
-          "title": "Wireframes",
-          "description": "Structure, flows, architecture. The skeleton before the skin."
-        },
-        {
-          "title": "Prototype",
-          "description": "Testable interactive mockups. Validation before development."
-        },
-        {
-          "title": "Design System",
-          "description": "Reusable components, guidelines. Guaranteed consistency."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "User Research",
-          "description": "User testing, interviews, surveys. Fact-based decisions.",
-          "result": "+40% satisfaction"
-        },
-        {
-          "title": "Design System",
-          "description": "Component library. Consistency and development speed.",
-          "result": "-50% design time"
-        },
-        {
-          "title": "Prototyping",
-          "description": "Interactive Figma, testing before code. Fast and cheap iterations.",
-          "result": "-30% dev iterations"
-        },
-        {
-          "title": "Accessibility",
-          "description": "WCAG 2.1, contrast, keyboard navigation. Inclusive design.",
-          "result": "AA+ score"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Banking App",
-          "description": "Complete UX redesign for a fintech. Simplified journey.",
-          "result": "+60% tasks completed"
-        },
-        {
-          "name": "SaaS Dashboard",
-          "description": "Design system + interface redesign for a B2B tool.",
-          "result": "-40% support tickets"
-        },
-        {
-          "name": "E-commerce Site",
-          "description": "Checkout funnel and product page optimization.",
-          "result": "+25% conversion"
-        },
-        {
-          "name": "Business App",
-          "description": "Field UX for technicians. Mobile-first optimized interface.",
-          "result": "4.7★ internal satisfaction"
-        }
-      ],
-      "technologies": ["Figma", "Framer", "Principle", "Whimsical", "Hotjar", "Maze", "Notion", "Storybook"],
-      "whyUs": [
-        "Research-based design",
-        "No trends, just useful",
-        "Impeccable dev handoff",
-        "Systematic user testing"
-      ]
-    },
-
-    "cybersecurity": {
-      "title": "Cybersecurity",
-      "subtitle": "Test and guarantee your company's security.",
-      "description": "Security audits, pentests, vulnerability analysis. We find the flaws before hackers do. Actionable reports, not PDF for the drawer.",
-      "services": [
-        {
-          "title": "Penetration Testing",
-          "description": "Web, API, mobile, network pentest. We attack like the real ones."
-        },
-        {
-          "title": "Source Code Audit",
-          "description": "SAST analysis, manual review. We find what tools miss."
-        },
-        {
-          "title": "Infrastructure Audit",
-          "description": "AWS, Azure, GCP. Configuration, IAM, secrets. Nothing escapes us."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Reconnaissance",
-          "description": "Mapping your attack surface. We see what attackers see."
-        },
-        {
-          "title": "Intrusion",
-          "description": "Exploitation of identified vulnerabilities. Realistic tests."
-        },
-        {
-          "title": "Analysis",
-          "description": "Risk qualification, prioritization, recommendations."
-        },
-        {
-          "title": "Remediation",
-          "description": "Fix support, re-audit. You're really protected."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Web Pentest",
-          "description": "OWASP Top 10, injections, XSS, CSRF. Web applications thoroughly tested.",
-          "result": "100% critical vulns found"
-        },
-        {
-          "title": "API Pentest",
-          "description": "Authentication, authorization, business logic. Your APIs secured.",
-          "result": "Zero breach post-audit"
-        },
-        {
-          "title": "Cloud Audit",
-          "description": "Configuration, IAM, secrets, logs. Your cloud hardened.",
-          "result": "CIS benchmark compliance"
-        },
-        {
-          "title": "Awareness",
-          "description": "Team training, simulated phishing. Human link strengthened.",
-          "result": "-70% phishing clicks"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Fintech",
-          "description": "Complete pre-launch audit. Web, API, infra, code.",
-          "result": "0 post-launch incident"
-        },
-        {
-          "name": "E-commerce",
-          "description": "Platform pentest + PCI-DSS audit.",
-          "result": "Compliance achieved"
-        },
-        {
-          "name": "B2B SaaS",
-          "description": "Quarterly recurring audit + private bug bounty.",
-          "result": "SOC2 Type II"
-        },
-        {
-          "name": "Manufacturing",
-          "description": "IT/OT network audit, segmentation, remote access.",
-          "result": "Risk score -60%"
-        }
-      ],
-      "technologies": ["Burp Suite", "Metasploit", "Nmap", "OWASP ZAP", "Nuclei", "Trivy", "SonarQube", "AWS Security Hub"],
-      "whyUs": [
-        "OSCP/OSWE certified experts",
-        "Actionable reports, not fluff",
-        "Re-audit included",
-        "Total confidentiality"
-      ]
-    }
-  },
-  "CaseStudies": {
-    "backButton": "Back to work",
-    "contextEyebrow": "Context",
-    "contextTitle": "The project",
-    "challengeEyebrow": "Challenge",
-    "challengeTitle": "The Challenge",
-    "solutionEyebrow": "Approach",
-    "solutionTitle": "The Solution",
-    "resultsEyebrow": "Impact",
-    "resultsTitle": "Results",
-    "techTitle": "Technologies",
-    "ctaTitle": "A similar project?",
-    "ctaSubtitle": "Let's discuss your goals and see how we can achieve them together.",
-    "ctaButton": "Let's talk about your project",
-    "saas-b2b": {
-      "title": "B2B SaaS Platform",
-      "type": "SaaS / Web App",
-      "summary": "Development of a management platform for sales teams.",
-      "context": "Our client, a fast-growing scale-up, needed a centralized solution to manage their sales pipeline and optimize team performance.",
-      "challenge": "Existing tools were fragmented and poorly suited to their specific workflow. Performance tracking lacked precision and repetitive tasks were taking valuable time.",
-      "solution": "We designed a custom platform with an intuitive dashboard, smart automations, and native CRM integration. The multi-tenant architecture ensures optimal scalability.",
-      "results": ["+40% sales productivity", "60% reduction in reporting time", "95% team adoption", "Positive ROI in 3 months"],
-      "testimonial": {
-        "quote": "Yodev perfectly understood our challenges and delivered a solution that exceeds our expectations. The team is responsive and proactive.",
-        "author": "Marie Dupont",
-        "role": "Sales Director"
-      }
-    },
-    "ecommerce-refonte": {
-      "title": "Premium E-commerce Redesign",
-      "type": "E-commerce",
-      "summary": "Complete redesign of a high-end online store.",
-      "context": "A French luxury brand wanted to modernize their digital presence and reposition their image toward a more premium positioning.",
-      "challenge": "The existing store suffered from low conversion rates, degraded mobile experience, and slow loading times.",
-      "solution": "Complete redesign with a clean, luxurious design, performance optimization (95+ Lighthouse score), simplified checkout funnel, and mobile-first experience.",
-      "results": ["+120% conversion rate", "+35% average order value", "4x faster loading time", "95+ Lighthouse score"],
-      "testimonial": {
-        "quote": "Our new store finally reflects our brand DNA. The results are beyond our expectations.",
-        "author": "Jean Martin",
-        "role": "Founder"
-      }
-    },
-    "app-coaching": {
-      "title": "Sports Coaching App",
-      "type": "Mobile App",
-      "summary": "Mobile coaching app with personalized tracking in real-time.",
-      "context": "A wellness startup wanted to launch an innovative sports coaching app to differentiate themselves in a competitive market.",
-      "challenge": "The client wanted to create an app with personalized tracking, adaptive programs, and an engaged community. The MVP had to be delivered quickly to test the market.",
-      "solution": "React Native development with performance-based adaptive program system, wearables integration, coach-user chat, and gamification for engagement.",
-      "results": ["MVP delivered in 8 weeks", "10k downloads in 3 months", "4.8/5 average rating on stores", "65% retention rate"],
-      "testimonial": {
-        "quote": "The Yodev team was a true partner. They transformed our vision into a product our users love.",
-        "author": "Sophie Bernard",
-        "role": "CEO & Founder"
-      }
-    }
-  },
-  "BlogPage": {
-    "eyebrow": "Insights",
-    "title": "Blog",
-    "subtitle": "Insights on web, mobile, AI and product strategy.",
-    "readMore": "Read article",
-    "posts": [
-      {
-        "slug": "agrement-cii",
-        "title": "Yodev approved for the Innovation Tax Credit (CII)",
-        "excerpt": "Yodev is CII-certified as a subcontractor recognized by the French Ministry of Research.",
-        "category": "Business",
-        "date": "Dec 12, 2025",
-        "readTime": "4 min"
-      },
-      {
-        "slug": "waf-efficacite",
-        "title": "How to maximize a Web Application Firewall (WAF)?",
-        "excerpt": "A well-configured WAF is the difference between symbolic protection and a real barrier.",
-        "category": "Tech",
-        "date": "Dec 11, 2025",
-        "readTime": "6 min"
-      },
-      {
-        "slug": "integrite-logs-continu",
-        "title": "Certifying the integrity of a continuous log stream",
-        "excerpt": "Proving your logs were not altered is now a security and compliance must.",
-        "category": "Tech",
-        "date": "Dec 11, 2025",
-        "readTime": "7 min"
-      },
-      {
-        "slug": "mvp-iteration",
-        "title": "MVP and Iteration: The Right Approach",
-        "excerpt": "How to build an effective minimum viable product and iterate intelligently.",
-        "category": "Product",
-        "date": "December 20, 2024",
-        "readTime": "8 min"
-      },
-      {
-        "slug": "core-web-vitals",
-        "title": "Core Web Vitals: A Practical Guide",
-        "excerpt": "Everything about web performance metrics and how to optimize them.",
-        "category": "Performance",
-        "date": "December 15, 2024",
-        "readTime": "10 min"
-      },
-      {
-        "slug": "owasp-2024",
-        "title": "Web Security: OWASP Top 10 in Practice",
-        "excerpt": "The most common vulnerabilities and how to protect your applications.",
-        "category": "Security",
-        "date": "December 10, 2024",
-        "readTime": "12 min"
-      }
-    ]
-  },
-  "BlogArticles": {
-    "ctaTitle": "Need expertise?",
-    "ctaSubtitle": "Let's discuss your project and technical challenges.",
-    "ctaButton": "Contact us",
-    "agrement-cii": {
-      "title": "Yodev approved for the Innovation Tax Credit (CII)",
-      "excerpt": "Yodev is CII-certified as a subcontractor recognized by the French Ministry of Research.",
-      "category": "Business",
-      "date": "Dec 12, 2025",
-      "readTime": "4 min",
-      "author": "Jean Ashton",
-      "content": [
-        "The Innovation Tax Credit (CII) helps companies fund a portion of their R&D and innovation spend.",
-        "Yodev is CII-approved as a subcontractor recognized by the French Ministry of Research, which means our services can be included in eligible projects.",
-        "We help frame eligible work, structure deliverables, and secure technical requirements.",
-        "If you're preparing a CII file, we can support you from the framing phase to maximize delivered value."
-      ]
-    },
-    "waf-efficacite": {
-      "title": "How to maximize a Web Application Firewall (WAF)?",
-      "excerpt": "A well-configured WAF is the difference between symbolic protection and a real barrier.",
-      "category": "Tech",
-      "date": "Dec 11, 2025",
-      "readTime": "6 min",
-      "author": "Molly Allerhand",
-      "content": [
-        "A WAF blocks what it recognizes. Poor configuration leads to false positives or missed attacks.",
-        "Start with observation mode and analyze logs to understand real traffic patterns.",
-        "Tailor rules to critical routes, business use cases and your sector's attack patterns.",
-        "Automate rule updates and add security regression tests to your CI/CD pipeline.",
-        "Measure impact: block rate, latency, false positives and incidents avoided."
-      ]
-    },
-    "integrite-logs-continu": {
-      "title": "Certifying the integrity of a continuous log stream",
-      "excerpt": "Proving your logs were not altered is now a security and compliance must.",
-      "category": "Tech",
-      "date": "Dec 11, 2025",
-      "readTime": "7 min",
-      "author": "Molly Allerhand",
-      "content": [
-        "Logs are evidence. You must be able to prove they have not been modified.",
-        "The approach chains events with hashes and periodically signs the stream.",
-        "Immutable storage (WORM) and timestamping reinforce traceability.",
-        "A well-designed pipeline enables faster audits and stronger compliance (ISO, SOC2).",
-        "We implement these guarantees on modern stacks without harming performance."
-      ]
-    },
-    "mvp-iteration": {
-      "title": "MVP and Iteration: The Right Approach",
-      "excerpt": "How to build an effective minimum viable product and iterate intelligently.",
-      "category": "Product",
-      "date": "December 20, 2024",
-      "readTime": "8 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "The MVP concept is often misunderstood. It's not about delivering a sloppy product, but creating the simplest version that validates a hypothesis.",
-        "The key is identifying the core value of your product. What makes it unique and essential? This is the core feature the MVP should focus on.",
-        "Define clear metrics before launching. Without success criteria, you won't know how to interpret results and decide what's next.",
-        "Iteration should be fast and data-driven. Analyze user behaviors, gather qualitative feedback, and prioritize ruthlessly.",
-        "Don't be afraid to pivot if the data suggests it. An MVP that fails isn't a failure, it's valuable learning that brings you closer to product-market fit."
-      ]
-    },
-    "core-web-vitals": {
-      "title": "Core Web Vitals: A Practical Guide",
-      "excerpt": "Everything about web performance metrics and how to optimize them.",
-      "category": "Performance",
-      "date": "December 15, 2024",
-      "readTime": "10 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Core Web Vitals have become a Google ranking factor. But beyond SEO, they reflect user experience quality.",
-        "LCP (Largest Contentful Paint) measures perceived loading time. Goal: under 2.5 seconds. Optimize your images, use lazy loading, and preload critical resources.",
-        "FID (First Input Delay) measures responsiveness. Goal: under 100ms. Reduce blocking JavaScript and use code splitting.",
-        "CLS (Cumulative Layout Shift) measures visual stability. Goal: under 0.1. Reserve space for images and avoid dynamic content injections.",
-        "Essential tools: Lighthouse for auditing, WebPageTest for detailed diagnostics, and Chrome DevTools for debugging. Measure in real conditions, not just locally.",
-        "Optimization is an ongoing process. Integrate performance tests into your CI/CD and monitor regressions."
-      ]
-    },
-    "owasp-2024": {
-      "title": "Web Security: OWASP Top 10 in Practice",
-      "excerpt": "The most common vulnerabilities and how to protect your applications.",
-      "category": "Security",
-      "date": "December 10, 2024",
-      "readTime": "12 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Security is not optional. The OWASP Top 10 lists the most critical vulnerabilities every developer should know.",
-        "Injections (SQL, NoSQL, LDAP) remain at the top. Always use parameterized queries and rigorously validate user input.",
-        "Broken authentication is a classic. Implement 2FA, use proven libraries, and never reinvent the wheel with passwords.",
-        "Sensitive data exposure can be fatal. Encrypt in transit (HTTPS) and at rest, minimize stored data, and regularly audit your endpoints.",
-        "Vulnerable components are an often-neglected risk. Keep your dependencies up to date, use automated audit tools like Snyk or Dependabot.",
-        "Security is everyone's business. Train your teams, integrate security tests into your pipeline, and have critical applications audited by experts."
-      ]
-    }
-  },
-  "CareersPage": {
-    "eyebrow": "Join us",
-    "title": "Jobs",
-    "subtitle": "Build web, mobile & AI products with a passionate and demanding team.",
-    "valuesEyebrow": "Our culture",
-    "valuesTitle": "What drives us",
-    "values": [
-      {
-        "title": "Uncompromising quality",
-        "description": "We aim for excellence in every line of code and every pixel."
-      },
-      {
-        "title": "Continuous learning",
-        "description": "Curiosity and knowledge sharing are at the heart of our DNA."
-      },
-      {
-        "title": "Autonomy and trust",
-        "description": "We trust everyone to take initiatives and make decisions."
-      },
-      {
-        "title": "Work-life balance",
-        "description": "Remote-first and flexibility so everyone can give their best."
-      },
-      {
-        "title": "Real impact",
-        "description": "Every project counts, every contribution makes a difference."
-      },
-      {
-        "title": "Full transparency",
-        "description": "Open communication about goals, results, and challenges."
-      }
-    ],
-    "positionsEyebrow": "Opportunities",
-    "positionsTitle": "Open positions",
-    "jobs": [
-      {
-        "slug": "dev-fullstack",
-        "title": "Senior Fullstack Developer",
-        "type": "Full-time",
-        "location": "Remote (France)",
-        "department": "Engineering"
-      },
-      {
-        "slug": "ux-designer",
-        "title": "UX/UI Designer",
-        "type": "Full-time",
-        "location": "Remote (France)",
-        "department": "Design"
-      },
-      {
-        "slug": "chef-projet",
-        "title": "Digital Project Manager",
-        "type": "Full-time",
-        "location": "Remote (France)",
-        "department": "Delivery"
-      }
-    ],
-    "viewJob": "View position",
-    "noPositions": "No positions currently open. Feel free to send us a spontaneous application.",
-    "spontaneousTitle": "Can't find your position?",
-    "spontaneousSubtitle": "We're always looking for exceptional talent. Send us a spontaneous application.",
-    "spontaneousButton": "Spontaneous application"
-  },
-  "JobPostings": {
-    "applyButton": "Apply now",
-    "responsibilitiesEyebrow": "Your missions",
-    "responsibilitiesTitle": "What you'll do",
-    "requirementsEyebrow": "Profile sought",
-    "requirementsTitle": "What we're looking for",
-    "benefitsEyebrow": "Benefits",
-    "benefitsTitle": "What we offer",
-    "ctaTitle": "Interested in this position?",
-    "ctaSubtitle": "Send us your resume and let's talk about your background.",
-    "dev-fullstack": {
-      "title": "Senior Fullstack Developer",
-      "type": "Full-time",
-      "location": "Remote (France)",
-      "department": "Engineering",
-      "summary": "Join our technical team to design and develop modern web applications for our clients.",
-      "responsibilities": [
-        "Develop web applications with Next.js, React, and Node.js",
-        "Participate in architecture decisions and code reviews",
-        "Collaborate closely with designers and product managers",
-        "Mentor junior developers on the team",
-        "Contribute to continuous improvement of our practices"
-      ],
-      "requirements": [
-        "5+ years of web development experience",
-        "Mastery of TypeScript, React, and Node.js",
-        "Experience with SQL and NoSQL databases",
-        "Sensitivity to UX and code quality",
-        "Excellent communication skills in French"
-      ],
-      "benefits": [
-        "Remote-first with full flexibility",
-        "Premium equipment (MacBook, monitor, etc.)",
-        "Continuous learning and conferences",
-        "Varied and challenging projects",
-        "Caring and demanding team"
-      ]
-    },
-    "ux-designer": {
-      "title": "UX/UI Designer",
-      "type": "Full-time",
-      "location": "Remote (France)",
-      "department": "Design",
-      "summary": "Create exceptional user experiences for varied web and mobile projects.",
-      "responsibilities": [
-        "Conduct user research and define personas",
-        "Design wireframes, prototypes, and high-fidelity mockups",
-        "Create and maintain consistent design systems",
-        "Collaborate with developers for perfect handoff",
-        "Participate in user testing and iterate"
-      ],
-      "requirements": [
-        "3+ years of UX/UI design experience",
-        "Mastery of Figma and prototyping tools",
-        "Portfolio demonstrating a user-centered approach",
-        "Knowledge of web and mobile technical constraints",
-        "Curiosity and active watch on design trends"
-      ],
-      "benefits": [
-        "Remote-first with full flexibility",
-        "Figma license and premium tools",
-        "Access to design resources (courses, books, conferences)",
-        "Varied projects with strong autonomy",
-        "Close collaboration with passionate developers"
-      ]
-    },
-    "chef-projet": {
-      "title": "Digital Project Manager",
-      "type": "Full-time",
-      "location": "Remote (France)",
-      "department": "Delivery",
-      "summary": "Lead web and mobile projects from A to Z, from scoping to delivery.",
-      "responsibilities": [
-        "Scope projects and define roadmaps",
-        "Coordinate design and development teams",
-        "Manage client relationships and expectations",
-        "Track budgets, timelines, and deliverables",
-        "Ensure deliverable quality"
-      ],
-      "requirements": [
-        "3+ years of digital project management experience",
-        "Excellent understanding of web professions",
-        "Mastery of Agile methodologies (Scrum, Kanban)",
-        "Ability to manage multiple projects simultaneously",
-        "Natural leadership and excellent interpersonal skills"
-      ],
-      "benefits": [
-        "Remote-first with full flexibility",
-        "Premium productivity tools",
-        "Varied projects and stimulating clients",
-        "Evolution toward leadership roles",
-        "Healthy and transparent company culture"
-      ]
-    }
+    "ctaSubtitle": "Describe the context and receive a clear next step.",
+    "ctaButton": "Qualify the project"
   },
   "LegalPage": {
     "eyebrow": "Legal information",
     "title": "Legal Notice",
-    "lastUpdated": "Last updated: January 2025",
+    "lastUpdated": "Last updated: July 2026",
     "sections": [
       {
         "title": "Site Editor",
@@ -1817,7 +110,7 @@
       },
       {
         "title": "Hosting",
-        "content": "This site is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. The host ensures service continuity and data security."
+        "content": "This site is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Applicable terms and warranties are those of the subscribed hosting service."
       },
       {
         "title": "Intellectual Property",
@@ -1836,7 +129,7 @@
   "PrivacyPage": {
     "eyebrow": "Data Protection",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: January 2025",
+    "lastUpdated": "Last updated: July 2026",
     "backToLegal": "Back to legal notice",
     "sections": [
       {
@@ -1845,24 +138,166 @@
       },
       {
         "title": "Data Use",
-        "content": "Your data is used exclusively to respond to your requests, send you relevant information if you have consented, and improve our services."
+        "content": "Your data is used to qualify and respond to your request. The site does not automatically subscribe you to a newsletter."
       },
       {
         "title": "Data Protection",
-        "content": "We implement technical and organizational security measures to protect your data against unauthorized access, modification, or disclosure."
+        "content": "Requests are sent to the technical services required to operate the site and deliver the email. Access is limited to people who need to process the request."
       },
       {
-        "title": "Cookies",
-        "content": "This site uses essential technical cookies for operation and analytical cookies to understand site usage. You can disable them in your browser."
+        "title": "Cookies and audience measurement",
+        "content": "No advertising audience measurement tool is enabled in this version of the site. Your light or dark display preference may be stored locally by your browser."
       },
       {
         "title": "Your Rights",
-        "content": "Under GDPR, you have the right to access, rectify, delete, and transfer your data. Contact us to exercise these rights."
+        "content": "Under GDPR, you may request access, rectification or deletion of your data, as well as exercise other rights applicable to your situation."
       },
       {
         "title": "Contact",
-        "content": "For any questions about our privacy policy or your personal data, you can contact us via our contact form."
+        "content": "For questions about your personal data, email hello@yodev.fr. We will request the information needed to verify your identity when required."
       }
     ]
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Product and development studio",
+      "titleLine1": "One product problem.",
+      "titleLine2": "One reliable delivery.",
+      "subtitle": "We frame, design and build useful web products, with direct communication and explicit technical decisions.",
+      "ctaNote": "The first conversation focuses on your context. If Yodev is not the right format, we will say so clearly.",
+      "secondary": "See our work",
+      "chips": [
+        "Explicit scope",
+        "UX and architecture",
+        "Tests and previews",
+        "Documented handover"
+      ],
+      "process": {
+        "label": "delivery-method",
+        "diagnostic": {
+          "title": "Diagnosis",
+          "description": "Goals, users, constraints and risks are framed before anything is built."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Journeys, interface and architecture are decided with you."
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": "The product is tested, documented and ready to operate."
+        }
+      }
+    },
+    "paths": {
+      "eyebrow": "Your starting point",
+      "title": "Start with the problem blocking progress today",
+      "items": [
+        {
+          "icon": "Rocket",
+          "title": "Launch a new product",
+          "description": "Turn an idea into a testable scope, then into an operable product without building too early.",
+          "cta": "Frame the launch",
+          "href": "/contact?type=new"
+        },
+        {
+          "icon": "Wrench",
+          "title": "Improve existing",
+          "description": "Identify product, UX or technical friction, then address the costliest risk first.",
+          "cta": "Audit the product",
+          "href": "/contact?type=optimization"
+        },
+        {
+          "icon": "Brain",
+          "title": "Decide before investing",
+          "description": "Compare options, expose assumptions and obtain a roadmap you can defend.",
+          "cta": "Prepare the decision",
+          "href": "/contact?type=audit"
+        }
+      ]
+    },
+    "selectedWork": {
+      "eyebrow": "Inspectable work",
+      "title": "Products that show how we make trade-offs",
+      "subtitle": "Each case makes the problem, constraints, decisions and limits visible. No client metric is invented.",
+      "cta": "See all work",
+      "items": [
+        {
+          "title": "Moodday",
+          "type": "Sensitive product",
+          "summary": "A personal tracking companion redesigned around privacy, offline use and caregiver permissions.",
+          "proofs": [
+            "Calm, accessible UX",
+            "Explicit synchronization"
+          ]
+        },
+        {
+          "title": "Jobio",
+          "type": "Sales workflow",
+          "summary": "An oversized product narrowed to the actions that help a freelancer move a real opportunity forward.",
+          "proofs": [
+            "Scope reduction",
+            "Actionable journeys"
+          ]
+        },
+        {
+          "title": "MyCryptoPilot",
+          "type": "Architecture and security",
+          "summary": "A crypto demonstrator limited to testnet and read-only access, designed to explain risk rather than promise returns.",
+          "proofs": [
+            "Risk-first",
+            "Clearly labelled demo data"
+          ]
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Work evidence",
+      "title": "What you can verify during the engagement",
+      "subtitle": "Trust comes from visible decisions and inspectable deliverables, not a row of logos.",
+      "items": [
+        {
+          "title": "Explicit scope",
+          "description": "Goals, exclusions, assumptions and acceptance criteria are written before delivery."
+        },
+        {
+          "title": "Documented decisions",
+          "description": "Product, UX and architecture trade-offs are tied to their constraints."
+        },
+        {
+          "title": "Verifiable quality",
+          "description": "Tests, previews, error monitoring and a rollback procedure accompany the product."
+        }
+      ]
+    },
+    "fitSection": {
+      "eyebrow": "Transparency",
+      "title": "A clear collaboration framework from day one",
+      "goodFit": {
+        "title": "For you if...",
+        "items": [
+          "You have a concrete product or business problem",
+          "You want scope and trade-offs to be explicit",
+          "You want direct access to the people designing and building",
+          "You value reliability, accessibility and maintainability",
+          "You agree to test assumptions before expanding the product"
+        ]
+      },
+      "badFit": {
+        "title": "Not for you if...",
+        "items": [
+          "You only need staffing volume",
+          "The scope can never be challenged",
+          "No user or business owner can participate",
+          "A delivery date is fixed with no room for trade-offs"
+        ]
+      }
+    },
+    "cta": {
+      "eyebrow": "Your context",
+      "title": "A product problem to clarify?",
+      "subtitle": "Describe the users, constraints and expected outcome. The reply will identify the next useful step.",
+      "button": "Qualify the project",
+      "secondary": "Or email us directly"
+    }
   }
 }

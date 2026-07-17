@@ -1,1828 +1,108 @@
 {
   "Common": {
-    "tagline": "Studio digital artisan",
     "cta": "Démarrer la discussion",
-    "menu": "Menu",
-    "available": "Disponible",
-    "readyToStart": "Démarrage rapide, équipe dédiée",
     "menuOpen": "Ouvrir le menu",
-    "menuClose": "Fermer le menu",
-    "watchVideo": "Voir la vidéo"
+    "menuClose": "Fermer le menu"
   },
   "Nav": {
     "services": "Services",
-    "ai": "IA",
-    "expertise": "Expertises",
     "work": "Réalisations",
-    "offers": "Offres & tarifs",
     "method": "Méthode",
+    "offers": "Offres & tarifs",
     "about": "À propos",
-    "team": "L'équipe",
-    "contact": "Contact",
-    "blog": "Blog",
-    "careers": "Jobs"
-  },
-  "Styles": {
-    "pulse": "Pulse",
-    "atelier": "Atelier",
-    "forge": "Forge"
+    "contact": "Contact"
   },
   "Footer": {
-    "subtitle": "Studio digital artisan. Web, mobile & IA pour les projets qui comptent.",
-    "company": "Entreprise",
-    "resourcesTitle": "Ressources",
+    "subtitle": "Studio produit et développement. Cadrage, UX et applications web fiables.",
+    "company": "Studio",
+    "navigation": "Navigation",
+    "contact": {
+      "title": "Parlons de votre produit",
+      "description": "Décrivez le problème, le contexte et le résultat attendu. Nous vous répondrons avec une prochaine étape claire.",
+      "cta": "Qualifier le projet"
+    },
     "resources": {
-      "offers": "Offres",
       "legal": "Mentions légales",
       "privacy": "Confidentialité"
     },
-    "services": {
-      "ai": "Intelligence artificielle",
-      "web": "Plateformes web",
-      "customSoftware": "Logiciels métier",
-      "mobile": "Apps mobiles",
-      "ecommerce": "E-commerce",
-      "uxDesign": "UX/UI Design",
-      "cybersecurity": "Cybersécurité"
-    },
-    "newsletter": {
-      "title": "Restez informé",
-      "placeholder": "Votre email",
-      "submit": "S'inscrire",
-      "success": "Merci ! Vous êtes inscrit à notre newsletter."
-    },
     "email": "hello@yodev.fr",
-    "offices": [
-      {
-        "city": "Paris",
-        "address": "117 avenue des Champs-Élysées",
-        "zip": "75008",
-        "country": "France"
-      }
-    ],
-    "rights": "© 2025 Yodev. Tous droits réservés."
-  },
-  "Home": {
-    "hero": {
-      "eyebrow": "STUDIO DIGITAL. 4 EXPERTS. 0 INTERMÉDIAIRE.",
-      "title": "Le studio artisan que les grands groupes s'arrachent",
-      "subtitle": "Nike, Clarins, L'Oréal, Céline, Decathlon, Sephora... Ils nous ont choisi pour notre expertise, pas pour notre taille. IA, Architecture, Design, Stratégie : les bonnes personnes, au bon moment.",
-      "primary": "Discuter de mon projet",
-      "secondary": "Voir nos réalisations",
-      "chips": [
-        "IA & Automation",
-        "Architecture Cloud",
-        "Design produit",
-        "Stratégie digitale"
-      ],
-      "signals": {
-        "studioEyebrow": "Format",
-        "studioBody": "4 experts complémentaires. Vous parlez directement à ceux qui font.",
-        "outputEyebrow": "Promesse",
-        "outputBody": "Pas d'usine, pas de junior caché. Un interlocuteur unique qui comprend votre métier."
-      }
-    },
-    "story": {
-      "eyebrow": "Notre philosophie",
-      "title": "Petit par choix. Excellent par exigence.",
-      "subtitle": "On a refusé de grossir. On a préféré rester une équipe resserrée où chacun maîtrise son domaine.",
-      "body": [
-        "Depuis 2018, les plus grands nous font confiance pour leurs projets stratégiques. Pas parce qu'on est gros, mais parce qu'on est bons.",
-        "Notre secret ? 4 profils complémentaires seniors. Pas de dilution, pas de délégation. Vous parlez aux experts."
-      ],
-      "highlights": [
-        {
-          "title": "Relation directe",
-          "description": "Zéro commercial, zéro chef de projet. L'expert qui fait est celui qui vous répond."
-        },
-        {
-          "title": "Expertise pointue",
-          "description": "IA, Architecture, UX/UI, Growth. 4 domaines, 4 seniors."
-        },
-        {
-          "title": "Tarif premium assumé",
-          "description": "On ne brade pas. Notre prix reflète notre expertise. Nos résultats le justifient."
-        }
-      ]
-    },
-    "paths": {
-      "eyebrow": "Par où commencer ?",
-      "title": "Trois façons de travailler avec nous",
-      "items": [
-        {
-          "icon": "Rocket",
-          "title": "Lancer un nouveau produit",
-          "description": "Site, app, SaaS... Vous partez de zéro ou presque. On vous accompagne du cadrage au lancement.",
-          "cta": "Créer mon produit",
-          "href": "/contact?type=nouveau"
-        },
-        {
-          "icon": "Wrench",
-          "title": "Améliorer l'existant",
-          "description": "Votre produit existe mais ne performe pas. On diagnostique, on optimise, on fait décoller.",
-          "cta": "Optimiser mon produit",
-          "href": "/contact?type=optimisation"
-        },
-        {
-          "icon": "Brain",
-          "title": "Explorer l'IA",
-          "description": "Vous voulez comprendre ce que l'IA peut faire pour vous. On identifie les opportunités concrètes.",
-          "cta": "Explorer l'IA",
-          "href": "/ai"
-        }
-      ]
-    },
-    "fitSection": {
-      "eyebrow": "Transparence",
-      "title": "On n'est pas faits pour tout le monde. Et c'est très bien.",
-      "goodFit": {
-        "title": "Pour vous si...",
-        "items": [
-          "Vous cherchez de l'expertise, pas des bras",
-          "Vous valorisez la qualité plus que le volume",
-          "Vous voulez parler aux gens qui font",
-          "Vous avez un vrai budget (>10K€ pour un projet)",
-          "Vous acceptez nos recommandations (même quand ça pique)"
-        ]
-      },
-      "badFit": {
-        "title": "Pas pour vous si...",
-        "items": [
-          "Vous cherchez le moins cher",
-          "Vous voulez 10 devs demain matin",
-          "Vous avez déjà tout décidé et cherchez des exécutants",
-          "Votre projet est urgent ET mal défini"
-        ]
-      }
-    },
-    "team": {
-      "eyebrow": "L'équipe",
-      "title": "4 experts. 0 junior.",
-      "subtitle": "Une micro-équipe de seniors complémentaires. Chacun expert dans son domaine, tous impliqués sur chaque projet.",
-      "stats": [
-        { "value": "4", "label": "experts complémentaires" },
-        { "value": "50+", "label": "projets en production" },
-        { "value": "100%", "label": "seniors" }
-      ]
-    },
-    "testimonials": {
-      "eyebrow": "Ils nous font confiance",
-      "title": "Ce que nos clients disent (vraiment)",
-      "items": [
-        {
-          "quote": "Notre plateforme e-commerce gère maintenant 10x plus de trafic. Black Friday sans stress.",
-          "author": "Sophie Martin",
-          "role": "Directrice Digital",
-          "company": "Nike France",
-          "result": "x10 capacité serveur"
-        },
-        {
-          "quote": "L'app de diagnostic peau a dépassé les 500K téléchargements en 6 mois.",
-          "author": "Claire Dubois",
-          "role": "Chief Digital Officer",
-          "company": "Clarins",
-          "result": "500K downloads"
-        },
-        {
-          "quote": "Notre outil IA génère 1000 descriptions produits par jour. Gain de temps colossal.",
-          "author": "Thomas Bernard",
-          "role": "Head of E-commerce",
-          "company": "L'Oréal Paris",
-          "result": "1000 contenus/jour"
-        },
-        {
-          "quote": "Le configurateur 3D a augmenté notre taux de conversion de 45%.",
-          "author": "Marie Lefèvre",
-          "role": "Directrice E-commerce",
-          "company": "Céline",
-          "result": "+45% conversion"
-        },
-        {
-          "quote": "App de coaching sportif livrée en 8 semaines. 4.9 étoiles sur les stores.",
-          "author": "Alexandre Petit",
-          "role": "VP Product",
-          "company": "Decathlon",
-          "result": "4.9/5 App Store"
-        },
-        {
-          "quote": "Dashboard temps réel pour 200 magasins. Décisions data-driven enfin possibles.",
-          "author": "Julie Moreau",
-          "role": "DSI",
-          "company": "Sephora",
-          "result": "200 magasins connectés"
-        }
-      ]
-    },
-    "cases": {
-      "eyebrow": "Nos réalisations",
-      "title": "Des projets qui font la différence",
-      "subtitle": "Pas de slides. Des apps en production.",
-      "items": [
-        {
-          "title": "Plateforme E-commerce Luxe",
-          "type": "E-commerce haute performance",
-          "summary": "Refonte complète avec configurateur 3D et paiement fractionné.",
-          "result": "+65% de conversion",
-          "badge": "E-commerce"
-        },
-        {
-          "title": "App Coaching Personnalisé",
-          "type": "Application mobile iOS/Android",
-          "summary": "Programmes adaptatifs, tracking temps réel, communauté intégrée.",
-          "result": "500K utilisateurs actifs",
-          "badge": "Mobile"
-        },
-        {
-          "title": "IA Génération Contenu",
-          "type": "Solution IA sur-mesure",
-          "summary": "Génération automatique de fiches produits multilingues.",
-          "result": "1000 contenus/jour",
-          "badge": "IA"
-        },
-        {
-          "title": "Dashboard Analytics Retail",
-          "type": "Business Intelligence",
-          "summary": "Visualisation temps réel des KPIs pour 200+ points de vente.",
-          "result": "-40% temps de décision",
-          "badge": "Data"
-        }
-      ],
-      "cta": "Voir toutes nos réalisations"
-    },
-    "expertise": {
-      "eyebrow": "Nos expertises",
-      "title": "Vous avez le problème. On a la solution.",
-      "subtitle": "Pas de buzzwords. Des compétences qui livrent.",
-      "items": [
-        {
-          "title": "Intelligence artificielle",
-          "description": "IA générative et prédictive branchée sur vos données. De l'automatisation qui marche vraiment."
-        },
-        {
-          "title": "Plateformes web",
-          "description": "Sites rapides, SEO-friendly, qui font ce qu'on leur demande. Score Lighthouse 95+."
-        },
-        {
-          "title": "Logiciels métier",
-          "description": "Logiciels sur-mesure qui s'adaptent à vos process, pas l'inverse."
-        },
-        {
-          "title": "Applications mobiles",
-          "description": "iOS/Android en React Native. Une codebase, deux stores, zéro compromis sur l'UX."
-        },
-        {
-          "title": "E-commerce",
-          "description": "Parcours d'achat optimisés. Shopify, Prestashop ou sur-mesure."
-        },
-        {
-          "title": "UX/UI Design",
-          "description": "Interfaces claires, design systems, tests utilisateurs. Le beau qui convertit."
-        },
-        {
-          "title": "Cybersécurité",
-          "description": "Audits de sécurité, pentests, conformité RGPD/SOC2. Protection proactive."
-        }
-      ]
-    },
-    "blog": {
-      "title": "Blog",
-      "subtitle": "Veille, retours d'expérience et analyses produit/IA.",
-      "cta": "Tous nos articles"
-    },
-    "jobs": {
-      "title": "Jobs",
-      "subtitle": "Rejoignez une équipe exigeante et bienveillante.",
-      "cta": "Voir les jobs"
-    },
-    "press": {
-      "eyebrow": "Presse",
-      "title": "Ils parlent de nous",
-      "outlets": ["Le Parisien", "BFM Business", "JDN", "Challenges", "Le Point"]
-    },
-    "locations": {
-      "eyebrow": "Bureaux",
-      "title": "Nos bureaux",
-      "items": [
-        {
-          "city": "Paris",
-          "address": "2 rue Neuve Saint-Pierre",
-          "zip": "75004",
-          "country": "France"
-        },
-        {
-          "city": "Nantes",
-          "address": "10 rue Voltaire",
-          "zip": "44000",
-          "country": "France"
-        },
-        {
-          "city": "Lyon",
-          "address": "3 rue de la République",
-          "zip": "69001",
-          "country": "France"
-        }
-      ]
-    },
-    "services": {
-      "title": "Ce que Yodev construit pour vous",
-      "subtitle": "Des expertises web, mobile et IA pour livrer des produits utiles et scalables.",
-      "items": [
-        {
-          "title": "Plateformes web",
-          "description": "Sites vitrines, plateformes métiers, applications web robustes et rapides.",
-          "bullets": ["Next.js / React", "SEO & performance", "Design system", "Analytics & tracking"]
-        },
-        {
-          "title": "Applications mobiles",
-          "description": "Apps iOS/Android fiables, conçues pour l'usage et la croissance.",
-          "bullets": ["React Native / Flutter", "UX mobile-first", "API & back-office", "Publication stores"]
-        },
-        {
-          "title": "Solutions IA & data",
-          "description": "Modèles d'IA, assistants et automatisations branchés à vos données.",
-          "bullets": ["IA générative & RAG", "Prédictif & scoring", "MLOps & déploiement", "Sécurité & conformité"]
-        }
-      ]
-    },
-    "method": {
-      "title": "Méthode Yodev",
-      "subtitle": "Cadrage clair, exécution rapide, itérations continues.",
-      "steps": [
-        {
-          "title": "Cadrage & objectifs",
-          "description": "KPI, usages, contraintes, plan de delivery."
-        },
-        {
-          "title": "Design & architecture",
-          "description": "UX/UI, choix techniques, roadmap itérative."
-        },
-        {
-          "title": "Build & intégration",
-          "description": "Développement, QA, sécurité, performance."
-        },
-        {
-          "title": "Déploiement & évolution",
-          "description": "Mise en production, suivi, améliorations."
-        }
-      ]
-    },
-    "offers": {
-      "eyebrow": "Nos offres",
-      "title": "Des prix clairs. Pas de devis surprise.",
-      "subtitle": "Choisissez le format qui correspond à votre besoin. On ajuste ensemble.",
-      "items": [
-        {
-          "name": "Diagnostic Flash",
-          "description": "Valider la faisabilité avant d'investir",
-          "price": "À partir de 2 500€ HT",
-          "duration": "1 semaine",
-          "idealFor": "Valider une idée, auditer l'existant",
-          "bullets": [
-            "2h d'atelier de cadrage",
-            "Audit technique & data",
-            "Benchmark solutions marché",
-            "Rapport 15-20 pages",
-            "Architecture recommandée",
-            "Estimation budget 3 scénarios",
-            "1h de conseil offerte (30 jours)"
-          ],
-          "cta": "Réserver mon diagnostic"
-        },
-        {
-          "name": "Build MVP",
-          "description": "Lancer votre produit sur le marché",
-          "price": "À partir de 12 000€ HT",
-          "duration": "6-10 semaines",
-          "idealFor": "Startups, nouveaux produits",
-          "featured": true,
-          "bullets": [
-            "Phase Design (2 sem) : UX research, wireframes, UI Figma, design system",
-            "Phase Dev (4-6 sem) : Front & back-end, API, tests automatisés",
-            "Phase Launch (1 sem) : Déploiement, analytics, formation 2h",
-            "Slack dédié + démos hebdo",
-            "Code source livré (vous êtes propriétaire)",
-            "30 jours de garantie corrective"
-          ],
-          "examples": [
-            { "type": "App marketplace", "price": "~12K€" },
-            { "type": "Plateforme SaaS", "price": "~25K€" },
-            { "type": "Dashboard IA", "price": "~18K€" }
-          ],
-          "cta": "Obtenir un devis en 48h"
-        },
-        {
-          "name": "Scale",
-          "description": "Accélérer sans recruter",
-          "price": "À partir de 7 500€ HT/mois/dev",
-          "duration": "3 mois minimum",
-          "idealFor": "Scale-ups, renfort d'équipe",
-          "bullets": [
-            "1 à 5 ingénieurs seniors dédiés",
-            "Intégration complète (Slack, Jira, GitHub)",
-            "Daily standup avec votre équipe",
-            "Code reviews & pair programming",
-            "Backup garanti si absence",
-            "Profils : Full-stack, Mobile, Data/ML, DevOps, Tech Lead"
-          ],
-          "comparison": {
-            "vsFreelance": ["Backup garanti", "Qualité homogène", "0 admin"],
-            "vsRecrutement": ["Opérationnel en 1 semaine", "Pas de CDI", "Flexibilité up/down"]
-          },
-          "cta": "Planifier un appel"
-        },
-        {
-          "name": "Conseil IA",
-          "description": "Explorer le potentiel IA de votre métier",
-          "price": "À partir de 5 000€ HT",
-          "duration": "2-4 semaines",
-          "idealFor": "Directions innovation, DSI",
-          "badge": "Nouveau",
-          "bullets": [
-            "Identification des cas d'usage IA pertinents",
-            "POC sur 1 cas d'usage prioritaire",
-            "Évaluation ROI et complexité",
-            "Roadmap de déploiement"
-          ],
-          "useCases": [
-            "Automatisation de tâches répétitives",
-            "Génération de contenu (fiches, emails)",
-            "Chatbot / assistant interne",
-            "Analyse prédictive"
-          ],
-          "cta": "Explorer le potentiel IA"
-        }
-      ]
-    },
-    "faq": {
-      "eyebrow": "Questions fréquentes",
-      "title": "Ce que vous voulez savoir (avant de nous contacter)",
-      "items": [
-        {
-          "question": "C'est quoi vos délais, concrètement ?",
-          "answer": "MVP en 6-10 semaines. Première démo en 2 semaines max. On s'engage sur des dates, pas sur des estimations floues."
-        },
-        {
-          "question": "Forfait ou régie ?",
-          "answer": "Les deux. Forfait si le scope est clair, régie si on explore ensemble. Dans tous les cas, vous savez ce que vous payez."
-        },
-        {
-          "question": "On peut brancher de l'IA sur notre stack existante ?",
-          "answer": "Oui. On se connecte à vos données, vos APIs, vos outils. Pas besoin de tout refaire."
-        },
-        {
-          "question": "Le code, il est à qui ?",
-          "answer": "À vous. 100%. Code source, documentation, tout. C'est votre projet."
-        },
-        {
-          "question": "Et après le lancement ?",
-          "answer": "On reste dispo. Maintenance continue, interventions ponctuelles, ou formation de votre équipe. Vous choisissez."
-        },
-        {
-          "question": "Comment on commence ?",
-          "answer": "Un appel de 30 minutes pour comprendre votre besoin. Devis en 48h. Premier sprint possible sous 2 semaines."
-        }
-      ]
-    },
-    "cta": {
-      "eyebrow": "Prêt ?",
-      "title": "Et si on en parlait ?",
-      "subtitle": "30 minutes pour comprendre votre projet. Zéro engagement. Si ça matche, on démarre sous 2 semaines.",
-      "button": "Réserver un appel",
-      "secondary": "Ou écrivez-nous directement"
-    }
-  },
-  "AiPage": {
-    "eyebrow": "IA EN PRODUCTION",
-    "title": "L'IA qui fait vraiment le job",
-    "subtitle": "Pas de POC éternel. Des solutions IA en prod qui génèrent du ROI. GPT-4, Claude, Gemini... On maîtrise les modèles, vous récoltez les résultats.",
-    "cta": "Parler IA avec un expert",
-    "servicesEyebrow": "Ce qu'on fait",
-    "servicesTitle": "De l'audit au déploiement",
-    "services": [
-      {
-        "title": "Audit Data & IA",
-        "description": "On analyse vos process, vos données, vos douleurs. On identifie les quick wins IA à fort ROI."
-      },
-      {
-        "title": "Applications IA",
-        "description": "Chatbots, assistants, automatisation... Des apps IA qui s'intègrent à votre stack et qui marchent."
-      },
-      {
-        "title": "Modèles sur mesure",
-        "description": "Fine-tuning, RAG, systèmes prédictifs. Des modèles entraînés sur VOS données."
-      }
-    ],
-    "teamEyebrow": "L'équipe IA",
-    "teamTitle": "Des experts IA. Pas des consultants PowerPoint.",
-    "teamBody": "Notre expert IA senior a déjà déployé des dizaines de projets en production. De l'idée au déploiement, vous parlez à celui qui fait.",
-    "teamStats": [
-      { "value": "50+", "label": "projets en prod" },
-      { "value": "1", "label": "expert IA dédié" },
-      { "value": "400K", "label": "contenus générés/an pour 1 client" }
-    ],
-    "expertiseEyebrow": "Nos spécialités",
-    "expertiseTitle": "Ce qu'on maîtrise",
-    "expertise": {
-      "items": [
-        {
-          "title": "IA générative",
-          "description": "GPT-4, Claude, Gemini, Mistral. Génération de contenu, assistants, automatisation de tâches.",
-          "result": "400K fiches/an pour Showroomprivé"
-        },
-        {
-          "title": "Systèmes prédictifs",
-          "description": "Prévision de demande, scoring, détection d'anomalies. Des modèles qui anticipent.",
-          "result": "-30% de gaspillage pour Turboself"
-        },
-        {
-          "title": "Computer Vision",
-          "description": "OCR, analyse d'images, vidéo. Extraction d'info automatique.",
-          "result": "x10 de rapidité de traitement"
-        },
-        {
-          "title": "Data Engineering",
-          "description": "Pipelines, data lakes, MLOps. L'infra qui fait tourner vos modèles.",
-          "result": "99.9% de disponibilité"
-        }
-      ]
-    },
-    "casesEyebrow": "En production",
-    "casesTitle": "Des projets IA qui tournent. Maintenant.",
-    "cases": [
-      {
-        "name": "Showroomprivé",
-        "description": "400K fiches produits générées automatiquement par an avec des LLM multimodaux.",
-        "result": "+400K fiches/an"
-      },
-      {
-        "name": "Turboself",
-        "description": "Prévision d'affluence en cantine. Moins de gaspillage, meilleure gestion.",
-        "result": "-30% gaspillage"
-      },
-      {
-        "name": "Ministère des Armées",
-        "description": "Extraction automatique de graphes relationnels depuis des documents complexes.",
-        "result": "Projet classifié"
-      },
-      {
-        "name": "Okantis",
-        "description": "Data warehouse intelligent avec LLM pour la santé. Recherche et analyse augmentées.",
-        "result": "x5 rapidité d'analyse"
-      }
-    ],
-    "reasonsEyebrow": "Pourquoi nous",
-    "reasonsTitle": "Ce qui nous différencie",
-    "reasons": [
-      "30+ projets IA en production (pas en slide).",
-      "On code. On déploie. On maintient.",
-      "ROI mesurable dès le POC.",
-      "Veille permanente sur les derniers modèles."
-    ],
-    "ctaEyebrow": "Prêt ?",
-    "ctaTitle": "Un projet IA en tête ?",
-    "ctaSubtitle": "De l'idée à la prod en quelques semaines. On commence par un appel de 30 min ?",
-    "ctaButton": "Parler IA"
-  },
-  "ExpertisePage": {
-    "title": "Expertises",
-    "subtitle": "Toutes les compétences pour construire, lancer et faire évoluer vos produits.",
-    "eyebrow": "Savoir-faire",
-    "sectionTitle": "Nos domaines d'intervention",
-    "sectionSubtitle": "Du produit à l'infra, du design à l'IA.",
-    "categories": [
-      {
-        "title": "Développement sur mesure",
-        "items": [
-          "Applications mobiles",
-          "Logiciels métier sur mesure",
-          "Sites e-commerce",
-          "Applications SaaS"
-        ]
-      },
-      {
-        "title": "Data & IA",
-        "items": [
-          "IA Générative",
-          "Computer Vision",
-          "Systèmes prédictifs",
-          "Data Engineering"
-        ]
-      },
-      {
-        "title": "Expertises techniques",
-        "items": [
-          "React / React Native",
-          "Node.js / TypeScript",
-          "Angular",
-          "Python",
-          "PHP",
-          "Flutter",
-          ".NET",
-          "Développement mobile natif"
-        ]
-      },
-      {
-        "title": "Stratégie produit",
-        "items": [
-          "Product Discovery",
-          "UX Research",
-          "UX/UI Design"
-        ]
-      },
-      {
-        "title": "Conseil & Transformation",
-        "items": [
-          "Cloud & DevOps",
-          "Cybersécurité",
-          "Transformation digitale"
-        ]
-      }
-    ],
-    "ctaEyebrow": "Contact",
-    "ctaTitle": "Un besoin précis ?",
-    "ctaSubtitle": "Parlons-en et cadrons la meilleure approche.",
-    "ctaButton": "Nous contacter"
-  },
-  "TeamPage": {
-    "eyebrow": "QUI ON EST",
-    "title": "4 experts qui en avaient marre des agences classiques",
-    "subtitle": "Une micro-équipe de seniors complémentaires. Zéro junior sur vos projets. Zéro commercial entre vous et nous.",
-    "stats": [
-      { "value": "4", "label": "experts" },
-      { "value": "10+ ans", "label": "d'expérience moyenne" },
-      { "value": "50+", "label": "projets livrés" },
-      { "value": "0", "label": "juniors sur vos projets" }
-    ],
-    "valuesEyebrow": "Comment on bosse",
-    "valuesTitle": "Ce qu'on fait (et ce qu'on ne fait pas)",
-    "values": [
-      {
-        "title": "On livre. Vraiment.",
-        "description": "Pas de POC éternel. Des apps en prod qui marchent."
-      },
-      {
-        "title": "On parle direct",
-        "description": "Zéro bullshit. Si ça ne va pas, on le dit. Si c'est bien, aussi."
-      },
-      {
-        "title": "On va vite",
-        "description": "Première démo en 2 semaines. MVP en 6-10 semaines."
-      },
-      {
-        "title": "On mesure tout",
-        "description": "ROI, performance, adoption. Des chiffres, pas des impressions."
-      },
-      {
-        "title": "On reste après",
-        "description": "Maintenance, évolutions, support. On ne disparaît pas après le lancement."
-      },
-      {
-        "title": "On dit non",
-        "description": "Si le projet n'a pas de sens, on vous le dit. Votre succès nous intéresse plus qu'une facture."
-      }
-    ],
-    "ctaEyebrow": "On recrute",
-    "ctaTitle": "Envie de bosser avec nous ?",
-    "ctaSubtitle": "Remote-first, projets variés, équipe bienveillante et exigeante.",
-    "ctaButton": "Voir les postes ouverts"
-  },
-  "ServicesPage": {
-    "eyebrow": "CE QU'ON FAIT",
-    "title": "On code. On livre. On maintient.",
-    "subtitle": "Web, mobile, IA. Du brief à la prod, en passant par le design."
-  },
-  "WorkPage": {
-    "eyebrow": "NOS RÉALISATIONS",
-    "title": "Des apps qui tournent. Des clients qui recommandent.",
-    "subtitle": "Pas de maquettes Figma. Des produits en production."
-  },
-  "OffersPage": {
-    "eyebrow": "NOS OFFRES",
-    "title": "Des prix clairs. Pas de devis surprise.",
-    "subtitle": "4 formats. Choisissez celui qui vous correspond. On ajuste ensemble."
+    "rights": "© 2026 Yodev. Tous droits réservés."
   },
   "MethodPage": {
-    "eyebrow": "COMMENT ON BOSSE",
-    "title": "La méthode qui a fait ses preuves sur 50+ projets",
-    "subtitle": "Pas de magie. Comprendre avant de coder, livrer tôt et souvent, mesurer pour s'améliorer.",
+    "eyebrow": "MÉTHODE",
+    "title": "Une méthode lisible, du cadrage à la mise en ligne",
+    "subtitle": "Comprendre avant de construire, rendre les arbitrages visibles et valider chaque étape avec une preuve adaptée.",
     "steps": [
       {
         "number": "00",
-        "title": "Le brief qui change tout",
-        "duration": "1-2 jours",
-        "description": "Avant de coder une ligne, on passe 2-4h à comprendre votre business. Qui sont vos users ? Quels KPIs ? Qu'est-ce qui a déjà été tenté ?",
-        "deliverable": "Document de cadrage validé par vous"
+        "title": "Cadrer le problème",
+        "duration": "Selon les inconnues",
+        "description": "Identifier les utilisateurs, le résultat attendu, les contraintes, les dépendances et ce qui reste à apprendre avant de choisir une solution.",
+        "deliverable": "Périmètre, risques et critères de décision"
       },
       {
         "number": "01",
         "title": "Design orienté usage",
-        "duration": "1-2 semaines",
-        "description": "On ne dessine pas pour faire joli. On dessine pour que vos utilisateurs accomplissent leurs tâches. Wireframes, prototypes, tests si besoin.",
-        "deliverable": "Maquettes Figma validées"
+        "duration": "Selon les parcours",
+        "description": "Structurer les parcours essentiels, leurs états et les décisions d’interface. Le niveau de prototype dépend du risque à lever.",
+        "deliverable": "Parcours, prototype et règles d’interface"
       },
       {
         "number": "02",
-        "title": "Dev en sprints",
-        "duration": "4-6 semaines",
-        "description": "Chaque semaine, vous voyez l'avancement en démo live. Chaque sprint livre des fonctionnalités testables. Vous pouvez changer d'avis en cours de route.",
-        "deliverable": "App fonctionnelle, incréments hebdo"
+        "title": "Construire par incréments",
+        "duration": "Cadence convenue",
+        "description": "Livrer des tranches utilisables, traiter leurs états réels et vérifier la logique métier avant d’élargir le périmètre.",
+        "deliverable": "Incréments testables sur une preview partagée"
       },
       {
         "number": "03",
-        "title": "Lancement & itération",
-        "duration": "1 semaine + ongoing",
-        "description": "Mise en prod, monitoring, premiers retours utilisateurs. On reste dispos pour les ajustements post-lancement.",
-        "deliverable": "App en prod + 30 jours support inclus"
+        "title": "Lancer et transférer",
+        "duration": "Définie dans le devis",
+        "description": "Préparer la mise en production, surveiller les signaux convenus et organiser la reprise sans dépendance implicite.",
+        "deliverable": "Release vérifiée, documentation et procédure de rollback"
       }
     ],
     "commitments": {
-      "title": "Nos engagements concrets",
+      "title": "Des règles de travail explicites",
       "items": [
-        "Première démo utilisable en 2 semaines max",
-        "Réponse Slack en moins de 4h (jours ouvrés)",
-        "Budget respecté à ±10% (ou on vous prévient avant)",
-        "Code documenté et transférable"
+        "Objectifs, exclusions et critères d'acceptation écrits avant la construction",
+        "Cadence de démonstration et canal de communication convenus au démarrage",
+        "Impact d'un changement de périmètre documenté avant son intégration",
+        "Code, accès et documentation organisés pour le transfert"
       ]
     }
   },
   "AboutPage": {
     "eyebrow": "QUI ON EST",
-    "title": "4 experts. 1 mission. 0 bullshit.",
-    "subtitle": "Un studio artisan à taille humaine. IA, Architecture, Design, Stratégie : chacun expert dans son domaine.",
+    "title": "Concevoir utile, livrer proprement",
+    "subtitle": "Un studio produit et développement à taille humaine, avec un interlocuteur direct.",
     "storyTitle": "Notre histoire",
-    "storyBody": "En 2018, on s'est rendu compte que les agences classiques avaient un problème : trop d'intermédiaires entre le client et le code. Résultat ? Des projets qui traînent, des budgets qui explosent, et des clients frustrés.\n\nOn a décidé de faire autrement : une micro-équipe de seniors qui parlent directement aux clients. Pas de commercial, pas de chef de projet qui fait le téléphone arabe. L'expert qui fait est celui qui vous répond.\n\nAujourd'hui, on est 4 profils complémentaires : IA, Architecture, Design, Stratégie. Chacun a plus de 10 ans d'expérience. Nike, Clarins, L'Oréal nous font confiance. Pas pour notre taille, mais pour notre expertise.",
+    "storyBody": "Yodev part d'un principe simple : moins d'intermédiaires permet de mieux comprendre le problème et de décider plus vite.\n\nChaque mission commence par un cadrage concret, puis avance par livrables vérifiables. Les contraintes, arbitrages et limites restent visibles tout au long du projet.\n\nL'objectif n'est pas de vendre une transformation abstraite, mais de livrer un produit utile, maintenable et transmissible.",
     "valuesEyebrow": "Ce qui nous anime",
     "valuesTitle": "Nos valeurs",
     "values": [
       {
-        "title": "On code, on ne commente pas",
-        "description": "Moins de réunions, plus de lignes de code qui marchent. On avance, on livre, on itère."
+        "title": "Construire et vérifier",
+        "description": "Chaque incrément est relié à un besoin, un critère d'acceptation et une preuve de fonctionnement."
       },
       {
-        "title": "Transparence totale",
-        "description": "Budget, planning, difficultés : vous savez tout. Pas de mauvaise surprise en fin de projet."
+        "title": "Transparence utile",
+        "description": "Budget, planning, risques et arbitrages sont visibles au moment où une décision peut encore être prise."
       },
       {
-        "title": "L'équipe > l'individu",
-        "description": "Profils complémentaires, backup garanti. Si un dev est malade, le projet continue."
+        "title": "Produit transmissible",
+        "description": "Le code, la documentation et les accès sont organisés pour éviter une dépendance artificielle au prestataire."
       }
     ],
     "ctaEyebrow": "Prêt ?",
     "ctaTitle": "Parlons de votre projet",
-    "ctaSubtitle": "30 minutes pour comprendre vos besoins. Zéro engagement.",
-    "ctaButton": "Réserver un appel"
-  },
-  "ContactPage": {
-    "eyebrow": "PREMIER CONTACT",
-    "title": "On répond en 24h. Promis.",
-    "subtitle": "Pas de formulaire interminable. Dites-nous en 3 phrases ce dont vous avez besoin.",
-    "info": [
-      "Réponse garantie en 24h ouvrées",
-      "Premier appel de 30 min offert",
-      "Devis détaillé en 48-72h"
-    ],
-    "emailTitle": "Par email",
-    "email": "hello@yodev.fr",
-    "emailCta": "Nous écrire",
-    "calendarTitle": "Par visio",
-    "calendarCta": "Réserver un créneau",
-    "form": {
-      "nameLabel": "Votre nom",
-      "emailLabel": "Email pro",
-      "budgetLabel": "Budget approximatif (optionnel)",
-      "messageLabel": "En une phrase, c'est quoi le projet ?",
-      "submit": "Envoyer",
-      "placeholders": {
-        "name": "Marie Dupont",
-        "email": "marie@entreprise.com",
-        "budget": "Sélectionnez une fourchette",
-        "message": "On veut lancer une app mobile pour... / On cherche à automatiser... / On a besoin d'une équipe pour..."
-      },
-      "budgetOptions": [
-        "< 10K€",
-        "10-25K€",
-        "25-50K€",
-        "50-100K€",
-        "> 100K€",
-        "Je ne sais pas encore"
-      ]
-    }
-  },
-  "Services": {
-    "backButton": "Retour aux services",
-    "cta": "Démarrer un projet",
-    "viewWork": "Voir nos réalisations",
-    "servicesEyebrow": "Ce qu'on fait",
-    "servicesTitle": "Nos prestations",
-    "methodologyEyebrow": "Comment on travaille",
-    "methodologyTitle": "Notre méthode",
-    "expertiseEyebrow": "Nos domaines",
-    "expertiseTitle": "Expertise technique",
-    "projectsEyebrow": "Cas concrets",
-    "projectsTitle": "Projets réalisés",
-    "technologiesEyebrow": "Stack technique",
-    "technologiesTitle": "Technologies maîtrisées",
-    "whyUsEyebrow": "Pourquoi nous",
-    "whyUsTitle": "Ce qui fait la différence",
-    "ctaTitle": "Prêt à démarrer ?",
-    "ctaSubtitle": "Discutons de votre projet et voyons comment on peut vous aider.",
-    "ctaButton": "Nous contacter",
-
-    "ai": {
-      "title": "Intelligence Artificielle",
-      "subtitle": "L'IA qui fait vraiment le job",
-      "description": "Pas de POC éternel. Des solutions IA en prod qui génèrent du ROI. On transforme vos données en avantage concurrentiel.",
-      "services": [
-        {
-          "title": "Audit Data & IA",
-          "description": "On analyse vos process et identifie les quick wins IA à fort impact. Pas de bullshit, que du concret."
-        },
-        {
-          "title": "Applications IA",
-          "description": "Chatbots, assistants, automatisation. Des apps qui s'intègrent à votre stack et qui fonctionnent vraiment."
-        },
-        {
-          "title": "Modèles sur mesure",
-          "description": "Fine-tuning, RAG, prédictif. Des modèles entraînés sur VOS données pour VOS cas d'usage."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Cadrage",
-          "description": "On identifie les use cases à fort ROI et on valide la faisabilité technique."
-        },
-        {
-          "title": "POC rapide",
-          "description": "Prototype fonctionnel en 2-4 semaines pour valider l'approche."
-        },
-        {
-          "title": "Production",
-          "description": "Industrialisation, monitoring, amélioration continue."
-        },
-        {
-          "title": "Itérations",
-          "description": "Feedback utilisateurs, fine-tuning, nouvelles fonctionnalités."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "IA Générative",
-          "description": "GPT-4, Claude, Gemini, Mistral. On maîtrise les meilleurs LLMs et on sait lequel choisir pour votre cas.",
-          "result": "400K contenus générés/an"
-        },
-        {
-          "title": "Systèmes prédictifs",
-          "description": "Machine Learning appliqué à vos données métier. Prévisions, détection d'anomalies, optimisation.",
-          "result": "-30% de gaspillage"
-        },
-        {
-          "title": "Computer Vision",
-          "description": "Reconnaissance d'images, OCR, analyse vidéo. Du traitement intelligent de vos données visuelles.",
-          "result": "x5 rapidité d'analyse"
-        },
-        {
-          "title": "RAG & Embeddings",
-          "description": "Bases de connaissances intelligentes. Vos documents deviennent interrogeables en langage naturel.",
-          "result": "90% de précision"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Génération de fiches produit",
-          "description": "IA générative pour créer automatiquement des descriptions produit optimisées SEO.",
-          "result": "+400K fiches/an"
-        },
-        {
-          "name": "Prévision de consommation",
-          "description": "Système prédictif pour anticiper les commandes en restauration collective.",
-          "result": "-30% gaspillage"
-        },
-        {
-          "name": "Analyse documentaire",
-          "description": "Extraction et classification automatique d'informations de documents complexes.",
-          "result": "x5 productivité"
-        },
-        {
-          "name": "Assistant métier",
-          "description": "Chatbot interne entraîné sur la documentation et les process de l'entreprise.",
-          "result": "-60% tickets support"
-        }
-      ],
-      "technologies": ["GPT-4", "Claude", "Gemini", "Mistral", "LangChain", "Python", "TensorFlow", "PyTorch", "Pinecone", "Chroma"],
-      "whyUs": [
-        "4 experts seniors IA en interne",
-        "50+ projets IA en production",
-        "Pas de POC éternel, on livre",
-        "Veille techno permanente"
-      ]
-    },
-
-    "web": {
-      "title": "Plateformes Web",
-      "subtitle": "Des sites qui convertissent. Pas des vitrines.",
-      "description": "Web apps, sites vitrines, plateformes métier. Rapides, SEO-friendly, maintenables. On construit des sites qui travaillent pour vous.",
-      "services": [
-        {
-          "title": "Développement complet",
-          "description": "Du design au déploiement. Sites vitrines, web apps, plateformes métier sur-mesure."
-        },
-        {
-          "title": "Refonte & Migration",
-          "description": "On modernise votre site sans casser ce qui marche. Migration progressive, SEO préservé."
-        },
-        {
-          "title": "Maintenance & Évolutions",
-          "description": "Support réactif, mises à jour sécurité, nouvelles fonctionnalités. Votre site reste vivant."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Cadrage",
-          "description": "Objectifs, KPIs, personas, contraintes techniques. On pose les bases."
-        },
-        {
-          "title": "Conception",
-          "description": "Wireframes, maquettes, validation. Vous voyez avant qu'on code."
-        },
-        {
-          "title": "Développement",
-          "description": "Sprints de 2 semaines, démos régulières. Vous suivez l'avancement."
-        },
-        {
-          "title": "Lancement",
-          "description": "Déploiement, monitoring, itérations. On reste à vos côtés."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Performance",
-          "description": "Score Lighthouse 90+, Core Web Vitals au vert. Vos utilisateurs n'attendent pas.",
-          "result": "Lighthouse 95+"
-        },
-        {
-          "title": "SEO technique",
-          "description": "Architecture optimisée, balisage sémantique, sitemap. Google vous trouve.",
-          "result": "+150% trafic organique"
-        },
-        {
-          "title": "Accessibilité",
-          "description": "WCAG 2.1 AA, navigation clavier, lecteurs d'écran. Tout le monde compte.",
-          "result": "Score 100%"
-        },
-        {
-          "title": "Maintenabilité",
-          "description": "Code propre, documenté, testé. Vos futurs devs nous remercieront.",
-          "result": "-40% temps debug"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Plateforme B2B",
-          "description": "Web app complète avec gestion utilisateurs, dashboard analytics et API.",
-          "result": "+40% productivité"
-        },
-        {
-          "name": "Site corporate",
-          "description": "Refonte complète avec nouveau design system et CMS headless.",
-          "result": "+120% conversions"
-        },
-        {
-          "name": "Marketplace",
-          "description": "Plateforme multi-vendeurs avec paiement intégré et gestion automatisée.",
-          "result": "500K€ GMV/mois"
-        },
-        {
-          "name": "Portail client",
-          "description": "Espace client sécurisé avec suivi commandes et support intégré.",
-          "result": "-50% appels support"
-        }
-      ],
-      "technologies": ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS", "Vercel", "AWS"],
-      "whyUs": [
-        "Architecture scalable dès le départ",
-        "Performance non négociable",
-        "Code maintenable et documenté",
-        "Support réactif post-livraison"
-      ]
-    },
-
-    "custom-software": {
-      "title": "Logiciels Métier",
-      "subtitle": "Des logiciels qui s'adaptent à vous. Pas l'inverse.",
-      "description": "On cartographie vos besoins et on développe une app qui y répond parfaitement. Fini les workarounds et les Excel qui débordent.",
-      "services": [
-        {
-          "title": "Analyse & Conception",
-          "description": "Ateliers métier, cartographie des process, spécifications fonctionnelles. On comprend avant de coder."
-        },
-        {
-          "title": "Développement sur mesure",
-          "description": "Application taillée pour vos besoins. Pas de licence, pas de limites, que du sur-mesure."
-        },
-        {
-          "title": "Intégration SI",
-          "description": "Connexion à vos outils existants : ERP, CRM, comptabilité. Tout communique."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Kickoff & Interviews",
-          "description": "On rencontre les utilisateurs finaux. Pas juste les décideurs."
-        },
-        {
-          "title": "Ateliers métier",
-          "description": "Cartographie des process, identification des pain points, priorisation."
-        },
-        {
-          "title": "Conception UX",
-          "description": "Wireframes, flux utilisateur, validation avec les équipes terrain."
-        },
-        {
-          "title": "Développement itératif",
-          "description": "Sprints courts, démos fréquentes, ajustements en continu."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Domain-Driven Design",
-          "description": "Architecture alignée sur votre métier. Le code parle votre langage.",
-          "result": "Évolutivité garantie"
-        },
-        {
-          "title": "Test-Driven Development",
-          "description": "Tests avant code. Moins de bugs, plus de confiance à chaque release.",
-          "result": "-80% bugs en prod"
-        },
-        {
-          "title": "DevOps & CI/CD",
-          "description": "Déploiements automatisés, monitoring, rollback instantané.",
-          "result": "Déploiements quotidiens"
-        },
-        {
-          "title": "Formation utilisateurs",
-          "description": "Documentation, vidéos, sessions de formation. Vos équipes sont autonomes.",
-          "result": "100% adoption"
-        }
-      ],
-      "projects": [
-        {
-          "name": "ERP Logistique",
-          "description": "Gestion complète des flux, stocks, expéditions pour un e-commerçant.",
-          "result": "+60% productivité"
-        },
-        {
-          "name": "CRM sur mesure",
-          "description": "Suivi client adapté aux process spécifiques d'une agence immobilière.",
-          "result": "+35% ventes"
-        },
-        {
-          "name": "Planning RH",
-          "description": "Gestion des plannings, congés, compétences pour une PME de 200 personnes.",
-          "result": "-4h/semaine admin"
-        },
-        {
-          "name": "Gestion de production",
-          "description": "Suivi temps réel, traçabilité, reporting pour un industriel.",
-          "result": "+25% rendement"
-        }
-      ],
-      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "GraphQL", "TypeScript"],
-      "whyUs": [
-        "On comprend votre métier avant de coder",
-        "Tests et qualité non négociables",
-        "Accompagnement long terme",
-        "Vos données restent chez vous"
-      ]
-    },
-
-    "mobile": {
-      "title": "Applications Mobiles",
-      "subtitle": "Des apps que vos utilisateurs adorent.",
-      "description": "iOS, Android, cross-platform. Des apps performantes, fluides, qui créent de l'engagement. Pas des prototypes qui lagguent.",
-      "services": [
-        {
-          "title": "Audit & Conseil",
-          "description": "Analyse de votre app existante ou de votre projet. Recommandations techniques et UX."
-        },
-        {
-          "title": "Développement complet",
-          "description": "De l'idée au store. Design, développement, tests, déploiement, maintenance."
-        },
-        {
-          "title": "Refonte & Modernisation",
-          "description": "Migration vers une stack moderne sans perdre vos utilisateurs."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Discovery",
-          "description": "Personas, user stories, benchmark concurrence. On pose les fondations."
-        },
-        {
-          "title": "Design",
-          "description": "Wireframes, UI kit, prototype interactif. Vous testez avant le code."
-        },
-        {
-          "title": "Développement",
-          "description": "Sprints de 2 semaines, builds de test réguliers. Vous suivez l'avancement."
-        },
-        {
-          "title": "Publication",
-          "description": "Soumission stores, ASO, analytics. Votre app est visible."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "React Native",
-          "description": "Une base de code, deux plateformes. Performance native, développement optimisé.",
-          "result": "-40% temps dev"
-        },
-        {
-          "title": "Flutter",
-          "description": "UI fluide et personnalisée. Idéal pour des expériences visuelles riches.",
-          "result": "60 FPS garanti"
-        },
-        {
-          "title": "Push & Engagement",
-          "description": "Notifications intelligentes, deep linking, rétention optimisée.",
-          "result": "+45% rétention"
-        },
-        {
-          "title": "Mode offline",
-          "description": "Synchronisation intelligente. Votre app fonctionne même sans réseau.",
-          "result": "100% disponibilité"
-        }
-      ],
-      "projects": [
-        {
-          "name": "App fidélité retail",
-          "description": "Scan, points, récompenses, notifications personnalisées.",
-          "result": "500K+ téléchargements"
-        },
-        {
-          "name": "App métier terrain",
-          "description": "Saisie offline, sync automatique, gestion photos pour techniciens.",
-          "result": "+2h/jour gagnées"
-        },
-        {
-          "name": "App santé",
-          "description": "Suivi patient, rappels médicaments, téléconsultation intégrée.",
-          "result": "4.8★ sur stores"
-        },
-        {
-          "name": "App événementielle",
-          "description": "Programme, networking, scan badges, notifications live.",
-          "result": "+70% engagement"
-        }
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo", "TypeScript", "GraphQL"],
-      "whyUs": [
-        "Expérience native non négociable",
-        "Publication stores maîtrisée",
-        "Tests sur vrais devices",
-        "Maintenance long terme"
-      ]
-    },
-
-    "ecommerce": {
-      "title": "E-commerce",
-      "subtitle": "Des boutiques qui font croître votre CA.",
-      "description": "Shopify, Prestashop, sur-mesure. On conçoit des parcours d'achat qui convertissent et des back-offices qui vous font gagner du temps.",
-      "services": [
-        {
-          "title": "Création de boutique",
-          "description": "De A à Z. Stratégie, design, développement, lancement. Clé en main."
-        },
-        {
-          "title": "Refonte & Migration",
-          "description": "Migration de plateforme sans perdre votre SEO ni vos clients."
-        },
-        {
-          "title": "Optimisation conversion",
-          "description": "A/B testing, tunnel d'achat, UX. Chaque % compte."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Audit & Stratégie",
-          "description": "Analyse concurrence, positionnement, KPIs cibles."
-        },
-        {
-          "title": "UX & Parcours",
-          "description": "Tunnel d'achat optimisé, réduction des frictions."
-        },
-        {
-          "title": "Développement",
-          "description": "Boutique, paiement, logistique, intégrations."
-        },
-        {
-          "title": "Optimisation",
-          "description": "Tests A/B, analytics, itérations continues."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Conversion",
-          "description": "Tunnel d'achat optimisé, one-click checkout, abandon panier.",
-          "result": "+35% conversion"
-        },
-        {
-          "title": "Intégration SI",
-          "description": "Connexion ERP, PIM, CRM. Vos stocks et commandes synchronisés.",
-          "result": "0 ressaisie"
-        },
-        {
-          "title": "Omnicanalité",
-          "description": "Click & collect, marketplace, retail. Partout où sont vos clients.",
-          "result": "+50% CA"
-        },
-        {
-          "title": "Performance",
-          "description": "Temps de chargement < 2s. Chaque seconde compte pour la conversion.",
-          "result": "Lighthouse 95+"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Boutique luxe",
-          "description": "Refonte complète avec expérience premium et checkout optimisé.",
-          "result": "+120% conversion"
-        },
-        {
-          "name": "Marketplace B2B",
-          "description": "Plateforme multi-vendeurs avec gestion commandes complexes.",
-          "result": "2M€ GMV/mois"
-        },
-        {
-          "name": "Click & Collect",
-          "description": "Intégration POS, stocks temps réel, parcours omnicanal.",
-          "result": "+40% panier moyen"
-        },
-        {
-          "name": "Abonnement box",
-          "description": "Système d'abonnement flexible avec gestion churn.",
-          "result": "-25% churn"
-        }
-      ],
-      "technologies": ["Shopify", "Prestashop", "WooCommerce", "Stripe", "Algolia", "Klaviyo", "React", "Node.js"],
-      "whyUs": [
-        "Obsession de la conversion",
-        "Intégration SI maîtrisée",
-        "Data-driven, pas de feeling",
-        "Support e-commerce dédié"
-      ]
-    },
-
-    "ux-design": {
-      "title": "UX/UI Design",
-      "subtitle": "Des interfaces que vos utilisateurs comprennent.",
-      "description": "UX research, wireframes, design systems, tests utilisateurs. On conçoit des interfaces claires qui guident vos utilisateurs vers l'action.",
-      "services": [
-        {
-          "title": "UX Research",
-          "description": "Interviews, tests utilisateurs, analytics. On comprend vos users avant de designer."
-        },
-        {
-          "title": "UI Design",
-          "description": "Maquettes, design system, iconographie. Des interfaces belles ET fonctionnelles."
-        },
-        {
-          "title": "Audit UX",
-          "description": "Analyse de votre produit existant. Recommandations actionnables, quick wins identifiés."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Brief & Discovery",
-          "description": "Objectifs, contraintes, personas. On aligne tout le monde."
-        },
-        {
-          "title": "Wireframes",
-          "description": "Structure, flux, architecture. Le squelette avant la peau."
-        },
-        {
-          "title": "Prototype",
-          "description": "Maquettes interactives testables. Validation avant développement."
-        },
-        {
-          "title": "Design System",
-          "description": "Composants réutilisables, guidelines. Cohérence garantie."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "User Research",
-          "description": "Tests utilisateurs, interviews, enquêtes. Décisions basées sur des faits.",
-          "result": "+40% satisfaction"
-        },
-        {
-          "title": "Design System",
-          "description": "Bibliothèque de composants. Consistance et rapidité de développement.",
-          "result": "-50% temps design"
-        },
-        {
-          "title": "Prototypage",
-          "description": "Figma interactif, tests avant code. Itérations rapides et peu coûteuses.",
-          "result": "-30% iterations dev"
-        },
-        {
-          "title": "Accessibilité",
-          "description": "WCAG 2.1, contraste, navigation clavier. Design inclusif.",
-          "result": "Score AA+"
-        }
-      ],
-      "projects": [
-        {
-          "name": "App bancaire",
-          "description": "Refonte complète UX pour une fintech. Parcours simplifié.",
-          "result": "+60% tâches complétées"
-        },
-        {
-          "name": "Dashboard SaaS",
-          "description": "Design system + refonte interface pour un outil B2B.",
-          "result": "-40% tickets support"
-        },
-        {
-          "name": "Site e-commerce",
-          "description": "Optimisation tunnel d'achat et fiches produit.",
-          "result": "+25% conversion"
-        },
-        {
-          "name": "App métier",
-          "description": "UX terrain pour techniciens. Interface optimisée mobile-first.",
-          "result": "4.7★ satisfaction interne"
-        }
-      ],
-      "technologies": ["Figma", "Framer", "Principle", "Whimsical", "Hotjar", "Maze", "Notion", "Storybook"],
-      "whyUs": [
-        "Design basé sur la recherche",
-        "Pas de tendances, de l'utile",
-        "Handoff dev impeccable",
-        "Tests utilisateurs systématiques"
-      ]
-    },
-
-    "cybersecurity": {
-      "title": "Cybersécurité",
-      "subtitle": "Testez et garantissez la sécurité de votre entreprise.",
-      "description": "Audits de sécurité, pentests, analyse de vulnérabilités. On trouve les failles avant les hackers. Rapports exploitables, pas du PDF pour le tiroir.",
-      "services": [
-        {
-          "title": "Tests d'intrusion",
-          "description": "Pentest web, API, mobile, réseau. On attaque comme les vrais."
-        },
-        {
-          "title": "Audit code source",
-          "description": "Analyse SAST, review manuelle. On trouve ce que les outils ratent."
-        },
-        {
-          "title": "Audit infrastructure",
-          "description": "AWS, Azure, GCP. Configuration, IAM, secrets. Rien ne nous échappe."
-        }
-      ],
-      "methodology": [
-        {
-          "title": "Reconnaissance",
-          "description": "Cartographie de votre surface d'attaque. On voit ce que voient les attaquants."
-        },
-        {
-          "title": "Intrusion",
-          "description": "Exploitation des vulnérabilités identifiées. Tests réalistes."
-        },
-        {
-          "title": "Analyse",
-          "description": "Qualification des risques, priorisation, recommandations."
-        },
-        {
-          "title": "Remédiation",
-          "description": "Accompagnement correction, contre-audit. Vous êtes vraiment protégé."
-        }
-      ],
-      "expertise": [
-        {
-          "title": "Pentest Web",
-          "description": "OWASP Top 10, injections, XSS, CSRF. Applications web passées au crible.",
-          "result": "100% vulns critiques trouvées"
-        },
-        {
-          "title": "Pentest API",
-          "description": "Authentification, autorisations, logique métier. Vos APIs sécurisées.",
-          "result": "Zero breach post-audit"
-        },
-        {
-          "title": "Audit Cloud",
-          "description": "Configuration, IAM, secrets, logs. Votre cloud durci.",
-          "result": "Conformité CIS benchmark"
-        },
-        {
-          "title": "Sensibilisation",
-          "description": "Formation équipes, phishing simulé. Le maillon humain renforcé.",
-          "result": "-70% clics phishing"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Fintech",
-          "description": "Audit complet pré-lancement. Web, API, infra, code.",
-          "result": "0 incident post-launch"
-        },
-        {
-          "name": "E-commerce",
-          "description": "Pentest plateforme + audit PCI-DSS.",
-          "result": "Conformité obtenue"
-        },
-        {
-          "name": "SaaS B2B",
-          "description": "Audit récurrent trimestriel + bug bounty privé.",
-          "result": "SOC2 Type II"
-        },
-        {
-          "name": "Industrie",
-          "description": "Audit réseau IT/OT, segmentation, accès distants.",
-          "result": "Score risque -60%"
-        }
-      ],
-      "technologies": ["Burp Suite", "Metasploit", "Nmap", "OWASP ZAP", "Nuclei", "Trivy", "SonarQube", "AWS Security Hub"],
-      "whyUs": [
-        "Experts certifiés OSCP/OSWE",
-        "Rapports actionnables, pas du blabla",
-        "Contre-audit inclus",
-        "Confidentialité totale"
-      ]
-    }
-  },
-  "CaseStudies": {
-    "backButton": "Retour aux réalisations",
-    "contextEyebrow": "Contexte",
-    "contextTitle": "Le projet",
-    "challengeEyebrow": "Problématique",
-    "challengeTitle": "Le défi",
-    "solutionEyebrow": "Approche",
-    "solutionTitle": "La solution",
-    "resultsEyebrow": "Impact",
-    "resultsTitle": "Résultats",
-    "techTitle": "Technologies",
-    "ctaTitle": "Un projet similaire ?",
-    "ctaSubtitle": "Discutons de vos objectifs et voyons comment les atteindre ensemble.",
-    "ctaButton": "Parlons de votre projet",
-    "saas-b2b": {
-      "title": "Plateforme SaaS B2B",
-      "type": "SaaS / Web App",
-      "summary": "Développement d'une plateforme de gestion pour les équipes commerciales.",
-      "context": "Notre client, une scale-up en forte croissance, avait besoin d'une solution centralisée pour gérer son pipeline commercial et optimiser les performances de ses équipes.",
-      "challenge": "Les outils existants étaient fragmentés et peu adaptés à leur workflow spécifique. Le suivi des performances manquait de précision et les tâches répétitives prenaient un temps précieux.",
-      "solution": "Nous avons conçu une plateforme sur-mesure avec un dashboard intuitif, des automatisations intelligentes et une intégration CRM native. L'architecture multi-tenant permet une scalabilité optimale.",
-      "results": ["+40% de productivité commerciale", "Réduction de 60% du temps de reporting", "Adoption à 95% par les équipes", "ROI positif en 3 mois"],
-      "testimonial": {
-        "quote": "Yodev a parfaitement compris nos enjeux et a livré une solution qui dépasse nos attentes. L'équipe est réactive et force de proposition.",
-        "author": "Marie Dupont",
-        "role": "Directrice Commerciale"
-      }
-    },
-    "ecommerce-refonte": {
-      "title": "Refonte E-commerce Premium",
-      "type": "E-commerce",
-      "summary": "Refonte complète d'une boutique en ligne haut de gamme.",
-      "context": "Une marque de luxe française souhaitait moderniser sa présence digitale et repositionner son image vers un positionnement plus premium.",
-      "challenge": "La boutique existante souffrait d'un taux de conversion faible, d'une expérience mobile dégradée et d'un temps de chargement lent.",
-      "solution": "Refonte totale avec un design épuré et luxueux, optimisation des performances (score Lighthouse 95+), nouveau tunnel d'achat simplifié et expérience mobile-first.",
-      "results": ["+120% de taux de conversion", "+35% de panier moyen", "Temps de chargement divisé par 4", "Score Lighthouse 95+"],
-      "testimonial": {
-        "quote": "Notre nouvelle boutique reflète enfin l'ADN de notre marque. Les résultats sont au-delà de nos espérances.",
-        "author": "Jean Martin",
-        "role": "Fondateur"
-      }
-    },
-    "app-coaching": {
-      "title": "App de Coaching Sportif",
-      "type": "Mobile App",
-      "summary": "Application mobile de coaching personnalisé avec suivi en temps réel.",
-      "context": "Une startup dans le domaine du bien-être souhaitait lancer une app de coaching sportif innovante pour se différencier sur un marché compétitif.",
-      "challenge": "Le client souhaitait créer une app permettant un suivi personnalisé, des programmes adaptatifs et une communauté engagée. Le MVP devait être livré rapidement pour tester le marché.",
-      "solution": "Développement React Native avec un système de programmes adaptatifs basé sur les performances, intégration wearables, chat coach-utilisateur et gamification pour l'engagement.",
-      "results": ["MVP livré en 8 semaines", "10k téléchargements en 3 mois", "Note moyenne 4.8/5 sur les stores", "Taux de rétention de 65%"],
-      "testimonial": {
-        "quote": "L'équipe Yodev a été un véritable partenaire. Ils ont su transformer notre vision en un produit que nos utilisateurs adorent.",
-        "author": "Sophie Bernard",
-        "role": "CEO & Fondatrice"
-      }
-    }
-  },
-  "BlogPage": {
-    "eyebrow": "Insights",
-    "title": "Blog",
-    "subtitle": "Retours d'expérience sur le web, le mobile, l'IA et la stratégie produit.",
-    "readMore": "Lire l'article",
-    "posts": [
-      {
-        "slug": "agrement-cii",
-        "title": "Yodev, prestataire agréé pour le Crédit d'impôt innovation (CII)",
-        "excerpt": "Yodev est agréé CII en tant que sous-traitant reconnu par le ministère de la Recherche.",
-        "category": "Business",
-        "date": "12 déc. 2025",
-        "readTime": "4 min"
-      },
-      {
-        "slug": "waf-efficacite",
-        "title": "Comment maximiser l'efficacité d'un Web Application Firewall (WAF) ?",
-        "excerpt": "Un WAF bien configuré fait la différence entre une protection symbolique et une vraie barrière.",
-        "category": "Tech",
-        "date": "11 déc. 2025",
-        "readTime": "6 min"
-      },
-      {
-        "slug": "integrite-logs-continu",
-        "title": "Certifier l'intégrité d'un flux de logs en continu, un enjeu de sécurité crucial",
-        "excerpt": "Prouver la non-altération de vos logs est devenu un impératif de conformité et de sécurité.",
-        "category": "Tech",
-        "date": "11 déc. 2025",
-        "readTime": "7 min"
-      },
-      {
-        "slug": "mvp-iteration",
-        "title": "MVP et itération : la bonne approche",
-        "excerpt": "Comment construire un produit minimum viable efficace et itérer intelligemment.",
-        "category": "Produit",
-        "date": "20 décembre 2024",
-        "readTime": "8 min"
-      },
-      {
-        "slug": "core-web-vitals",
-        "title": "Core Web Vitals : guide pratique",
-        "excerpt": "Tout comprendre sur les métriques de performance web et comment les optimiser.",
-        "category": "Performance",
-        "date": "15 décembre 2024",
-        "readTime": "10 min"
-      },
-      {
-        "slug": "owasp-2024",
-        "title": "Sécurité web : OWASP Top 10 en pratique",
-        "excerpt": "Les vulnérabilités les plus courantes et comment protéger vos applications.",
-        "category": "Sécurité",
-        "date": "10 décembre 2024",
-        "readTime": "12 min"
-      }
-    ]
-  },
-  "BlogArticles": {
-    "ctaTitle": "Besoin d'expertise ?",
-    "ctaSubtitle": "Discutons de votre projet et de vos enjeux techniques.",
-    "ctaButton": "Nous contacter",
-    "agrement-cii": {
-      "title": "Yodev, prestataire agréé pour le Crédit d'impôt innovation (CII)",
-      "excerpt": "Yodev est agréé CII en tant que sous-traitant reconnu par le ministère de la Recherche.",
-      "category": "Business",
-      "date": "12 déc. 2025",
-      "readTime": "4 min",
-      "author": "Jean Ashton",
-      "content": [
-        "Le Crédit d'impôt innovation (CII) permet aux entreprises de récupérer une partie des dépenses liées à l'innovation.",
-        "L'agrément CII signifie que Yodev est reconnu comme sous-traitant éligible par le ministère de la Recherche.",
-        "Concrètement, cela simplifie vos démarches et sécurise l'éligibilité des travaux que nous réalisons.",
-        "Nous vous aidons à cadrer le périmètre technique et à documenter les livrables nécessaires.",
-        "Parlons de votre projet pour vérifier l'éligibilité et accélérer la mise en œuvre."
-      ]
-    },
-    "waf-efficacite": {
-      "title": "Comment maximiser l'efficacité d'un Web Application Firewall (WAF) ?",
-      "excerpt": "Un WAF bien configuré fait la différence entre une protection symbolique et une vraie barrière.",
-      "category": "Tech",
-      "date": "11 déc. 2025",
-      "readTime": "6 min",
-      "author": "Molly Allerhand",
-      "content": [
-        "Un WAF est souvent déployé mais rarement optimisé. Résultat : des faux positifs ou une protection limitée.",
-        "Commencez par auditer le trafic réel et adapter les règles aux usages légitimes de votre application.",
-        "Activez progressivement les protections avancées, mesurez les impacts, puis ajustez.",
-        "Corrélez les alertes WAF avec vos logs applicatifs pour identifier les vrais risques.",
-        "Enfin, automatisez les mises à jour et la surveillance pour garder une posture de sécurité durable."
-      ]
-    },
-    "integrite-logs-continu": {
-      "title": "Certifier l'intégrité d'un flux de logs en continu, un enjeu de sécurité crucial",
-      "excerpt": "Prouver la non-altération de vos logs est devenu un impératif de conformité et de sécurité.",
-      "category": "Tech",
-      "date": "11 déc. 2025",
-      "readTime": "7 min",
-      "author": "Molly Allerhand",
-      "content": [
-        "Les logs sont souvent la source de vérité en cas d'incident. Encore faut-il prouver qu'ils n'ont pas été altérés.",
-        "Les techniques de chaînage cryptographique permettent de garantir l'intégrité d'un flux de logs.",
-        "Coupler ces mécanismes à un stockage immuable renforce la fiabilité des preuves.",
-        "L'enjeu est double : sécurité opérationnelle et conformité réglementaire.",
-        "Mettre en place ces garanties dès la conception évite des refontes coûteuses plus tard."
-      ]
-    },
-    "mvp-iteration": {
-      "title": "MVP et itération : la bonne approche",
-      "excerpt": "Comment construire un produit minimum viable efficace et itérer intelligemment.",
-      "category": "Produit",
-      "date": "20 décembre 2024",
-      "readTime": "8 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Le concept de MVP est souvent mal compris. Il ne s'agit pas de livrer un produit bâclé, mais de créer la version la plus simple qui permet de valider une hypothèse.",
-        "La clé est d'identifier le cœur de valeur de votre produit. Qu'est-ce qui le rend unique et indispensable ? C'est sur cette fonctionnalité core que doit se concentrer le MVP.",
-        "Définissez des métriques claires avant de lancer. Sans critères de succès, vous ne saurez pas interpréter les résultats et décider de la suite.",
-        "L'itération doit être rapide et basée sur les données. Analysez les comportements utilisateurs, recueillez du feedback qualitatif, et priorisez impitoyablement.",
-        "N'ayez pas peur de pivoter si les données le suggèrent. Un MVP qui échoue n'est pas un échec, c'est un apprentissage précieux qui vous rapproche du product-market fit."
-      ]
-    },
-    "core-web-vitals": {
-      "title": "Core Web Vitals : guide pratique",
-      "excerpt": "Tout comprendre sur les métriques de performance web et comment les optimiser.",
-      "category": "Performance",
-      "date": "15 décembre 2024",
-      "readTime": "10 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "Les Core Web Vitals sont devenus un critère de référencement Google. Mais au-delà du SEO, ils reflètent la qualité de l'expérience utilisateur.",
-        "LCP (Largest Contentful Paint) mesure le temps de chargement perçu. Objectif : moins de 2.5 secondes. Optimisez vos images, utilisez le lazy loading et préchargez les ressources critiques.",
-        "FID (First Input Delay) mesure la réactivité. Objectif : moins de 100ms. Réduisez le JavaScript bloquant et utilisez le code splitting.",
-        "CLS (Cumulative Layout Shift) mesure la stabilité visuelle. Objectif : moins de 0.1. Réservez l'espace pour les images et évitez les injections de contenu dynamique.",
-        "Les outils essentiels : Lighthouse pour l'audit, WebPageTest pour le diagnostic détaillé, et Chrome DevTools pour le debug. Mesurez en conditions réelles, pas seulement en local.",
-        "L'optimisation est un process continu. Intégrez les tests de performance dans votre CI/CD et surveillez les régressions."
-      ]
-    },
-    "owasp-2024": {
-      "title": "Sécurité web : OWASP Top 10 en pratique",
-      "excerpt": "Les vulnérabilités les plus courantes et comment protéger vos applications.",
-      "category": "Sécurité",
-      "date": "10 décembre 2024",
-      "readTime": "12 min",
-      "author": "Yoann Andrieux",
-      "content": [
-        "La sécurité n'est pas optionnelle. L'OWASP Top 10 recense les vulnérabilités les plus critiques que tout développeur doit connaître.",
-        "Les injections (SQL, NoSQL, LDAP) restent en tête. Utilisez toujours des requêtes paramétrées et validez rigoureusement les entrées utilisateur.",
-        "L'authentification cassée est un classique. Implémentez la 2FA, utilisez des librairies éprouvées, et ne réinventez jamais la roue sur les mots de passe.",
-        "L'exposition de données sensibles peut être fatale. Chiffrez en transit (HTTPS) et au repos, minimisez les données stockées, et auditez régulièrement vos endpoints.",
-        "Les composants vulnérables sont un risque souvent négligé. Maintenez vos dépendances à jour, utilisez des outils d'audit automatisé comme Snyk ou Dependabot.",
-        "La sécurité est l'affaire de tous. Formez vos équipes, intégrez des tests de sécurité dans votre pipeline, et faites auditer vos applications critiques par des experts."
-      ]
-    }
-  },
-  "CareersPage": {
-    "eyebrow": "Rejoignez-nous",
-    "title": "Jobs",
-    "subtitle": "Construisez des produits web, mobile & IA avec une équipe passionnée et exigeante.",
-    "valuesEyebrow": "Notre culture",
-    "valuesTitle": "Ce qui nous anime",
-    "values": [
-      {
-        "title": "Qualité sans compromis",
-        "description": "Nous visons l'excellence dans chaque ligne de code et chaque pixel."
-      },
-      {
-        "title": "Apprentissage continu",
-        "description": "La curiosité et le partage de connaissances sont au cœur de notre ADN."
-      },
-      {
-        "title": "Autonomie et confiance",
-        "description": "Nous faisons confiance à chacun pour prendre des initiatives et des décisions."
-      },
-      {
-        "title": "Équilibre vie pro/perso",
-        "description": "Le remote-first et la flexibilité pour que chacun donne le meilleur."
-      },
-      {
-        "title": "Impact réel",
-        "description": "Chaque projet compte, chaque contribution fait la différence."
-      },
-      {
-        "title": "Transparence totale",
-        "description": "Communication ouverte sur les objectifs, les résultats et les défis."
-      }
-    ],
-    "positionsEyebrow": "Opportunités",
-    "positionsTitle": "Postes ouverts",
-    "jobs": [
-      {
-        "slug": "dev-fullstack",
-        "title": "Développeur Fullstack Senior",
-        "type": "CDI",
-        "location": "Remote (France)",
-        "department": "Engineering"
-      },
-      {
-        "slug": "ux-designer",
-        "title": "UX/UI Designer",
-        "type": "CDI",
-        "location": "Remote (France)",
-        "department": "Design"
-      },
-      {
-        "slug": "chef-projet",
-        "title": "Chef de Projet Digital",
-        "type": "CDI",
-        "location": "Remote (France)",
-        "department": "Delivery"
-      }
-    ],
-    "viewJob": "Voir le poste",
-    "noPositions": "Aucun poste ouvert actuellement. N'hésitez pas à nous envoyer une candidature spontanée.",
-    "spontaneousTitle": "Vous ne trouvez pas votre poste ?",
-    "spontaneousSubtitle": "Nous sommes toujours à la recherche de talents exceptionnels. Envoyez-nous une candidature spontanée.",
-    "spontaneousButton": "Candidature spontanée"
-  },
-  "JobPostings": {
-    "applyButton": "Postuler maintenant",
-    "responsibilitiesEyebrow": "Vos missions",
-    "responsibilitiesTitle": "Ce que vous ferez",
-    "requirementsEyebrow": "Profil recherché",
-    "requirementsTitle": "Ce que nous cherchons",
-    "benefitsEyebrow": "Avantages",
-    "benefitsTitle": "Ce que nous offrons",
-    "ctaTitle": "Intéressé par ce poste ?",
-    "ctaSubtitle": "Envoyez-nous votre CV et parlons de votre parcours.",
-    "dev-fullstack": {
-      "title": "Développeur Fullstack Senior",
-      "type": "CDI",
-      "location": "Remote (France)",
-      "department": "Engineering",
-      "summary": "Rejoignez notre équipe technique pour concevoir et développer des applications web modernes pour nos clients.",
-      "responsibilities": [
-        "Développer des applications web avec Next.js, React et Node.js",
-        "Participer aux choix d'architecture et aux revues de code",
-        "Collaborer étroitement avec les designers et product managers",
-        "Mentorer les développeurs juniors de l'équipe",
-        "Contribuer à l'amélioration continue de nos pratiques"
-      ],
-      "requirements": [
-        "5+ ans d'expérience en développement web",
-        "Maîtrise de TypeScript, React et Node.js",
-        "Expérience avec les bases de données SQL et NoSQL",
-        "Sensibilité à l'UX et à la qualité du code",
-        "Excellent niveau de communication en français"
-      ],
-      "benefits": [
-        "Remote-first avec flexibilité totale",
-        "Équipement premium (MacBook, écran, etc.)",
-        "Formation continue et conférences",
-        "Projets variés et challengeants",
-        "Équipe bienveillante et exigeante"
-      ]
-    },
-    "ux-designer": {
-      "title": "UX/UI Designer",
-      "type": "CDI",
-      "location": "Remote (France)",
-      "department": "Design",
-      "summary": "Créez des expériences utilisateur exceptionnelles pour des projets web et mobile variés.",
-      "responsibilities": [
-        "Conduire des recherches utilisateur et définir les personas",
-        "Concevoir des wireframes, prototypes et maquettes haute-fidélité",
-        "Créer et maintenir des design systems cohérents",
-        "Collaborer avec les développeurs pour un handoff parfait",
-        "Participer aux tests utilisateurs et itérer"
-      ],
-      "requirements": [
-        "3+ ans d'expérience en UX/UI design",
-        "Maîtrise de Figma et des outils de prototypage",
-        "Portfolio démontrant une approche centrée utilisateur",
-        "Connaissance des contraintes techniques web et mobile",
-        "Curiosité et veille active sur les tendances design"
-      ],
-      "benefits": [
-        "Remote-first avec flexibilité totale",
-        "Licence Figma et outils premium",
-        "Accès à des ressources design (cours, livres, conférences)",
-        "Projets variés avec forte autonomie",
-        "Collaboration étroite avec des devs passionnés"
-      ]
-    },
-    "chef-projet": {
-      "title": "Chef de Projet Digital",
-      "type": "CDI",
-      "location": "Remote (France)",
-      "department": "Delivery",
-      "summary": "Pilotez des projets web et mobile de A à Z, de la phase de cadrage à la livraison.",
-      "responsibilities": [
-        "Cadrer les projets et définir les roadmaps",
-        "Coordonner les équipes design et développement",
-        "Gérer la relation client et les attentes",
-        "Suivre les budgets, plannings et livrables",
-        "Garantir la qualité des livrables"
-      ],
-      "requirements": [
-        "3+ ans d'expérience en gestion de projet digital",
-        "Excellente compréhension des métiers du web",
-        "Maîtrise des méthodologies Agile (Scrum, Kanban)",
-        "Capacité à gérer plusieurs projets en parallèle",
-        "Leadership naturel et excellent relationnel"
-      ],
-      "benefits": [
-        "Remote-first avec flexibilité totale",
-        "Outils de productivité premium",
-        "Projets variés et clients stimulants",
-        "Évolution vers des rôles de direction",
-        "Culture d'entreprise saine et transparente"
-      ]
-    }
+    "ctaSubtitle": "Décrivez le contexte et recevez une prochaine étape claire.",
+    "ctaButton": "Qualifier le projet"
   },
   "LegalPage": {
     "eyebrow": "Informations légales",
     "title": "Mentions légales",
-    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "lastUpdated": "Dernière mise à jour : juillet 2026",
     "sections": [
       {
         "title": "Éditeur du site",
@@ -1830,7 +110,7 @@
       },
       {
         "title": "Hébergement",
-        "content": "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. L'hébergeur assure la continuité de service et la sécurité des données."
+        "content": "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Les conditions et garanties applicables sont celles du service d'hébergement souscrit."
       },
       {
         "title": "Propriété intellectuelle",
@@ -1849,7 +129,7 @@
   "PrivacyPage": {
     "eyebrow": "Protection des données",
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "lastUpdated": "Dernière mise à jour : juillet 2026",
     "backToLegal": "Retour aux mentions légales",
     "sections": [
       {
@@ -1858,24 +138,166 @@
       },
       {
         "title": "Utilisation des données",
-        "content": "Vos données sont utilisées exclusivement pour répondre à vos demandes, vous envoyer des informations pertinentes si vous y avez consenti, et améliorer nos services."
+        "content": "Vos données sont utilisées pour qualifier votre demande et y répondre. Le site ne vous inscrit pas automatiquement à une newsletter."
       },
       {
         "title": "Protection des données",
-        "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, modification ou divulgation."
+        "content": "Les demandes sont transmises aux services techniques nécessaires au fonctionnement du site et à l'envoi de l'email. L'accès est limité aux personnes qui doivent traiter la demande."
       },
       {
-        "title": "Cookies",
-        "content": "Ce site utilise des cookies techniques essentiels au fonctionnement et des cookies analytiques pour comprendre l'utilisation du site. Vous pouvez les désactiver dans votre navigateur."
+        "title": "Cookies et mesure d'audience",
+        "content": "Aucun outil de mesure d'audience publicitaire n'est activé dans cette version du site. Le choix d'affichage clair ou sombre peut être conservé localement par votre navigateur."
       },
       {
         "title": "Vos droits",
-        "content": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Contactez-nous pour exercer ces droits."
+        "content": "Conformément au RGPD, vous pouvez demander l'accès, la rectification ou la suppression de vos données, ainsi que l'exercice des autres droits applicables à votre situation."
       },
       {
         "title": "Contact",
-        "content": "Pour toute question concernant notre politique de confidentialité ou vos données personnelles, vous pouvez nous contacter via notre formulaire de contact."
+        "content": "Pour toute question concernant vos données personnelles, écrivez à hello@yodev.fr. La demande sera traitée avec les éléments nécessaires pour vérifier votre identité lorsque cela est requis."
       }
     ]
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Studio produit et développement",
+      "titleLine1": "Un problème produit.",
+      "titleLine2": "Une livraison fiable.",
+      "subtitle": "Nous cadrons, concevons et développons des produits web utiles, avec un interlocuteur direct et des décisions techniques explicites.",
+      "ctaNote": "Premier échange centré sur votre contexte. Si Yodev n’est pas le bon format, nous vous le dirons clairement.",
+      "secondary": "Voir nos réalisations",
+      "chips": [
+        "Périmètre explicite",
+        "UX et architecture",
+        "Tests et preview",
+        "Transfert documenté"
+      ],
+      "process": {
+        "label": "méthode-de-livraison",
+        "diagnostic": {
+          "title": "Diagnostic",
+          "description": "Objectifs, utilisateurs, contraintes et risques sont cadrés avant de construire."
+        },
+        "design": {
+          "title": "Conception",
+          "description": "Les parcours, l'interface et l'architecture sont décidés avec vous."
+        },
+        "delivery": {
+          "title": "Livraison",
+          "description": "Le produit est testé, documenté et prêt à être exploité."
+        }
+      }
+    },
+    "paths": {
+      "eyebrow": "Votre point de départ",
+      "title": "Commencer par le problème qui bloque aujourd’hui",
+      "items": [
+        {
+          "icon": "Rocket",
+          "title": "Lancer un nouveau produit",
+          "description": "Transformer une idée en périmètre testable, puis en produit exploitable sans construire trop tôt.",
+          "cta": "Cadrer le lancement",
+          "href": "/contact?type=nouveau"
+        },
+        {
+          "icon": "Wrench",
+          "title": "Améliorer l'existant",
+          "description": "Identifier les frictions produit, UX ou techniques, puis traiter le risque le plus coûteux en premier.",
+          "cta": "Auditer l’existant",
+          "href": "/contact?type=optimisation"
+        },
+        {
+          "icon": "Brain",
+          "title": "Décider avant d’investir",
+          "description": "Comparer les options, rendre les hypothèses visibles et obtenir une feuille de route défendable.",
+          "cta": "Préparer la décision",
+          "href": "/contact?type=audit"
+        }
+      ]
+    },
+    "selectedWork": {
+      "eyebrow": "Travail inspectable",
+      "title": "Des produits qui montrent comment nous arbitrons",
+      "subtitle": "Chaque cas rend visibles le problème, les contraintes, les décisions et les limites. Aucun chiffre client n’est inventé.",
+      "cta": "Voir toutes les réalisations",
+      "items": [
+        {
+          "title": "Moodday",
+          "type": "Produit sensible",
+          "summary": "Un compagnon de suivi personnel repensé autour de la confidentialité, du hors-ligne et des permissions aidant.",
+          "proofs": [
+            "UX calme et accessible",
+            "Synchronisation explicite"
+          ]
+        },
+        {
+          "title": "Jobio",
+          "type": "Workflow commercial",
+          "summary": "Un produit trop large recentré sur les actions qui aident un freelance à faire avancer une opportunité réelle.",
+          "proofs": [
+            "Réduction de périmètre",
+            "Parcours actionnables"
+          ]
+        },
+        {
+          "title": "MyCryptoPilot",
+          "type": "Architecture et sécurité",
+          "summary": "Un démonstrateur crypto limité au testnet et au read-only, conçu pour expliquer le risque plutôt que promettre un rendement.",
+          "proofs": [
+            "Risk-first",
+            "Données démo identifiées"
+          ]
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Preuves de travail",
+      "title": "Ce que vous pouvez vérifier pendant la mission",
+      "subtitle": "La confiance vient des décisions visibles et des livrables inspectables, pas d'une rangée de logos.",
+      "items": [
+        {
+          "title": "Périmètre explicite",
+          "description": "Objectifs, exclusions, hypothèses et critères d'acceptation sont écrits avant la livraison."
+        },
+        {
+          "title": "Décisions documentées",
+          "description": "Les arbitrages produit, UX et architecture sont reliés à leurs contraintes."
+        },
+        {
+          "title": "Qualité vérifiable",
+          "description": "Tests, preview, suivi des erreurs et procédure de retour arrière accompagnent le produit."
+        }
+      ]
+    },
+    "fitSection": {
+      "eyebrow": "Transparence",
+      "title": "Un cadre de collaboration clair dès le départ",
+      "goodFit": {
+        "title": "Pour vous si...",
+        "items": [
+          "Vous avez un problème produit ou métier concret",
+          "Vous voulez rendre les arbitrages et le périmètre explicites",
+          "Vous souhaitez parler directement aux personnes qui conçoivent et développent",
+          "Vous valorisez la fiabilité, l’accessibilité et la maintenabilité",
+          "Vous acceptez de tester les hypothèses avant d’élargir le produit"
+        ]
+      },
+      "badFit": {
+        "title": "Pas pour vous si...",
+        "items": [
+          "Vous cherchez uniquement du renfort en volume",
+          "Le périmètre ne peut jamais être questionné",
+          "Aucun utilisateur ou responsable métier n’est disponible",
+          "Une date de livraison est imposée sans arbitrage possible"
+        ]
+      }
+    },
+    "cta": {
+      "eyebrow": "Votre contexte",
+      "title": "Un problème produit à clarifier ?",
+      "subtitle": "Décrivez les utilisateurs, les contraintes et le résultat attendu. La réponse précisera la prochaine étape utile.",
+      "button": "Qualifier le projet",
+      "secondary": "Ou écrivez-nous directement"
+    }
   }
 }

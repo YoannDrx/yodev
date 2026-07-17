@@ -1,0 +1,10 @@
+<svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top left - primary -->
+  <rect x="0" y="0" width="35" height="35" rx="6" fill="#1BA896"/>
+  <!-- Top right - primary 60% -->
+  <rect x="40" y="0" width="35" height="35" rx="6" fill="#1BA896" fill-opacity="0.6"/>
+  <!-- Bottom left - primary 40% -->
+  <rect x="0" y="40" width="35" height="35" rx="6" fill="#1BA896" fill-opacity="0.4"/>
+  <!-- Bottom right - secondary -->
+  <rect x="40" y="40" width="35" height="35" rx="6" fill="#FF6B35"/>
+</svg>

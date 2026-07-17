@@ -1,148 +1,26 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Section } from "@/components/ui/section";
 import {
   HeroHome,
-  ServiceCard,
-  ServiceGrid,
-  CaseStudyCard,
-  CaseStudyGrid,
-  CtaSection,
-  TestimonialCard,
   PathsSection,
+  SelectedWorkSection,
+  TrustSection,
   FitSection,
+  CtaSection,
 } from "@/components/sections";
-import { Card } from "@/components/ui/card";
-import { FadeIn } from "@/components/motion";
-
-type HighlightItem = {
-  title: string;
-  description: string;
-};
-
-type StoryContent = {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
-  body: string[];
-  highlights: HighlightItem[];
-};
-
-type TestimonialItem = {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-};
-
-type ExpertiseItem = {
-  title: string;
-  description: string;
-};
-
-type CaseItem = {
-  title: string;
-  type: string;
-  summary: string;
-  result: string;
-};
 
 export default function HomePage() {
   const t = useTranslations("Home");
   const nav = useTranslations("Nav");
 
-  const story = t.raw("story") as StoryContent;
-  const testimonials = t.raw("testimonials.items") as TestimonialItem[];
-  const expertise = t.raw("expertise.items") as ExpertiseItem[];
-  const cases = t.raw("cases.items") as CaseItem[];
-
   return (
     <>
-      {/* Hero Section */}
       <HeroHome />
-
-      {/* Story Section */}
-      <Section eyebrow={story.eyebrow} title={story.title} subtitle={story.subtitle}>
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-4 text-sm text-muted md:text-base">
-            {story.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <div className="grid gap-4">
-            {story.highlights.map((item) => (
-              <Card key={item.title} className="p-5">
-                <h3 className="text-base font-semibold text-text">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted">{item.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Paths Section - 3 ways to work with us */}
       <PathsSection />
-
-      {/* Fit Section - For you / Not for you */}
+      <SelectedWorkSection />
+      <TrustSection />
       <FitSection />
-
-      {/* Testimonials Section */}
-      <Section
-        eyebrow={t("testimonials.eyebrow")}
-        title={t("testimonials.title")}
-      >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.author}
-              quote={testimonial.quote}
-              author={testimonial.author}
-              role={testimonial.role}
-              company={testimonial.company}
-            />
-          ))}
-        </div>
-      </Section>
-
-      {/* Cases Section */}
-      <Section
-        eyebrow={nav("work")}
-        title={t("cases.title")}
-        subtitle={t("cases.subtitle")}
-      >
-        <CaseStudyGrid>
-          {cases.map((item, index) => (
-            <FadeIn key={item.title} delay={index * 0.1}>
-              <CaseStudyCard
-                title={item.title}
-                type={item.type}
-                summary={item.summary}
-                result={item.result}
-              />
-            </FadeIn>
-          ))}
-        </CaseStudyGrid>
-      </Section>
-
-      {/* Expertise Section */}
-      <Section
-        eyebrow={nav("expertise")}
-        title={t("expertise.title")}
-        subtitle={t("expertise.subtitle")}
-      >
-        <ServiceGrid>
-          {expertise.map((item, index) => (
-            <FadeIn key={item.title} delay={index * 0.1}>
-              <ServiceCard title={item.title} description={item.description} />
-            </FadeIn>
-          ))}
-        </ServiceGrid>
-      </Section>
-
-      {/* CTA Section */}
       <CtaSection
         eyebrow={nav("contact")}
         title={t("cta.title")}

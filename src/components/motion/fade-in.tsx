@@ -9,6 +9,7 @@ interface FadeInProps extends HTMLMotionProps<"div"> {
   duration?: number;
   distance?: number;
   once?: boolean;
+  initiallyVisible?: boolean;
 }
 
 export function FadeIn({
@@ -19,6 +20,7 @@ export function FadeIn({
   duration = 0.5,
   distance = 24,
   once = true,
+  initiallyVisible = false,
   ...props
 }: FadeInProps) {
   const directions = {
@@ -31,10 +33,14 @@ export function FadeIn({
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        ...directions[direction],
-      }}
+      initial={
+        initiallyVisible
+          ? false
+          : {
+              opacity: 0,
+              ...directions[direction],
+            }
+      }
       whileInView={{
         opacity: 1,
         x: 0,

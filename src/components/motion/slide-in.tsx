@@ -9,6 +9,7 @@ interface SlideInProps extends HTMLMotionProps<"div"> {
   duration?: number;
   distance?: number;
   once?: boolean;
+  initiallyVisible?: boolean;
 }
 
 export function SlideIn({
@@ -19,6 +20,7 @@ export function SlideIn({
   duration = 0.6,
   distance = 100,
   once = true,
+  initiallyVisible = false,
   ...props
 }: SlideInProps) {
   const directions = {
@@ -30,10 +32,14 @@ export function SlideIn({
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        ...directions[direction],
-      }}
+      initial={
+        initiallyVisible
+          ? false
+          : {
+              opacity: 0,
+              ...directions[direction],
+            }
+      }
       whileInView={{
         opacity: 1,
         x: 0,

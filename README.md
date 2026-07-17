@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yodev
+
+Site bilingue du studio produit et développement Yodev.
+
+## Configuration locale
+
+Copier les variables suivantes dans `.env.local` :
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://yodev.fr
+CONTACT_EMAIL=hello@yodev.fr
+RESEND_API_KEY=re_...
+RESEND_FROM_EMAIL=Yodev <contact@do-not-reply.app>
+# Optionnel : le bloc de réservation reste masqué sans URL réelle.
+NEXT_PUBLIC_BOOKING_URL=https://...
+```
+
+Le formulaire de contact renvoie une erreur visible si Resend n’est pas configuré
+ou refuse le message. Il ne simule jamais une réussite.
+
+Les anciennes routes marketing (blog, équipe fictive, carrières, expertises,
+audits et anciennes études de cas) sont redirigées temporairement par
+`next.config.ts` vers les six surfaces publiques auditées. `src/proxy.ts`
+reste consacré à la négociation de langue `next-intl`.
+
+## Développement
 
 ## Getting Started
 
