@@ -10,6 +10,8 @@ const publicRoutes = [
   { fr: "/offres", en: "/offers" },
   { fr: "/a-propos", en: "/about" },
   { fr: "/contact", en: "/contact" },
+  { fr: "/mail", en: "/mail" },
+  { fr: "/ads", en: "/ads" },
   { fr: "/mentions-legales", en: "/legal" },
   {
     fr: "/mentions-legales/confidentialite",
