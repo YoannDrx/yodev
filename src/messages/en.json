@@ -5,6 +5,8 @@
     "menuClose": "Close menu"
   },
   "Nav": {
+    "mail": "Mail",
+    "ads": "Ads",
     "services": "Services",
     "work": "Work",
     "method": "Method",
@@ -221,6 +223,24 @@
       "subtitle": "Each case makes the problem, constraints, decisions and limits visible. No client metric is invented.",
       "cta": "See all work",
       "items": [
+        {
+          "title": "Mail by Yodev",
+          "type": "Email SaaS",
+          "summary": "A multi-tenant platform to send, measure and audit compliant transactional and marketing email.",
+          "proofs": [
+            "Observable Amazon SES",
+            "Consent and isolation"
+          ]
+        },
+        {
+          "title": "Ads by Yodev",
+          "type": "Google Ads operations",
+          "summary": "An agency cockpit that turns Google Ads signals into explained alerts, approvals and traceable actions.",
+          "proofs": [
+            "Multi-client monitoring",
+            "Validated mutations"
+          ]
+        },
         {
           "title": "Moodday",
           "type": "Sensitive product",

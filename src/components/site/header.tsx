@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
+  { href: "/mail", key: "mail" },
+  { href: "/ads", key: "ads" },
   { href: "/services", key: "services" },
   { href: "/work", key: "work" },
   { href: "/method", key: "method" },
