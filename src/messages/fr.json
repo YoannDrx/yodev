@@ -104,15 +104,27 @@
   "LegalPage": {
     "eyebrow": "Informations légales",
     "title": "Mentions légales",
-    "lastUpdated": "Dernière mise à jour : juillet 2026",
+    "lastUpdated": "Dernière mise à jour : 10 août 2026",
     "sections": [
       {
         "title": "Éditeur du site",
-        "content": "Le site yodev.fr est édité par Yodev, studio digital basé en France. Pour toute question, vous pouvez nous contacter via notre page contact."
+        "content": "Le site yodev.fr et les services Mail by Yodev et Ads by Yodev sont édités sous le nom commercial Yodev par Yoann Andrieux, entrepreneur individuel (EI)."
+      },
+      {
+        "title": "Immatriculation et activité",
+        "content": "SIREN : 803 272 590. SIRET : 803 272 590 00024. Activité principale : programmation informatique (code NAF/APE 62.01Z)."
+      },
+      {
+        "title": "Adresse et contact",
+        "content": "Adresse professionnelle : 11 rue de la Chine, 75020 Paris, France. Adresse électronique : hello@yodev.fr."
+      },
+      {
+        "title": "Directeur de la publication",
+        "content": "Yoann Andrieux."
       },
       {
         "title": "Hébergement",
-        "content": "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Les conditions et garanties applicables sont celles du service d'hébergement souscrit."
+        "content": "Ce site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis."
       },
       {
         "title": "Propriété intellectuelle",
@@ -131,9 +143,13 @@
   "PrivacyPage": {
     "eyebrow": "Protection des données",
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : juillet 2026",
+    "lastUpdated": "Dernière mise à jour : 10 août 2026",
     "backToLegal": "Retour aux mentions légales",
     "sections": [
+      {
+        "title": "Responsable du traitement",
+        "content": "Yodev, édité par Yoann Andrieux, entrepreneur individuel (EI), SIREN 803 272 590, est responsable des traitements réalisés via yodev.fr. Pour exercer vos droits, écrivez à hello@yodev.fr."
+      },
       {
         "title": "Collecte des données",
         "content": "Nous collectons uniquement les données nécessaires au bon fonctionnement de nos services : nom, email, et informations de projet lors d'une prise de contact."
