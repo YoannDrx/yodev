@@ -104,15 +104,27 @@
   "LegalPage": {
     "eyebrow": "Legal information",
     "title": "Legal Notice",
-    "lastUpdated": "Last updated: July 2026",
+    "lastUpdated": "Last updated: August 10, 2026",
     "sections": [
       {
         "title": "Site Editor",
-        "content": "The yodev.fr website is published by Yodev, a digital studio based in France. For any questions, you can contact us via our contact page."
+        "content": "The yodev.fr website and the Mail by Yodev and Ads by Yodev services are published under the Yodev trade name by Yoann Andrieux, a French sole trader (entrepreneur individuel, EI)."
+      },
+      {
+        "title": "Registration and activity",
+        "content": "SIREN: 803 272 590. SIRET: 803 272 590 00024. Main activity: computer programming (NAF/APE code 62.01Z)."
+      },
+      {
+        "title": "Address and contact",
+        "content": "Business address: 11 rue de la Chine, 75020 Paris, France. Email: hello@yodev.fr."
+      },
+      {
+        "title": "Publication Director",
+        "content": "Yoann Andrieux."
       },
       {
         "title": "Hosting",
-        "content": "This site is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Applicable terms and warranties are those of the subscribed hosting service."
+        "content": "This site is hosted by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States."
       },
       {
         "title": "Intellectual Property",
@@ -131,9 +143,13 @@
   "PrivacyPage": {
     "eyebrow": "Data Protection",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: July 2026",
+    "lastUpdated": "Last updated: August 10, 2026",
     "backToLegal": "Back to legal notice",
     "sections": [
+      {
+        "title": "Data Controller",
+        "content": "Yodev, published by Yoann Andrieux, a French sole trader (entrepreneur individuel, EI), SIREN 803 272 590, is the controller for processing carried out through yodev.fr. To exercise your rights, email hello@yodev.fr."
+      },
       {
         "title": "Data Collection",
         "content": "We only collect data necessary for the proper functioning of our services: name, email, and project information when you contact us."
