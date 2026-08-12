@@ -74,6 +74,29 @@ export function ProductLanding({ copy, appUrl, accent }: ProductLandingProps) {
         </Container>
       </section>
 
+      {copy.pricing && (
+        <section className="border-y border-border bg-surface-2/50 py-20">
+          <Container>
+            <div className="grid gap-10 rounded-3xl border border-border bg-surface p-8 md:p-12 lg:grid-cols-[1fr_1fr]">
+              <div>
+                <p className={`font-mono text-sm font-semibold uppercase tracking-[0.18em] ${accentClass}`}>{copy.pricing.eyebrow}</p>
+                <h2 className="mt-4 text-3xl font-bold text-text md:text-4xl">{copy.pricing.title}</h2>
+                <p className="mt-3 text-lg font-semibold text-text">{copy.pricing.price}</p>
+                <p className="mt-4 leading-relaxed text-muted">{copy.pricing.usage}</p>
+              </div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {copy.pricing.details.map((item) => (
+                  <li key={item} className="flex gap-3 rounded-2xl border border-border p-4 text-text">
+                    <CheckCircle2 className={`mt-0.5 size-5 shrink-0 ${accentClass}`} aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Container>
+        </section>
+      )}
+
       <section className="pb-24">
         <Container>
           <div className="rounded-3xl border border-border bg-surface p-8 md:p-12">
