@@ -1,5 +1,5 @@
 export const productUrls = {
-  mail: "https://mail.yodev.fr",
+  mail: "https://mail.yodev.fr/inscription",
   ads: "https://ads.yodev.fr",
 } as const;
 
@@ -17,6 +17,13 @@ export type ProductLandingCopy = {
   features: { title: string; description: string }[];
   trustTitle: string;
   trustItems: string[];
+  pricing?: {
+    eyebrow: string;
+    title: string;
+    price: string;
+    usage: string;
+    details: string[];
+  };
   closingTitle: string;
   closingBody: string;
 };
@@ -25,44 +32,58 @@ export const mailCopy: Record<ProductLocale, ProductLandingCopy> = {
   fr: {
     brand: "Mail",
     signature: "by Yodev",
-    eyebrow: "Email transactionnel & marketing",
-    title: "Envoyez des emails fiables, sans perdre le contrôle de vos données.",
+    eyebrow: "Passerelle transactionnelle gérée",
+    title: "Un événement applicatif, un destinataire, une livraison maîtrisée.",
     subtitle:
-      "Mail by Yodev réunit délivrabilité, campagnes, API et conformité dans un espace multi-tenant conçu pour les équipes françaises.",
-    primaryCta: "Ouvrir Mail by Yodev",
-    secondaryCta: "Parler du produit",
-    featuresTitle: "Une chaîne d’envoi complète et observable",
+      "Mail by Yodev opère l’envoi transactionnel pour vos applications : revue du cas d’usage, configuration DNS, API stricte et suivi de délivrabilité, sans compte fournisseur à gérer.",
+    primaryCta: "Candidater à la bêta privée",
+    secondaryCta: "Présenter mon besoin",
+    featuresTitle: "Une chaîne transactionnelle accompagnée",
     features: [
-      { title: "API transactionnelle", description: "Une API documentée, idempotente et pensée pour les intégrations produit." },
-      { title: "Campagnes conformes", description: "Consentement explicite, désinscription visible et en-têtes RFC 8058." },
-      { title: "Délivrabilité", description: "Domaines, événements SES, suppressions et santé d’envoi au même endroit." },
-      { title: "Isolation par espace", description: "Données, clés et permissions sont systématiquement limitées au workspace." },
+      { title: "API one-to-one", description: "Une requête idempotente décrit un événement métier et un destinataire unique. Aucun SMTP, CC, BCC ou outil de campagne." },
+      { title: "Validation avant envoi", description: "Yodev examine l’application, le profil transactionnel et chaque template avant toute clé live." },
+      { title: "DNS pris en charge", description: "DKIM, Return-Path et DMARC sont préparés avec vous, ou configurés via une délégation temporaire et limitée." },
+      { title: "Délivrabilité sans tracking", description: "Livraisons, bounces, plaintes et suppressions sont suivis sans pixel d’ouverture ni réécriture des liens." },
     ],
-    trustTitle: "Conçu pour rester maîtrisable",
-    trustItems: ["Infrastructure Amazon SES", "Données hébergées dans l’Union européenne", "Clés et webhooks signés", "Aucune donnée personnelle dans les files opérationnelles"],
-    closingTitle: "Un socle email que l’on peut expliquer et auditer.",
-    closingBody: "Commencez par connecter un domaine, puis testez l’API ou préparez votre première campagne.",
+    trustTitle: "Une bêta volontairement contrôlée",
+    trustItems: ["Accès sur dossier et invitation", "Quotas progressifs 50 / 200 / 500", "Clés Yodev et webhooks signés", "Aucune donnée personnelle dans les files opérationnelles"],
+    pricing: {
+      eyebrow: "Tarif bêta privée",
+      title: "29 € HT / mois",
+      price: "+ 0,0025 € HT par email accepté",
+      usage: "Aucun email inclus et aucun frais sur les simulations ou rejets avant acceptation.",
+      details: ["2 domaines", "3 utilisateurs", "Pièces jointes incluses en V1", "Activation après approbation"],
+    },
+    closingTitle: "Présentez-nous un flux transactionnel réel.",
+    closingBody: "La candidature décrit votre application, les événements déclencheurs, les destinataires attendus et les volumes. Yodev valide ensuite le domaine et le parcours de livraison.",
   },
   en: {
     brand: "Mail",
     signature: "by Yodev",
-    eyebrow: "Transactional & marketing email",
-    title: "Send reliable email without losing control of your data.",
+    eyebrow: "Managed transactional gateway",
+    title: "One application event, one recipient, one controlled delivery.",
     subtitle:
-      "Mail by Yodev brings deliverability, campaigns, API and compliance into a multi-tenant workspace built for European teams.",
-    primaryCta: "Open Mail by Yodev",
-    secondaryCta: "Discuss the product",
-    featuresTitle: "A complete, observable delivery chain",
+      "Mail by Yodev operates transactional delivery for your applications: use-case review, DNS setup, a strict API and deliverability monitoring, with no provider account for you to manage.",
+    primaryCta: "Apply for the private beta",
+    secondaryCta: "Describe my use case",
+    featuresTitle: "A supported transactional delivery chain",
     features: [
-      { title: "Transactional API", description: "A documented, idempotent API designed for product integrations." },
-      { title: "Compliant campaigns", description: "Explicit consent, visible unsubscribe and RFC 8058 headers." },
-      { title: "Deliverability", description: "Domains, SES events, suppressions and sending health in one place." },
-      { title: "Workspace isolation", description: "Data, keys and permissions are always scoped to the active workspace." },
+      { title: "One-to-one API", description: "An idempotent request describes one business event and one recipient. No SMTP, CC, BCC or campaign tooling." },
+      { title: "Review before delivery", description: "Yodev reviews the application, transactional profile and every template before issuing a live key." },
+      { title: "Supported DNS", description: "DKIM, Return-Path and DMARC are prepared with you or configured through limited, temporary delegation." },
+      { title: "Deliverability without tracking", description: "Delivery, bounces, complaints and suppressions are monitored without open pixels or rewritten links." },
     ],
-    trustTitle: "Built to remain understandable",
-    trustItems: ["Amazon SES infrastructure", "Data hosted in the European Union", "Signed keys and webhooks", "No personal data in operational queues"],
-    closingTitle: "An email foundation you can explain and audit.",
-    closingBody: "Connect a domain, then test the API or prepare your first campaign.",
+    trustTitle: "A deliberately controlled beta",
+    trustItems: ["Application and invitation only", "Progressive 50 / 200 / 500 quotas", "Yodev keys and signed webhooks", "No personal data in operational queues"],
+    pricing: {
+      eyebrow: "Private beta pricing",
+      title: "€29 excl. VAT / month",
+      price: "+ €0.0025 excl. VAT per accepted email",
+      usage: "No included emails and no charge for simulations or pre-acceptance rejections.",
+      details: ["2 domains", "3 users", "Attachments included in V1", "Activation after approval"],
+    },
+    closingTitle: "Show us a real transactional flow.",
+    closingBody: "Your application describes the app, triggering events, expected recipients and volumes. Yodev then validates the domain and delivery path.",
   },
 };
 

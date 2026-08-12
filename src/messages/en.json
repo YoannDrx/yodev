@@ -245,11 +245,11 @@
       "items": [
         {
           "title": "Mail by Yodev",
-          "type": "Email SaaS",
-          "summary": "A multi-tenant platform to send, measure and audit compliant transactional and marketing email.",
+          "type": "Transactional gateway",
+          "summary": "A managed service that validates domains, reviews each use case and delivers one transactional email to one recipient.",
           "proofs": [
-            "Observable Amazon SES",
-            "Consent and isolation"
+            "Idempotent one-to-one API",
+            "Supported DNS and deliverability"
           ]
         },
         {
