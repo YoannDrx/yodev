@@ -1,6 +1,7 @@
 export const productUrls = {
   mail: "https://mail.yodev.fr/inscription",
   ads: "https://ads.yodev.fr",
+  spend: "https://spend.yodev.fr",
 } as const;
 
 export type ProductLocale = "fr" | "en";
@@ -129,5 +130,50 @@ export const adsCopy: Record<ProductLocale, ProductLandingCopy> = {
     trustItems: ["Encrypted Google OAuth", "Google Ads validation before mutation", "Append-only operational history", "Revocable client reports"],
     closingTitle: "Fewer blind spots, more traceable decisions.",
     closingBody: "Connect your MCC, select your agents and start with a read-only analysis.",
+  },
+};
+
+export const spendCopy: Record<ProductLocale, ProductLandingCopy> = {
+  fr: {
+    brand: "Spend",
+    signature: "by Yodev",
+    eyebrow: "FinOps par projet pour les équipes produit",
+    title: "Comprenez précisément ce que coûte chaque produit.",
+    subtitle:
+      "Spend by Yodev réunit les dépenses de votre stack, rattache les coûts directs aux bons projets et répartit les abonnements mutualisés sans perdre un centime.",
+    primaryCta: "Ouvrir Spend by Yodev",
+    secondaryCta: "Parler du produit",
+    featuresTitle: "De la facture au coût réel par projet",
+    features: [
+      { title: "Connecteurs provider", description: "Vercel, OpenAI, GitHub et AWS alimentent un ledger commun, avec période, devise, statut et fraîcheur visibles." },
+      { title: "Attribution explicable", description: "Les ressources mappées sont affectées directement. Les coûts partagés suivent des règles égales ou manuelles, datées et auditables." },
+      { title: "Zéro centime perdu", description: "Chaque total provider reste égal à la somme des projets et du reliquat non alloué, y compris lors des arrondis." },
+      { title: "Une vue par produit", description: "Chaque projet expose ses providers, ses coûts directs et mutualisés, leur source et leur méthode d’allocation." },
+    ],
+    trustTitle: "Une vérité financière traçable",
+    trustItems: ["Montants source conservés", "Credentials chiffrés", "Isolation stricte par workspace", "Synchronisations idempotentes"],
+    closingTitle: "Passez d’une pile de factures à un coût produit défendable.",
+    closingBody: "Connectez vos providers, mappez vos projets et identifiez immédiatement les dépenses directes, partagées ou encore non allouées.",
+  },
+  en: {
+    brand: "Spend",
+    signature: "by Yodev",
+    eyebrow: "Project-level FinOps for product teams",
+    title: "Understand exactly what every product costs.",
+    subtitle:
+      "Spend by Yodev brings your stack expenses together, maps direct costs to the right projects and allocates shared subscriptions without losing a cent.",
+    primaryCta: "Open Spend by Yodev",
+    secondaryCta: "Discuss the product",
+    featuresTitle: "From provider bill to real project cost",
+    features: [
+      { title: "Provider connectors", description: "Vercel, OpenAI, GitHub and AWS feed one ledger with visible periods, currencies, statuses and freshness." },
+      { title: "Explainable allocation", description: "Mapped resources are assigned directly. Shared costs use dated, auditable equal or manual rules." },
+      { title: "No lost cents", description: "Every provider total stays equal to projects plus the unallocated remainder, including rounding cases." },
+      { title: "One view per product", description: "Each project shows its providers, direct and shared costs, source and allocation method." },
+    ],
+    trustTitle: "Traceable financial truth",
+    trustItems: ["Original amounts preserved", "Encrypted credentials", "Strict workspace isolation", "Idempotent synchronisation"],
+    closingTitle: "Turn a pile of bills into a defensible product cost.",
+    closingBody: "Connect providers, map projects and immediately identify direct, shared and still-unallocated expenses.",
   },
 };

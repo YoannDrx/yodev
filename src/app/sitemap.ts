@@ -12,6 +12,7 @@ const publicRoutes = [
   { fr: "/contact", en: "/contact" },
   { fr: "/mail", en: "/mail" },
   { fr: "/ads", en: "/ads" },
+  { fr: "/spend", en: "/spend" },
   { fr: "/mentions-legales", en: "/legal" },
   {
     fr: "/mentions-legales/confidentialite",

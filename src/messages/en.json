@@ -7,6 +7,7 @@
   "Nav": {
     "mail": "Mail",
     "ads": "Ads",
+    "spend": "Spend",
     "services": "Services",
     "work": "Work",
     "method": "Method",
@@ -108,7 +109,7 @@
     "sections": [
       {
         "title": "Site Editor",
-        "content": "The yodev.fr website and the Mail by Yodev and Ads by Yodev services are published under the Yodev trade name by Yoann Andrieux, a French sole trader (entrepreneur individuel, EI)."
+        "content": "The yodev.fr website and the Mail by Yodev, Ads by Yodev and Spend by Yodev services are published under the Yodev trade name by Yoann Andrieux, a French sole trader (entrepreneur individuel, EI)."
       },
       {
         "title": "Registration and activity",
@@ -238,15 +239,16 @@
       ]
     },
     "selectedWork": {
-      "eyebrow": "Inspectable work",
-      "title": "Products that show how we make trade-offs",
-      "subtitle": "Each case makes the problem, constraints, decisions and limits visible. No client metric is invented.",
+      "eyebrow": "Products by Yodev",
+      "title": "Three tools, one operational standard",
+      "subtitle": "Explore our products for transactional delivery, Google Ads operations and the real cost of every project.",
       "cta": "See all work",
       "items": [
         {
           "title": "Mail by Yodev",
           "type": "Transactional gateway",
           "summary": "A managed service that validates domains, reviews each use case and delivers one transactional email to one recipient.",
+          "href": "/mail",
           "proofs": [
             "Idempotent one-to-one API",
             "Supported DNS and deliverability"
@@ -256,36 +258,20 @@
           "title": "Ads by Yodev",
           "type": "Google Ads operations",
           "summary": "An agency cockpit that turns Google Ads signals into explained alerts, approvals and traceable actions.",
+          "href": "/ads",
           "proofs": [
             "Multi-client monitoring",
             "Validated mutations"
           ]
         },
         {
-          "title": "Moodday",
-          "type": "Sensitive product",
-          "summary": "A personal tracking companion redesigned around privacy, offline use and caregiver permissions.",
+          "title": "Spend by Yodev",
+          "type": "Project-level FinOps",
+          "summary": "A cockpit that brings stack expenses together, assigns direct costs and allocates shared subscriptions across projects.",
+          "href": "/spend",
           "proofs": [
-            "Calm, accessible UX",
-            "Explicit synchronization"
-          ]
-        },
-        {
-          "title": "Jobio",
-          "type": "Sales workflow",
-          "summary": "An oversized product narrowed to the actions that help a freelancer move a real opportunity forward.",
-          "proofs": [
-            "Scope reduction",
-            "Actionable journeys"
-          ]
-        },
-        {
-          "title": "MyCryptoPilot",
-          "type": "Architecture and security",
-          "summary": "A crypto demonstrator limited to testnet and read-only access, designed to explain risk rather than promise returns.",
-          "proofs": [
-            "Risk-first",
-            "Clearly labelled demo data"
+            "Reconcilable provider costs",
+            "Allocations without lost cents"
           ]
         }
       ]

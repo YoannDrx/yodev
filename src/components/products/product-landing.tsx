@@ -9,12 +9,13 @@ import type { ProductLandingCopy } from "@/lib/products";
 type ProductLandingProps = {
   copy: ProductLandingCopy;
   appUrl: string;
-  accent: "mail" | "ads";
+  accent: "mail" | "ads" | "spend";
 };
 
 export function ProductLanding({ copy, appUrl, accent }: ProductLandingProps) {
-  const accentClass = accent === "mail" ? "text-primary" : "text-secondary";
-  const glowClass = accent === "mail" ? "from-primary/20" : "from-secondary/20";
+  const usesPrimaryAccent = accent !== "ads";
+  const accentClass = usesPrimaryAccent ? "text-primary" : "text-secondary";
+  const glowClass = usesPrimaryAccent ? "from-primary/20" : "from-secondary/20";
 
   return (
     <>
@@ -22,7 +23,7 @@ export function ProductLanding({ copy, appUrl, accent }: ProductLandingProps) {
         <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${glowClass} via-transparent to-transparent`} />
         <Container>
           <div className="max-w-4xl">
-            <Badge variant={accent === "mail" ? "primary" : "secondary"} className="mb-6">
+            <Badge variant={usesPrimaryAccent ? "primary" : "secondary"} className="mb-6">
               {copy.eyebrow}
             </Badge>
             <div className="mb-8 flex items-baseline gap-3" aria-label={`${copy.brand} ${copy.signature}`}>
