@@ -1,7 +1,10 @@
 export const productUrls = {
   mail: "https://mail.yodev.fr/inscription",
   ads: "https://ads.yodev.fr",
-  spend: "https://spend.yodev.fr",
+  spend: {
+    fr: "https://spend.yodev.fr/fr/dashboard",
+    en: "https://spend.yodev.fr/en/dashboard",
+  },
 } as const;
 
 export type ProductLocale = "fr" | "en";

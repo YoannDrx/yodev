@@ -22,5 +22,5 @@ export default async function SpendProductPage({ params }: { params: Promise<{ l
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  return <ProductLanding copy={spendCopy[locale]} appUrl={productUrls.spend} accent="spend" />;
+  return <ProductLanding copy={spendCopy[locale]} appUrl={productUrls.spend[locale]} accent="spend" />;
 }
