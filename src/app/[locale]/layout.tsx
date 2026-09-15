@@ -11,14 +11,14 @@ import "@/app/globals.css";
 
 const metadataByLocale = {
   fr: {
-    title: "Yodev — Studio produit et développement",
+    title: "Yodev — Développeur indépendant web & mobile",
     description:
-      "Studio produit et développement pour cadrer, concevoir et livrer des applications web fiables.",
+      "Yoann Andrieux, développeur indépendant. Applications web et mobiles, refonte et automatisation pour les PME et les fondateurs.",
   },
   en: {
-    title: "Yodev — Product and development studio",
+    title: "Yodev — Independent web & mobile developer",
     description:
-      "A product and development studio that frames, designs and ships reliable web applications.",
+      "Yoann Andrieux, independent developer. Web and mobile apps, redesign and automation for small businesses and founders.",
   },
 } as const;
 
@@ -75,7 +75,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <div className="min-h-screen bg-bg text-text">
               <SiteHeader />
-              <main className="relative mesh-gradient min-h-screen">
+              <main id="main-content" className="min-h-screen">
                 {children}
               </main>
               <SiteFooter />

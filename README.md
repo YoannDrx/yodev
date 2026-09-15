@@ -1,61 +1,52 @@
 # Yodev
 
-Site bilingue du studio produit et développement Yodev.
+Vitrine bilingue de Yoann Andrieux, développeur indépendant pour les PME et les fondateurs. Elle présente les prestations sur devis et la famille Yodev Mail, Yodev Ads et Yodev Spend.
 
-## Configuration locale
+## Développement
 
-Copier les variables suivantes dans `.env.local` :
+```bash
+npm ci
+npm run dev
+```
+
+Ouvrir http://localhost:3000/fr. Le thème initial est sombre ; un choix explicite est conservé dans le navigateur. Les pages existent en français et en anglais.
+
+## Contact
+
+Configurer `.env.local` pour un envoi réel :
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://yodev.fr
 CONTACT_EMAIL=hello@yodev.fr
 RESEND_API_KEY=re_...
 RESEND_FROM_EMAIL=Yodev <hello@yodev.fr>
-# Optionnel : le bloc de réservation reste masqué sans URL réelle.
+# Facultatif : calendrier de réservation
 NEXT_PUBLIC_BOOKING_URL=https://...
 ```
 
-Le formulaire de contact renvoie une erreur visible si Resend n’est pas configuré
-ou refuse le message. Il ne simule jamais une réussite.
+Le formulaire affiche une erreur si le service est absent ou refuse le message. Les champs sont conservés pour réessayer. La suite navigateur neutralise les identifiants d’envoi ; son scénario de réussite simule uniquement la réponse HTTP.
 
-Les anciennes routes marketing (blog, équipe fictive, carrières, expertises,
-audits et anciennes études de cas) sont redirigées temporairement par
-`next.config.ts` vers les six surfaces publiques auditées. `src/proxy.ts`
-reste consacré à la négociation de langue `next-intl`.
+## Identité commune
 
-## Développement
-
-## Getting Started
-
-First, run the development server:
+La référence versionnée est `brand/manifest.json`. Les sources CSS et React se trouvent dans `brand/`. Les règles d’usage figurent dans `docs/design-system.md`.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run brand:sync
+npm run brand:check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ces commandes distribuent et contrôlent les copies dans cette vitrine et les dépôts voisins `../yodev-mail`, `../yodev-ads/web` et `../yodev-spend`. Ajouter `-- --local` pour ne traiter que la vitrine. Ne pas éditer directement `src/brand` ou les SVG générés dans `public/brand`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vérifications
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npx tsc --noEmit
+npm test
+npm run build
+npm run test:e2e
+```
 
-## Learn More
+Les tests Playwright démarrent un serveur local au port 3920. Arrêter un éventuel `next dev` de ce dépôt avant de les lancer. Ils couvrent les anciennes URL, FR/EN, les pages produits, le formulaire, les thèmes, le clavier, les contrastes et les tailles 390/768/1440 px.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les anciennes pages Méthode et Offres redirigent vers les sections `methode` et `formats` de Services, en conservant la langue. Les autres redirections historiques sont conservées dans `next.config.ts`.

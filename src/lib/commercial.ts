@@ -1,0 +1,57 @@
+export const commercial = {
+  fr: {
+    title: ["Des logiciels utiles.", "Du premier écran à la mise en ligne."],
+    intro: "Je conçois et développe des applications web et mobiles pour les PME et les fondateurs.",
+    person: "Yoann Andrieux · Développeur indépendant", cta: "Parlons de votre projet", discover: "Découvrir mes produits",
+    products: "Mes produits", expertise: "Expertises", about: "À propos", work: "Réalisations", method: "Collaboration", quote: "Sur devis",
+    servicesTitle: "Le bon outil pour votre activité.",
+    services: [
+      { title: "Applications web & outils métier", text: "Un espace client, un service en ligne ou un outil interne. Je transforme vos usages en une application simple à prendre en main.", details: ["Parcours et interfaces", "Données, comptes et paiements", "Développement React / Next.js"] },
+      { title: "Applications mobiles", text: "Une expérience pensée pour le téléphone, ses gestes et ses contraintes. Du parcours initial à la publication de votre application.", details: ["Applications iOS et Android", "React Native", "Navigation, intégrations et publication"] },
+      { title: "Refonte & amélioration", text: "Votre produit existe déjà. Je reprends ses parcours, son interface et son code pour résoudre les frictions qui ralentissent vos utilisateurs.", details: ["Audit UX et technique", "Direction artistique et UI", "Performance et fiabilisation"] },
+      { title: "Intégrations & automatisation", text: "Relier vos outils, éviter les doubles saisies et simplifier les tâches répétitives. Une automatisation qui répond à un besoin précis.", details: ["API et services tiers", "Workflows métier", "Fonctionnalités IA adaptées à l’usage"] },
+    ],
+    proofsTitle: "Des idées devenues des outils.", allWork: "Voir les réalisations",
+    workItems: [
+      { name: "Parigo Music", label: "Mission client · En ligne", image: "/images/work/parigo.webp", text: "Repenser la découverte et l’écoute d’un catalogue musical. Je conçois la direction artistique, les parcours et le frontend de la nouvelle plateforme.", result: "Une nouvelle plateforme de catalogue, de recherche et d’écoute, en ligne sur parigomusic.com." },
+      { name: "Pressay", label: "Produit personnel · Bêta publique", image: "/images/work/pressay.webp", text: "Passer de la voix au texte dans les applications du quotidien. Un produit que je conçois et développe, de l’expérience sur Mac à sa distribution.", result: "Une application de dictée sur Mac disponible en bêta publique." },
+    ],
+    methodTitle: "Un interlocuteur, du début à la suite.",
+    steps: [
+      ["Comprendre", "Nous précisons le besoin, les utilisateurs et les contraintes. Vous recevez un périmètre et un devis avant le développement."],
+      ["Construire", "Je conçois et développe par étapes. Vous pouvez essayer le produit et me faire vos retours tout au long du projet."],
+      ["Mettre en ligne", "Je prépare le lancement, vérifie les parcours essentiels et vous transmets le code, les accès et la documentation convenus."],
+    ],
+    aboutTitle: "Je suis Yoann. Je conçois et je développe.",
+    aboutText: "Yodev est le nom de mon activité indépendante. Je travaille directement avec les personnes qui portent le projet, pour comprendre leur métier et construire les bons outils. Mon travail réunit la conception des parcours, le design d’interface et le développement.",
+    aboutMore: "Je développe aussi mes propres produits. Mail, Ads et Spend sont nés de besoins rencontrés dans mes applications et mon travail. Cette pratique nourrit les décisions que je prends avec mes clients : simplicité d’usage, fiabilité et maîtrise des coûts.",
+    formats: "Un format adapté à votre point de départ.", formatItems: [["Faire le point", "Un audit ciblé et des recommandations pour décider de la suite."], ["Construire un produit", "Un périmètre défini ensemble, de la conception au lancement."], ["Faire évoluer l’existant", "Une intervention ciblée sur vos parcours, fonctionnalités ou points de friction."]],
+    footer: "Des outils utiles. Pour de vrais projets.", legal: "Mentions légales", privacy: "Confidentialité",
+  },
+  en: {
+    title: ["Useful software.", "From the first screen to launch."],
+    intro: "I design and build web and mobile applications for small businesses and founders.",
+    person: "Yoann Andrieux · Independent developer", cta: "Let’s talk about your project", discover: "Explore my products",
+    products: "My products", expertise: "Expertise", about: "About", work: "Selected work", method: "Working together", quote: "Quoted for your project",
+    servicesTitle: "The right tool for your business.",
+    services: [
+      { title: "Web apps & business tools", text: "A customer portal, an online service or an internal tool. I turn everyday workflows into an application that is easy to use.", details: ["User journeys and interfaces", "Data, accounts and payments", "React / Next.js development"] },
+      { title: "Mobile applications", text: "An experience designed for the phone, its gestures and its constraints. From the first journey to publishing your application.", details: ["iOS and Android apps", "React Native", "Navigation, integrations and publishing"] },
+      { title: "Redesign & improvement", text: "Your product already exists. I revisit its journeys, interface and code to solve the friction holding your users back.", details: ["UX and technical audits", "Art direction and UI", "Performance and reliability"] },
+      { title: "Integrations & automation", text: "Connect your tools, remove duplicate entry and simplify repetitive work. Automation designed around a specific need.", details: ["APIs and third-party services", "Business workflows", "AI features suited to the use case"] },
+    ],
+    proofsTitle: "Ideas turned into working tools.", allWork: "Explore selected work",
+    workItems: [
+      { name: "Parigo Music", label: "Client project · Live", image: "/images/work/parigo.webp", text: "Rethinking discovery and listening across a music catalogue. I design the art direction, user journeys and frontend of the new platform.", result: "A redesigned catalogue, search and listening platform, live at parigomusic.com." },
+      { name: "Pressay", label: "Personal product · Public beta", image: "/images/work/pressay.webp", text: "From voice to text in everyday applications. A product I design and build, from the Mac experience through to distribution.", result: "A Mac dictation application available in public beta." },
+    ],
+    methodTitle: "One person, from the start onwards.",
+    steps: [["Understand", "We clarify the need, users and constraints. You receive a scope and a quote before development starts."], ["Build", "I design and develop in stages. You can try the product and share feedback throughout the project."], ["Launch", "I prepare the release, verify key journeys and hand over the agreed code, access and documentation."]],
+    aboutTitle: "I’m Yoann. I design and build.",
+    aboutText: "Yodev is my independent business. I work directly with the people behind a project to understand their work and build the right tools. My practice brings together user journeys, interface design and development.",
+    aboutMore: "I also build my own products. Mail, Ads and Spend grew out of needs I encountered in my applications and day-to-day work. That experience informs the decisions I make with clients: ease of use, reliability and control over costs.",
+    formats: "A format that fits your starting point.", formatItems: [["Find a direction", "A focused audit and recommendations to decide what comes next."], ["Build a product", "A scope agreed together, from design to launch."], ["Improve an existing tool", "A focused engagement on journeys, features or friction points."]],
+    footer: "Useful tools. For real projects.", legal: "Legal notice", privacy: "Privacy",
+  },
+} as const;
+export type CommercialLocale = keyof typeof commercial;
