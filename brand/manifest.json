@@ -1,19 +1,62 @@
 {
-  "version": "1.0.0",
-  "source": "yodev",
-  "colors": {
-    "dark": "#0C1117",
-    "light": "#F7F5F0",
-    "mail": "#315EFB",
-    "ads": "#19A58F"
-  },
+  "version": "2.0.0",
+  "source": "yodev/brand",
+  "defaultTheme": "dark",
   "fonts": {
     "body": "DM Sans",
-    "display": "Plus Jakarta Sans",
+    "display": "DM Sans",
     "mono": "Fira Code"
   },
+  "colors": {
+    "background": "#141716",
+    "surface": "#1B201E",
+    "text": "#EBEFEB"
+  },
   "products": {
-    "mail": { "name": "Mail by Yodev", "asset": "/brand/mail-by-yodev.svg", "sha256": "04b48e0adefc7f4619e99428f2bb0a081ec38c28ba445b88812bae866a7adec2" },
-    "ads": { "name": "Ads by Yodev", "asset": "/brand/ads-by-yodev.svg", "sha256": "d1c16f2d506806d0ff634a0d0c0ddc3068e95abb22f4d555ebd288938083b28d" }
+    "yodev": {
+      "name": "Yodev",
+      "accent": "#B6D68B",
+      "accentLight": "#426026",
+      "assets": {
+        "symbol": "/brand/yodev-symbol.svg",
+        "logo": "/brand/yodev-logo.svg",
+        "logoLight": "/brand/yodev-logo-light.svg"
+      }
+    },
+    "mail": {
+      "name": "Yodev Mail",
+      "accent": "#A7CFE8",
+      "accentLight": "#276181",
+      "assets": {
+        "symbol": "/brand/mail-symbol.svg",
+        "logo": "/brand/mail-logo.svg",
+        "logoLight": "/brand/mail-logo-light.svg"
+      }
+    },
+    "ads": {
+      "name": "Yodev Ads",
+      "accent": "#B6D68B",
+      "accentLight": "#426026",
+      "assets": {
+        "symbol": "/brand/ads-symbol.svg",
+        "logo": "/brand/ads-logo.svg",
+        "logoLight": "/brand/ads-logo-light.svg"
+      }
+    },
+    "spend": {
+      "name": "Yodev Spend",
+      "accent": "#F0C66E",
+      "accentLight": "#81580C",
+      "assets": {
+        "symbol": "/brand/spend-symbol.svg",
+        "logo": "/brand/spend-logo.svg",
+        "logoLight": "/brand/spend-logo-light.svg"
+      }
+    }
+  },
+  "lightColors": {
+    "background": "#F7F8F5",
+    "surface": "#FFFFFF",
+    "text": "#18201B"
   }
 }

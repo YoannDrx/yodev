@@ -1,9 +1,9 @@
 export const productUrls = {
-  mail: "https://mail.yodev.fr/inscription",
+  mail: "https://mail.yodev.fr",
   ads: "https://ads.yodev.fr",
   spend: {
-    fr: "https://spend.yodev.fr/fr/dashboard",
-    en: "https://spend.yodev.fr/en/dashboard",
+    fr: "https://spend.yodev.fr/fr",
+    en: "https://spend.yodev.fr/en",
   },
 } as const;
 
@@ -37,9 +37,9 @@ export const mailCopy: Record<ProductLocale, ProductLandingCopy> = {
     brand: "Mail",
     signature: "by Yodev",
     eyebrow: "Passerelle transactionnelle gérée",
-    title: "Un événement applicatif, un destinataire, une livraison maîtrisée.",
+    title: "Les emails de votre application, pris en charge.",
     subtitle:
-      "Mail by Yodev opère l’envoi transactionnel pour vos applications : revue du cas d’usage, configuration DNS, API stricte et suivi de délivrabilité, sans compte fournisseur à gérer.",
+      "Yodev Mail opère l’envoi transactionnel pour vos applications : revue du cas d’usage, configuration DNS, API stricte et suivi de délivrabilité, sans compte fournisseur à gérer.",
     primaryCta: "Candidater à la bêta privée",
     secondaryCta: "Présenter mon besoin",
     featuresTitle: "Une chaîne transactionnelle accompagnée",
@@ -65,9 +65,9 @@ export const mailCopy: Record<ProductLocale, ProductLandingCopy> = {
     brand: "Mail",
     signature: "by Yodev",
     eyebrow: "Managed transactional gateway",
-    title: "One application event, one recipient, one controlled delivery.",
+    title: "Your application’s emails, taken care of.",
     subtitle:
-      "Mail by Yodev operates transactional delivery for your applications: use-case review, DNS setup, a strict API and deliverability monitoring, with no provider account for you to manage.",
+      "Yodev Mail operates transactional delivery for your applications: use-case review, DNS setup, a strict API and deliverability monitoring, with no provider account for you to manage.",
     primaryCta: "Apply for the private beta",
     secondaryCta: "Describe my use case",
     featuresTitle: "A supported transactional delivery chain",
@@ -96,10 +96,10 @@ export const adsCopy: Record<ProductLocale, ProductLandingCopy> = {
     brand: "Ads",
     signature: "by Yodev",
     eyebrow: "Pilotage Google Ads multi-client",
-    title: "Surveillez chaque compte, expliquez chaque alerte, sécurisez chaque action.",
+    title: "Gardez une vue claire sur vos comptes Google Ads.",
     subtitle:
-      "Ads by Yodev donne aux agences et media buyers un cockpit unique pour analyser, approuver et piloter leurs comptes Google Ads.",
-    primaryCta: "Ouvrir Ads by Yodev",
+      "Yodev Ads donne aux agences et media buyers un espace de travail pour analyser, approuver et piloter leurs comptes Google Ads.",
+    primaryCta: "Ouvrir Yodev Ads",
     secondaryCta: "Parler du produit",
     featuresTitle: "Du signal à la décision",
     features: [
@@ -117,10 +117,10 @@ export const adsCopy: Record<ProductLocale, ProductLandingCopy> = {
     brand: "Ads",
     signature: "by Yodev",
     eyebrow: "Multi-client Google Ads operations",
-    title: "Monitor every account, explain every alert and secure every action.",
+    title: "Keep a clear view of your Google Ads accounts.",
     subtitle:
-      "Ads by Yodev gives agencies and media buyers one cockpit to analyse, approve and operate their Google Ads accounts.",
-    primaryCta: "Open Ads by Yodev",
+      "Yodev Ads gives agencies and media buyers one cockpit to analyse, approve and operate their Google Ads accounts.",
+    primaryCta: "Open Yodev Ads",
     secondaryCta: "Discuss the product",
     featuresTitle: "From signal to decision",
     features: [
@@ -140,11 +140,11 @@ export const spendCopy: Record<ProductLocale, ProductLandingCopy> = {
   fr: {
     brand: "Spend",
     signature: "by Yodev",
-    eyebrow: "FinOps par projet pour les équipes produit",
+    eyebrow: "Dépenses logicielles par projet",
     title: "Comprenez précisément ce que coûte chaque produit.",
     subtitle:
-      "Spend by Yodev réunit les dépenses de votre stack, rattache les coûts directs aux bons projets et répartit les abonnements mutualisés sans perdre un centime.",
-    primaryCta: "Ouvrir Spend by Yodev",
+      "Yodev Spend réunit les services utilisés par vos projets, leurs factures et la répartition de leurs coûts. Vous identifiez ce qui est attribué et ce qui reste à répartir.",
+    primaryCta: "Ouvrir Yodev Spend",
     secondaryCta: "Parler du produit",
     featuresTitle: "De la facture au coût réel par projet",
     features: [
@@ -161,11 +161,11 @@ export const spendCopy: Record<ProductLocale, ProductLandingCopy> = {
   en: {
     brand: "Spend",
     signature: "by Yodev",
-    eyebrow: "Project-level FinOps for product teams",
+    eyebrow: "Software expenses by project",
     title: "Understand exactly what every product costs.",
     subtitle:
-      "Spend by Yodev brings your stack expenses together, maps direct costs to the right projects and allocates shared subscriptions without losing a cent.",
-    primaryCta: "Open Spend by Yodev",
+      "Yodev Spend brings together the services your projects use, their bills and cost allocation. See what is assigned and what still needs allocating.",
+    primaryCta: "Open Yodev Spend",
     secondaryCta: "Discuss the product",
     featuresTitle: "From provider bill to real project cost",
     features: [

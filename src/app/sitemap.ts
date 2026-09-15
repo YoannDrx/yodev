@@ -6,8 +6,6 @@ const publicRoutes = [
   { fr: "", en: "" },
   { fr: "/services", en: "/services" },
   { fr: "/realisations", en: "/work" },
-  { fr: "/methode", en: "/method" },
-  { fr: "/offres", en: "/offers" },
   { fr: "/a-propos", en: "/about" },
   { fr: "/contact", en: "/contact" },
   { fr: "/mail", en: "/mail" },

@@ -9,27 +9,33 @@
     "start": "next start",
     "lint": "eslint",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "check": "pnpm exec tsc --noEmit && pnpm lint && pnpm test && pnpm build"
+    "check": "pnpm exec tsc --noEmit && pnpm lint && pnpm test && pnpm build",
+    "brand:sync": "node scripts/sync-brand.mjs",
+    "brand:check": "node scripts/sync-brand.mjs --check",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
-    "next": "16.1.0",
+    "next": "^16.3.5",
     "next-intl": "^4.6.1",
     "next-themes": "^0.4.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.0",
+    "eslint-config-next": "^16.3.5",
+    "playwright-core": "1.61.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

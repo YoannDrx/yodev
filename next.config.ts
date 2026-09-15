@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      { source: "/fr/methode", destination: "/fr/services#methode", permanent: true },
+      { source: "/en/method", destination: "/en/services#methode", permanent: true },
+      { source: "/fr/offres", destination: "/fr/services#formats", permanent: true },
+      { source: "/en/offers", destination: "/en/services#formats", permanent: true },
       { source: "/fr/ia/:path*", destination: "/fr/services", permanent: false },
       { source: "/en/ai/:path*", destination: "/en/services", permanent: false },
       { source: "/fr/expertises/:path*", destination: "/fr/services", permanent: false },

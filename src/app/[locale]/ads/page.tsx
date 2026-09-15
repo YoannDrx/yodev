@@ -11,10 +11,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const language = hasLocale(routing.locales, locale) ? locale : "fr";
   const copy = adsCopy[language];
   return {
-    title: `Ads by Yodev — ${copy.eyebrow}`,
+    title: `Yodev Ads — ${copy.eyebrow}`,
     description: copy.subtitle,
     alternates: { canonical: `/${language}/ads`, languages: { fr: "/fr/ads", en: "/en/ads" } },
-    openGraph: { title: `Ads by Yodev — ${copy.eyebrow}`, description: copy.subtitle, url: `/${language}/ads`, type: "website" },
+    openGraph: { title: `Yodev Ads — ${copy.eyebrow}`, description: copy.subtitle, url: `/${language}/ads`, type: "website" },
   };
 }
 
@@ -22,5 +22,5 @@ export default async function AdsProductPage({ params }: { params: Promise<{ loc
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  return <ProductLanding copy={adsCopy[locale]} appUrl={productUrls.ads} accent="ads" />;
+  return <ProductLanding copy={adsCopy[locale]} appUrl={productUrls.ads} accent="ads" locale={locale} />;
 }
