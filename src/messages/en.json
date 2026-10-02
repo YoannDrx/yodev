@@ -148,7 +148,7 @@
   "PrivacyPage": {
     "eyebrow": "Data Protection",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: August 10, 2026",
+    "lastUpdated": "Last updated: October 2, 2026",
     "backToLegal": "Back to legal notice",
     "sections": [
       {
@@ -156,28 +156,36 @@
         "content": "Yodev, published by Yoann Andrieux, a French sole trader (entrepreneur individuel, EI), SIREN 803 272 590, is the controller for processing carried out through yodev.fr. To exercise your rights, email hello@yodev.fr."
       },
       {
-        "title": "Data Collection",
-        "content": "We only collect data necessary for the proper functioning of our services: name, email, and project information when you contact us."
+        "title": "Data and purposes",
+        "content": "The form collects your name, email, message and, if provided, organization, budget and product of interest. Fields marked * are required to assess and reply to your request; other fields are optional. Do not send passwords, health data or other sensitive information. You are not automatically subscribed to a newsletter."
       },
       {
-        "title": "Data Use",
-        "content": "Your data is used to qualify and respond to your request. The site does not automatically subscribe you to a newsletter."
+        "title": "Legal basis",
+        "content": "Assessing a request for services is based on steps taken at your request before entering into a contract. Other enquiries and abuse prevention rely on our legitimate interest in answering requests and protecting the website. We do not make automated decisions that produce legal effects concerning you."
       },
       {
-        "title": "Data Protection",
-        "content": "Requests are sent to the technical services required to operate the site and deliver the email. Access is limited to people who need to process the request."
+        "title": "Recipients and providers",
+        "content": "Requests are accessible to the person responsible for replying at Yodev. Vercel hosts the website, Resend transmits emails, and the email provider stores received correspondence. The rate-limiting service receives only pseudonymous identifiers and temporary counters, without the content of your request. Data is neither sold nor used for targeted advertising."
       },
       {
-        "title": "Cookies and audience measurement",
-        "content": "No advertising audience measurement tool is enabled in this version of the site. Your light or dark display preference may be stored locally by your browser."
+        "title": "Retention",
+        "content": "Enquiries that do not lead to a business relationship are removed from the mailbox no later than 12 months after the last exchange. If a contract is concluded, records needed to fulfil the contract and legal obligations follow their own retention periods. Abuse-prevention counters expire after 15 minutes to 24 hours. Application logs exclude names, email addresses and messages; their operational retention is limited to 30 days. Details of provider copies and technical-log retention are available on request."
       },
       {
-        "title": "Your Rights",
-        "content": "Under GDPR, you may request access, rectification or deletion of your data, as well as exercise other rights applicable to your situation."
+        "title": "Hosting and international transfers",
+        "content": "Vercel and Resend may process data outside the European Economic Area, including in the United States. Their data processing agreements provide transfer mechanisms, including European Commission standard contractual clauses where applicable. You can request the list of providers, processing locations and safeguards relevant to your request from our privacy contact."
       },
       {
-        "title": "Contact",
-        "content": "For questions about your personal data, email hello@yodev.fr. We will request the information needed to verify your identity when required."
+        "title": "Preferences and duplicate prevention",
+        "content": "The site includes no advertising trackers. Your selected theme is stored in your browser; a language cookie may remember your language preference. When submitting, session storage may keep a random identifier and a fingerprint of the request valid for up to 23 hours to reuse the same identifier after an interruption. Your name, email address and message are not stored there. These items are removed after success or when the browser session closes."
+      },
+      {
+        "title": "Your rights and complaints",
+        "content": "You may request access, rectification, erasure or restriction of processing, object to processing based on legitimate interests, and exercise data portability where applicable. Email hello@yodev.fr. Proportionate proof of identity may be requested if there is reasonable doubt. You may also lodge a complaint with the French data protection authority, CNIL, including through cnil.fr."
+      },
+      {
+        "title": "Scope of this policy",
+        "content": "This policy covers the yodev.fr website and its contact requests. Mail, Ads, Spend and Pressay publish their own information about their accounts and services. For questions about this policy: hello@yodev.fr."
       }
     ]
   },

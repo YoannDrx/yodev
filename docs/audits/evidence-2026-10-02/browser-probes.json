@@ -1,0 +1,214 @@
+[
+  {
+    "kind": "axe",
+    "path": "/fr/contact",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/contact",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/en/contact",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/en/contact",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/mentions-legales",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/mentions-legales",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/mentions-legales/confidentialite",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/mentions-legales/confidentialite",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/en/legal/privacy",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/en/legal/privacy",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/services",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/services",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/realisations",
+    "theme": "dark",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "axe",
+    "path": "/fr/realisations",
+    "theme": "light",
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "kind": "name-validity",
+    "browserValid": true
+  },
+  {
+    "kind": "name-rejection",
+    "status": 400,
+    "alert": "La demande n’a pas pu être envoyée\n\nRéessayez dans quelques instants ou utilisez l’adresse email directe ci-dessous."
+  },
+  {
+    "kind": "pending-request",
+    "buttonDisabled": true,
+    "capturedFields": [
+      "name",
+      "email",
+      "organization",
+      "projectType",
+      "budget",
+      "message",
+      "website",
+      "locale"
+    ],
+    "productSent": null
+  },
+  {
+    "kind": "edit-during-submit",
+    "formGone": true,
+    "status": "Demande transmise\n\nVotre demande a bien été transmise. Je vous répondrai à l’adresse indiquée.\n\nRéessayer"
+  },
+  {
+    "kind": "width",
+    "width": 320,
+    "scrollWidth": 320
+  },
+  {
+    "kind": "width",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "kind": "width",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "kind": "width",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "kind": "nojs-privacy",
+    "headingOpacity": "0",
+    "sectionOpacity": "0"
+  },
+  {
+    "kind": "resources",
+    "entries": [
+      {
+        "name": "5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2",
+        "transferSize": 0,
+        "decodedBodySize": 36980
+      },
+      {
+        "name": "b8b552e8609c5636-s.p.2qe5xx8d5sx8i.woff2",
+        "transferSize": 0,
+        "decodedBodySize": 36340
+      },
+      {
+        "name": "0r_rwslj88mx8.js",
+        "transferSize": 0,
+        "decodedBodySize": 29045
+      },
+      {
+        "name": "3vv__l9083d3b.js",
+        "transferSize": 0,
+        "decodedBodySize": 228914
+      },
+      {
+        "name": "2kck1cj5wptkz.js",
+        "transferSize": 0,
+        "decodedBodySize": 165750
+      },
+      {
+        "name": "turbopack-1m72ej-ws2903.js",
+        "transferSize": 0,
+        "decodedBodySize": 10946
+      },
+      {
+        "name": "3pv8v3fi8_6px.js",
+        "transferSize": 0,
+        "decodedBodySize": 14381
+      },
+      {
+        "name": "2uw-xlv83eenq.js",
+        "transferSize": 0,
+        "decodedBodySize": 32422
+      },
+      {
+        "name": "0emcm-1e1j2ho.js",
+        "transferSize": 0,
+        "decodedBodySize": 39832
+      },
+      {
+        "name": "0z4fls6lbgd0-.js",
+        "transferSize": 0,
+        "decodedBodySize": 33253
+      },
+      {
+        "name": "27wyzifrfk-1t.js",
+        "transferSize": 0,
+        "decodedBodySize": 135952
+      }
+    ]
+  }
+]

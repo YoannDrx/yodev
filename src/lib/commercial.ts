@@ -13,8 +13,8 @@ export const commercial = {
     ],
     proofsTitle: "Des idées devenues des outils.", allWork: "Voir les réalisations",
     workItems: [
-      { name: "Parigo Music", label: "Mission client · En ligne", image: "/images/work/parigo.webp", text: "Repenser la découverte et l’écoute d’un catalogue musical. Je conçois la direction artistique, les parcours et le frontend de la nouvelle plateforme.", result: "Une nouvelle plateforme de catalogue, de recherche et d’écoute, en ligne sur parigomusic.com." },
-      { name: "Pressay", label: "Produit personnel · Bêta publique", image: "/images/work/pressay.webp", text: "Passer de la voix au texte dans les applications du quotidien. Un produit que je conçois et développe, de l’expérience sur Mac à sa distribution.", result: "Une application de dictée sur Mac disponible en bêta publique." },
+      { name: "Parigo Music", url: "https://www.parigomusic.com", label: "Mission client · En ligne", image: "/images/work/parigo.webp", text: "Repenser la découverte et l’écoute d’un catalogue musical. Je conçois la direction artistique, les parcours et le frontend de la nouvelle plateforme.", result: "Une nouvelle plateforme de catalogue, de recherche et d’écoute, en ligne sur parigomusic.com." },
+      { name: "Pressay", url: "https://press-say.app", label: "Produit personnel · Bêta publique", image: "/images/work/pressay.webp", text: "Passer de la voix au texte dans les applications du quotidien. Un produit que je conçois et développe, de l’expérience sur Mac à sa distribution.", result: "Une application de dictée sur Mac disponible en bêta publique." },
     ],
     methodTitle: "Un interlocuteur, du début à la suite.",
     steps: [
@@ -42,8 +42,8 @@ export const commercial = {
     ],
     proofsTitle: "Ideas turned into working tools.", allWork: "Explore selected work",
     workItems: [
-      { name: "Parigo Music", label: "Client project · Live", image: "/images/work/parigo.webp", text: "Rethinking discovery and listening across a music catalogue. I design the art direction, user journeys and frontend of the new platform.", result: "A redesigned catalogue, search and listening platform, live at parigomusic.com." },
-      { name: "Pressay", label: "Personal product · Public beta", image: "/images/work/pressay.webp", text: "From voice to text in everyday applications. A product I design and build, from the Mac experience through to distribution.", result: "A Mac dictation application available in public beta." },
+      { name: "Parigo Music", url: "https://www.parigomusic.com", label: "Client project · Live", image: "/images/work/parigo.webp", text: "Rethinking discovery and listening across a music catalogue. I design the art direction, user journeys and frontend of the new platform.", result: "A redesigned catalogue, search and listening platform, live at parigomusic.com." },
+      { name: "Pressay", url: "https://press-say.app", label: "Personal product · Public beta", image: "/images/work/pressay.webp", text: "From voice to text in everyday applications. A product I design and build, from the Mac experience through to distribution.", result: "A Mac dictation application available in public beta." },
     ],
     methodTitle: "One person, from the start onwards.",
     steps: [["Understand", "We clarify the need, users and constraints. You receive a scope and a quote before development starts."], ["Build", "I design and develop in stages. You can try the product and share feedback throughout the project."], ["Launch", "I prepare the release, verify key journeys and hand over the agreed code, access and documentation."]],

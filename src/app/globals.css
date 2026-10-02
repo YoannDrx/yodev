@@ -85,7 +85,7 @@ button { cursor: pointer; }
 .yd-preview th { font: 11px var(--font-fira); color: var(--y-muted); }
 .yd-preview td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
 .glass-panel,.glass-panel-strong { background: var(--y-surface); border: 1px solid var(--y-border); box-shadow: none; }
-.yd-contact { padding-top: 70px; }
+.yd-contact-embedded { padding-top: 54px; }
 .yd-contact .text-center { text-align: left; }
 .yd-contact .mx-auto { margin-left: 0; }
 .yd-skip { position: absolute; left: 16px; top: -100px; z-index: 100; background: var(--y-accent); color: var(--y-on-accent); padding: 12px; }

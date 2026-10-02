@@ -1,0 +1,21 @@
+
+Running 15 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/commercial.spec.ts:4:1 › dark default, explicit preference, mobile navigation and localized destination (612ms)
+  ✓   2 [chromium] › e2e/commercial.spec.ts:22:1 › old routes preserve language and target the relevant service section (269ms)
+  ✓   3 [chromium] › e2e/commercial.spec.ts:30:1 › product index, product status and both languages remain accessible (1.9s)
+  ✓   4 [chromium] › e2e/commercial.spec.ts:41:1 › contact validates, retains input after a real server failure and supports retry success (576ms)
+  ✓   5 [chromium] › e2e/commercial.spec.ts:61:1 › responsive layout, keyboard entry and contrast in both themes (3.5s)
+  ✓   6 [chromium] › e2e/commercial.spec.ts:79:1 › brand icons and localized sharing images are served as images (228ms)
+COLD_MOBILE_METRICS {"lcpMs":732,"cls":0.032888237180927,"ttfbMs":2.7999999970197678,"scripts":13,"jsDecodedBytes":623418,"jsTransferredBytes":197110,"totalTransferredBytes":313182,"profile":"Chromium, cold cache, 390x844, 1.6Mbps down/750Kbps up, 150ms latency, CPU x4, local next start"}
+  ✓   7 [chromium] › e2e/performance.spec.ts:4:1 › cold mobile production baseline (3.2s)
+  ✓   8 [chromium] › e2e/readiness.spec.ts:12:1 › product context reaches the payload and remains selected through a language switch (763ms)
+  ✓   9 [chromium] › e2e/readiness.spec.ts:33:1 › trimmed validation focuses the field; pending submission locks input and reuses its ID after failure (726ms)
+  ✓  10 [chromium] › e2e/readiness.spec.ts:69:1 › client deadline unlocks fields, and rate-limit feedback includes the waiting time (647ms)
+  ✓  11 [chromium] › e2e/readiness.spec.ts:85:1 › changing language warns before losing an unsent request and cancellation retains it (626ms)
+  ✓  12 [chromium] › e2e/readiness.spec.ts:98:1 › every editorial page has its own canonical metadata and security headers (810ms)
+  ✓  13 [chromium] › e2e/readiness.spec.ts:121:1 › legal content is visible without JavaScript and unknown pages return localized 404 (292ms)
+  ✓  14 [chromium] › e2e/readiness.spec.ts:143:1 › contact and privacy remain accessible at 320px in both languages (1.3s)
+  ✓  15 [chromium] › e2e/readiness.spec.ts:153:1 › read-only deployment smoke checks all public routes and sitemap without sending email (115ms)
+
+  15 passed (16.9s)

@@ -1,14 +1,14 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { getPageLocale, type LocalizedPageProps } from "@/i18n/page-locale";
+import { pageMetadata } from "@/lib/site";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FadeIn } from "@/components/motion";
 
-export default function LegalPage() {
-  const t = useTranslations("LegalPage");
+export default async function LegalPage({ params }: LocalizedPageProps) {
+  const locale = await getPageLocale(params);
+  const t = await getTranslations({ locale, namespace: "LegalPage" });
   const sections = t.raw("sections") as Array<{ title: string; content: string }>;
 
   return (
@@ -18,19 +18,19 @@ export default function LegalPage() {
         <div className="absolute inset-0 -z-10 bg-grid opacity-30" />
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <FadeIn>
+            <div>
               <Badge variant="primary" className="mb-4">
                 {t("eyebrow")}
               </Badge>
-            </FadeIn>
-            <FadeIn delay={0.1}>
+            </div>
+            <div>
               <h1 className="text-4xl font-bold text-text md:text-5xl">
                 {t("title")}
               </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
+            </div>
+            <div>
               <p className="mt-6 text-lg text-muted">{t("lastUpdated")}</p>
-            </FadeIn>
+            </div>
           </div>
         </Container>
       </section>
@@ -41,7 +41,7 @@ export default function LegalPage() {
           <Card className="p-8 md:p-12">
             <div className="space-y-8">
               {sections.map((section, index) => (
-                <FadeIn key={index} delay={index * 0.1}>
+                <div key={index}>
                   <div>
                     <h2 className="text-xl font-semibold text-text">
                       {section.title}
@@ -50,7 +50,7 @@ export default function LegalPage() {
                       {section.content}
                     </p>
                   </div>
-                </FadeIn>
+                </div>
               ))}
             </div>
           </Card>
@@ -59,3 +59,5 @@ export default function LegalPage() {
     </>
   );
 }
+
+export async function generateMetadata({ params }: LocalizedPageProps) { return pageMetadata("legal", await getPageLocale(params)); }

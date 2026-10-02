@@ -10,11 +10,12 @@ import {
   MessageSquare,
   Send,
 } from "lucide-react";
-import { FadeIn } from "@/components/motion";
+import { Link } from "@/i18n/navigation";
+import { CONTACT_LIMITS, CONTACT_MESSAGE_MIN, CONTACT_CLIENT_TIMEOUT_MS, CONTACT_PRODUCTS, validateContactRequest, type ContactValues, type ContactFieldErrors, type ContactProduct } from "@/lib/contact-request";
+import { contactSubmissionId, clearContactReceipt } from "@/lib/contact-submission";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { GlassPanel } from "@/components/ui/glass-panel";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,15 +24,7 @@ import { cn } from "@/lib/utils";
 type Locale = "fr" | "en";
 type SubmissionStatus = "idle" | "submitting" | "success" | "error";
 
-type FormValues = {
-  name: string;
-  email: string;
-  organization: string;
-  projectType: string;
-  budget: string;
-  message: string;
-  website: string;
-};
+type FormValues = ContactValues;
 
 const initialValues: FormValues = {
   name: "",
@@ -41,6 +34,7 @@ const initialValues: FormValues = {
   budget: "",
   message: "",
   website: "",
+  product: "",
 };
 
 const content = {
@@ -84,7 +78,7 @@ const content = {
     errorTitle: "La demande n’a pas pu être envoyée",
     errorBody:
       "Réessayez dans quelques instants ou utilisez l’adresse email directe ci-dessous. ",
-    retry: "Réessayer",
+    retry: "Envoyer une autre demande",
     directTitle: "Email direct",
     directBody:
       "Si le formulaire est indisponible, envoyez le même contexte par email.",
@@ -132,13 +126,13 @@ const content = {
       "What stage is the product at, who uses it, what problem needs solving and what deadline matters?",
     submit: "Send the request",
     submitting: "Sending",
-    successTitle: "Request delivered",
+    successTitle: "Request submitted",
     successBody:
       "Your request has been sent. I will reply to the email address you provided.",
     errorTitle: "The request could not be sent",
     errorBody:
       "Try again in a moment or use the direct email address below.",
-    retry: "Try again",
+    retry: "Send another request",
     directTitle: "Direct email",
     directBody: "If the form is unavailable, send the same context by email.",
     bookingTitle: "Choose a time",
@@ -159,69 +153,149 @@ const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
 
 export function ContactSection({ embedded = false }: { embedded?: boolean }) {
   const locale = (useLocale() === "en" ? "en" : "fr") satisfies Locale;
-  const copy = content[locale];
+  const [ready, setReady] = useState(false);
   const [values, setValues] = useState<FormValues>(initialValues);
   const [status, setStatus] = useState<SubmissionStatus>("idle");
   const requestIdRef = useRef<string | null>(null);
+  const busy = useRef(false);
+  const activeController = useRef<AbortController | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const successRef = useRef<HTMLDivElement>(null);
+  const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({});
+  const [errorKind, setErrorKind] = useState("DELIVERY_FAILED");
+  const [retryMinutes, setRetryMinutes] = useState(1);
+  const dirty = status !== "success" && Boolean(values.name || values.email || values.organization || values.message || values.budget);
+  const fr = locale === "fr";
+  const productName = values.product ? `Yodev ${values.product[0].toUpperCase()}${values.product.slice(1)}` : "";
+  const copy = {
+    ...content[locale],
+    ...(productName ? {
+      eyebrow: fr ? `Découvrir ${productName}` : `Discover ${productName}`,
+      title: fr ? `Parlons de votre usage de ${productName}.` : `Let’s talk about your use of ${productName}.`,
+      subtitle: fr ? "Décrivez votre usage et vos attentes. Je vous préciserai les possibilités d’accès et la prochaine étape utile." : "Describe your use case and expectations. I will explain the access options and a useful next step.",
+      formTitle: fr ? "Parlons de votre usage" : "Tell me about your use case",
+      process: fr ? ["Je lis votre demande et votre contexte d’usage.", "Je vous précise la disponibilité et les conditions d’accès du produit.", "Nous choisissons la prochaine étape adaptée à votre besoin."] : ["I review your request and use case.", "I explain product availability and access conditions.", "We choose the next step that fits your needs."],
+    } : {}),
+  };
 
   useEffect(() => {
-    const requestedType = new URLSearchParams(window.location.search).get("type");
-    const projectTypeByQuery: Record<string, FormValues["projectType"]> = {
-      nouveau: "product",
-      new: "product",
-      optimisation: "improvement",
-      optimization: "improvement",
-      audit: "audit",
-    };
-
-    if (requestedType && projectTypeByQuery[requestedType]) {
-      setValues((current) => ({
-        ...current,
-        projectType: projectTypeByQuery[requestedType],
-      }));
-    }
+    setReady(true);
+    const query = new URLSearchParams(window.location.search);
+    const types: Record<string, string> = { nouveau: "product", new: "product", optimisation: "improvement", optimization: "improvement", audit: "audit" };
+    const product = query.get("product");
+    setValues(current => ({ ...current,
+      projectType: types[query.get("type") ?? ""] ?? current.projectType,
+      product: CONTACT_PRODUCTS.some(value => value === product) ? product as ContactProduct : "",
+    }));
+    return () => activeController.current?.abort();
   }, []);
 
+  useEffect(() => {
+    if (!dirty) return;
+    let discarding = false;
+    const discard = () => { discarding = true; };
+    const warn = (event: BeforeUnloadEvent) => { if (!discarding) { event.preventDefault(); event.returnValue = ""; } };
+    window.addEventListener("beforeunload", warn);
+    window.addEventListener("yodev:discard-contact", discard);
+    return () => {
+      window.removeEventListener("beforeunload", warn);
+      window.removeEventListener("yodev:discard-contact", discard);
+    };
+  }, [dirty]);
+
+  useEffect(() => {
+    if (status === "success") successRef.current?.focus();
+  }, [status]);
+
   function updateValue(field: keyof FormValues, value: string) {
+    if (busy.current) return;
     requestIdRef.current = null;
-    setValues((current) => ({ ...current, [field]: value }));
+    setValues(current => ({ ...current, [field]: value }));
+    setFieldErrors(current => ({ ...current, [field]: undefined }));
+    if (status === "error") setStatus("idle");
   }
+
+  function showValidation(fields: ContactFieldErrors) {
+    setFieldErrors(fields);
+    setErrorKind("INVALID_REQUEST");
+    setStatus("error");
+    requestAnimationFrame(() => {
+      const field = formRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]');
+      const details = field?.closest("details");
+      if (details) details.open = true;
+      field?.focus();
+    });
+  }
+
+  function fieldError(field: keyof FormValues) {
+    const code = fieldErrors[field];
+    if (!code) return undefined;
+    if (code === "required") return fr ? "Renseignez ce champ." : "Complete this field.";
+    if (field === "message" && code === "too_short") return fr ? "Décrivez votre besoin en au moins 20 caractères, hors espaces en début et fin." : "Describe your needs in at least 20 characters, excluding leading and trailing spaces.";
+    if (code === "too_long") return fr ? "Ce champ dépasse la longueur autorisée." : "This field is too long.";
+    if (field === "email") return fr ? "Indiquez une adresse email valide." : "Enter a valid email address.";
+    return fr ? "Vérifiez la valeur de ce champ." : "Check this field’s value.";
+  }
+
+  const errorBody = errorKind === "INVALID_REQUEST"
+    ? fr ? "Corrigez les champs indiqués avant de renvoyer votre demande." : "Correct the highlighted fields before submitting again."
+    : errorKind === "RATE_LIMITED"
+      ? fr ? `Trop de demandes ont été reçues. Attendez environ ${retryMinutes} minute(s), ou utilisez l’email direct.` : `Too many requests were received. Wait about ${retryMinutes} minute(s), or use direct email.`
+      : errorKind === "DELIVERY_TIMEOUT"
+        ? fr ? "L’envoi prend trop de temps. Votre saisie est conservée. Réessayez la même demande ; elle garde son identifiant pour éviter un doublon." : "Sending is taking too long. Your input is preserved. Retry the same request; it keeps its identifier to avoid duplicates."
+        : ["CONTACT_NOT_CONFIGURED", "CONTACT_UNAVAILABLE"].includes(errorKind)
+          ? fr ? "Le formulaire est temporairement indisponible. Votre saisie est conservée ; utilisez l’email direct ou réessayez plus tard." : "The form is temporarily unavailable. Your input is preserved; use direct email or try again later."
+          : copy.errorBody;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (busy.current) return;
+    const validation = validateContactRequest({ ...values, locale });
+    if (!validation.success) { showValidation(validation.fields); return; }
+    busy.current = true;
+    setFieldErrors({});
     setStatus("submitting");
-    requestIdRef.current ??= crypto.randomUUID();
-
+    const controller = new AbortController();
+    activeController.current = controller;
+    const timer = window.setTimeout(() => controller.abort(), CONTACT_CLIENT_TIMEOUT_MS);
     try {
+      requestIdRef.current ??= await contactSubmissionId(validation.data);
       const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Contact-Request-Id": requestIdRef.current,
-        },
-        body: JSON.stringify({ ...values, locale }),
+        method: "POST", signal: controller.signal,
+        headers: { "Content-Type": "application/json", "X-Contact-Request-Id": requestIdRef.current },
+        body: JSON.stringify(validation.data),
       });
-
-      if (!response.ok) {
-        setStatus("error");
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) {
+        if (response.status === 400 && result.fields) showValidation(result.fields);
+        else {
+          setErrorKind(result.code ?? "DELIVERY_FAILED");
+          setRetryMinutes(Math.max(1, Math.ceil((Number(response.headers.get("retry-after")) || 60) / 60)));
+          setStatus("error");
+        }
         return;
       }
-
-      setValues(initialValues);
+      setValues({ ...initialValues, product: values.product });
       requestIdRef.current = null;
+      clearContactReceipt();
       setStatus("success");
     } catch {
+      setErrorKind(controller.signal.aborted ? "DELIVERY_TIMEOUT" : "DELIVERY_FAILED");
       setStatus("error");
+    } finally {
+      window.clearTimeout(timer);
+      busy.current = false;
+      activeController.current = null;
     }
   }
 
   return (
-    <div className="yd-contact" id="contact">
-      {!embedded && <section className="relative overflow-hidden pb-16 pt-32">
+    <div className={`yd-contact${embedded ? " yd-contact-embedded" : ""}`} id="contact">
+      {!embedded && <section className="relative overflow-hidden pb-8 pt-12 md:pb-12 md:pt-16">
 
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <FadeIn initiallyVisible>
+            <div>
               <Badge variant="primary" className="mb-6">
                 <MessageSquare className="mr-1 size-3" aria-hidden="true" />
                 {copy.eyebrow}
@@ -232,7 +306,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
                 {copy.subtitle}
               </p>
-            </FadeIn>
+            </div>
           </div>
         </Container>
       </section>}
@@ -240,7 +314,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
       <section className="pb-24 pt-8">
         <Container>
           <div className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <GlassPanel className="rounded-3xl p-6 md:p-10">
+            <div className="glass-panel rounded-3xl p-6 md:p-10">
               <div className="mb-8">
                 <h2 className="font-display text-2xl font-bold">
                   {copy.formTitle}
@@ -249,7 +323,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
               </div>
 
               {status === "success" ? (
-                <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6" role="status">
+                <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6" role="status" ref={successRef} tabIndex={-1}>
                   <CheckCircle2 className="size-8 text-primary" aria-hidden="true" />
                   <h3 className="mt-4 text-xl font-bold">{copy.successTitle}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -260,8 +334,15 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                   </Button>
                 </div>
               ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <fieldset>
+                <form ref={formRef} method="post" action="/api/contact" noValidate onSubmit={handleSubmit} data-contact-dirty={dirty ? "true" : undefined}>
+                  {!ready && <p className="mb-4">{fr ? "Activez JavaScript pour utiliser ce formulaire, ou écrivez à " : "Enable JavaScript to use this form, or email "}<a href={`mailto:${contactEmail}`} className="underline">{contactEmail}</a>.</p>}
+                  <fieldset className="space-y-6" disabled={!ready || status === "submitting"} aria-busy={status === "submitting"}>
+                    <legend className="sr-only">{copy.formTitle}</legend>
+                    <Select name="product" label={fr ? "Votre demande concerne" : "Your request is about"}
+                      value={values.product} onChange={event => updateValue("product", event.target.value)} error={fieldError("product")}
+                      options={[{ value: "", label: fr ? "Une prestation sur devis" : "A project or service" }, ...CONTACT_PRODUCTS.map(product => ({ value: product, label: `Yodev ${product[0].toUpperCase()}${product.slice(1)}` }))]} />
+                    {values.product && <p className="text-sm text-muted">{fr ? "Décrivez votre usage et vos attentes pour ce produit. Je vous préciserai les possibilités d’accès." : "Describe your use case and expectations for this product. I will explain the available access options."}</p>}
+                  <fieldset hidden={Boolean(values.product)}>
                     <legend className="mb-3 text-sm font-medium text-text">
                       {copy.projectLegend}
                     </legend>
@@ -291,51 +372,60 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Input
+                      name="name"
+                      error={fieldError("name")}
                       label={copy.name}
                       value={values.name}
                       onChange={(event) => updateValue("name", event.target.value)}
                       placeholder={copy.namePlaceholder}
                       autoComplete="name"
-                      maxLength={80}
+                      maxLength={CONTACT_LIMITS.name}
                       required
                     />
                     <Input
+                      name="email"
+                      error={fieldError("email")}
                       label={copy.email}
                       type="email"
                       value={values.email}
                       onChange={(event) => updateValue("email", event.target.value)}
                       placeholder={copy.emailPlaceholder}
                       autoComplete="email"
-                      maxLength={160}
+                      maxLength={CONTACT_LIMITS.email}
                       required
                     />
                   </div>
 
                   <details><summary className="cursor-pointer text-sm text-muted py-2">{locale === "fr" ? "Organisation et budget (facultatif)" : "Organization and budget (optional)"}</summary><div className="grid gap-4 sm:grid-cols-2 mt-4">
                     <Input
+                      name="organization"
+                      error={fieldError("organization")}
                       label={copy.organization}
                       value={values.organization}
                       onChange={(event) => updateValue("organization", event.target.value)}
                       placeholder={copy.organizationPlaceholder}
                       autoComplete="organization"
-                      maxLength={120}
+                      maxLength={CONTACT_LIMITS.organization}
                     />
                     <Select
+                      name="budget"
+                      error={fieldError("budget")}
                       label={copy.budget}
                       value={values.budget}
                       onChange={(event) => updateValue("budget", event.target.value)}
-                      placeholder={copy.budgetPlaceholder}
-                      options={[...copy.budgetOptions]}
+                                            options={[{ value: "", label: copy.budgetPlaceholder }, ...copy.budgetOptions]}
                     />
                   </div></details>
 
                   <Textarea
-                    label={copy.message}
+                    name="message"
+                      error={fieldError("message")}
+                      label={copy.message}
                     value={values.message}
                     onChange={(event) => updateValue("message", event.target.value)}
                     placeholder={copy.messagePlaceholder}
-                    minLength={20}
-                    maxLength={4_000}
+                    minLength={CONTACT_MESSAGE_MIN}
+                    maxLength={CONTACT_LIMITS.message}
                     rows={7}
                     required
                   />
@@ -355,10 +445,11 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                   {status === "error" && (
                     <div className="rounded-xl border border-rose/30 bg-rose/10 p-4" role="alert">
                       <p className="font-bold text-text">{copy.errorTitle}</p>
-                      <p className="mt-1 text-sm text-muted">{copy.errorBody}</p>
+                      <p className="mt-1 text-sm text-muted">{errorBody}</p>
                     </div>
                   )}
 
+                  <p className="text-xs leading-relaxed text-muted">{fr ? "Yodev utilise ces informations pour étudier votre demande et vous répondre. Les champs marqués * sont nécessaires. " : "Yodev uses this information to assess and reply to your request. Fields marked * are required. "}<Link href="/legal/privacy" target="_blank" rel="noreferrer" className="underline underline-offset-4">{fr ? "Confidentialité et droits (nouvel onglet)" : "Privacy and your rights (new tab)"}</Link></p>
                   <Button
                     type="submit"
                     size="lg"
@@ -368,12 +459,13 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                   >
                     {status === "submitting" ? copy.submitting : copy.submit}
                   </Button>
+                  </fieldset>
                 </form>
               )}
-            </GlassPanel>
+            </div>
 
             <div className="space-y-6">
-              <GlassPanel className="rounded-2xl p-6">
+              <div className="glass-panel rounded-2xl p-6">
                 <Mail className="size-6 text-primary" aria-hidden="true" />
                 <h2 className="mt-4 text-lg font-bold">{copy.directTitle}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -386,10 +478,10 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                   {contactEmail}
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </a>
-              </GlassPanel>
+              </div>
 
               {bookingUrl && (
-                <GlassPanel className="rounded-2xl p-6">
+                <div className="glass-panel rounded-2xl p-6">
                   <Calendar className="size-6 text-primary" aria-hidden="true" />
                   <h2 className="mt-4 text-lg font-bold">{copy.bookingTitle}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -404,10 +496,10 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                     {copy.bookingCta}
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </a>
-                </GlassPanel>
+                </div>
               )}
 
-              <GlassPanel className="rounded-2xl p-6">
+              <div className="glass-panel rounded-2xl p-6">
                 <h2 className="text-lg font-bold">{copy.processTitle}</h2>
                 <ol className="mt-5 space-y-4">
                   {copy.process.map((step, index) => (
@@ -419,7 +511,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                     </li>
                   ))}
                 </ol>
-              </GlassPanel>
+              </div>
             </div>
           </div>
         </Container>
