@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteFooter } from "@/components/site/footer";
@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/site/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { fontVariables } from "@/app/_fonts";
 import "@/app/globals.css";
+import { siteUrl } from "@/lib/site";
 
 const metadataByLocale = {
   fr: {
@@ -37,7 +38,7 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL ?? "https://yodev.fr"
+      siteUrl
     ),
     title: copy.title,
     description: copy.description,
@@ -66,13 +67,12 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={fontVariables}>
         <ThemeProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={{}}>
             <div className="min-h-screen bg-bg text-text">
               <SiteHeader />
               <main id="main-content" className="min-h-screen">

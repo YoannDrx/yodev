@@ -148,7 +148,7 @@
   "PrivacyPage": {
     "eyebrow": "Protection des données",
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : 10 août 2026",
+    "lastUpdated": "Dernière mise à jour : 2 octobre 2026",
     "backToLegal": "Retour aux mentions légales",
     "sections": [
       {
@@ -156,28 +156,36 @@
         "content": "Yodev, édité par Yoann Andrieux, entrepreneur individuel (EI), SIREN 803 272 590, est responsable des traitements réalisés via yodev.fr. Pour exercer vos droits, écrivez à hello@yodev.fr."
       },
       {
-        "title": "Collecte des données",
-        "content": "Nous collectons uniquement les données nécessaires au bon fonctionnement de nos services : nom, email, et informations de projet lors d'une prise de contact."
+        "title": "Données et finalités",
+        "content": "Le formulaire recueille votre nom, votre email, votre message et, si vous les renseignez, votre organisation, votre budget et le produit concerné. Les champs marqués * sont nécessaires pour étudier votre demande et vous répondre ; les autres sont facultatifs. Ne transmettez pas de mots de passe, de données de santé ni d’autres informations sensibles. Aucune inscription automatique à une newsletter n’est effectuée."
       },
       {
-        "title": "Utilisation des données",
-        "content": "Vos données sont utilisées pour qualifier votre demande et y répondre. Le site ne vous inscrit pas automatiquement à une newsletter."
+        "title": "Base légale",
+        "content": "L’étude d’une demande de prestation repose sur les mesures précontractuelles prises à votre initiative. Les autres échanges et la prévention des abus reposent sur notre intérêt légitime à répondre aux demandes et à protéger le site. Nous ne prenons pas de décision automatisée produisant des effets juridiques à votre égard."
       },
       {
-        "title": "Protection des données",
-        "content": "Les demandes sont transmises aux services techniques nécessaires au fonctionnement du site et à l'envoi de l'email. L'accès est limité aux personnes qui doivent traiter la demande."
+        "title": "Destinataires et prestataires",
+        "content": "Les demandes sont accessibles à la personne chargée d’y répondre chez Yodev. Vercel assure l’hébergement, Resend transmet les emails et le fournisseur de messagerie conserve les échanges reçus. Le service technique de limitation des envois ne reçoit que des identifiants pseudonymisés et des compteurs temporaires, sans le contenu de votre demande. Les données ne sont ni vendues ni utilisées pour de la publicité ciblée."
       },
       {
-        "title": "Cookies et mesure d'audience",
-        "content": "Aucun outil de mesure d'audience publicitaire n'est activé dans cette version du site. Le choix d'affichage clair ou sombre peut être conservé localement par votre navigateur."
+        "title": "Conservation",
+        "content": "Les demandes n’aboutissant pas à une relation commerciale sont supprimées de la messagerie au plus tard 12 mois après le dernier échange. En cas de contrat, les documents nécessaires à son exécution et aux obligations légales suivent leurs durées propres. Les compteurs anti-abus expirent en 15 minutes à 24 heures. Les journaux techniques de l’application ne contiennent pas le nom, l’email ou le message ; leur conservation opérationnelle est limitée à 30 jours. Les durées des copies et journaux techniques des prestataires sont précisées sur demande."
       },
       {
-        "title": "Vos droits",
-        "content": "Conformément au RGPD, vous pouvez demander l'accès, la rectification ou la suppression de vos données, ainsi que l'exercice des autres droits applicables à votre situation."
+        "title": "Hébergement et transferts",
+        "content": "Vercel et Resend peuvent traiter des données hors de l’Espace économique européen, notamment aux États-Unis. Leurs accords de traitement prévoient des mécanismes de transfert, dont les clauses contractuelles types de la Commission européenne lorsqu’elles sont applicables. Vous pouvez demander la liste des prestataires, les localisations de traitement et les garanties correspondant à votre demande auprès de notre point de contact."
       },
       {
-        "title": "Contact",
-        "content": "Pour toute question concernant vos données personnelles, écrivez à hello@yodev.fr. La demande sera traitée avec les éléments nécessaires pour vérifier votre identité lorsque cela est requis."
+        "title": "Préférences et protection contre les doublons",
+        "content": "Aucun traceur publicitaire n’est intégré au site. Le thème choisi est conservé dans votre navigateur ; un cookie de langue peut mémoriser votre préférence linguistique. Lors d’un envoi, le stockage de session peut conserver un identifiant aléatoire et une empreinte de la demande, valables au plus 23 heures, afin de réutiliser le même identifiant après une interruption. Le nom, l’email et le texte du message n’y sont pas conservés. Ces éléments sont supprimés après un succès ou à la fermeture de la session du navigateur."
+      },
+      {
+        "title": "Vos droits et réclamation",
+        "content": "Vous pouvez demander l’accès, la rectification, l’effacement ou la limitation du traitement de vos données, vous opposer aux traitements fondés sur l’intérêt légitime et exercer le droit à la portabilité lorsque ses conditions sont réunies. Écrivez à hello@yodev.fr. Une preuve d’identité proportionnée peut être demandée en cas de doute raisonnable. Vous pouvez également introduire une réclamation auprès de la CNIL, notamment depuis cnil.fr."
+      },
+      {
+        "title": "Périmètre de cette politique",
+        "content": "Cette politique concerne la vitrine yodev.fr et ses prises de contact. Les applications Mail, Ads, Spend et Pressay disposent de leurs propres informations concernant leurs comptes et services. Pour toute question sur cette politique : hello@yodev.fr."
       }
     ]
   },

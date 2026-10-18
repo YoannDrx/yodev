@@ -48,7 +48,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
               "px-4 py-2 pr-10 text-sm text-text",
               // Focus styles
               "transition-all duration-200",
-              "focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20",
+              "focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40",
               // Hover
               "hover:border-border/80",
               // Disabled

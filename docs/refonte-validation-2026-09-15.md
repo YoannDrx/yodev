@@ -1,5 +1,7 @@
 # Refonte Yodev — validation du 15 septembre 2026
 
+> Note du 2 octobre 2026 : ce document conserve les résultats historiques de septembre. Pour l’état actuel de la vitrine, voir le [rapport d’implémentation](audits/implementation-results-2026-10-02.md) et le [guide d’exploitation](operations.md). L’ancienne réserve Next.js 16.1.0 ci-dessous n’est pas un relevé de la version actuelle.
+
 ## Résultat
 
 Les quatre dépôts adoptent la marque Yodev et ses déclinaisons Mail, Ads et Spend : graphite, surfaces opaques, DM Sans / Fira Code, symbole commun, thèmes sombre et clair. Le thème initial est sombre et les préférences existantes sont conservées. Les sources versionnées de la marque se trouvent dans `brand/`; les copies dans chaque `src/brand` sont vérifiées par `npm run brand:check` depuis Yodev.

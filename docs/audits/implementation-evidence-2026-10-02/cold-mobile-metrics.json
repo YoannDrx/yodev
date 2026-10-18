@@ -1,0 +1,10 @@
+{
+  "lcpMs": 732,
+  "cls": 0.032888237180927,
+  "ttfbMs": 2.7999999970197678,
+  "scripts": 13,
+  "jsDecodedBytes": 623418,
+  "jsTransferredBytes": 197110,
+  "totalTransferredBytes": 313182,
+  "profile": "Chromium, cold cache, 390x844, 1.6Mbps down/750Kbps up, 150ms latency, CPU x4, local next start"
+}

@@ -60,7 +60,7 @@ test('contact validates, retains input after a real server failure and supports 
 
 test('responsive layout, keyboard entry and contrast in both themes', async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  for (const width of [390,768,1440]) {
+  for (const width of [320,390,768,1440]) {
     await page.setViewportSize({width,height:900});
     await page.goto('/fr');
     for (const theme of ['dark','light']) {

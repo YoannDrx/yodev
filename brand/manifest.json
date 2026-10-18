@@ -1,22 +1,27 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.0",
   "source": "yodev/brand",
+  "direction": "Signal",
   "defaultTheme": "dark",
   "fonts": {
-    "body": "DM Sans",
-    "display": "DM Sans",
-    "mono": "Fira Code"
+    "body": "Geist",
+    "display": "Geist",
+    "mono": "Geist Mono"
   },
   "colors": {
-    "background": "#141716",
-    "surface": "#1B201E",
-    "text": "#EBEFEB"
+    "background": "#0E1110",
+    "surface": "#161B19",
+    "text": "#ECF0EA",
+    "muted": "#9BA59F",
+    "border": "#2A312E"
   },
   "products": {
     "yodev": {
       "name": "Yodev",
-      "accent": "#B6D68B",
-      "accentLight": "#426026",
+      "accent": "#C9F36B",
+      "onAccent": "#12170A",
+      "accentLight": "#3E5A0E",
+      "signalLight": "#7FAE1C",
       "assets": {
         "symbol": "/brand/yodev-symbol.svg",
         "logo": "/brand/yodev-logo.svg",
@@ -25,8 +30,10 @@
     },
     "mail": {
       "name": "Yodev Mail",
-      "accent": "#A7CFE8",
-      "accentLight": "#276181",
+      "accent": "#72B7FF",
+      "onAccent": "#0B1A2B",
+      "accentLight": "#1A5FB4",
+      "signalLight": "#2F7FD6",
       "assets": {
         "symbol": "/brand/mail-symbol.svg",
         "logo": "/brand/mail-logo.svg",
@@ -35,8 +42,10 @@
     },
     "ads": {
       "name": "Yodev Ads",
-      "accent": "#B6D68B",
-      "accentLight": "#426026",
+      "accent": "#FF7A4D",
+      "onAccent": "#2B1206",
+      "accentLight": "#B23F17",
+      "signalLight": "#E0602F",
       "assets": {
         "symbol": "/brand/ads-symbol.svg",
         "logo": "/brand/ads-logo.svg",
@@ -45,8 +54,10 @@
     },
     "spend": {
       "name": "Yodev Spend",
-      "accent": "#F0C66E",
-      "accentLight": "#81580C",
+      "accent": "#FFD04A",
+      "onAccent": "#2A2004",
+      "accentLight": "#7D5A00",
+      "signalLight": "#C99300",
       "assets": {
         "symbol": "/brand/spend-symbol.svg",
         "logo": "/brand/spend-logo.svg",
@@ -55,8 +66,10 @@
     }
   },
   "lightColors": {
-    "background": "#F7F8F5",
+    "background": "#F6F7F4",
     "surface": "#FFFFFF",
-    "text": "#18201B"
+    "text": "#121614",
+    "muted": "#5D6661",
+    "border": "#D9DED7"
   }
 }

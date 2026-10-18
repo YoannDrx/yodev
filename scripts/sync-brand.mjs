@@ -11,11 +11,17 @@ const copies = [];
 for (const file of ["tokens.css", "brand.tsx", "social-image.tsx", "navigation-disclosure.tsx"]) copies.push([`src/brand/${file}`, await readFile(path.join(root, "brand", file))]);
 const source = copies.find(([name]) => name.endsWith("brand.tsx"))[1].toString();
 const symbol = source.match(/symbolPath = "([^"]+)"/)[1];
+// Signal marks: Yodev keeps the bare symbol (on a dark tile in the light theme); products sit on a tile of their fill colour.
+const tile = (x, y, fill, ink) => `<rect x="${x}" y="${y}" width="32" height="32" rx="8" fill="${fill}"/><path transform="translate(${x + 6} ${y + 6}) scale(.625)" fill="${ink}" d="${symbol}"/>`;
+const wordmark = (label, ink) => { const [first, ...rest] = label.split(" "); return `<text x="44" y="34" font-family="Geist,Arial,sans-serif" font-size="30" letter-spacing="-1.2" fill="${ink}"><tspan font-weight="650">${first}</tspan>${rest.length ? `<tspan font-weight="400"> ${rest.join(" ")}</tspan>` : ""}</text>`; };
 for (const [key, brand] of Object.entries(manifest.products)) {
-  copies.push([`public/brand/${key}-symbol.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="${brand.accent}" d="${symbol}"/></svg>\n`)]);
   const label = key === "yodev" ? "yodev" : `yodev ${brand.name.split(" ")[1]}`;
-  copies.push([`public/brand/${key}-logo.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48"><path transform="translate(0 8)" fill="${brand.accent}" d="${symbol}"/><text x="44" y="34" font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="30" fill="#ebefeb">${label}</text></svg>\n`)]);
-  copies.push([`public/brand/${key}-logo-light.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48"><path transform="translate(0 8)" fill="${brand.accentLight}" d="${symbol}"/><text x="44" y="34" font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="30" fill="#18201b">${label}</text></svg>\n`)]);
+  const mark = key === "yodev" ? `<path fill="${brand.accent}" d="${symbol}"/>` : tile(0, 0, brand.accent, brand.onAccent);
+  const markDark = key === "yodev" ? `<path transform="translate(0 8)" fill="${brand.accent}" d="${symbol}"/>` : tile(0, 8, brand.accent, brand.onAccent);
+  const markLight = key === "yodev" ? tile(0, 8, manifest.lightColors.text, brand.accent) : tile(0, 8, brand.accent, brand.onAccent);
+  copies.push([`public/brand/${key}-symbol.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">${mark}</svg>\n`)]);
+  copies.push([`public/brand/${key}-logo.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48">${markDark}${wordmark(label, manifest.colors.text)}</svg>\n`)]);
+  copies.push([`public/brand/${key}-logo-light.svg`, Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48">${markLight}${wordmark(label, manifest.lightColors.text)}</svg>\n`)]);
 }
 const hashes = Object.fromEntries(copies.map(([file, body]) => [file, createHash("sha256").update(body).digest("hex")]));
 copies.push(["src/brand/manifest.json", Buffer.from(JSON.stringify({ ...manifest, hashes }, null, 2) + "\n")]);

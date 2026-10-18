@@ -14,7 +14,11 @@ export type ProductLandingCopy = {
   signature: string;
   eyebrow: string;
   title: string;
+  /** Part of the title set in the product colour. */
+  titleAccent: string;
   subtitle: string;
+  /** Real access status, shown next to the calls to action. */
+  status: string;
   primaryCta: string;
   secondaryCta: string;
   featuresTitle: string;
@@ -38,6 +42,8 @@ export const mailCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Passerelle transactionnelle gérée",
     title: "Les emails de votre application, pris en charge.",
+    titleAccent: "pris en charge.",
+    status: "Bêta privée · Candidature et invitation",
     subtitle:
       "Yodev Mail opère l’envoi transactionnel pour vos applications : revue du cas d’usage, configuration DNS, API stricte et suivi de délivrabilité, sans compte fournisseur à gérer.",
     primaryCta: "Candidater à la bêta privée",
@@ -66,6 +72,8 @@ export const mailCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Managed transactional gateway",
     title: "Your application’s emails, taken care of.",
+    titleAccent: "taken care of.",
+    status: "Private beta · Application and invitation",
     subtitle:
       "Yodev Mail operates transactional delivery for your applications: use-case review, DNS setup, a strict API and deliverability monitoring, with no provider account for you to manage.",
     primaryCta: "Apply for the private beta",
@@ -97,6 +105,8 @@ export const adsCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Pilotage Google Ads multi-client",
     title: "Gardez une vue claire sur vos comptes Google Ads.",
+    titleAccent: "une vue claire",
+    status: "Accès limité · Disponibilité à confirmer selon votre besoin",
     subtitle:
       "Yodev Ads donne aux agences et media buyers un espace de travail pour analyser, approuver et piloter leurs comptes Google Ads.",
     primaryCta: "Ouvrir Yodev Ads",
@@ -118,6 +128,8 @@ export const adsCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Multi-client Google Ads operations",
     title: "Keep a clear view of your Google Ads accounts.",
+    titleAccent: "a clear view",
+    status: "Limited access · Availability confirmed for your use case",
     subtitle:
       "Yodev Ads gives agencies and media buyers one cockpit to analyse, approve and operate their Google Ads accounts.",
     primaryCta: "Open Yodev Ads",
@@ -142,6 +154,8 @@ export const spendCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Dépenses logicielles par projet",
     title: "Comprenez précisément ce que coûte chaque produit.",
+    titleAccent: "précisément",
+    status: "Accès limité · Disponibilité à confirmer selon votre besoin",
     subtitle:
       "Yodev Spend réunit les services utilisés par vos projets, leurs factures et la répartition de leurs coûts. Vous identifiez ce qui est attribué et ce qui reste à répartir.",
     primaryCta: "Ouvrir Yodev Spend",
@@ -163,6 +177,8 @@ export const spendCopy: Record<ProductLocale, ProductLandingCopy> = {
     signature: "by Yodev",
     eyebrow: "Software expenses by project",
     title: "Understand exactly what every product costs.",
+    titleAccent: "exactly",
+    status: "Limited access · Availability confirmed for your use case",
     subtitle:
       "Yodev Spend brings together the services your projects use, their bills and cost allocation. See what is assigned and what still needs allocating.",
     primaryCta: "Open Yodev Spend",
