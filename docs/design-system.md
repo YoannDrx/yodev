@@ -16,6 +16,7 @@ La ligne de signal est le motif de marque : une ligne de base calme interrompue 
 Thème sombre à la première visite, choix explicite conservé dans chaque origine. Garder la préférence déjà enregistrée. Boutons de 44px minimum, rayon 8px (14px pour les grands blocs), surfaces opaques, filets fins et focus visible. Aucun verre dépoli, dégradé décoratif ou animation continue. Pas de couleur comme seul indicateur d’état. Données financières avec chiffres tabulaires et devise visible.
 
 Maquettes de référence : canvas « YoDev — Refonte DA » (claude.ai/artifact/MhTtXGt5ye3depbMGpK1XW).
+Vitrine en production : [accueil sombre](previews/yodev-signal-desktop-dark.png), [clair](previews/yodev-signal-desktop-light.png), [mobile](previews/yodev-signal-mobile-dark.png), [page Mail](previews/yodev-signal-mail-desktop-dark.png). Les captures `yodev-desktop-*` et `yodev-mobile-dark` restent la preuve datée de la refonte du 15 septembre.
 
 ## Parcours
 Vitrine : promesse → produits → expertises → réalisations → collaboration → contact. Les pages produits exposent usage, public, aperçu identifié et statut réel. Ads et Spend gardent un accès limité tant que leurs gates commerciaux ne sont pas établis. Aucun tarif de prestation freelance public.

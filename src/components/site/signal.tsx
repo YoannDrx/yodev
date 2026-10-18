@@ -24,7 +24,7 @@ export function HeroSignal({ label, linkLabel }: { label: string; linkLabel: str
   return <div className="yd-hero-signal">
     <svg className="yd-signal yd-signal-hero" viewBox="0 0 1440 300" role="img" aria-label={label}>
       {HERO_SEGMENTS.map(([product, from, to]) => <path key={product} data-product={product} className="y-signal-line" d={signalSegment(HERO, from, to)} />)}
-      <circle data-product="yodev" className="y-signal-node" cx={start[0]} cy={start[1]} r={7} />
+      <g data-product="yodev"><circle className="y-signal-halo" cx={start[0]} cy={start[1]} r={16} /><circle className="y-signal-node" cx={start[0]} cy={start[1]} r={8} /></g>
       {HERO_NODES.map(([product, x]) => <g key={product} data-product={product}>
         <circle className="y-signal-halo" cx={x} cy={HERO_PEAK} r={16} /><circle className="y-signal-node" cx={x} cy={HERO_PEAK} r={8} />
         <text className="yd-chart-text yd-chart-strong" x={x} y={HERO_PEAK - 30} textAnchor="middle">{productName(product)}</text>

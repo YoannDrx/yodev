@@ -7,6 +7,13 @@ import { adsStory, demoLabel, mailStory, spendStory } from "@/lib/product-storie
 import { Accent, SignalDivider, SignalRoute } from "@/components/site/signal";
 import { AdsDrift, SpendAllocation, SpendStairs } from "./product-figures";
 
+/** Each product page opens on its own story; the anchor bar names it. */
+const STORY_ID: Record<YodevProduct, string> = { mail: "api", ads: "decision", spend: "repartition" };
+const STORY_LABEL: Record<ProductLocale, Record<YodevProduct, string>> = {
+  fr: { mail: "L’API", ads: "La décision", spend: "La répartition" },
+  en: { mail: "The API", ads: "The decision", spend: "Allocation" },
+};
+
 const ICONS: Record<YodevProduct, LucideIcon[]> = {
   mail: [Code, ShieldCheck, Globe, EyeOff],
   ads: [Bot, Target, ShieldCheck, FolderKanban],
@@ -19,6 +26,14 @@ export function ProductLanding({ copy, appUrl, accent, locale = "fr" }: { copy: 
   const applyUrl = `https://mail.yodev.fr/${locale}/inscription`;
   const site = fr ? "Explorer le site du produit" : "Explore the product website";
   const talk = fr ? "Parlons-en" : "Let’s talk";
+  const anchors = ([
+    [STORY_ID[accent], STORY_LABEL[locale][accent]],
+    ...(accent === "ads" ? [["parcours", fr ? "Le parcours" : "The journey"]] : []),
+    ["fonctions", fr ? "Fonctions" : "Features"],
+    ["garanties", fr ? "Garanties" : "Safeguards"],
+    ...(copy.pricing ? [["tarif", fr ? "Tarif" : "Pricing"]] : []),
+    ["acces", fr ? "Accès" : "Access"],
+  ] as [string, string][]);
   return <div data-product={accent}>
     <section className="yd-hero y-dots" aria-labelledby="product-title">
       <div className="yd-wrap yd-hero-grid">
@@ -43,18 +58,20 @@ export function ProductLanding({ copy, appUrl, accent, locale = "fr" }: { copy: 
       {accent === "spend" && <SpendStairs locale={locale} />}
     </section>
 
-    <section className="yd-band yd-story">
+    <nav className="yd-anchors" aria-label={fr ? "Sur cette page" : "On this page"}><div className="yd-wrap">{anchors.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}</div></nav>
+
+    <section className="yd-band yd-story" id={STORY_ID[accent]}>
       <div className="yd-wrap">{accent === "mail" ? <MailApi locale={locale} /> : accent === "ads" ? <AdsDecision locale={locale} /> : <SpendSplit locale={locale} />}</div>
     </section>
     <SignalDivider product={accent} at={accent === "spend" ? .62 : .68} className="yd-divider-band" />
 
-    {accent === "ads" && <section className="yd-flow-section" aria-labelledby="flow-title">
+    {accent === "ads" && <section className="yd-flow-section" id="parcours" aria-labelledby="flow-title">
       <div className="yd-wrap"><h2 id="flow-title">{adsStory[locale].flowTitle}</h2></div>
       <SignalRoute steps={adsStory[locale].flow.steps} label={adsStory[locale].flow.label} spikes="highlight" highlight={2} />
     </section>}
 
     <div className="yd-wrap">
-      <section className="yd-section yd-section-open" aria-labelledby="features-title">
+      <section className="yd-section yd-section-open" id="fonctions" aria-labelledby="features-title">
         <div className="yd-section-head"><h2 id="features-title">{copy.featuresTitle}</h2></div>
         <div className="yd-cards">{copy.features.map((feature, i) => {
           const Icon = ICONS[accent][i];
@@ -62,13 +79,13 @@ export function ProductLanding({ copy, appUrl, accent, locale = "fr" }: { copy: 
         })}</div>
       </section>
 
-      <section className="yd-section yd-section-open yd-trust" aria-labelledby="trust-title">
+      <section className="yd-section yd-section-open yd-trust" id="garanties" aria-labelledby="trust-title">
         <div className="yd-trust-copy">
           <h2 id="trust-title">{copy.trustTitle}</h2>
           {accent === "mail" && <MailQuota locale={locale} />}
           <ul className="yd-chips">{copy.trustItems.map(item => <li key={item}><Check size={16} aria-hidden="true" />{item}</li>)}</ul>
         </div>
-        {copy.pricing && <article className="yd-price" aria-labelledby="price-title">
+        {copy.pricing && <article className="yd-price" id="tarif" aria-labelledby="price-title">
           <div className="yd-price-line"><SignalLine width={400} height={60} spikes={[.3, .65]} node={false} /></div>
           <div className="yd-price-body">
             <p className="yd-accent yd-price-eyebrow">{copy.pricing.eyebrow}</p>
@@ -82,7 +99,7 @@ export function ProductLanding({ copy, appUrl, accent, locale = "fr" }: { copy: 
       </section>
     </div>
 
-    <section className="yd-wrap yd-fill-band" aria-labelledby="closing-title">
+    <section className="yd-wrap yd-fill-band" id="acces" aria-labelledby="closing-title">
       <div className="yd-fill-band-body">
         <div><h2 id="closing-title">{copy.closingTitle}</h2><p>{copy.closingBody}</p></div>
         <div className="yd-actions">
