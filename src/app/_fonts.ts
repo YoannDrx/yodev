@@ -1,4 +1,4 @@
-import { DM_Sans, Fira_Code } from "next/font/google";
-const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"], display: "swap" });
-const firaCode = Fira_Code({ variable: "--font-fira", subsets: ["latin"], display: "swap" });
-export const fontVariables = `${dmSans.variable} ${firaCode.variable} antialiased`;
+import { Geist, Geist_Mono } from "next/font/google";
+const body = Geist({ variable: "--font-yodev-body", subsets: ["latin"], display: "swap" });
+const mono = Geist_Mono({ variable: "--font-yodev-mono", subsets: ["latin"], display: "swap" });
+export const fontVariables = `${body.variable} ${mono.variable} antialiased`;
