@@ -26,8 +26,6 @@ pnpm lint         # ESLint
 - **Framework** : Next.js 16 avec App Router
 - **Langage** : TypeScript
 - **Styling** : TailwindCSS v4
-- **Animations** : Framer Motion
 - **i18n** : next-intl
 - **Thème** : next-themes
-- **Carousel** : Embla Carousel
 - **Package Manager** : pnpm
