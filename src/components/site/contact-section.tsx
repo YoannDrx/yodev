@@ -7,13 +7,12 @@ import {
   Calendar,
   CheckCircle2,
   Mail,
-  MessageSquare,
   Send,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { CONTACT_LIMITS, CONTACT_MESSAGE_MIN, CONTACT_CLIENT_TIMEOUT_MS, CONTACT_PRODUCTS, validateContactRequest, type ContactValues, type ContactFieldErrors, type ContactProduct } from "@/lib/contact-request";
 import { contactSubmissionId, clearContactReceipt } from "@/lib/contact-submission";
-import { Badge } from "@/components/ui/badge";
+import { PageHero } from "@/components/site/page-hero";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Input } from "@/components/ui/input";
@@ -290,28 +289,10 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
   }
 
   return (
-    <div className={`yd-contact${embedded ? " yd-contact-embedded" : ""}`} id="contact">
-      {!embedded && <section className="relative overflow-hidden pb-8 pt-12 md:pb-12 md:pt-16">
+    <div className={`yd-contact${embedded ? " yd-contact-embedded" : ""}`} id="contact" data-product={values.product || undefined}>
+      {!embedded && <PageHero kicker={copy.eyebrow} title={copy.title} lead={copy.subtitle} at={.82} />}
 
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <div>
-              <Badge variant="primary" className="mb-6">
-                <MessageSquare className="mr-1 size-3" aria-hidden="true" />
-                {copy.eyebrow}
-              </Badge>
-              <h1 className="font-display text-4xl font-extrabold leading-[1.1] md:text-6xl">
-                {copy.title}
-              </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-                {copy.subtitle}
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>}
-
-      <section className="pb-24 pt-8">
+      <section className="yd-contact-body">
         <Container>
           <div className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="glass-panel rounded-3xl p-6 md:p-10">
@@ -504,9 +485,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                 <ol className="mt-5 space-y-4">
                   {copy.process.map((step, index) => (
                     <li key={step} className="flex gap-3 text-sm leading-relaxed text-muted">
-                      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/10 font-mono text-xs font-bold text-primary">
-                        {index + 1}
-                      </span>
+                      <span className={cn("yd-node mt-2", index < copy.process.length - 1 && "yd-node-ring")} aria-hidden="true" />
                       <span className="pt-1">{step}</span>
                     </li>
                   ))}

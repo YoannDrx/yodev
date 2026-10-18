@@ -27,6 +27,10 @@ export const commercial = {
     aboutMore: "Je développe aussi mes propres produits. Mail, Ads et Spend sont nés de besoins rencontrés dans mes applications et mon travail. Cette pratique nourrit les décisions que je prends avec mes clients : simplicité d’usage, fiabilité et maîtrise des coûts.",
     formats: "Un format adapté à votre point de départ.", formatItems: [["Faire le point", "Un audit ciblé et des recommandations pour décider de la suite."], ["Construire un produit", "Un périmètre défini ensemble, de la conception au lancement."], ["Faire évoluer l’existant", "Une intervention ciblée sur vos parcours, fonctionnalités ou points de friction."]],
     footer: "Des outils utiles. Pour de vrais projets.", legal: "Mentions légales", privacy: "Confidentialité",
+    titleAccent: "utiles", heroLine: "Une ligne de signal traverse la page et prend la couleur de Mail, Ads puis Spend en passant par chaque produit.",
+    productsTitle: "Trois outils nés de mes propres projets.", productsIntro: "Une même ligne, trois façons de la lire : des envois, des dérives, des dépenses.",
+    servicesNote: "Sur devis, après un premier échange.", contactTitle: "Un projet à clarifier ? Envoyez le premier signal.",
+    contactBody: "Décrivez vos utilisateurs, vos contraintes et le résultat attendu. Je vous réponds avec la prochaine étape utile.", contactMail: "Écrire à Yoann",
   },
   en: {
     title: ["Useful software.", "From the first screen to launch."],
@@ -52,6 +56,10 @@ export const commercial = {
     aboutMore: "I also build my own products. Mail, Ads and Spend grew out of needs I encountered in my applications and day-to-day work. That experience informs the decisions I make with clients: ease of use, reliability and control over costs.",
     formats: "A format that fits your starting point.", formatItems: [["Find a direction", "A focused audit and recommendations to decide what comes next."], ["Build a product", "A scope agreed together, from design to launch."], ["Improve an existing tool", "A focused engagement on journeys, features or friction points."]],
     footer: "Useful tools. For real projects.", legal: "Legal notice", privacy: "Privacy",
+    titleAccent: "Useful", heroLine: "A signal line crosses the page, taking on the colour of Mail, Ads and then Spend as it passes each product.",
+    productsTitle: "Three tools born from my own projects.", productsIntro: "One line, read three ways: deliveries, drifts and spending.",
+    servicesNote: "Quoted after a first conversation.", contactTitle: "A project to clarify? Send the first signal.",
+    contactBody: "Describe your users, your constraints and the outcome you expect. I will reply with the next useful step.", contactMail: "Email Yoann",
   },
 } as const;
 export type CommercialLocale = keyof typeof commercial;
