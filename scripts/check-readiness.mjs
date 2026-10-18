@@ -4,7 +4,11 @@ const failures = [];
 const requireValue = key => {
   if (!env[key]?.trim()) failures.push(`${key}: missing`);
 };
-for (const key of ['NEXT_PUBLIC_SITE_URL', 'RESEND_API_KEY', 'RESEND_FROM_EMAIL', 'CONTACT_EMAIL', 'CONTACT_REDIS_REST_URL', 'CONTACT_REDIS_REST_TOKEN', 'CONTACT_RATE_LIMIT_SECRET']) requireValue(key);
+for (const key of ['NEXT_PUBLIC_SITE_URL', 'RESEND_API_KEY', 'RESEND_FROM_EMAIL', 'CONTACT_EMAIL', 'CONTACT_RATE_LIMIT_SECRET']) requireValue(key);
+// Same precedence as src/lib/server/contact-rate-limit.ts: explicit names, then the Upstash integration of the Vercel Marketplace.
+const redis = { url: ['CONTACT_REDIS_REST_URL', 'UPSTASH_REDIS_REST_URL', 'KV_REST_API_URL'], token: ['CONTACT_REDIS_REST_TOKEN', 'UPSTASH_REDIS_REST_TOKEN', 'KV_REST_API_TOKEN'] };
+const redisKey = names => names.find(name => env[name]?.trim());
+for (const names of Object.values(redis)) if (!redisKey(names)) failures.push(`${names.join(' | ')}: missing`);
 function secureOrigin(key, originOnly = false) {
   if (!env[key]) return;
   try {
@@ -13,7 +17,7 @@ function secureOrigin(key, originOnly = false) {
   } catch { failures.push(`${key}: expected an HTTPS ${originOnly ? 'origin' : 'URL'} without credentials or query`); }
 }
 secureOrigin('NEXT_PUBLIC_SITE_URL', true);
-secureOrigin('CONTACT_REDIS_REST_URL');
+if (redisKey(redis.url)) secureOrigin(redisKey(redis.url));
 if (env.NEXT_PUBLIC_BOOKING_URL) secureOrigin('NEXT_PUBLIC_BOOKING_URL');
 if (env.CONTACT_RATE_LIMIT_SECRET && (env.CONTACT_RATE_LIMIT_SECRET.length < 32 || /^(change|replace|example)/i.test(env.CONTACT_RATE_LIMIT_SECRET))) failures.push('CONTACT_RATE_LIMIT_SECRET: requires at least 32 random characters, not a placeholder');
 if (env.CONTACT_EMAIL && !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(env.CONTACT_EMAIL)) failures.push('CONTACT_EMAIL: expected one mailbox');

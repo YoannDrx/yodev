@@ -18,13 +18,15 @@ Le garde de build `vercel.json` empêchera le nouveau candidat de se déployer a
 | `RESEND_API_KEY` | Envoi serveur | Clé limitée au domaine/usage nécessaire ; coffre de secrets, jamais variable publique. |
 | `RESEND_FROM_EMAIL` | Expéditeur fixe | Domaine validé chez Resend ; vérifier SPF/DKIM et politique DMARC. |
 | `CONTACT_EMAIL` | Boîte destinataire fixe | Boîte surveillée en production ; boîte de recette autorisée en preview. |
-| `CONTACT_REDIS_REST_URL` | API Redis REST | HTTPS, compatible `EVAL`, token serveur. Choisir région et contrat adaptés. |
-| `CONTACT_REDIS_REST_TOKEN` | Autorisation Redis | Base dédiée ou permissions minimales sur le préfixe Yodev ; EVAL/GET/INCR/EXPIRE/TTL. |
+| `CONTACT_REDIS_REST_URL` | API Redis REST | HTTPS, compatible `EVAL`, token serveur. Choisir région et contrat adaptés. À défaut : `UPSTASH_REDIS_REST_URL`, puis `KV_REST_API_URL`. |
+| `CONTACT_REDIS_REST_TOKEN` | Autorisation Redis | Base dédiée ou permissions minimales sur le préfixe Yodev ; EVAL/GET/INCR/EXPIRE/TTL. À défaut : `UPSTASH_REDIS_REST_TOKEN`, puis `KV_REST_API_TOKEN` ; jamais le jeton en lecture seule. |
 | `CONTACT_RATE_LIMIT_SECRET` | HMAC IP/email et namespace | Au moins 32 caractères aléatoires, distinct par environnement ; gestionnaire de secrets. |
 | `CONTACT_TRUSTED_IP_HEADER` | IP hors Vercel | Seulement un header écrasé par l’ingress ; jamais un header client transmis tel quel. Vide sous Vercel. |
 | `NEXT_PUBLIC_BOOKING_URL` | Calendrier facultatif | URL publique HTTPS. Absente : carte masquée. |
 
 Sur Vercel, `VERCEL=1`, `VERCEL_ENV` et `VERCEL_URL` viennent de la plateforme. L’IP provient uniquement de `x-vercel-forwarded-for`. Sans ingress de confiance, toutes les requêtes partagent volontairement le seau `unknown` ; le contrôle readiness refuse cette configuration hors Vercel.
+
+Avec l’intégration Upstash du Marketplace Vercel, connecter une base à l’environnement Production et une autre à Preview : Vercel injecte lui-même l’URL et le jeton, sans copie manuelle. Seul `CONTACT_RATE_LIMIT_SECRET` reste à saisir, avec une valeur distincte par environnement.
 
 Créer ou utiliser un Redis REST dédié en préproduction et production. Ne pas réutiliser les secrets des produits. Choisir le fournisseur, sa région, son budget et ses garanties avant activation. Aucune base payante n’est créée par le dépôt. La compatibilité cible est le protocole [Redis REST documenté par Upstash](https://upstash.com/docs/redis/features/restapi) ; aucune dépendance SDK n’est nécessaire. Les tests locaux évaluent le même Lua dans Redis réel mais ne valident pas le contrat du fournisseur distant.
 

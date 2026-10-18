@@ -28,6 +28,19 @@ return {1, 0}
 `;
 export type RateLimitResult = { allowed: boolean; retryAfter: number };
 
+/**
+ * Redis REST credentials. Explicit names win; the names injected by the Upstash integration of the Vercel Marketplace
+ * are accepted so the token never has to be copied by hand. Never the read-only token: the limiter writes.
+ */
+export const CONTACT_REDIS_ALIASES = {
+  url: ["CONTACT_REDIS_REST_URL", "UPSTASH_REDIS_REST_URL", "KV_REST_API_URL"],
+  token: ["CONTACT_REDIS_REST_TOKEN", "UPSTASH_REDIS_REST_TOKEN", "KV_REST_API_TOKEN"],
+} as const;
+export function contactRedisConfig(env: NodeJS.ProcessEnv) {
+  const pick = (names: readonly string[]) => names.map(name => env[name]?.trim()).find(Boolean);
+  return { endpoint: pick(CONTACT_REDIS_ALIASES.url), token: pick(CONTACT_REDIS_ALIASES.token) };
+}
+
 export function contactClientIp(request: Request, env: NodeJS.ProcessEnv) {
   // Only trust a header replaced by our ingress. Never trust arbitrary forwarded headers.
   const header = env.VERCEL === "1" ? "x-vercel-forwarded-for" : env.CONTACT_TRUSTED_IP_HEADER;
@@ -39,7 +52,8 @@ export function contactClientIp(request: Request, env: NodeJS.ProcessEnv) {
 
 export function createContactRateLimiter(env: NodeJS.ProcessEnv, fetcher: typeof fetch = fetch) {
   return async (request: Request, email: string): Promise<RateLimitResult> => {
-    const { CONTACT_REDIS_REST_URL: endpoint, CONTACT_REDIS_REST_TOKEN: token, CONTACT_RATE_LIMIT_SECRET: secret } = env;
+    const { endpoint, token } = contactRedisConfig(env);
+    const secret = env.CONTACT_RATE_LIMIT_SECRET;
     if (!endpoint || !token || !secret || secret.length < 32) throw new Error("LIMITER_NOT_CONFIGURED");
     const url = new URL(endpoint);
     if (url.protocol !== "https:" || url.username || url.password || url.search || url.hash) throw new Error("INVALID_LIMITER_URL");

@@ -12,6 +12,13 @@ test('release configuration check requires every contact dependency and never pr
     for (const value of Object.values(env).filter(value => value.length > 10)) assert.ok(!result.stderr.includes(value));
   }
 });
+test('release configuration accepts the Upstash integration names without copying the token', () => {
+  const { CONTACT_REDIS_REST_URL: url, CONTACT_REDIS_REST_TOKEN: token, ...rest } = env;
+  assert.equal(run({ ...rest, KV_REST_API_URL: url, KV_REST_API_TOKEN: token }).status, 0);
+  assert.equal(run({ ...rest, UPSTASH_REDIS_REST_URL: url, UPSTASH_REDIS_REST_TOKEN: token }).status, 0);
+  assert.equal(run({ ...rest, KV_REST_API_URL: 'http://redis.example.invalid', KV_REST_API_TOKEN: token }).status, 1);
+  assert.equal(run({ ...rest, KV_REST_API_URL: url, KV_REST_API_READ_ONLY_TOKEN: token }).status, 1);
+});
 test('release configuration rejects unsafe URLs, ambiguous recipients and missing ingress trust', () => {
   for (const invalid of [
     { NEXT_PUBLIC_SITE_URL: 'https://user:secret@example.invalid/path' },
