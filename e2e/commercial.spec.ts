@@ -81,3 +81,14 @@ test('brand icons and localized sharing images are served as images', async ({re
     const response=await request.get(path);expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('image/png');
   }
 });
+
+test('no section or step numbering on any public page', async ({ page }) => {
+  // Design system: pictograms, signal nodes or real labels, never "01 —" style numbering.
+  const numbering = /(^|\n)\s*0[1-9](\s*[—–.-])?\s+\S/;
+  for (const path of ['/fr', '/en', '/fr/services', '/fr/realisations', '/fr/a-propos', '/fr/contact', '/fr/mail', '/fr/ads', '/fr/spend', '/en/mail', '/en/ads', '/en/spend']) {
+    await page.goto(path);
+    const text = await page.locator('main').innerText();
+    expect(text.match(numbering)?.[0] ?? null, path).toBeNull();
+    expect(await page.locator('main ol > li > span.font-mono, main .yd-meta').count(), path).toBe(0);
+  }
+});

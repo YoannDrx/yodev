@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type FormEvent } from "react";
 import { useLocale } from "next-intl";
 import {
   ArrowRight,
@@ -21,6 +21,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 type Locale = "fr" | "en";
+const subscribeToNothing = () => () => {};
 type SubmissionStatus = "idle" | "submitting" | "success" | "error";
 
 type FormValues = ContactValues;
@@ -150,10 +151,28 @@ const content = {
 const contactEmail = "hello@yodev.fr";
 const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
 
+const PROJECT_TYPES: Record<string, string> = { nouveau: "product", new: "product", optimisation: "improvement", optimization: "improvement", audit: "audit" };
+/** Initial values from `?product=` and `?type=`; the server and hydration render without them. */
+function valuesFromSearch(search: string): FormValues {
+  const query = new URLSearchParams(search);
+  const product = query.get("product");
+  return { ...initialValues,
+    projectType: PROJECT_TYPES[query.get("type") ?? ""] ?? initialValues.projectType,
+    product: CONTACT_PRODUCTS.some(value => value === product) ? product as ContactProduct : "",
+  };
+}
+
 export function ContactSection({ embedded = false }: { embedded?: boolean }) {
+  const search = useSyncExternalStore(subscribeToNothing, () => window.location.search, () => "");
+  // Remounting once the query is known gives the form its initial values without setting state in an effect.
+  return <ContactForm key={search} embedded={embedded} initial={valuesFromSearch(search)} />;
+}
+
+function ContactForm({ embedded, initial }: { embedded: boolean; initial: FormValues }) {
   const locale = (useLocale() === "en" ? "en" : "fr") satisfies Locale;
-  const [ready, setReady] = useState(false);
-  const [values, setValues] = useState<FormValues>(initialValues);
+  // False on the server and during hydration, true once the client has taken over the form.
+  const ready = useSyncExternalStore(subscribeToNothing, () => true, () => false);
+  const [values, setValues] = useState<FormValues>(initial);
   const [status, setStatus] = useState<SubmissionStatus>("idle");
   const requestIdRef = useRef<string | null>(null);
   const busy = useRef(false);
@@ -177,17 +196,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
     } : {}),
   };
 
-  useEffect(() => {
-    setReady(true);
-    const query = new URLSearchParams(window.location.search);
-    const types: Record<string, string> = { nouveau: "product", new: "product", optimisation: "improvement", optimization: "improvement", audit: "audit" };
-    const product = query.get("product");
-    setValues(current => ({ ...current,
-      projectType: types[query.get("type") ?? ""] ?? current.projectType,
-      product: CONTACT_PRODUCTS.some(value => value === product) ? product as ContactProduct : "",
-    }));
-    return () => activeController.current?.abort();
-  }, []);
+  useEffect(() => () => activeController.current?.abort(), []);
 
   useEffect(() => {
     if (!dirty) return;
@@ -295,7 +304,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
       <section className="yd-contact-body">
         <Container>
           <div className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="glass-panel rounded-3xl p-6 md:p-10">
+            <div className="yd-panel rounded-3xl p-6 md:p-10">
               <div className="mb-8">
                 <h2 className="font-display text-2xl font-bold">
                   {copy.formTitle}
@@ -446,7 +455,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
             </div>
 
             <div className="space-y-6">
-              <div className="glass-panel rounded-2xl p-6">
+              <div className="yd-panel rounded-2xl p-6">
                 <Mail className="size-6 text-primary" aria-hidden="true" />
                 <h2 className="mt-4 text-lg font-bold">{copy.directTitle}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -462,7 +471,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
               </div>
 
               {bookingUrl && (
-                <div className="glass-panel rounded-2xl p-6">
+                <div className="yd-panel rounded-2xl p-6">
                   <Calendar className="size-6 text-primary" aria-hidden="true" />
                   <h2 className="mt-4 text-lg font-bold">{copy.bookingTitle}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -480,7 +489,7 @@ export function ContactSection({ embedded = false }: { embedded?: boolean }) {
                 </div>
               )}
 
-              <div className="glass-panel rounded-2xl p-6">
+              <div className="yd-panel rounded-2xl p-6">
                 <h2 className="text-lg font-bold">{copy.processTitle}</h2>
                 <ol className="mt-5 space-y-4">
                   {copy.process.map((step, index) => (
